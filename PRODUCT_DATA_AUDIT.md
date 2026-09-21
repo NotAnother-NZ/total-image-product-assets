@@ -1270,3 +1270,90 @@ Final read-back confirms:
 
 The `TW1825` Gender discrepancy remains intentionally unresolved pending client confirmation.
 
+
+
+---
+
+## 2026-09-21 — Promotional Merchandise source audit — pending client confirmation
+
+Source: `Product (Promotional Merchandise)-Grid view.csv`
+
+### Summary
+
+- Source rows: **31**
+- Unique SKUs: **31**
+- Duplicate source SKUs: **0**
+- Blank-SKU rows: **0**
+- Source top-level filter: **Promo Merch**
+- Source subgroups:
+  - **Drinkware** — 9
+  - **Bags** — 9
+  - **Pens** — 9
+  - **Note Books** — 4
+- Webflow import status: **Not imported**
+- Reason: there is no defensible existing Product Category for this set, and the source Industry taxonomy also requires confirmation.
+
+### Product Category question
+
+Current Product Categories in Webflow are:
+
+- **Accessories**
+- **Bottoms**
+- **Hi Vis & Workwear**
+- **Outerwear**
+- **Polos**
+
+The Promotional Merchandise set contains drink bottles, coffee cups, tumblers, bags, pens, notebooks and a wireless charger.
+
+Although some items could loosely be considered accessories, assigning the full set to **Accessories** would mix a distinct promotional-merchandise range into an apparel/accessories taxonomy that currently contains items such as Headwear, Aprons and Belts.
+
+The source itself consistently uses:
+
+- `Promo Merch`
+
+as the top-level filter, with the four clear subgroups listed above.
+
+**Current handling:** do not create a Product Category or import this set until the client confirms whether **Promotional Merchandise / Promo Merch** should become its own Product Category.
+
+### Industry taxonomy question
+
+Every row uses:
+
+- **Promotional Merchandise**
+
+as an `Industry Reference`.
+
+Nine rows also use:
+
+- **Sustainable**
+
+as an `Industry Reference`.
+
+Neither **Promotional Merchandise** nor **Sustainable** currently exists in the Webflow Industries collection.
+
+These values also do not read like conventional industries in the same sense as Corporate, Hospitality, Healthcare, Retail, Government, etc.:
+
+- **Promotional Merchandise** appears to describe the product range itself.
+- **Sustainable** appears to describe a product attribute / filter rather than a commercial industry.
+
+**Current handling:** do not create either value as a Webflow Industry until the client confirms the intended taxonomy.
+
+### Client confirmation required
+
+Recommended question:
+
+> We’ve reached the Promotional Merchandise product set. All 31 products are grouped under `Promo Merch`, with subgroups for Drinkware, Bags, Pens and Note Books, but we don’t currently have a matching Product Category in the new CMS. Should **Promotional Merchandise** be added as a new Product Category?
+>
+> We also noticed `Promotional Merchandise` is being used as an Industry on every row, and `Sustainable` is used as an Industry on 9 products. Our current Industries are commercial sectors such as Corporate, Hospitality, Healthcare, Retail, etc. Should either of these genuinely be Industries, or should they instead be treated as product categories / filters / attributes?
+
+Until this is confirmed, Set 7 remains intentionally unimported.
+
+### CMS cleanup noted during review
+
+During the Set 7 category check, an unused duplicate **Polos** Product Category created during the split Set 6 workflow was found.
+
+- duplicate category had **0 Products**
+- canonical Polos category already contains the imported Set 6 Products
+- unused duplicate Polos category was deleted
+
+No Product data was affected.
