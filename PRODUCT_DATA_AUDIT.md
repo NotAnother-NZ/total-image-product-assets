@@ -2622,3 +2622,334 @@ These are audit-only. No folders should be renamed, merged, or deleted.
 - Genuinely new products contributed: **61**
 - Cumulative unique products reconciled through source row 500: **390**
 - No Webflow changes were made during this reconciliation pass
+
+
+---
+
+## 2026-09-21 — Full taxonomy reconciliation — Batch 6 (source rows 501–568)
+
+This is the sixth and final bounded reconciliation pass across the fresh 15-set product export.
+
+Scope:
+
+- **68 source rows**
+- Sustainable: final **3 rows**
+- Tees & Singlets: all **23 rows**
+- Tops: all **24 rows**
+- Tunics: all **18 rows**
+- Product identities after within-batch duplicate reconciliation: **67**
+- Product identities already encountered in Batches 1–5: **19**
+- Genuinely new products added by this batch: **48**
+- **Final cumulative unique product identities across all 568 source rows: 438**
+
+This review did **not** modify Webflow.
+
+### Source duplicate reconciliation
+
+One SKU appears twice within Batch 6:
+
+- `1799WZ`
+  - **Lola 3/4 Sleeve Shirred Cuff Top**
+  - **Lola Top**
+
+Both rows describe the same 3/4-sleeve Lola garment and use the same SKU. They should resolve to one Product identity, preserving the fuller title/content and the union of colour/reference data.
+
+### Cross-batch repeated products
+
+Nineteen Batch 6 identities had already appeared earlier and therefore merge into existing Product identities rather than creating duplicates:
+
+- `AH655 — Premium Rpet Bucket Hat`
+- `3980 — Recycled Breathable Poly Twill Cap`
+- `BPC6088T — Recycle Taped Biomotion Cargo Work Pant`
+- `T207MS — Men's Action Short Sleeve Tee`
+- `1807WS — Poppy Puff Sleeve Top`
+- `CA4T — City Active Top`
+- `2277 — Petal Print Top`
+- `1805WL — Marni 1/2 Placket Top`
+- `RU569LL — Women's Evelyn Long Sleeve Blouse`
+- `RU569LS — Women's Evelyn Short Sleeve Blouse`
+- `RU570LL — Women's Evelyn Long Sleeve Shirt`
+- `2281 — Heart Print Tunic`
+- `2284 — Zip Back Tunic`
+- `CU544US — Unisex Pulse V-Neck Scrub Top`
+- `CST043LS — Women's Riley V-Neck Scrub Top`
+- `CU543LS — Women's Pulse V-Neck Scrub Top`
+- `CST043MS — Men's Riley V-Neck Scrub Top`
+- `CST141LS — Women's Tokyo Scrub Top`
+- `CST141MS — Men's Tokyo Scrub Top`
+
+### Fixed Product Category model
+
+The approved seven Product Categories remain sufficient.
+
+Batch 6 allocation:
+
+- **Tops:** 64 product identities
+- **Accessories:** 2
+- **Workwear & Hi-vis:** 1
+
+No additional top-level Product Category is required.
+
+The remaining Sustainable rows retain their normal product category and simply gain the reusable Sustainable filter:
+
+- `AH655` → Accessories
+- `3980` → Accessories
+- `BPC6088T` → Workwear & Hi-vis
+
+All Tees & Singlets, Tops and Tunics in this batch fit under **Tops**.
+
+### Reusable Product Subcategories / filters
+
+Subcategories continue to function as reusable filter tags with two-way Product Category relationships.
+
+Required / validated by Batch 6:
+
+**Tops**
+- Tees
+- Short Sleeve
+- Long Sleeve
+- 3/4 Sleeve
+- Scrubs
+- Tunics
+- Sustainable
+
+**Accessories**
+- Headwear
+- Sustainable
+
+**Workwear & Hi-vis**
+- Workwear
+- Pants
+- Sustainable
+
+Normalisation:
+
+- `Tee` / `Tees` → **Tees**
+- `Scrub Tops` → **Scrubs**
+- Sustainable remains one shared Subcategory/filter across every Product Category where applicable
+
+#### Known source anomaly: `3980`
+
+`3980 — Recycled Breathable Poly Twill Cap` carries `Accessories,Aprons` in the source Extra Filter Reference.
+
+This is inconsistent with the product identity: the item is a cap.
+
+The prior Accessories audit already treated the Aprons reference as erroneous.
+
+**Recommended taxonomy:** Accessories + Headwear + Sustainable. Do not assign Aprons.
+
+### Fixed Industry model
+
+Only the ten approved Figma Industries are treated as valid:
+
+- Aged Care
+- Automotive
+- Workwear & Hi-Vis
+- Retail
+- Corporate
+- Hospitality
+- Healthcare
+- Education
+- Teamwear & Fitness
+- Government
+
+All **67 / 67 Batch 6 product identities** have at least one approved Industry.
+
+Approved Industry usage represented in this batch:
+
+- **Corporate:** 43
+- **Education:** 27
+- **Government:** 25
+- **Retail:** 22
+- **Healthcare:** 20
+- **Hospitality:** 19
+- **Teamwear & Fitness:** 15
+- **Workwear & Hi-Vis:** 4
+- **Automotive:** 1
+
+Non-approved source values:
+
+- **Services:** 41 product identities
+- **Beauty:** 4
+
+Every product carrying Services or Beauty already has at least one approved Industry, so both values can be dropped safely.
+
+**Batch 6 unresolved Industry count: 0.**
+
+No additional Industry is required.
+
+### Asset reconciliation
+
+Across the 67 Batch 6 product identities:
+
+- **48** have exact SKU-prefix asset-folder matches
+- **1** has a high-confidence manual / naming-variant mapping
+- **18** have no safe asset mapping
+
+Usable asset coverage:
+
+- **49 / 67 = 73.1%**
+
+For the **48 genuinely new products** contributed by Batch 6:
+
+- **30** have exact assets
+- **1** has a high-confidence manual mapping
+- **17** remain unresolved
+- usable new-product coverage: **31 / 48 = 64.6%**
+
+#### High-confidence manual mapping
+
+- `2151CC — Ezylin Tunic`
+  - asset: `2151_EZYLIN_TUNIC`
+  - exact product-name match
+  - source SKU extends the same base numeric SKU with `CC`
+  - this folder was previously identified as unrelated to the separate `2151 — Silvertech Polo - Ladies` product; it is, however, a strong match for `2151CC — Ezylin Tunic`
+
+### Asset-folder / naming issues
+
+#### `1799WZ — Lola`
+
+The source contains two names under the same SKU:
+
+- **Lola 3/4 Sleeve Shirred Cuff Top**
+- **Lola Top**
+
+The asset package also contains two matching folders:
+
+- `1799WZ_LOLA_3_4_SLEEVE_SHIRRED_CUFF_TOP`
+- `1799WZ_LOLA_TOP`
+
+Treat this as one Product identity with duplicate/alias asset folders. Do not create two Products.
+
+#### `RU568LS — Women's Ruche Short Sleeve Blouse`
+
+The asset package contains:
+
+- `RU568LS_WOMEN'S_RUCHE_SHORT_SLEEVE_BLOUSE` — correct
+- `RU568LS_WOMEN'S_EVELYN_SHORT_SLEEVE_BLOUSE` — incorrectly named / conflicting folder
+
+The separate real Evelyn product is:
+
+- `RU569LS — Women's Evelyn Short Sleeve Blouse`
+
+with its own correctly named asset folder:
+
+- `RU569LS_WOMEN'S_EVELYN_SHORT_SLEEVE_BLOUSE`
+
+Therefore the Evelyn-labelled folder under `RU568LS` should not be treated as authoritative. Record it as an asset naming collision.
+
+### Products without safe asset matches
+
+Tees & Singlets:
+
+- `5001 — Men's Staple Tee`
+- `5052 — Men's State Tee`
+- `5044 — Men's Classic Stripe Tee`
+- `5053 — Men's Ringer Tee`
+- `4037 — Wo's Maple Stripe Tee`
+- `4073 — Wo's Classic L/S Tee`
+- `5071 — Classic L/S Tee`
+- `X2001M — Everyday Short Sleeve Tee Men's`
+- `X1001M — Basis Short Sleeve Tee Men's`
+- `X1002M — Black Men's Basis Long Sleeve Tee`
+- `X2001W — Women's Everyday Short Sleeve Tee`
+- `X1001W — Women's Basis Short Sleeve Tee`
+- `X1002W — Women's Basis Long Sleeve Tee`
+
+Tops:
+
+- `CA4T — City Active Top`
+  - nearby `CA4P_CITY_ACTIVE_PANT` is a different product and must not be reused
+- `2290 — Smart Knit 3/4`
+  - nearby `2291_SMART_KNIT_TOP` uses a different SKU and is not safe to reuse
+
+Tunics:
+
+- `CST945MS — Avery Men's V-Neck Scrub Top`
+- `CST942LS — Avery Women's Round Neck Scrub Top`
+- `CST941LS — Avery Women's V-Neck Scrub Top`
+
+No sufficiently reliable alternate asset folders were identified for these 18 products.
+
+### Batch 6 conclusion
+
+- Fixed seven Product Categories: **works**
+- Reusable multi-reference Subcategories: **works**
+- Tees, Scrubs, Tunics, Sustainable and sleeve-length filters all fit the agreed shared-filter model
+- Fixed ten Industries: **works for 67 / 67 products**
+- Services and Beauty can be removed safely
+- No additional Industry is required
+- Asset coverage: **49 / 67 usable**
+- Genuinely new products contributed: **48**
+- **Final cumulative unique products reconciled across all 568 source rows: 438**
+- No Webflow changes were made during this reconciliation pass
+
+---
+
+## 2026-09-21 — Full 15-set reconciliation complete
+
+All **568 source rows** across the fresh 15 CSV datasets have now been reviewed in six bounded batches.
+
+Final reconciled product identity count:
+
+- **438 unique product identities**
+
+The agreed architecture remains viable across the complete source:
+
+### Fixed Product Categories
+
+- Tops
+- Bottoms
+- Outerwear
+- Suiting
+- Workwear & Hi-vis
+- Shoes
+- Accessories
+
+No additional Product Category is required by the supplied product data.
+
+### Fixed Industries
+
+The approved ten Industries remain the only target Industry taxonomy:
+
+- Aged Care
+- Automotive
+- Workwear & Hi-Vis
+- Retail
+- Corporate
+- Hospitality
+- Healthcare
+- Education
+- Teamwear & Fitness
+- Government
+
+The only source ranges still requiring client guidance for Industry assignment are:
+
+- **14 First Nations products**
+- **31 Promotional Merchandise products**
+
+Total Industry-unresolved products:
+
+- **45**
+
+All other products can be represented using the approved ten Industries.
+
+Source-only values such as **Services** and **Beauty** can be dropped because affected products also carry approved Industry assignments.
+
+**Sustainable**, **First Nations**, **Promotional Merchandise**, **Scrubs**, **Polos**, **Tees**, **Tunics**, garment types and sleeve lengths are handled through the reusable Product Subcategory/filter system rather than by expanding the fixed Product Category or Industry lists.
+
+### Overall asset coverage from the supplied asset package
+
+Across the 438 reconciled product identities:
+
+- **305** have exact SKU-prefix asset matches
+- **18** have documented high-confidence manual / naming-variant mappings
+- **115** remain without a safe asset mapping
+
+Usable asset coverage:
+
+- **323 / 438 = 73.7%**
+
+The unresolved asset list includes whole ranges such as Promotional Merchandise and Shoes, along with individual missing products documented within each batch above.
+
+No approximate, opposite-gender, or materially different SKU assets were silently reused.
