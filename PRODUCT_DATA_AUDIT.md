@@ -484,3 +484,167 @@ For these six products, only the corresponding **Unisex** asset folder was found
 
 This is a second reason the First Nations batch remains intentionally paused alongside the taxonomy question.
 
+
+
+---
+
+## 2026-09-21 — Hi Vis & Workwear source audit and Webflow import
+
+Source: `Product (Hi Vis & Workwear)-Grid view.csv`
+
+Asset inventory: `Total Image Product Assets`
+
+### Summary
+
+- Source rows: **90**
+- Non-empty unique source SKUs before deduplication: **65**
+- Duplicate source SKUs: **24**
+- Additional source row with a blank SKU: **1**
+- Final unique products after deduplication / blank-row reconciliation: **65**
+- Exact asset-folder matches: **50**
+- Unresolved SKUs without an exact asset-folder match: **15**
+- Duplicate asset folders among the 50 exact matches: **0**
+- Products imported to Webflow: **50**
+- Products intentionally excluded from this import: **15**
+- All imported items remain **drafts**. Nothing was published.
+- Images were **not** imported or attached because the Product image schema is still pending.
+
+### Blank SKU source row
+
+One source row had no SKU:
+
+- Product: **Women's Outdoor Long Sleeve Shirt**
+- Supplier: **Syzmik**
+- Category/filter data: `Workwear,Shirts,Long Sleeve`
+
+This row was reconciled with SKU `ZW760` — **Women's Outdoor L/S Shirt** — because the product identity, supplier, gender, colours and product type align with the existing `ZW760` rows.
+
+**Import handling:** no separate CMS Product was created. The blank-SKU row was merged into the `ZW760` source group before import.
+
+### Duplicate source SKUs merged
+
+The following 24 SKUs appeared more than once in the source. Each was reduced to a single source product before any Webflow import:
+
+- `6HVSV` — Hi Vis Safety Vest
+- `6HVSZ` — Hi Vis Zip Safety Vest
+- `BPC6008` — Stretch Cotton Drill Cargo Pants
+- `BPC6088T` — Recycle Taped Biomotion Cargo Work Pant
+- `BPC6334T` — Flx And Move™ Taped Stretch Cargo Cuffed Pants
+- `SW19A` — Hi-Vis Reversible Safety Vest With 3m Tapes
+- `ZP230` — Men's Essential Basic Stretch Cargo Pant
+- `ZP504` — Men's Rugged Cooling Cargo Pant (Regular)
+- `ZP730` — Women's Essential Basic Stretch Cargo Pant
+- `ZP733` — Women's Essential Stretch Taped Cargo Pant
+- `ZP735` — Women's Essential Stretch Taped Cargo Pant - Cuffed
+- `ZP820` — Men's Streetworx Heritage Pant
+- `ZP923` — Men's Essential Stretch Taped Cargo Pant
+- `ZP935` — Men's Essential Stretch Taped Cargo Pant - Cuffed
+- `ZT210` — Unisex Streetworx Lightweight 1/4 Zip Polar Fleece
+- `ZV245` — Unisex Streetworx Hooded Puffer Vest
+- `ZW120` — Men's Light Weight Tradie S/S Shirt
+- `ZW121` — Men's Lightweight Tradie L/S Shirt
+- `ZW460` — Men's Outdoor L/S Shirt
+- `ZW465` — Men's Outdoor S/S Shirt
+- `ZW468` — Men's Hi Vis Outdoor L/S Shirt
+- `ZW760` — Women's Outdoor L/S Shirt
+- `ZW765` — Women's Outdoor Short Sleeve Shirt
+- `ZWL120` — Women's Lightweight Tradie S/S Shirt
+
+Where duplicate rows differed, the import merge rule was:
+
+- preserve the union of colours, industries and filter/subcategory values;
+- retain the more complete non-empty Description / Fabric / Size Range value;
+- never create two Webflow Products for the same SKU.
+
+Some duplicate source rows had conflicting or incomplete size values, for example `ZW765`, `ZWL120`, `SW19A` and `6HVSZ`; the more complete size-range value was retained.
+
+### Unresolved SKUs excluded from Webflow
+
+The following 15 products do not have an exact asset-folder match and were intentionally left out of this import:
+
+| SKU | Product |
+| --- | --- |
+| `6HVPF` | Hi Vis 1/2 Zip Polar Fleece |
+| `6HVSZ` | Hi Vis Zip Safety Vest |
+| `BJ6078T` | Taped Two Tone Hi Vis 3 In 1 Soft Shell Jacket |
+| `BJ6766T` | Taped Hi Vis Recycled Rain Shell Jacket |
+| `ZJ240` | Unisex Streetworx Hooded Puffer Jacket |
+| `ZJ532` | Men's Hi Vis 4 In 1 Waterproof Jacket |
+| `ZJ553` | Unisex Hi Vis Antarctic Softshell Taped Jacket |
+| `ZJ616` | Men's Hi Vis X Back Taped 4 In 1 Waterproof Jacket |
+| `ZJ770` | Women's Hi Vis Nsw Rail X Back 2 In 1 Softshell Jacket |
+| `ZT210` | Unisex Streetworx Lightweight 1/4 Zip Polar Fleece |
+| `ZT462` | Hi Vis Polar Fleece Jumper - Shoulder Taped |
+| `ZT476` | Unisex Hi Vis Half Zip Pullover |
+| `ZT640` | Unisex Hi Vis Vic Rail 1/4 Zip Pullover |
+| `ZT867` | Unisex Streetworx Water Resistant Hoodie With Segmented Tape |
+| `ZV228` | Unisex Hi Vis Waterproof Reversible Vest |
+
+Several have visually or semantically similar asset folders, but none were strong enough to justify using another SKU's asset folder without client approval.
+
+**Current handling:** no guessed mappings were used. These 15 products remain pending manual SKU/asset review.
+
+### Product taxonomy created
+
+New Product Category:
+
+- **Hi Vis & Workwear**
+
+Canonical Product Subcategories created for this category:
+
+- **Workwear**
+- **Hi Vis**
+- **Pants**
+- **Shirts**
+- **Long Sleeve**
+- **Short Sleeve**
+- **Safety Vests**
+- **Shorts**
+- **Vests**
+
+Source taxonomy was normalised before import:
+
+- `Shirt` → **Shirts**
+- `Vest` / `Vests` → **Vests**
+- `Safety Vest` → **Safety Vests**
+
+The broader source values **Workwear** and **Hi Vis** are retained as subcategories/filters because individual products use them distinctly, while all products also retain the existing **Workwear & Hi-Vis** Industry relationship.
+
+### Color data
+
+The batch uses a mixture of existing colours plus additional Hi Vis / workwear-specific values.
+
+New specific Color items created from this source include:
+
+- **Charcoal Blue**
+- **Green**
+- **Lime/Black**
+- **Lime/Navy**
+- **Lime/Purple**
+- **Lt Blue**
+- **Orange/Black**
+- **Orange/Charcoal**
+- **Orange/Navy**
+- **Pea Green**
+- **Pink/Navy**
+- **Vic Rail Orange**
+- **Yellow**
+- **Yellow/Bottle**
+- **Yellow/Charcoal**
+- **Yellow/Navy**
+
+Some of these belong only to the 15 currently excluded products. They were still created because they are valid source taxonomy values and can be reused when those products are resolved later.
+
+### Final Webflow QA
+
+After the five import batches completed, the Hi Vis & Workwear category was checked directly in Webflow:
+
+- **50 Product items found**
+- **50/50 are drafts**
+- **0 missing Gender values**
+- **0 missing Category references**
+- **0 missing Color references**
+- **0 missing Subcategory references**
+
+The category's reverse Subcategories relationship was also populated.
+
