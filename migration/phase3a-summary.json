@@ -1,0 +1,30 @@
+{
+  "phase": "3A",
+  "status": "complete",
+  "source_rows": 568,
+  "canonical_products": 438,
+  "products_with_sku": 436,
+  "products_without_source_sku": 2,
+  "blank_sku_products": [
+    "Men's City Polo",
+    "Women's Avery Multi-Pocket Straight Leg Pant"
+  ],
+  "products_cross_listed_multiple_sets": 70,
+  "products_with_multiple_source_rows": 105,
+  "conflict_counts": {
+    "sku": 0,
+    "name": 22,
+    "supplier": 0,
+    "fabric": 11,
+    "size_range": 13,
+    "gender": 1,
+    "tig_url": 2,
+    "description": 62
+  },
+  "reconciliation_notes": [
+    "Blank Women's Outdoor Long Sleeve Shirt in Hi Vis & Workwear folds into SKU ZW760.",
+    "Blank Womens Outdoor Long Sleeve Shirt in Shirts also folds into SKU ZW760.",
+    "SKU 1799WZ remains one identity; Lola 3/4 Sleeve Shirred Cuff Top is the preferred canonical name.",
+    "No Webflow writes were performed in Phase 3A."
+  ]
+}
