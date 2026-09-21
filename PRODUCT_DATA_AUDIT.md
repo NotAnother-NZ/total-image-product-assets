@@ -3139,3 +3139,120 @@ Verified after writes:
 - nothing was published
 
 Phase 1 is complete and safe for the Industry-normalisation / Product-repair phases that follow.
+
+
+---
+
+## 2026-09-21 — Webflow Industry normalization — Phase 2 complete
+
+Phase 2 locks the Webflow Industry taxonomy to the ten Figma-approved Industries and removes non-approved Industry references from already-imported Products.
+
+No Product Category or Product Subcategory records were changed during this phase.
+No Webflow content was published.
+
+### Approved Industry list retained
+
+The Industries collection now contains exactly these ten records:
+
+- Aged Care — `6a6c325cdae4423c35d7a4ba`
+- Automotive — `6a6c328b693690449c3429da`
+- Corporate — `6a6c329e1097432a8788d1e5`
+- Education — `6a6c32a588a6f6503b23abd7`
+- Government — `6a6c32adf2c3f7bb4510e17d`
+- Healthcare — `6a6c32b7df1334b57cef362b`
+- Hospitality — `6a6c32bec811ea83170fab93`
+- Retail — `6a6c32c6d56669369100b942`
+- Teamwear & Fitness — `6a6c32cf0c9d6be476f45d8e`
+- Workwear & Hi-Vis — `6a6c32e4e7585ba74aad1f42`
+
+All ten approved Industry IDs and slugs were preserved.
+
+### Non-approved Industry references found on existing Products
+
+The Products collection contained **198 existing Product records**.
+
+Before cleanup:
+
+- **90 Products** referenced at least one non-approved Industry
+- `Services` was referenced by **79 Products**
+- `Beauty` was referenced by **11 Products**
+- `Child Care` was referenced by **0 Products**
+
+Every Product carrying Services or Beauty also carried at least one approved Industry.
+
+Therefore removing the non-approved Industry references did **not** leave any existing Product without an Industry assignment.
+
+### Product cleanup performed
+
+For all 90 affected Products:
+
+- removed `Services`
+- removed `Beauty`
+- preserved every approved Industry already assigned
+- preserved all other Product fields and draft state
+
+Post-write QA:
+
+- **198 / 198 Products** contain only approved Industry IDs
+- **0 Products** reference Services
+- **0 Products** reference Beauty
+- **0 Products** reference Child Care
+- **0 Products** are Industry-less
+
+No new Industry assignments were invented.
+
+### Other CMS references checked
+
+The only other CMS collection with a reference to the Industries collection is **Case Studies**, through its `Related Industry` MultiReference field.
+
+Seven Case Studies currently have Industry references.
+
+None reference:
+
+- Services
+- Beauty
+- Child Care
+
+Therefore the three non-approved Industry records had no remaining CMS references before deletion.
+
+### Non-approved Industry records removed
+
+Deleted from the Industries collection:
+
+- `Services` — `6ab0d1f13a3089f25d3d310a`
+- `Beauty` — `6ab0d9015d7c729205242633`
+- `Child Care` — `6a6c3297c95798982c9c32bd`
+
+The Industries collection now contains exactly **10 records**, matching the approved Figma taxonomy.
+
+### Phase 1 taxonomy integrity rechecked
+
+After Phase 2:
+
+- Product Categories: **8 records** — final seven + temporary legacy Polos
+- Product Subcategories: **35 records**
+- no Category/Subcategory records were added, deleted or modified in Phase 2
+- temporary legacy Polos Category remains intact for the later Product-repair phase
+
+### Outstanding Industry decisions
+
+The full-project reconciliation still identifies **45 source products** whose supplied source data does not map safely to one of the approved ten Industries:
+
+- **14 First Nations products**
+- **31 Promotional Merchandise products**
+
+These products have not been assigned an invented Industry.
+
+They should remain pending client guidance during later Product migration / repair work.
+
+### Phase 2 conclusion
+
+- Approved Industry taxonomy locked to exactly **10 Industries**
+- Existing Product references normalized successfully
+- Services removed
+- Beauty removed
+- Child Care removed
+- no existing Product lost all Industry assignments
+- no unrelated CMS references were broken
+- no taxonomy changes outside Industries were made
+- nothing was published
