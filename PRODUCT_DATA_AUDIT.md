@@ -2022,3 +2022,290 @@ No Promotional Merchandise product in this Batch 3 slice has a safe asset match 
 - Genuinely new products contributed: **96**
 - Cumulative unique products reconciled through source row 300: **267**
 - No Webflow changes were made during this reconciliation pass
+
+
+---
+
+## 2026-09-21 — Full taxonomy reconciliation — Batch 4 (source rows 301–400)
+
+This is the fourth bounded reconciliation pass across the fresh 15-set product export.
+
+Scope:
+
+- **100 source rows**
+- Promotional Merchandise: remaining **10 rows**
+- Scrubs: all **32 rows**
+- Shirts: first **58 rows**
+- Product identities after duplicate / blank-SKU reconciliation: **81**
+- Product identities already encountered in earlier batches: **19**
+- Genuinely new products added by this batch: **62**
+- Cumulative unique product identities after rows 1–400: **329**
+
+This review did **not** modify Webflow.
+
+### Source duplicate / blank-SKU reconciliation
+
+The Scrubs set contains 15 duplicated non-empty SKUs in this batch:
+
+- `CL541LL`
+- `CL542UL`
+- `CSP042LL`
+- `CSP047LL`
+- `CSP047ML`
+- `CSP241LL`
+- `CST043LS`
+- `CST043MS`
+- `CST141LS`
+- `CST141MS`
+- `CST245LS`
+- `CU543LS`
+- `CU544US`
+- `M7660`
+- `M9710`
+
+The Shirts slice contains three duplicated non-empty SKUs:
+
+- `1637HL`
+- `1637S`
+- `1637WZ`
+
+These resolve to one Product identity per SKU, preserving the union of supported source values.
+
+Two blank-SKU rows occur:
+
+1. **Women's Avery Multi-Pocket Straight Leg Pant**
+   - no SKU in the source
+   - unique asset folder strongly identifies the product as:
+     `CSP944LL_WOMEN'S_AVERY_MULTI_POCKET_STRAIGHT_LEG_PANT`
+   - treat this as a high-confidence asset identity, but do not silently invent the missing source SKU without client/source confirmation
+
+2. **Womens Outdoor Long Sleeve Shirt**
+   - same product identity as existing `ZW760 — Women's Outdoor L/S Shirt`
+   - fold into `ZW760`; do not create a separate Product
+
+### Cross-batch repeated products
+
+Nineteen Shirts SKUs in Batch 4 were already encountered in the Hi Vis & Workwear source and therefore must not create duplicate Products:
+
+- `6HDNL`
+- `BS1896`
+- `BS6266XT`
+- `BS6896`
+- `ZW115`
+- `ZW120`
+- `ZW121`
+- `ZW128`
+- `ZW229`
+- `ZW400`
+- `ZW460`
+- `ZW465`
+- `ZW468`
+- `ZW680`
+- `ZW760`
+- `ZW765`
+- `ZW815`
+- `ZW835`
+- `ZWL120`
+
+The blank Outdoor Long Sleeve Shirt row also folds into the already-listed `ZW760` identity.
+
+### Fixed Product Category model
+
+The approved seven Product Categories remain sufficient.
+
+Batch 4 allocation:
+
+- **Tops:** 43 product identities
+- **Workwear & Hi-vis:** 20 product identities
+- **Accessories:** 10 product identities
+- **Bottoms:** 8 product identities
+
+No additional top-level Product Category is required.
+
+Category handling rules validated in this batch:
+
+- Scrub tops → **Tops**
+- Scrub pants → **Bottoms**
+- Scrubs remains one reusable Subcategory linked to both Tops and Bottoms
+- ordinary Shirts → **Tops**
+- Shirts whose source Industry is Hi Vis & Workwear → **Workwear & Hi-vis**
+- Promotional Merchandise → **Accessories**
+
+### Reusable Product Subcategories / filters
+
+Subcategories continue to be treated as reusable filter tags with two-way Product Category relationships.
+
+Required by Batch 4:
+
+**Accessories**
+- Promotional Merchandise
+- Bags
+- Drinkware
+- Notebooks
+- Sustainable
+
+**Tops**
+- Scrubs
+- Shirts
+- Long Sleeve
+- Short Sleeve
+- Sustainable
+
+**Bottoms**
+- Scrubs
+
+**Workwear & Hi-vis**
+- Shirts
+- Long Sleeve
+- Short Sleeve
+- Sustainable
+
+Important taxonomy decision confirmed by this batch:
+
+- do **not** create separate `Scrub Tops` and `Scrub Pants` filters unless the client explicitly wants them
+- use one **Scrubs** Subcategory related to both Tops and Bottoms
+- the fixed Product Category already distinguishes whether the item is a top or bottom
+
+Likewise, **Sustainable** remains one reusable Subcategory/filter and is linked to every Product Category where sustainable products occur.
+
+### Fixed Industry model
+
+Only the ten approved Figma Industries are treated as valid:
+
+- Aged Care
+- Automotive
+- Workwear & Hi-Vis
+- Retail
+- Corporate
+- Hospitality
+- Healthcare
+- Education
+- Teamwear & Fitness
+- Government
+
+Across the 81 Batch 4 product identities, approved Industry references include:
+
+- **Corporate:** 31
+- **Education:** 31
+- **Government:** 31
+- **Healthcare:** 20
+- **Workwear & Hi-Vis:** 20
+- **Automotive:** 9
+- **Hospitality:** 5
+
+Non-approved source values:
+
+- **Services:** 31 product identities
+- **Promotional Merchandise:** 10
+- **Sustainable:** 7
+
+Every Product carrying **Services** in this batch already has at least one approved Industry, so Services can be dropped safely.
+
+The only Industry-unresolved products are the **10 remaining Promotional Merchandise products**. Their source Industry values are Promotional Merchandise, with seven also carrying Sustainable.
+
+**Client decision required:** define which approved Industries apply to Promotional Merchandise products, or confirm that Promotional Merchandise products may intentionally have no Industry.
+
+Batch 4 unresolved Industry count:
+
+- **10 / 81 products**
+- all are Promotional Merchandise products
+
+### Asset reconciliation
+
+Across the 81 Batch 4 product identities:
+
+- **62** have exact SKU-prefix asset matches
+- **4** have strong manual / naming-variant asset matches
+- **15** remain without a safe asset mapping
+
+Usable asset coverage:
+
+- **66 / 81 = 81.5%**
+
+All 19 cross-batch repeated products have valid exact asset matches.
+
+For the **62 genuinely new products** contributed by Batch 4:
+
+- **47 / 62 usable asset matches = 75.8%**
+- **15 / 62 unresolved asset products**
+
+#### High-confidence manual / naming-variant matches
+
+- blank SKU — **Women's Avery Multi-Pocket Straight Leg Pant**
+  - asset: `CSP944LL_WOMEN'S_AVERY_MULTI_POCKET_STRAIGHT_LEG_PANT`
+  - exact product-name match; source SKU is missing
+
+- `1520L — Premium Poplin Long Sleeve Shirt`
+  - asset: `1520WL_PREMIUM_POPLIN_LONG_SLEEVE_SHIRT`
+  - same base numeric SKU and exact product name; asset code contains an additional `W`
+
+- `2103L — Ashton Cotton Oxford Shirt`
+  - asset: `2103WL_ASHTON_COTTON_OXFORD_SHIRT`
+  - same base numeric SKU and exact product name; asset code contains an additional `W`
+
+- `1701L — Balmoral Royal Oxford Shirt`
+  - asset: `1701WL_BALMORAL_ROYAL_OXFOR_SHIRT`
+  - same base numeric SKU and exact product name; asset code contains an additional `W`
+
+These mappings should be retained in the audit trail because the folder SKU is not textually identical to the source SKU.
+
+#### Duplicate asset-folder cases
+
+These are audit-only. No folders should be renamed, merged, or deleted.
+
+- `LB3601 — Ladies Plain Oasis Short Sleeve Shirt`
+  - `LB3601_LADIES_PLAIN_OASIS_SHORT_SLEEVE_SHIRT`
+  - `LB3601_Womens_Oasis_Short_Sleeve_Shirt`
+
+- `S421LL — Womens Soul Long Sleeve Shirt`
+  - `S421LL_Soul_Womens_Long_Sleeve_Shirt`
+  - `S421LL_WOMEN'S_SOUL_LONG_SLEEVE_SHIRT`
+  - `S421LL_Womens_Soul_Long_Sleeve_Shirt`
+
+- `RS968LS — Womens Charlie S/S Shirt`
+  - `RS968LS_WOMEN'S_CHARLIE_S_S_SHIRT`
+  - `RS968LS_WOMENS_CHARLIE_SS_SHIRT`
+
+#### Products without safe asset matches
+
+Promotional Merchandise:
+
+- `LL9757 — Amazon Bamboo Notebook`
+- `LL0944 — Tourist A5 Notebook`
+- `LL0226 — Arc Eco Square Wireless Charger`
+- `LL0461 — Vienna Coffee Cup / Snap Lid / Cork Band`
+- `LL0427 — Vienna Coffee Cup / Silicone Lid`
+- `5198 — Urban Sports Backpack`
+- `BR1013 — Bellroy Classic Daypack`
+- `DA1007 — Darani GRS Recycled Canvas Anti-Theft 15" 21L Laptop Backpack`
+- `DA1003 — Darani 15" 19L Computer Backpack In Repreve Recycled Material`
+- `TL1001 — Thule Achiever 16" Laptop Backpack`
+
+Scrubs:
+
+- `M9710 — Men's V-Neck Contrast Trim Scrub Top`
+  - the asset package contains `M7650_MEN'S_V_NECK_CONTRAST_TRIM_SCRUB_TOP`
+  - product name matches closely, but the SKU is materially different; do not treat as a safe mapping without confirmation
+
+Shirts:
+
+- `1712L — Oxford Check Long Sleeve Shirt`
+- `1899L — Bradford Fine Oxford Long Sleeve Slim Fit Shirt`
+  - nearby `1899WL` folders are explicitly Women's and are not safe to reuse
+- `RS070ML — Noah L/S Shirt`
+- `W47 — Ladies Miller Short Sleeve Shirt`
+  - nearby `W47Q` asset is a Ladies Miller 3/4 Sleeve Shirt and is therefore a different product
+
+### Batch 4 conclusion
+
+- Fixed seven Product Categories: **works**
+- Reusable multi-reference Subcategories: **works**
+- Scrubs works cleanly as one shared filter across Tops and Bottoms
+- Sustainable works cleanly as a reusable filter
+- Fixed ten Industries: **works for 71 / 81 products**
+- Unresolved Industry assignment: **10 Promotional Merchandise products**
+- Services can be removed safely from this batch
+- Asset coverage: **66 / 81 usable**
+- Genuinely new products contributed: **62**
+- Cumulative unique products reconciled through source row 400: **329**
+- No Webflow changes were made during this reconciliation pass
