@@ -1028,3 +1028,245 @@ One QA issue was caught and fixed:
 - Webflow Gender was corrected to **Female**
 
 No Outerwear Product was published.
+
+
+---
+
+## 2026-09-21 — Polos source audit and Webflow import
+
+Source: `Product (Polos)-Grid view.csv`
+
+Asset inventory: `Total Image Product Assets`
+
+### Summary
+
+- Source rows: **40**
+- Non-empty unique SKUs: **39**
+- Duplicate non-empty source SKUs: **0**
+- Blank-SKU source rows: **1**
+- Exact SKU asset matches with one clearly matching folder: **35**
+- Asset-SKU collision requiring manual review: **1**
+- High-confidence non-exact asset mapping used: **1**
+- Unresolved source products excluded: **3**
+- Products imported to Webflow: **37**
+- All imported items remain **drafts**
+- Nothing was published
+- Images were not attached because the Product image schema is still pending
+
+### Blank-SKU source product — excluded
+
+One source row has no SKU:
+
+- **Men's City Polo**
+
+No reliable asset-folder mapping could be established without inventing a SKU.
+
+**Current handling:** do not import this product until the client confirms the correct SKU / asset relationship.
+
+### High-confidence manual asset mapping
+
+#### `N2306` — Keira Ladies' Polos
+
+Mapped asset folder:
+
+`N2306 → 2306_KEIRA_LADIES_POLOS`
+
+Reason:
+
+- exact product-name match
+- numeric SKU component `2306` matches
+- asset folder appears to omit the source prefix `N`
+
+**Status:** high-confidence mapping used for this import.
+
+### Asset-SKU collision: `2151`
+
+Source product:
+
+- `2151 — Silvertech Polo - Ladies`
+
+Two asset folders begin with the same numeric SKU:
+
+- `2151_SILVERTECH_POLO_LADIES`
+- `2151_EZYLIN_TUNIC`
+
+Only `2151_SILVERTECH_POLO_LADIES` matches the source Product Name and product type.
+
+**Import handling:** `2151_SILVERTECH_POLO_LADIES` is treated as the valid product asset folder. `2151_EZYLIN_TUNIC` is recorded as an asset-SKU collision and is not associated with the Polo product.
+
+No folder was deleted or renamed.
+
+### Unresolved products — excluded from Webflow
+
+The following source products were intentionally left out because no reliable asset mapping was available:
+
+- `2053 — Silvertech Polo - Men's`
+- `1061 — Freshen Polo Men's`
+- blank SKU — **Men's City Polo**
+
+No approximate or opposite-product assets were reused.
+
+### Product taxonomy
+
+Product Category:
+
+- **Polos**
+
+The category reuses the existing shared subcategories:
+
+- **Short Sleeve**
+- **Long Sleeve**
+
+The existing Short Sleeve / Long Sleeve subcategory records now reference both **Hi Vis & Workwear** and **Polos** where applicable.
+
+No duplicate sleeve subcategories were created.
+
+### Industry normalisation
+
+The source value:
+
+- `Teamwear and Fitness`
+
+is mapped to the existing Webflow Industry:
+
+- **Teamwear & Fitness**
+
+All other source Industry Reference values were mapped to their existing Webflow Industry items.
+
+### Colour canonicalisation
+
+The Polos source contains a large number of specific colour strings.
+
+Obvious duplicate spellings / formatting variants were normalised before references were created, including:
+
+- `mid blue/navy` → **Mid Blue/Navy**
+- `Nordic blue/ Navy` → **Nordic Blue/Navy**
+- `Royal Blue-Navy` → **Royal Blue/Navy**
+- `black/silver` → **Black/Silver**
+- `orange` → existing **Orange**
+
+### New colour creation
+
+The staged colour import initially created **89** Color items.
+
+During final QA, four exact duplicate Color names were detected because they had been included in two split creation passes:
+
+- **Nordic Blue/Navy**
+- **Ocean Blue**
+- **Ocean Blue/Silver**
+- **Ocean Marle**
+
+The newer duplicate items were deleted before completion.
+
+**Net new unique Colors retained from Set 6: 85.**
+
+Final QA confirmed there are **no exact duplicate Color names** remaining in the Colors collection.
+
+### Color Family relationships
+
+Color Family links were populated conservatively.
+
+A family was assigned only where the family name is explicitly represented in the specific colour name, for example:
+
+- **Royal Blue/Navy → Blue + Navy**
+- **Red/White → Red + White**
+- **Black/Charcoal → Black + Charcoal**
+- **Green/Navy → Green + Navy**
+- **Hot Pink/White → Pink + White**
+- **steel grey/black/white → Grey + Black + White**
+
+Colours whose broader family would require interpretation rather than explicit evidence were left without an inferred family.
+
+Both directions were updated:
+
+- **Color → Color Families**
+- **Color Family → Colors**
+
+### Source-data discrepancy requiring client confirmation
+
+#### `TW1825 — Women's Signature Long Sleeve Polo`
+
+The Product Name says:
+
+- **Women's Signature Long Sleeve Polo**
+
+but the source `GENDER` field says:
+
+- **Men's**
+
+The Webflow import currently preserves the source Gender value rather than silently correcting it.
+
+**Client confirmation required:** confirm whether `TW1825` should be **Female**.
+
+### Import execution
+
+The 37 eligible products were imported in controlled batches:
+
+- Batch 1: **10**
+- Batch 2: **10**
+- Batch 3: **10**
+- Batch 4: **7**
+
+Batch 1:
+
+- `TW1822`
+- `BP2616LS`
+- `TW1823`
+- `P400MS`
+- `TW1825`
+- `P400LS`
+- `BP2610MS`
+- `1062`
+- `TW1824`
+- `P105MS`
+
+Batch 2:
+
+- `1064`
+- `BP2616MS`
+- `1164`
+- `N2306`
+- `2LPS`
+- `P901MS`
+- `P112LS`
+- `P700LS`
+- `P112MS`
+- `P400ML`
+
+Batch 3:
+
+- `1054`
+- `210XL`
+- `210`
+- `1154`
+- `PS91`
+- `PS92`
+- `P400LL`
+- `1161`
+- `P227LS`
+- `P901LS`
+
+Batch 4:
+
+- `2151`
+- `2LCP`
+- `BP2610LS`
+- `P227MS`
+- `1143`
+- `1043`
+- `1162`
+
+### Final Webflow QA
+
+Final read-back confirms:
+
+- **37** Polos Products exist
+- all **37 are drafts**
+- no Product is missing Gender
+- no Product is missing Category
+- no Product is missing Colors
+- no Product is missing Subcategories
+- no exact duplicate Color names remain
+
+The `TW1825` Gender discrepancy remains intentionally unresolved pending client confirmation.
+
