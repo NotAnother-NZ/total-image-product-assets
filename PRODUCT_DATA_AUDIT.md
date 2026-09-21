@@ -844,3 +844,187 @@ Final Webflow QA confirmed all 50 imported Products have:
 - draft status
 
 No Set 4 Product was published.
+
+
+---
+
+## 2026-09-21 — Outerwear source audit and Webflow import
+
+Source: `Product (Outerwear)-Grid view.csv`
+
+Asset inventory: `Total Image Product Assets`
+
+### Summary
+
+- Source rows: **56**
+- Unique SKUs after source deduplication: **52**
+- Duplicate source SKUs: **4**
+- Exact asset-folder matches: **42**
+- High-confidence non-exact asset mapping used: **1**
+- Unresolved SKUs excluded: **9**
+- Duplicate asset-folder cases among source SKUs: **12**
+- Products imported to Webflow: **43**
+- All imported items remain **drafts**
+- Nothing was published
+- Images were not attached because the Product image schema is still pending
+
+### Duplicate source SKUs merged
+
+The following SKUs appeared twice in the source and were merged to one Product record per SKU:
+
+- `CO342LJ` — Nova Women's Knit Jacket
+- `CO342MJ` — Nova Men's Knit Jacket
+- `CO343LV` — Nova Women's Knit Vest
+- `CO343MV` — Nova Men's Knit Vest
+
+Merge handling:
+
+- retained one Product per SKU
+- combined non-conflicting reference/taxonomy values
+- retained the more complete Description / Fabric / Size Range values
+- `CO342MJ` contained different Industry Reference coverage across the duplicate rows; the merged record preserves the full supported set
+- `CO343LV` remained excluded because its asset match is unresolved
+
+### Approved high-confidence manual asset mapping
+
+#### `CH230ML-BIZ` — Al Dente Men's Chef Jacket
+
+Mapped asset folder:
+
+`CH230ML-BIZ → CH230ML_AL_DENTE_MEN'S_CHEF_JACKET`
+
+Reason:
+
+- same base SKU `CH230ML`
+- exact product-name match
+- the source SKU adds the `-BIZ` suffix only
+
+**Status:** high-confidence mapping used for this import.
+
+### Unresolved asset SKUs — excluded from Webflow
+
+The following 9 products were intentionally not imported because no exact or sufficiently reliable asset mapping was available:
+
+- `1513` — Men's Olympus Soft Shell Jacket
+- `CO343LV` — Nova Women's Knit Vest
+- `J213L` — Expedition Women's Vest
+- `J29123` — Ladies Soft Shell Vest
+- `J830M` — Men's Apex Vest
+- `JK63` — Men's Sustainable Softshell Corporate Jacket
+- `LP618L` — Ladies Milano Pullover
+- `RJP266M` — Osaka Men's Pineapple Knit Jumper
+- `WV619M` — Men's Milano Vest
+
+No opposite-gender or merely similar product asset folder was reused for any of these products.
+
+### Duplicate asset folders
+
+These were recorded only. No folders were deleted, merged or renamed.
+
+| SKU | Duplicate asset folders |
+| --- | --- |
+| `2513` | `2513_LADIES_OLYMPUS_SOFT_SHELL_JACKET`; `2513_OLYMPUS_LADY_JACKETS` |
+| `BJ2602L` | `BJ2602L_TAILOR_WOMENS_JACKET`; `BJ2602L_WOMEN'S_TAILOR_JACKET` |
+| `CH232ML` | `CH232ML_ZEST_MENS_LS_CHEF_JACKET`; `CH232ML_ZEST_MENS_LS_CHEF_JACKET (1)` |
+| `CO342LJ` | `CO342LJ_NOVA_WOMEN'S_KNIT_JACKET`; `CO342LJ_NOVA_WOMENS_ZIP_FRONT_JUMPER` |
+| `CO343MV` | `CO343MV_NOVA_MEN'S_KNIT_VEST`; `CO343MV_NOVA_MEN'S_ZIP_FRONT_VEST`; `CO343MV_NOVA_MENS_ZIP_FRONT_VEST` |
+| `J211L` | `J211L_ALPINE_LADIES_PUFFER_VEST`; `J211L_ALPINE_WOMENS_VEST` |
+| `J307L` | `J307L_GENEVA_WOMENS_JACKET`; `J307L_LADIES_GENEVA_JACKET` |
+| `J510M` | `J510M_CHARGER_UNISEX_JACKET`; `J510M_UNISEX_CHARGER_JACKET` |
+| `J740L` | `J740L_APEX_WOMENS_JACKET`; `J740L_LADIES_APEX_LIGHTWEIGHT_SOFTSHELL_JACKET` |
+| `J750M` | `J750M_EXPEDITION_MENS_JACKET`; `J750M_MEN'S_EXPEDITION_QUILTED_JACKET` |
+| `TW1827` | `TW1827_MEN'S_CREW_PULLOVER`; `TW1827_MENS_CREW_PULLOVER` |
+| `WP417M` | `WP417M_MEN'S_MILANO_PULLOVER`; `WP417M_MILANO_MENS_PULLOVER` |
+
+### Product taxonomy created
+
+Product Category:
+
+- **Outerwear**
+
+Subcategories:
+
+- **Jackets**
+- **Knitwear**
+- **Soft Shells**
+- **Puffers**
+- **Chef Jackets**
+- **Fleece**
+- **Vests** — reused from the existing shared subcategory
+
+Source naming was normalised:
+
+- `Soft Shell` → **Soft Shells**
+- `Soft Shells` → **Soft Shells**
+- `Chef Jacket` → **Chef Jackets**
+
+The existing **Vests** subcategory is now shared between **Hi Vis & Workwear** and **Outerwear**, avoiding duplicate taxonomy items.
+
+### New specific Colors created
+
+- **Asphalt Marle/Black**
+- **Black Marle**
+- **Black/Red**
+- **Brick**
+- **Cyan**
+- **Grey Smoke**
+- **Ink Blue**
+- **Navy Marle**
+- **Sky Blue**
+- **White/Black**
+- **black/cyan**
+- **black/fluoro orange/grey**
+- **black/graphite**
+- **black/green/grey**
+- **black/purple/grey**
+- **black/red/grey**
+- **black/royal/grey**
+- **navy/graphite**
+
+### Color Family relationships
+
+Only clear relationships were assigned:
+
+- **Asphalt Marle/Black → Black**
+- **Black Marle → Black**
+- **Black/Red → Black + Red**
+- **Grey Smoke → Grey**
+- **Ink Blue → Blue**
+- **Navy Marle → Navy**
+- **Sky Blue → Blue**
+- **White/Black → White + Black**
+- **black/cyan → Black**
+- **black/fluoro orange/grey → Black + Orange + Grey**
+- **black/graphite → Black**
+- **black/green/grey → Black + Green + Grey**
+- **black/purple/grey → Black + Purple + Grey**
+- **black/red/grey → Black + Red + Grey**
+- **black/royal/grey → Black + Grey**
+- **navy/graphite → Navy**
+
+**Brick** and **Cyan** were intentionally left without a Color Family rather than assuming Red or Blue.
+
+### Import execution
+
+The 43 eligible products were imported in controlled batches:
+
+- Batch 1: **10**
+- Batch 2: **10**
+- Batch 3: **10**
+- Batch 4: **10**
+- Batch 5: **3**
+
+Final QA confirmed all 43 products have:
+
+- Product Category
+- at least one Product Subcategory
+- at least one Color
+- draft status
+
+One QA issue was caught and fixed:
+
+- `J750L — Ladies Expedition Quilted Jacket` initially imported without Gender
+- source confirms **Women's**
+- Webflow Gender was corrected to **Female**
+
+No Outerwear Product was published.
