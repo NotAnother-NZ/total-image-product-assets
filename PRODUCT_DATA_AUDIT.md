@@ -81,13 +81,13 @@ The two records contain slightly different wording in the Description field.
 
 **Import handling:** create **one** Webflow Product item for SKU `A33`, not two.
 
-For deduplication, the first source occurrence is treated as the canonical row unless a later duplicate contains a value missing from the first. Missing values may be filled from another duplicate, but conflicting non-empty values are not silently overwritten. In this case, the first Description is retained and the duplicate wording is recorded here rather than creating a second product.
+For deduplication, the first source occurrence is treated as the canonical row unless a later duplicate contains a value missing from the first. Missing values may be filled from another duplicate. Where both rows contain non-empty Description values, the longer Description is retained so information is not discarded. This merge rule was applied during the Webflow import.
 
 ### Manual mapping status
 
 | Source SKU | Proposed asset folder | Status |
 | --- | --- | --- |
-| `AS1130` | `1130_ACCESS_CAP` | **Awaiting approval** |
+| `AS1130` | `1130_ACCESS_CAP` | **Approved and used for import** |
 | `BB248M` | `RA972L_WOMEN'S_BELT` | **Unresolved — low-confidence candidate only** |
 | `RA572M` | `RA972L_WOMEN'S_BELT` | **Unresolved — low-confidence candidate only** |
 | `99300` | `RA972L_WOMEN'S_BELT` | **Unresolved — low-confidence candidate only** |
@@ -109,3 +109,100 @@ The Webflow schema has therefore been updated to:
 - **Products → Colors:** multi-reference
 
 This preserves the specific product colour while supporting filtering/grouping by every relevant broad colour family.
+
+
+---
+
+## 2026-09-21 — Accessories Webflow import
+
+The first Accessories batch has now been imported into the Total Image Webflow CMS as **draft content only**. Nothing from this import was published.
+
+### Import result
+
+- Source rows reviewed: **47**
+- Unique source SKUs after deduplication: **46**
+- Products imported to Webflow: **39**
+- Duplicate source SKU merged before import: **A33**
+- High-confidence manual SKU mapping approved and used: **AS1130 → 1130_ACCESS_CAP**
+- Unresolved unmatched SKUs excluded from this import: **7**
+- Images were **not** imported or attached because the Product image schema is still pending.
+
+### Unmatched SKUs excluded
+
+The following products were intentionally left out of Webflow until their asset mapping can be confirmed:
+
+- `BB248M` — Men's Standard Belt
+- `RA572M` — Men's Leather Belt
+- `99300` — Men's Leather Reversible Belt
+- `H1026` — Slouch Hat With Break-Away Clip Strap
+- `HB004` — Manhattan Chef Beanie
+- `CH333` — Mesh Flat Top Hat
+- `BA93` — Continental Style Full Length Apron
+
+No low-confidence candidate folder was used for any of these products.
+
+### Approved manual SKU mapping
+
+#### `AS1130` — Access Cap
+
+Approved asset mapping:
+
+`AS1130 → 1130_ACCESS_CAP`
+
+Reason:
+
+- Exact product-name match: **Access Cap**
+- Same numeric SKU: **1130**
+- The asset-folder naming appears to omit the supplier prefix `AS`
+
+This product was included in the Webflow Product import.
+
+### Source-data discrepancy: SKU `3980`
+
+Product: **Recycled Breathable Poly Twill Cap**
+
+The source field `Extra Filter Reference` contains:
+
+`Accessories,Aprons`
+
+This conflicts with the product type, which is clearly headwear/cap rather than an apron.
+
+**Import handling:** the Product itself was imported, but its Product Subcategory was intentionally left unset. The source value was not silently corrected.
+
+This remains a client/source-data issue to confirm before assigning a subcategory.
+
+### Product taxonomy created
+
+The following supporting CMS data was created:
+
+- Product Category: **Accessories**
+- Product Subcategories:
+  - **Headwear**
+  - **Aprons**
+  - **Belts**
+
+Products were linked to their supported subcategories, except SKU `3980` as documented above.
+
+### Colour data imported
+
+Supporting colour taxonomy created from the Accessories source:
+
+- **70 specific Colors**
+- **17 Color Families**
+
+Products reference specific Colors directly.
+
+Color Family relationships were only populated where the family was explicitly supported by the specific colour name. For example:
+
+- `Navy/White → Navy + White`
+- `Navy/Brown → Navy + Brown`
+- `Indigo Blue → Blue`
+
+Ambiguous specific colours were left without a family relationship rather than guessed.
+
+### Hex field schema
+
+The `Hex Code` field on both **Colors** and **Color Families** has been changed from Plain Text to Webflow's native **Color** field type.
+
+At the time of replacement, all existing Hex Code values were empty, so no colour values were lost.
+
