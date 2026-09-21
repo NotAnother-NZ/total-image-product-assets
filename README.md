@@ -1,0 +1,1 @@
+# total-image-product-assets
