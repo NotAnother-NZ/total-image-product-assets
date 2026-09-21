@@ -380,3 +380,69 @@ The Bottoms source provides enough evidence to add these broader family relation
 
 Existing Color Family relationships were preserved. Because Colors support multiple Color Families, this means a specific colour such as **Stone** can retain its existing family relationship while also being grouped under **Brown** where this source explicitly does so.
 
+
+
+---
+
+## 2026-09-21 — First Nations source audit — pending client confirmation
+
+Source: `Product (First Nations)-Grid view.csv`
+
+### Summary
+
+- Source rows: **14**
+- Unique product SKUs: **14**
+- Duplicate source SKUs: **0**
+- Source Product Category / filters: **Polos → Short Sleeve → First Nations**
+- Source Industry Reference: **First Nations** on all 14 rows
+- Webflow import status: **Not imported**
+- Reason: the meaning of `First Nations` in the source taxonomy needs client confirmation before creating or assigning CMS taxonomy.
+
+### Why this set was paused
+
+The source uses `First Nations` in two places:
+
+- `Extra Filter Reference`: `Polos,Short Sleeve,First Nations`
+- `Industry Reference`: `First Nations`
+
+However, `First Nations` does not appear to represent an industry in the same sense as the existing Webflow Industries such as Corporate, Hospitality, Healthcare, Retail, Government, or Workwear & Hi-Vis.
+
+In an Australian context, **First Nations** is an umbrella term referring to Aboriginal and Torres Strait Islander peoples. The products in this source also appear to be culturally themed apparel featuring First Nations artwork / artist collaborations.
+
+Because of that, creating **First Nations** as a Webflow Industry would risk mixing a cultural/community classification with commercial industry verticals.
+
+### Current recommendation
+
+Do **not** create a `First Nations` Industry and do **not** import this batch until the client confirms the intended taxonomy.
+
+The likely alternatives are:
+
+1. Treat **First Nations** as a product tag / filter / collection rather than an Industry.
+2. Treat the products normally as **Polos → Short Sleeve**, with a separate `First Nations` attribute for cultural/artwork classification.
+3. If the client explicitly confirms that they intentionally use `First Nations` as an Industry in their product taxonomy, retain it as supplied.
+
+No assumption has been made yet.
+
+### Source observations
+
+- All 14 products are polo shirts.
+- All 14 rows use `Polos,Short Sleeve,First Nations`.
+- All 14 rows use `First Nations` as the Industry Reference.
+- There are no duplicate SKUs in this source.
+- Supplier information is mostly blank in the CSV; one row explicitly lists **Yarn Corp**.
+- Product names include artwork/design ranges such as:
+  - A Bright Future
+  - Family
+  - Future Dreaming
+  - Guiding Light
+  - Knowledge Holders
+  - Legacy
+  - Mountains
+
+### Client confirmation required
+
+Ask the client:
+
+> We noticed the First Nations product set is tagged as `First Nations` under both filters and Industry. We currently treat Industry as commercial sectors such as Corporate, Hospitality, Healthcare, Retail, etc. Should `First Nations` genuinely be treated as an Industry on the website, or is it intended as a product collection/filter for First Nations artwork and designs?
+
+Until this is confirmed, this set remains intentionally unimported.
