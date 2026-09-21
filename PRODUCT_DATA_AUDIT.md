@@ -648,3 +648,199 @@ After the five import batches completed, the Hi Vis & Workwear category was chec
 
 The category's reverse Subcategories relationship was also populated.
 
+
+
+---
+
+## 2026-09-21 — Hi Vis & Workwear source audit and Webflow import
+
+Source: `Product (Hi Vis & Workwear)-Grid view.csv`
+
+Asset inventory: `Total Image Product Assets`
+
+### Summary
+
+- Source rows: **90**
+- Unique product SKUs after deduplication / blank-SKU reconciliation: **65**
+- Duplicate non-empty source SKUs: **24**
+- Blank-SKU source rows: **1**
+- Exact asset-folder matches: **50**
+- Unresolved SKUs without an exact asset-folder match: **15**
+- Duplicate asset folders among exact matches: **0**
+- Products imported to Webflow: **50**
+- Products intentionally excluded from import: **15**
+- All imported Webflow items remain **drafts**. Nothing was published.
+- Images were **not** attached because the Product image schema is still pending.
+
+### Duplicate source SKUs merged
+
+The following source SKUs occurred more than once and were merged into one Product record per SKU before import:
+
+- `ZW460`
+- `ZW765`
+- `ZW468`
+- `ZW465`
+- `ZW760`
+- `ZW121`
+- `ZW120`
+- `ZWL120`
+- `SW19A`
+- `6HVSZ`
+- `6HVSV`
+- `ZP820`
+- `ZV245`
+- `ZT210`
+- `BPC6008`
+- `ZP504`
+- `ZP230`
+- `ZP730`
+- `ZP735`
+- `ZP935`
+- `BPC6088T`
+- `ZP923`
+- `ZP733`
+- `BPC6334T`
+
+Merge rule:
+
+- keep one Product per SKU
+- combine non-conflicting category/filter/reference values
+- retain the most complete Description / Fabric / Size Range values
+- do not create duplicate Webflow Products for repeated Airtable rows
+
+### Blank-SKU source row
+
+One source row had no SKU:
+
+- **Women's Outdoor Long Sleeve Shirt**
+
+The row is the same product as the existing source product:
+
+- `ZW760 — Women's Outdoor L/S Shirt`
+
+The blank-SKU row was therefore folded into the `ZW760` source record rather than imported as a separate Product.
+
+This reconciliation was based on the matching product identity and overlapping source data; no new SKU was invented.
+
+### Unresolved asset SKUs — excluded from Webflow
+
+The following 15 SKUs do not have an exact asset-folder match and were intentionally not imported:
+
+- `6HVSZ`
+- `ZJ240`
+- `ZT210`
+- `ZT867`
+- `BJ6078T`
+- `BJ6766T`
+- `ZJ532`
+- `ZJ616`
+- `ZJ553`
+- `ZJ770`
+- `ZV228`
+- `ZT476`
+- `ZT640`
+- `ZT462`
+- `6HVPF`
+
+**Current handling:** no approximate asset mapping has been used for these products. They remain pending manual review / client confirmation.
+
+### Product taxonomy created
+
+Product Category:
+
+- **Hi Vis & Workwear**
+
+Subcategories used for this category:
+
+- **Workwear**
+- **Hi Vis**
+- **Pants**
+- **Shirts**
+- **Long Sleeve**
+- **Short Sleeve**
+- **Safety Vests**
+- **Shorts**
+- **Vests**
+
+Source naming was normalised before import:
+
+- `Shirt` → **Shirts**
+- `Shirts` → **Shirts**
+- `Vest` / `Vests` → **Vests**
+- `Safety Vest` → **Safety Vests**
+
+### Shared subcategory correction
+
+**Pants** and **Shorts** already existed from the Bottoms taxonomy.
+
+During the first support-data pass, duplicate Pants / Shorts subcategory records were temporarily created for Hi Vis & Workwear.
+
+This was corrected before completion:
+
+- all Set 4 Product references were moved to the existing shared **Pants** / **Shorts** items
+- the shared subcategories now reference both **Bottoms** and **Hi Vis & Workwear**
+- the temporary duplicate Pants / Shorts items were deleted
+
+The CMS therefore retains one canonical reusable subcategory item for each shared taxonomy value.
+
+### Colors added for imported products
+
+New specific Colors retained for the 50 imported products:
+
+- **Lt Blue**
+- **Orange/Charcoal**
+- **Orange/Navy**
+- **Pea Green**
+- **Pink/Navy**
+- **Vic Rail Orange**
+- **Yellow/Bottle**
+- **Yellow/Charcoal**
+- **Yellow/Navy**
+- **Green**
+- **Yellow**
+
+The following Colors were initially encountered in the full source but only belonged to unresolved / excluded products. They were removed again so unused data was not left in the CMS:
+
+- `Charcoal Blue`
+- `Lime/Black`
+- `Lime/Navy`
+- `Lime/Purple`
+- `Orange/Black`
+
+### Color Family relationships added
+
+Only clear, defensible family relationships were added:
+
+- **Lt Blue → Blue**
+- **Orange/Charcoal → Orange + Charcoal**
+- **Orange/Navy → Orange + Navy**
+- **Pea Green → Green**
+- **Pink/Navy → Pink + Navy**
+- **Vic Rail Orange → Orange**
+- **Yellow/Bottle → Yellow**
+- **Yellow/Charcoal → Yellow + Charcoal**
+- **Yellow/Navy → Yellow + Navy**
+- **Green → Green**
+- **Yellow → Yellow**
+
+No extra family was inferred for **Bottle** in `Yellow/Bottle`; only the explicit **Yellow** relationship was applied.
+
+### Import execution
+
+The 50 eligible Products were imported in five controlled batches:
+
+- Batch 1: **10**
+- Batch 2: **10**
+- Batch 3: **10**
+- Batch 4: **10**
+- Batch 5: **10**
+
+Final Webflow QA confirmed all 50 imported Products have:
+
+- Product Category
+- at least one Product Subcategory
+- Gender
+- at least one Color
+- draft status
+
+No Set 4 Product was published.
