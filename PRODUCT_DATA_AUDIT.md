@@ -446,3 +446,41 @@ Ask the client:
 > We noticed the First Nations product set is tagged as `First Nations` under both filters and Industry. We currently treat Industry as commercial sectors such as Corporate, Hospitality, Healthcare, Retail, etc. Should `First Nations` genuinely be treated as an Industry on the website, or is it intended as a product collection/filter for First Nations artwork and designs?
 
 Until this is confirmed, this set remains intentionally unimported.
+
+### Asset coverage
+
+The First Nations/Yarn source was also checked against the product asset inventory.
+
+Asset-folder coverage:
+
+- **8 of 14 source SKUs have a high-confidence corresponding asset folder**
+- **6 of 14 source SKUs do not have a separate matching asset folder**
+
+High-confidence mappings:
+
+| Source SKU | Asset folder | Status |
+| --- | --- | --- |
+| `BRIGHT-YARN` | `BRIGHT_YARN_A_BRIGHT_FUTURE_ESSENCE_POLO_SHIRT` | High confidence |
+| `BRIGHT-YARN- UNISEX` | `BRIGHT_YARN_UNISEX_A_BRIGHT_FUTURE_ESSENCE_POLO_SHIRT` | High confidence |
+| `FAMILY-YARN-UNISEX` | `FAMILY_YARN_UNISEX_FAMILY_BLACK_BAMBOO_(SIMPSON)_POLO_SHIRT` | High confidence |
+| `FUTURE-YARN-UNISEX` | `FUTURE_YARN_UNISEX_FUTURE_DREAMING_ESSENCE_POLO_SHIRT` | High confidence |
+| `GUIDING-YARN- UNISEX` | `GUIDING_YARN_UNISEX_GUIDING_LIGHT_BLACK_BAMBOO_(SIMPSON)_POLO_SHIRT` | High confidence |
+| `KNOWLEDGE-YARN-UNISEX` | `KNOWLEDGE_YARN_UNISEX_KNOWLEDGE_HOLDERS_BLACK_BAMBOO_(SIMPSON)_POLO_SHIRT` | High confidence |
+| `LEGACY-YARN-UNISEX` | `LEGACY_YARN_UNISEX_LEGACY_POLO_SHIRT` | High confidence |
+| `MOUNTAINS-YARN-UNISEX` | `MOUNTAINS_YARN_UNISEX_MOUNTAINS_WHITE_BAMBOO_(SIMPSON)_POLO_SHIRT` | High confidence |
+
+Source SKUs without a separate matching asset folder:
+
+- `FAMILY-YARN`
+- `FUTURE-YARN`
+- `GUIDING-YARN`
+- `KNOWLEDGE-YARN`
+- `LEGACY-YARN`
+- `MOUNTAINS-YARN`
+
+For these six products, only the corresponding **Unisex** asset folder was found.
+
+**Current handling:** do not automatically reuse the Unisex imagery for the non-Unisex / women's source products. That relationship needs client confirmation before images are assigned.
+
+This is a second reason the First Nations batch remains intentionally paused alongside the taxonomy question.
+
