@@ -2953,3 +2953,189 @@ Usable asset coverage:
 The unresolved asset list includes whole ranges such as Promotional Merchandise and Shoes, along with individual missing products documented within each batch above.
 
 No approximate, opposite-gender, or materially different SKU assets were silently reused.
+
+
+---
+
+## 2026-09-21 — Webflow taxonomy migration — Phase 1 complete
+
+Phase 1 applies the fully reconciled Product Category / Product Subcategory model to Webflow without modifying Product records or Industry records.
+
+No Webflow content was published.
+
+### Final Product Category model prepared
+
+The approved Figma Product Categories remain:
+
+- Tops
+- Bottoms
+- Outerwear
+- Suiting
+- Workwear & Hi-vis
+- Shoes
+- Accessories
+
+Existing Category IDs were preserved wherever possible.
+
+Created:
+
+- `Tops` — `6ab1732da726ca8bc447360d`
+- `Suiting` — `6ab1732da726ca8bc447360f`
+- `Shoes` — `6ab1732da726ca8bc4473611`
+
+Existing `Hi Vis & Workwear` was renamed at display-name level to:
+
+- `Workwear & Hi-vis` — `6ab0e6ea3a3089f25d442c8b`
+
+Its existing slug `hi-vis-and-workwear` was deliberately preserved to avoid unnecessary URL/reference churn.
+
+### Temporary legacy Polos Category retained
+
+The existing top-level `Polos` Product Category:
+
+- `6ab0fa5cdbef6205f444d8af`
+
+was **not deleted** during Phase 1.
+
+It still has **37 existing Product records** referencing it.
+
+Deleting or replacing it before those Products are migrated would break existing CMS references.
+
+The final replacement taxonomy is already prepared:
+
+- Product Category: `Tops`
+- Product Subcategory: `Polos` — `6ab1732f0d0745026f786442`
+
+During the later Product repair phase, all 37 existing Polo Products will be moved to Tops and given the Polos Subcategory. Only after zero Products reference the legacy category should the old Polos Category be removed.
+
+Therefore the Product Categories collection temporarily contains **8 records** during the transition: the final seven plus the legacy Polos record.
+
+### New reusable Product Subcategories created
+
+Created:
+
+- `Polos`
+- `First Nations`
+- `Tees`
+- `Scrubs`
+- `Tunics`
+- `3/4 Sleeve`
+- `Sustainable`
+- `Promotional Merchandise`
+- `Drinkware`
+- `Bags`
+- `Pens`
+- `Notebooks`
+- `Blazers`
+- `Trousers`
+- `Dresses`
+
+The Product Subcategories collection now contains **35 unique records**.
+
+### Two-way Category ↔ Subcategory relationships
+
+Category and Subcategory references were explicitly synced in both directions.
+
+#### Tops
+
+- Polos
+- Shirts
+- Tees
+- Scrubs
+- Tunics
+- First Nations
+- Sustainable
+- Short Sleeve
+- Long Sleeve
+- 3/4 Sleeve
+
+#### Bottoms
+
+- Pants
+- Shorts
+- Skirts
+- Chinos
+- Scrubs
+- Sustainable
+
+#### Outerwear
+
+- Jackets
+- Vests
+- Knitwear
+- Soft Shells
+- Puffers
+- Fleece
+- Chef Jackets
+- Sustainable
+
+#### Suiting
+
+- Blazers
+- Trousers
+- Skirts
+- Dresses
+- Sustainable
+
+#### Workwear & Hi-vis
+
+- Workwear
+- Hi Vis
+- Shirts
+- Pants
+- Shorts
+- Safety Vests
+- Jackets
+- Vests
+- Long Sleeve
+- Short Sleeve
+- Sustainable
+
+#### Shoes
+
+No source-supported Product Subcategory is currently required. The Category intentionally has no Subcategory references.
+
+#### Accessories
+
+- Headwear
+- Aprons
+- Belts
+- Sustainable
+- Promotional Merchandise
+- Drinkware
+- Bags
+- Pens
+- Notebooks
+
+### Reusable filter relationships confirmed
+
+The following shared-filter relationships are now represented directly in Webflow:
+
+- `Scrubs` → Tops + Bottoms
+- `Sustainable` → Tops + Bottoms + Outerwear + Suiting + Workwear & Hi-vis + Accessories
+- `Shirts` → Tops + Workwear & Hi-vis
+- `Short Sleeve` → Tops + Workwear & Hi-vis + temporary legacy Polos
+- `Long Sleeve` → Tops + Workwear & Hi-vis + temporary legacy Polos
+- `Pants` → Bottoms + Workwear & Hi-vis
+- `Shorts` → Bottoms + Workwear & Hi-vis
+- `Skirts` → Bottoms + Suiting
+- `Jackets` → Outerwear + Workwear & Hi-vis
+- `Vests` → Outerwear + Workwear & Hi-vis
+
+The temporary legacy Polos relationship on Short Sleeve / Long Sleeve exists only to preserve reciprocal integrity while the existing Polo Product records still use that old Category.
+
+### Phase 1 QA
+
+Verified after writes:
+
+- Product Categories collection contains **8 records**: final seven + temporary legacy Polos
+- Product Subcategories collection contains **35 records**
+- all newly created Category/Subcategory items remain Draft
+- Category-side and Subcategory-side multi-references match the intended two-way taxonomy
+- Shoes remains intentionally without filters
+- legacy Polos Category still has **37 Product references**
+- no Product records were changed
+- no Industry records were changed
+- nothing was published
+
+Phase 1 is complete and safe for the Industry-normalisation / Product-repair phases that follow.
