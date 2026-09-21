@@ -1357,3 +1357,175 @@ During the Set 7 category check, an unused duplicate **Polos** Product Category 
 - unused duplicate Polos category was deleted
 
 No Product data was affected.
+
+
+---
+
+## 2026-09-21 — Full taxonomy reconciliation — Batch 1 (source rows 1–100)
+
+This is the first bounded reconciliation pass across the fresh 15-set product export.
+
+Scope:
+
+- **100 source rows**
+- Accessories: **47 rows**
+- Bottoms: **32 rows**
+- First Nations: **14 rows**
+- Hi Vis & Workwear: **first 7 rows**
+- After within-scope duplicate SKU merging: **96 unique products**
+
+This review did **not** modify Webflow.
+
+### Fixed Product Category model
+
+The approved seven Product Categories are treated as fixed:
+
+- Tops
+- Bottoms
+- Outerwear
+- Suiting
+- Workwear & Hi-vis
+- Shoes
+- Accessories
+
+All 96 unique products in this batch fit this model.
+
+Batch 1 category allocation:
+
+- **Accessories:** 46 products
+- **Bottoms:** 29 products
+- **Tops:** 14 products
+- **Workwear & Hi-vis:** 7 products
+
+No additional Product Category is required.
+
+### Reusable Product Subcategories / filters
+
+Subcategories are treated as reusable filter tags with two-way multi-reference relationships to Product Categories.
+
+Required by this batch:
+
+**Accessories**
+- Headwear
+- Aprons
+- Belts
+
+**Bottoms**
+- Pants
+- Shorts
+- Skirts
+- Chinos
+
+**Tops**
+- Polos
+- Short Sleeve
+- First Nations
+
+**Workwear & Hi-vis**
+- Workwear
+- Shirts
+- Long Sleeve
+- Short Sleeve
+
+Shared values such as **Short Sleeve** should exist once and be linked to every applicable Product Category.
+
+### Fixed Industry model
+
+Only the ten approved Figma Industries are considered valid:
+
+- Aged Care
+- Automotive
+- Workwear & Hi-Vis
+- Retail
+- Corporate
+- Hospitality
+- Healthcare
+- Education
+- Teamwear & Fitness
+- Government
+
+Within this batch:
+
+- **82 / 96 products** can be assigned entirely to those approved Industries.
+- **14 / 96 products** currently have no approved Industry assignment.
+
+Non-approved source values:
+
+- **Services** appears on 18 products.
+- **Beauty** appears on 11 products.
+
+Every product carrying Services or Beauty in this batch also has at least one approved Industry, so these two source values can be dropped without leaving those products Industry-less.
+
+The only unresolved Industry cases are the **14 First Nations products**, whose source Industry value is only `First Nations`.
+
+**Client decision required:** define which of the approved ten Industries should apply to the First Nations range, or confirm that these products may intentionally have no Industry.
+
+### Source duplicate SKUs
+
+Four SKUs occur more than once within the first 100 source rows:
+
+- `A33`
+- `BS724M`
+- `BS724L`
+- `BS022L`
+
+These should resolve to one Product per SKU, preserving the union of supported taxonomy/reference values and the most complete descriptive content.
+
+### Asset reconciliation
+
+Across the 96 unique products:
+
+- **72** have exact SKU-folder matches
+- **11** have high-confidence manual / naming-variant matches
+- **13** have no safe corresponding asset folder
+
+Usable asset coverage:
+
+- **83 / 96 products**
+- **86.5%**
+
+#### High-confidence non-exact mappings
+
+- `AS1130 → 1130_ACCESS_CAP`
+- `CA3P → CA3PSO_EZY_ PANT`
+- `RGS264L-BIZ → RGS264L_TRAVELLER_WOMEN'S_CHINO_SKIRT`
+- `BRIGHT-YARN → BRIGHT_YARN_A_BRIGHT_FUTURE_ESSENCE_POLO_SHIRT`
+- `BRIGHT-YARN- UNISEX → BRIGHT_YARN_UNISEX_A_BRIGHT_FUTURE_ESSENCE_POLO_SHIRT`
+- `FAMILY-YARN-UNISEX → FAMILY_YARN_UNISEX_FAMILY_BLACK_BAMBOO_(SIMPSON)_POLO_SHIRT`
+- `FUTURE-YARN-UNISEX → FUTURE_YARN_UNISEX_FUTURE_DREAMING_ESSENCE_POLO_SHIRT`
+- `GUIDING-YARN- UNISEX → GUIDING_YARN_UNISEX_GUIDING_LIGHT_BLACK_BAMBOO_(SIMPSON)_POLO_SHIRT`
+- `KNOWLEDGE-YARN-UNISEX → KNOWLEDGE_YARN_UNISEX_KNOWLEDGE_HOLDERS_BLACK_BAMBOO_(SIMPSON)_POLO_SHIRT`
+- `LEGACY-YARN-UNISEX → LEGACY_YARN_UNISEX_LEGACY_POLO_SHIRT`
+- `MOUNTAINS-YARN-UNISEX → MOUNTAINS_YARN_UNISEX_MOUNTAINS_WHITE_BAMBOO_(SIMPSON)_POLO_SHIRT`
+
+#### Products without safe asset matches
+
+Accessories:
+
+- `BB248M`
+- `RA572M`
+- `99300`
+- `H1026`
+- `HB004`
+- `CH333`
+- `BA93`
+
+First Nations:
+
+- `FAMILY-YARN`
+- `FUTURE-YARN`
+- `GUIDING-YARN`
+- `KNOWLEDGE-YARN`
+- `LEGACY-YARN`
+- `MOUNTAINS-YARN`
+
+For those six First Nations products, only corresponding Unisex asset folders were identified. Those images should not be reused for the non-Unisex products without client confirmation.
+
+### Batch 1 conclusion
+
+- Fixed seven Product Categories: **works**
+- Reusable multi-reference Subcategories: **works**
+- Fixed ten Industries: **works for 82 / 96 products**
+- Unresolved Industry assignment: **14 First Nations products**
+- Asset coverage: **83 / 96 usable**
+- No Webflow changes were made during this reconciliation pass
