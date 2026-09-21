@@ -1529,3 +1529,225 @@ For those six First Nations products, only corresponding Unisex asset folders we
 - Unresolved Industry assignment: **14 First Nations products**
 - Asset coverage: **83 / 96 usable**
 - No Webflow changes were made during this reconciliation pass
+
+
+---
+
+## 2026-09-21 — Full taxonomy reconciliation — Batch 2 (source rows 101–200)
+
+This is the second bounded reconciliation pass across the fresh 15-set product export.
+
+Scope:
+
+- **100 source rows**
+- Hi Vis & Workwear: source rows **8–90** = 83 rows
+- Outerwear: source rows **1–17** = 17 rows
+- Product identities after duplicate / blank-SKU reconciliation: **82**
+- Product identities already encountered in Batch 1: **7**
+- Genuinely new products added by this batch: **75**
+- Cumulative unique product identities after rows 1–200: **171**
+
+This review did **not** modify Webflow.
+
+### Cross-batch duplicate / reconciliation handling
+
+Seven Hi Vis & Workwear SKUs in this batch are second occurrences of products already seen in Batch 1:
+
+- `ZW460`
+- `ZW765`
+- `ZW468`
+- `ZW465`
+- `ZW760`
+- `ZW121`
+- `ZW120`
+
+Their Batch 2 rows should merge into the existing product identity rather than create new products.
+
+One additional blank-SKU row appears in this batch:
+
+- **Women's Outdoor Long Sleeve Shirt**
+
+This is the same product identity as `ZW760` and should be folded into that record rather than treated as a separate product.
+
+Within Batch 2 itself, 17 additional non-empty SKUs occur twice:
+
+- `ZWL120`
+- `SW19A`
+- `6HVSZ`
+- `6HVSV`
+- `ZP820`
+- `ZV245`
+- `ZT210`
+- `BPC6008`
+- `ZP504`
+- `ZP230`
+- `ZP730`
+- `ZP735`
+- `ZP935`
+- `BPC6088T`
+- `ZP923`
+- `ZP733`
+- `BPC6334T`
+
+These resolve to one product per SKU, preserving the union of supported source values.
+
+### Fixed Product Category model
+
+The approved seven Product Categories remain sufficient.
+
+Batch 2 allocation:
+
+- **Workwear & Hi-vis:** 65 product identities
+- **Outerwear:** 17 product identities
+
+No additional top-level Product Category is required.
+
+### Reusable Product Subcategories / filters
+
+Subcategories continue to be treated as reusable filter tags with two-way Product Category relationships.
+
+Required by Batch 2:
+
+**Workwear & Hi-vis**
+- Workwear
+- Hi Vis
+- Shirts
+- Pants
+- Shorts
+- Jackets
+- Vests
+- Safety Vests
+- Long Sleeve
+- Short Sleeve
+
+**Outerwear**
+- Jackets
+- Soft Shells
+- Puffers
+- Knitwear
+- Chef Jackets
+
+Source normalisation applied conceptually:
+
+- `Shirt` → **Shirts**
+- `Vest` / `Vests` → **Vests**
+- `Safety Vest` → **Safety Vests**
+- `Chef Jacket` → **Chef Jackets**
+
+The raw `Outerwear` marker inside Extra Filter Reference is not required as a duplicate filter when the Product Category / specific garment filter already represents the product.
+
+### Fixed Industry model
+
+Only the ten approved Figma Industries are treated as valid:
+
+- Aged Care
+- Automotive
+- Workwear & Hi-Vis
+- Retail
+- Corporate
+- Hospitality
+- Healthcare
+- Education
+- Teamwear & Fitness
+- Government
+
+All **82 / 82 product identities** in this batch have at least one approved Industry.
+
+Approved Industry references represented in Batch 2:
+
+- **Workwear & Hi-Vis:** 65 products
+- **Corporate:** 14
+- **Government:** 14
+- **Healthcare:** 14
+- **Retail:** 14
+- **Automotive:** 9
+- **Hospitality:** 2
+
+Non-approved source value:
+
+- **Services:** 15 products
+
+Every product carrying Services in this batch already has at least one approved Industry, so Services can be dropped without leaving any product Industry-less.
+
+**Batch 2 unresolved Industry count: 0.**
+
+### Asset reconciliation
+
+Across the 82 product identities in this batch:
+
+- **65** have exact SKU-prefix asset matches
+- of those, **5 SKUs have multiple matching asset folders**
+- **17** have no safe exact or high-confidence manual asset mapping
+
+Batch-scope usable asset coverage:
+
+- **65 / 82 = 79.3%**
+
+Because all seven cross-batch repeated products have valid exact assets, the 75 genuinely new products contributed by Batch 2 have:
+
+- **58 / 75 usable asset matches = 77.3%**
+- **17 / 75 unresolved asset products**
+
+No non-exact mapping in this batch was judged strong enough to use safely.
+
+#### Duplicate asset-folder cases
+
+These are audit-only. No folders should be merged, renamed, or deleted.
+
+- `2513 — Ladies Olympus Soft Shell Jacket`
+  - `2513_LADIES_OLYMPUS_SOFT_SHELL_JACKET`
+  - `2513_OLYMPUS_LADY_JACKETS`
+
+- `BJ2602L — Women's Tailor Jacket`
+  - `BJ2602L_TAILOR_WOMENS_JACKET`
+  - `BJ2602L_WOMEN'S_TAILOR_JACKET`
+
+- `J740L — Women's Apex Lightweight Softshell Jacket`
+  - `J740L_APEX_WOMENS_JACKET`
+  - `J740L_LADIES_APEX_LIGHTWEIGHT_SOFTSHELL_JACKET`
+
+- `CO342LJ — Nova Women's Knit Jacket`
+  - `CO342LJ_NOVA_WOMEN'S_KNIT_JACKET`
+  - `CO342LJ_NOVA_WOMENS_ZIP_FRONT_JUMPER`
+
+- `J510M — Charger Unisex Jacket`
+  - `J510M_CHARGER_UNISEX_JACKET`
+  - `J510M_UNISEX_CHARGER_JACKET`
+
+#### Products without safe asset matches
+
+Hi Vis & Workwear:
+
+- `6HVSZ — Hi Vis Zip Safety Vest`
+- `ZJ240 — Unisex Streetworx Hooded Puffer Jacket`
+- `ZT210 — Unisex Streetworx Lightweight 1/4 Zip Polar Fleece`
+- `ZT867 — Unisex Streetworx Water Resistant Hoodie With Segmented Tape`
+- `BJ6078T — Taped Two Tone Hi Vis 3 In 1 Soft Shell Jacket`
+- `BJ6766T — Taped Hi Vis Recycled Rain Shell Jacket`
+- `ZJ532 — Men's Hi Vis 4 In 1 Waterproof Jacket`
+- `ZJ616 — Men's Hi Vis X Back Taped 4 In 1 Waterproof Jacket`
+- `ZJ553 — Unisex Hi Vis Antarctic Softshell Taped Jacket`
+- `ZJ770 — Women's Hi Vis Nsw Rail X Back 2 In 1 Softshell Jacket`
+- `ZV228 — Unisex Hi Vis Waterproof Reversible Vest`
+- `ZT476 — Unisex Hi Vis Half Zip Pullover`
+- `ZT640 — Unisex Hi Vis Vic Rail 1/4 Zip Pullover`
+- `ZT462 — Hi Vis Polar Fleece Jumper - Shoulder Taped`
+- `6HVPF — Hi Vis 1/2 Zip Polar Fleece`
+
+Outerwear:
+
+- `1513 — Men's Olympus Soft Shell Jacket`
+- `JK63 — Men's Sustainable Softshell Corporate Jacket`
+
+Similar-looking folders exist for some unresolved products, but they represent different SKUs, genders, or product variants and were therefore **not** treated as valid asset mappings.
+
+### Batch 2 conclusion
+
+- Fixed seven Product Categories: **works**
+- Reusable multi-reference Subcategories: **works**
+- Fixed ten Industries: **works for 82 / 82 products**
+- Non-approved Services reference can be removed safely in this batch
+- Asset coverage: **65 / 82 usable**
+- Genuinely new products contributed: **75**
+- Cumulative unique products reconciled through source row 200: **171**
+- No Webflow changes were made during this reconciliation pass
