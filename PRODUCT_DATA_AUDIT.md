@@ -2309,3 +2309,316 @@ Shirts:
 - Genuinely new products contributed: **62**
 - Cumulative unique products reconciled through source row 400: **329**
 - No Webflow changes were made during this reconciliation pass
+
+
+---
+
+## 2026-09-21 — Full taxonomy reconciliation — Batch 5 (source rows 401–500)
+
+This is the fifth bounded reconciliation pass across the fresh 15-set product export.
+
+Scope:
+
+- **100 source rows**
+- Shirts: final **5 rows**
+- Shoes: all **14 rows**
+- Suiting: all **40 rows**
+- Sustainable: first **41 rows**
+- Product identities after within-batch duplicate / cross-set reconciliation: **91**
+- Product identities already encountered in Batches 1–4: **30**
+- Genuinely new products added by this batch: **61**
+- Cumulative unique product identities after rows 1–500: **390**
+
+This review did **not** modify Webflow.
+
+### Duplicate / cross-set reconciliation
+
+Within Batch 5, the following product identities appear more than once:
+
+- `1765WJ — Women's Washable One Button Jacket`
+  - appears twice in Suiting
+- `1762WT — Women's Washable Slim Leg Pant`
+  - appears twice in Suiting
+- `CU544US — Unisex Pulse V-Neck Scrub Top`
+  - appears twice in Sustainable
+- `BB2606L — Women's Soft Stretch Pant`
+  - appears in Suiting and Sustainable
+- `RGP408M — Renew Men's Adjustable Waist Straight Leg Pant`
+  - appears in Suiting and Sustainable
+- `RGP407M — Renew Men's Slim Fit Flat Front Pant`
+  - appears in Suiting and Sustainable
+- `RGS403L — Renew Women's Functional Pencil Skirt`
+  - appears in Suiting and Sustainable
+- `RGP404L — Renew Women's Tapered Adjustable Waist Pant`
+  - appears in Suiting and Sustainable
+- `RGP406L — Renew Women's 7/8 Mid-Waist Slim Leg Pant`
+  - appears in Suiting and Sustainable
+
+Thirty Batch 5 identities had already appeared in earlier batches and therefore must merge into the existing Product identity rather than create a second Product.
+
+These include Bottoms/Suiting overlaps, Scrubs/Sustainable overlaps, Polos/Sustainable overlaps, Outerwear/Sustainable overlaps, and Accessories/Sustainable overlaps.
+
+### Fixed Product Category model
+
+The approved seven Product Categories remain sufficient.
+
+Batch 5 allocation:
+
+- **Suiting:** 38 product identities
+- **Tops:** 28
+- **Shoes:** 14
+- **Bottoms:** 5
+- **Outerwear:** 3
+- **Accessories:** 3
+
+No additional top-level Product Category is required.
+
+Important precedence rules continue to hold:
+
+- products appearing in both Bottoms and Suiting use **Suiting** as the primary Product Category
+- Sustainable does not become a Product Category; it remains a reusable Subcategory/filter
+- Scrub tops/tunics remain under **Tops**
+- Scrub pants remain under **Bottoms**
+
+### Reusable Product Subcategories / filters
+
+Required / validated by Batch 5:
+
+**Tops**
+- Shirts
+- Polos
+- Tees
+- Scrubs
+- Tunics
+- Short Sleeve
+- Long Sleeve
+- Sustainable
+
+**Bottoms**
+- Pants
+- Scrubs
+- Sustainable
+
+**Outerwear**
+- Jackets
+- Soft Shells
+- Sustainable
+
+**Suiting**
+- Blazers
+- Trousers
+- Skirts
+- Dresses
+- Sustainable
+
+**Accessories**
+- Headwear
+- Sustainable
+
+**Shoes**
+- no additional source-supported Subcategory required in this batch
+
+For Suiting, **Trousers** is the preferred Suiting filter rather than adding a redundant Pants filter purely because some of the same SKUs also appeared in the Bottoms source.
+
+The Sustainable set confirms the intended two-way filter model: Sustainable products span Tops, Bottoms, Outerwear, Suiting and Accessories while retaining their normal primary Product Category.
+
+### Fixed Industry model
+
+Only the ten approved Figma Industries are treated as valid:
+
+- Aged Care
+- Automotive
+- Workwear & Hi-Vis
+- Retail
+- Corporate
+- Hospitality
+- Healthcare
+- Education
+- Teamwear & Fitness
+- Government
+
+All **91 / 91 product identities** in Batch 5 have at least one approved Industry after references are merged across duplicate/cross-listed source records.
+
+Approved Industry usage represented in Batch 5 includes:
+
+- **Corporate:** 71
+- **Government:** 66
+- **Healthcare:** 22
+- **Education:** 20
+- **Retail:** 12
+- **Workwear & Hi-Vis:** 11
+- **Hospitality:** 5
+- **Teamwear & Fitness:** 4
+
+Non-approved source values:
+
+- **Services:** 67 product identities
+- **Beauty:** 8
+
+Every product carrying Services or Beauty in this batch also has at least one approved Industry, so both values can be dropped safely.
+
+**Batch 5 unresolved Industry count: 0.**
+
+No additional Industry is required.
+
+### Asset reconciliation
+
+Across the 91 Batch 5 product identities:
+
+- **66** have exact SKU-prefix asset-folder matches
+- **1** uses a previously established high-confidence manual mapping
+- **24** have no safe asset mapping
+
+Usable asset coverage:
+
+- **67 / 91 = 73.6%**
+
+For the **61 genuinely new products** contributed by Batch 5:
+
+- **39 / 61** have usable exact assets
+- **22 / 61** are unresolved
+- usable new-product coverage: **63.9%**
+
+#### High-confidence mapping carried forward
+
+- `CA3P — So Ezy Pant`
+  - `CA3P → CA3PSO_EZY_ PANT`
+
+This mapping was already established in the Bottoms audit and remains the valid asset relationship.
+
+### Shoes — complete asset gap
+
+All **14 Shoes products** in this set have no matching asset folder in the supplied asset package:
+
+- `49-430 — Slip On Shoe`
+- `440 — Premium Elastic Sided Boot W/ Scuff Cap`
+- `49-445Z — Women's Black Zip Sided Boot`
+- `49-450Z — Women’s Stone Zip Sided Low-Cut Boot`
+- `49-432Z — Women's Wheat Zip Sided Boot`
+- `630797W — Women's Tornado`
+- `34-652 — Men's Black Lace Up Derby Shoe`
+- `45-627 — Men's Brown Elastic Sided Boot`
+- `ROLLIE-CLUB — Men's Courtclub`
+- `ROLLIE-DERBY — Men’s Derby`
+- `SC01535 — Women's Court Club`
+- `SC00129 — Women's Derby City`
+- `261 — Men's Zipsider Boot`
+- `240 — Elastic Sided Boot`
+
+**Client / source follow-up required:** product assets are missing for the entire Shoes set.
+
+### Other products without safe asset matches
+
+Suiting:
+
+- `RBL068M — Men's Arden Blazer`
+- `RBL068L — Arden Blazer`
+- `1766WSK — Women's Washable Box Pleat Skirt`
+- `1732WT — Elliot Washable 7/8th Pant`
+- `1723WT — Women's Washable Cigarette Pant`
+- `60717 — Siena Women's Longline Jacket`
+- `RJ400L — Renew Women's Double Breasted Longline Jacket`
+
+Tops:
+
+- `CA4T — City Active Top`
+
+Outerwear:
+
+- `JK63 — Men's Sustainable Softshell Corporate Jacket`
+  - already known from the Outerwear reconciliation
+
+Accessories:
+
+- `CH333 — Mesh Flat Top Hat`
+  - already known from the Accessories reconciliation
+
+### Important Suiting asset-SKU collision
+
+The source contains two distinct products:
+
+- `RJ400L — Renew Women's Double Breasted Longline Jacket`
+- `RJ401L — Renew Women's Single Button Mid Length Jacket`
+
+The asset package contains:
+
+- `RJ401L_RENEW_WOMEN'S_SINGLE_BUTTON_MID_LENGTH_JACKET`
+- `RJ401L_RENEW_WOMENS_DOUBLE_BREASTED_LONGLINE_JACKET`
+
+Therefore the Double Breasted Longline asset appears to be filed under the **RJ401L** prefix even though the source SKU for that product is **RJ400L**.
+
+Because `RJ401L` is itself a real separate source product, the Double Breasted folder must **not** be automatically reassigned to `RJ400L` without confirmation.
+
+This is recorded as an asset-SKU collision / likely asset naming error requiring source confirmation.
+
+### Duplicate asset-folder cases
+
+These are audit-only. No folders should be renamed, merged, or deleted.
+
+- `1520WL — Womens Nicholson Premium Poplin Long Sleeve Shirt`
+  - `1520WL_PREMIUM_POPLIN_LONG_SLEEVE_SHIRT`
+  - `1520WL_WOMEN'S_NICHOLSON_PREMIUM_POPLIN_LONG_SLEEVE_SHIRT`
+
+- `1899WL — Bradford Womens Fine Oxford Long Sleeve Shirt`
+  - `1899WL_BRADFORD_WOMEN'S_FINE_OXFORD_LONG_SLEEVE_SHIRT`
+  - `1899WL_BRADFORD_WOMENS_FINE_OXFORD_LONG_SLEEVE_SHIRT`
+
+- `1765WJ — Women's Washable One Button Jacket`
+  - `1765WJ_WOMEN'S_WASHABLE_ONE_BUTTON_JACKET`
+  - `1765WJ_WOMENS_WASHABLE_ONE_BUTTON_JACKET`
+
+- `BS732L — Ladies Bianca Jacket`
+  - `BS732L_BIANCA_WOMEN'S_JACKET`
+  - `BS732L_LADIES_BIANCA_JACKET`
+
+- `1724WSK — Women's Washable Pencil Skirt`
+  - `1724WSK_WOMEN'S_WASHABLE_PENCIL_SKIRT`
+  - `1724WSK_WOMENS_WASHABLE_PENCIL_SKIRT`
+
+- `20717 — Women's Bandless Pencil Skirt`
+  - `20717_Siena_Womens_Bandless_Pencil_Skirt`
+  - `20717_WOMEN'S_BANDLESS_PENCIL_SKIRT`
+
+- `CL955LL — Women's Comfort Waist Straight Leg Pant`
+  - `CL955LL_WOMEN'S_COMFORT_WAIST_STRAIGHT_LEG_PANT`
+  - `CL955LL_Women_Comfort_Waist Straight_Leg_Pant`
+
+- `BS909L — Ladies Remy Pant`
+  - `BS909L_LADIES_REMY_PANT`
+  - `BS909L_Ladies Remy Pant`
+
+- `10722 — Women's Bandless Elastic Waist Pant`
+  - `10722_Siena_Womens_Bandless_Elastic_Waist_Pant`
+  - `10722_WOMEN'S_BANDLESS_ELASTIC_WAIST_PANT`
+
+- `RGP308L — Siena 7/8 Mid-Waist Slim Leg Pant`
+  - `RGP308L_SIENA_7_8_MID-WAIST_SLIM_LEG_PANT`
+  - `RGP308L_Siena_Womens_7-8_Mid-waist_Slim_Leg_Pant`
+
+- `60719 — Siena Women's Mid Length Jacket`
+  - `60719_SIENA_WOMEN'S_MID_LENGTH_JACKET`
+  - `60719_Siena_Womens_Mid_Length_Jacket`
+
+- `RJ401L — Renew Women's Single Button Mid Length Jacket`
+  - `RJ401L_RENEW_WOMEN'S_SINGLE_BUTTON_MID_LENGTH_JACKET`
+  - `RJ401L_RENEW_WOMENS_DOUBLE_BREASTED_LONGLINE_JACKET`
+  - second folder is the separate Double Breasted product and represents the collision described above
+
+- `S421LL — Women's Soul Long Sleeve Shirt`
+  - `S421LL_Soul_Womens_Long_Sleeve_Shirt`
+  - `S421LL_WOMEN'S_SOUL_LONG_SLEEVE_SHIRT`
+  - `S421LL_Womens_Soul_Long_Sleeve_Shirt`
+
+### Batch 5 conclusion
+
+- Fixed seven Product Categories: **works**
+- Reusable multi-reference Subcategories: **works**
+- Sustainable continues to work as a shared filter rather than a Product Category
+- Fixed ten Industries: **works for 91 / 91 products**
+- Services and Beauty can be removed safely from this batch
+- No additional Industry is required
+- Asset coverage: **67 / 91 usable**
+- Entire Shoes set is missing from the supplied asset package
+- Genuinely new products contributed: **61**
+- Cumulative unique products reconciled through source row 500: **390**
+- No Webflow changes were made during this reconciliation pass
