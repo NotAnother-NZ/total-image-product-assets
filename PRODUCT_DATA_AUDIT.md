@@ -1751,3 +1751,274 @@ Similar-looking folders exist for some unresolved products, but they represent d
 - Genuinely new products contributed: **75**
 - Cumulative unique products reconciled through source row 200: **171**
 - No Webflow changes were made during this reconciliation pass
+
+
+---
+
+## 2026-09-21 — Full taxonomy reconciliation — Batch 3 (source rows 201–300)
+
+This is the third bounded reconciliation pass across the fresh 15-set product export.
+
+Scope:
+
+- **100 source rows**
+- Outerwear: remaining **39 rows**
+- Polos: all **40 rows**
+- Promotional Merchandise: first **21 rows**
+- Product identities after within-batch duplicate SKU reconciliation: **97**
+- Product identities already encountered in Batch 2: **1**
+- Genuinely new products added by this batch: **96**
+- Cumulative unique product identities after rows 1–300: **267**
+
+This review did **not** modify Webflow.
+
+### Source duplicate / cross-batch reconciliation
+
+Three Outerwear SKUs occur twice within Batch 3:
+
+- `CO342MJ`
+- `CO343LV`
+- `CO343MV`
+
+These resolve to one Product identity per SKU, preserving the union of supported reference/filter values and the most complete source content.
+
+One additional Outerwear product was already encountered in Batch 2:
+
+- `CO342LJ — Nova Women's Knit Jacket`
+
+Its Batch 3 occurrence should merge into the existing product identity rather than create a second Product.
+
+The Polos source also contains one blank-SKU product:
+
+- **Men's City Polo**
+
+It remains a valid source product identity for taxonomy review, but it has no safe SKU/asset mapping and should not be imported until the client confirms the SKU.
+
+### Fixed Product Category model
+
+The approved seven Product Categories remain sufficient.
+
+Batch 3 allocation:
+
+- **Outerwear:** 36 product identities
+- **Tops:** 40 product identities from the Polos set
+- **Accessories:** 21 product identities from Promotional Merchandise
+
+No additional top-level Product Category is required.
+
+### Reusable Product Subcategories / filters
+
+Subcategories continue to be treated as reusable filter tags with two-way Product Category relationships.
+
+Required by Batch 3:
+
+**Outerwear**
+- Jackets
+- Vests
+- Knitwear
+- Soft Shells
+- Puffers
+- Fleece
+- Chef Jackets
+
+**Tops**
+- Polos
+- Short Sleeve
+- Long Sleeve
+
+**Accessories**
+- Promotional Merchandise
+- Drinkware
+- Bags
+- Pens
+- Notebooks
+- Sustainable
+
+Source normalisation applied conceptually:
+
+- `Chef Jacket` → **Chef Jackets**
+- `Soft Shell` / `Soft Shells` → **Soft Shells**
+- `Promo Merch` → **Promotional Merchandise**
+- `Note Books` → **Notebooks**
+
+The **Sustainable** filter is required on the two Promotional Merchandise products in this slice whose source data includes Sustainable. It should be the same reusable Sustainable subcategory used across all applicable Product Categories.
+
+### Fixed Industry model
+
+Only the ten approved Figma Industries are treated as valid:
+
+- Aged Care
+- Automotive
+- Workwear & Hi-Vis
+- Retail
+- Corporate
+- Hospitality
+- Healthcare
+- Education
+- Teamwear & Fitness
+- Government
+
+Across the 97 Batch 3 product identities:
+
+Approved Industry references include:
+
+- **Corporate:** 62
+- **Healthcare:** 47
+- **Government:** 46
+- **Retail:** 45
+- **Hospitality:** 14
+- **Education:** 14
+- **Workwear & Hi-Vis:** 4
+- **Automotive:** 4
+- **Teamwear & Fitness:** 1
+
+Non-approved source values:
+
+- **Services:** 59 products
+- **Promotional Merchandise:** 21 products
+- **Sustainable:** 2 products
+
+All products carrying **Services** also have at least one approved Industry, so Services can be dropped safely.
+
+All **21 Promotional Merchandise products** in this slice have **no approved Industry assignment**. Their source Industry is Promotional Merchandise, with two also carrying Sustainable.
+
+**Client decision required:** define which of the approved ten Industries should apply to Promotional Merchandise products, or confirm that these products may intentionally have no Industry.
+
+Batch 3 unresolved Industry count:
+
+- **21 / 97 products**
+- all are Promotional Merchandise products
+
+### Asset reconciliation
+
+Across the 97 Batch 3 product identities:
+
+- **64** have exact SKU-prefix asset matches
+- **2** have high-confidence manual / naming-variant mappings
+- **31** have no safe asset mapping
+
+Usable asset coverage:
+
+- **66 / 97 = 68.0%**
+
+Excluding the one cross-batch product already counted previously, the 96 genuinely new products contributed by Batch 3 have:
+
+- **65 / 96 usable asset matches = 67.7%**
+- **31 / 96 unresolved asset products**
+
+#### High-confidence non-exact mappings
+
+- `CH230ML-BIZ — Al Dente Men's Chef Jacket`
+  - `CH230ML-BIZ → CH230ML_AL_DENTE_MEN'S_CHEF_JACKET`
+  - exact product-name match and matching base SKU; source adds `-BIZ`
+
+- `N2306 — Keira Ladies' Polos`
+  - `N2306 → 2306_KEIRA_LADIES_POLOS`
+  - exact product-name match and matching numeric SKU; asset folder omits the source `N` prefix
+
+#### Duplicate asset-folder cases
+
+These are audit-only. No folders should be merged, renamed, or deleted.
+
+Outerwear:
+
+- `J307L — Ladies Geneva Jacket`
+  - `J307L_GENEVA_WOMENS_JACKET`
+  - `J307L_LADIES_GENEVA_JACKET`
+
+- `J750M — Men's Expedition Quilted Jacket`
+  - `J750M_EXPEDITION_MENS_JACKET`
+  - `J750M_MEN'S_EXPEDITION_QUILTED_JACKET`
+
+- `CH232ML — Zest Men's L/S Chef Jacket`
+  - `CH232ML_ZEST_MENS_LS_CHEF_JACKET`
+  - `CH232ML_ZEST_MENS_LS_CHEF_JACKET (1)`
+
+- `J211L — Alpine Ladies Puffer Vest`
+  - `J211L_ALPINE_LADIES_PUFFER_VEST`
+  - `J211L_ALPINE_WOMENS_VEST`
+
+- `CO343MV — Nova Men's Knit Vest`
+  - `CO343MV_NOVA_MEN'S_KNIT_VEST`
+  - `CO343MV_NOVA_MEN'S_ZIP_FRONT_VEST`
+  - `CO343MV_NOVA_MENS_ZIP_FRONT_VEST`
+
+- `CO342LJ — Nova Women's Knit Jacket`
+  - `CO342LJ_NOVA_WOMEN'S_KNIT_JACKET`
+  - `CO342LJ_NOVA_WOMENS_ZIP_FRONT_JUMPER`
+
+- `TW1827 — Men's Crew Pullover`
+  - `TW1827_MEN'S_CREW_PULLOVER`
+  - `TW1827_MENS_CREW_PULLOVER`
+
+- `WP417M — Men's Milano Pullover`
+  - `WP417M_MEN'S_MILANO_PULLOVER`
+  - `WP417M_MILANO_MENS_PULLOVER`
+
+#### Asset-SKU collision
+
+`2151 — Silvertech Polo - Ladies` has two SKU-prefix folders:
+
+- `2151_SILVERTECH_POLO_LADIES` — correct matching product
+- `2151_EZYLIN_TUNIC` — unrelated product using the same numeric prefix
+
+Only the Silvertech Polo folder is considered valid for product `2151`.
+
+#### Products without safe asset matches
+
+Outerwear:
+
+- `J830M — Men's Apex Vest`
+- `WV619M — Men's Milano Vest`
+- `J29123 — Ladies Soft Shell Vest`
+- `CO343LV — Nova Women's Knit Vest`
+- `J213L — Expedition Women's Vest`
+- `RJP266M — Osaka Men's Pineapple Knit Jumper`
+- `LP618L — Ladies Milano Pullover`
+
+Polos:
+
+- blank SKU — **Men's City Polo**
+- `2053 — Silvertech Polo - Men's`
+- `1061 — Freshen Polo Men's`
+
+Promotional Merchandise:
+
+- `S909 — Summit 750ml Drink Bottle`
+- `S400 — Oakleigh Coffee Cup (354mL)`
+- `S990 — Arlo 1L Glass Water Bottle`
+- `S777 — Byron 1L Drink Bottle`
+- `S895 — Sunrise Smoothie 500mL Tumbler`
+- `S901 — Allegra 750ml Bottle`
+- `S3101 — Vidro 750ml Bottle`
+- `RB1053 — The Buddy Drawstring Bag`
+- `RB1043 — Willow Natural Tote`
+- `RB1040 — Rara Cooler Bag`
+- `D605.R — ECO NOVA Computer Backpack`
+- `P093 — The Gravity 3+1 Metal Pen`
+- `P131 — The Heritage Wooden + Metal Ball Pen`
+- `P381 — Paper Pen`
+- `P603 — SmartScribe Re-AL NFC Pen`
+- `P602 — Monarch Re-AL Ball Pen`
+- `P734 — RABS Mini Ballpoint Pen`
+- `P740 — Cambridge Colourful Gel Ink Pen`
+- `P129 — Tirana Pen`
+- `F501 — Bloa Pen`
+- `LL9753 — Stone Paper Notebook`
+
+No Promotional Merchandise product in this Batch 3 slice has a safe asset match in the supplied asset package.
+
+### Batch 3 conclusion
+
+- Fixed seven Product Categories: **works**
+- Reusable multi-reference Subcategories: **works**
+- Polos fit under **Tops**
+- Promotional Merchandise fits under **Accessories**
+- Sustainable works as a reusable subcategory/filter
+- Fixed ten Industries: **works for 76 / 97 products**
+- Unresolved Industry assignment: **21 Promotional Merchandise products**
+- Services can be removed safely from this batch
+- Asset coverage: **66 / 97 usable**
+- Genuinely new products contributed: **96**
+- Cumulative unique products reconciled through source row 300: **267**
+- No Webflow changes were made during this reconciliation pass
