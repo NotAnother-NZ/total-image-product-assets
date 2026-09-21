@@ -206,3 +206,177 @@ The `Hex Code` field on both **Colors** and **Color Families** has been changed 
 
 At the time of replacement, all existing Hex Code values were empty, so no colour values were lost.
 
+
+
+---
+
+## 2026-09-21 — Bottoms source audit and Webflow import
+
+Source: `Product (Bottoms)-Grid view.csv`
+
+Asset inventory: `Total Image Product Assets`
+
+### Summary
+
+- Source rows: **32**
+- Unique product SKUs after deduplication: **29**
+- Exact SKU asset matches with one folder: **18**
+- Exact SKU asset matches with multiple folders: **9**
+- Non-exact SKU asset matches reviewed manually: **2**
+- Duplicate source SKUs merged before import: **3**
+- Products imported to Webflow: **29**
+- Products excluded from import: **0**
+- All imported CMS items remain **drafts**. Nothing was published.
+- Images were **not** imported or attached because the Product image schema is still pending.
+
+### Product taxonomy created
+
+Product Category:
+
+- **Bottoms**
+
+Product Subcategories:
+
+- **Pants**
+- **Skirts**
+- **Shorts**
+- **Chinos**
+
+Source naming was normalised before import:
+
+- `Skirt` → **Skirts**
+- `Chino` → **Chinos**
+- `Chinos` → **Chinos**
+
+This avoids carrying inconsistent Airtable naming into the Webflow taxonomy.
+
+### Duplicate source products merged
+
+The following SKUs appeared more than once in the source and were merged into one Webflow Product each:
+
+#### `BS724M` — Men's Lawson Chino Pant
+
+Two source rows existed.
+
+Differences:
+
+- One row had `Bottoms,Pants`
+- One row had `Bottoms,Pants,Chinos`
+- Description wording differed slightly
+
+**Import handling:** merged to one Product, retained all supported taxonomy values, and assigned both **Pants** and **Chinos**. The more complete Description was retained.
+
+#### `BS724L` — Ladies Lawson Chino Pant
+
+Two source rows existed.
+
+Differences:
+
+- One row had `Bottoms,Pants`
+- One row had `Bottoms,Pants,Chinos`
+
+**Import handling:** merged to one Product and assigned both **Pants** and **Chinos**.
+
+#### `BS022L` — Lawson Ladies Chino Skirt
+
+Two source rows existed.
+
+Differences:
+
+- One row used `Bottoms,Skirt,Chino`
+- One row used `Bottoms,Skirt,Chinos`
+- Description wording differed slightly
+
+**Import handling:** merged to one Product, normalised the taxonomy to **Skirts** + **Chinos**, and retained the more complete Description.
+
+### Non-exact SKU mappings reviewed and used
+
+Both non-exact matches were considered high confidence and were used for this import.
+
+#### `RGS264L-BIZ` — Traveller Women's Chino Skirt
+
+Mapped asset folder:
+
+`RGS264L-BIZ → RGS264L_TRAVELLER_WOMEN'S_CHINO_SKIRT`
+
+Reason:
+
+- Exact product-name match
+- Base SKU `RGS264L` matches
+- The source SKU appears to add the `-BIZ` suffix only
+
+**Status:** high-confidence mapping, used for import.
+
+#### `CA3P` — So Ezy Pant
+
+Mapped asset folder:
+
+`CA3P → CA3PSO_EZY_ PANT`
+
+Reason:
+
+- Product name matches **So Ezy Pant**
+- Asset folder begins with the same base SKU `CA3P`
+- The folder appears to concatenate the product name directly after the SKU
+
+**Status:** high-confidence mapping, used for import.
+
+### Duplicate asset folders
+
+These were recorded only. No asset folders were deleted, merged, or renamed.
+
+| SKU | Product | Duplicate asset folders |
+| --- | --- | --- |
+| `BS125L` | Ladies Bella Pant | `BS125L_LADIES_BELLA_PANT`; `BS125L_Womens_Bella_Pant` |
+| `BS724L` | Ladies Lawson Chino Pant | `BS724L_LADIES_LAWSON_CHINO_PANT`; `BS724L__LADIES_LAWSON_CHINO_PANT` |
+| `BS724M` | Men's Lawson Chino Pant | `BS724M_MEN'S_LAWSON_CHINO_PANT`; `BS724M_Mens_Lawson_Chino_Pant` |
+| `BS909L` | Ladies Remy Pant | `BS909L_LADIES_REMY_PANT`; `BS909L_Ladies Remy Pant` |
+| `CH432M` | Men's Saffron Chef Flex Pant | `CH432M_MEN'S_SAFFRON_CHEF_FLEX _PANT`; `CH432M_MEN'S_SAFFRON_CHEF_FLEX_PANT` |
+| `CL955LL` | Women's Comfort Waist Straight Leg Pant | `CL955LL_WOMEN'S_COMFORT_WAIST_STRAIGHT_LEG_PANT`; `CL955LL_Women_Comfort_Waist Straight_Leg_Pant` |
+| `CL960MS` | Men's Comfort Waist Cargo Short | `CL960MS_Comfort_Waist_Mens_Cargo_Short`; `CL960MS_MEN'S_COMFORT_WAIST_CARGO_SHORT` |
+| `RGP263L` | Traveller Women's Slim Leg Chino | `RGP263L_TRAVELLER_WOMEN'S_SLIM_LEG_CHINO`; `RGP263L_Traveller_Womens_Slim_Leg_Chino` |
+| `RGP263M` | Traveller Men's Tapered Chino | `RGP263M_TRAVELLER_MEN'S_TAPERED_CHINO`; `RGP263M_TRAVELLER_MEN’S_TAPERED_CHINO` |
+
+**Current handling:** keep all duplicate folders untouched until the image-schema / asset migration stage.
+
+### Supporting CMS data created
+
+New Product Category:
+
+- **Bottoms**
+
+New Product Subcategories:
+
+- **Pants**
+- **Skirts**
+- **Shorts**
+- **Chinos**
+
+New Industry:
+
+- **Beauty**
+
+New specific Colors:
+
+- **Dark Grey**
+- **Desert**
+- **Taupe**
+- **Dark Stone**
+- **Toffee**
+
+Existing specific colour `olive` from the source was normalised to the existing CMS item **Olive**.
+
+### Color Family relationships added
+
+The Bottoms source provides enough evidence to add these broader family relationships:
+
+- **Dark Grey → Grey**
+- **Desert → Brown**
+- **Taupe → Brown**
+- **Dark Stone → Brown**
+- **Toffee → Brown**
+- **Olive → Green**
+- **Stone → Brown**
+
+Existing Color Family relationships were preserved. Because Colors support multiple Color Families, this means a specific colour such as **Stone** can retain its existing family relationship while also being grouped under **Brown** where this source explicitly does so.
+
