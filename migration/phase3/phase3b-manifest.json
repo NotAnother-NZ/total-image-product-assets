@@ -1,0 +1,55 @@
+{
+  "phase": "3B",
+  "canonical_products": 438,
+  "schema": "taxonomy-only",
+  "parts": [
+    {
+      "file": "canonical-products.taxonomy.part-001.csv",
+      "start_index": 1,
+      "end_index": 110,
+      "records": 110,
+      "sha": "04ad727a00c1c937b96f95b2c31a57f4ba4fff70"
+    },
+    {
+      "file": "canonical-products.taxonomy.part-002.csv",
+      "start_index": 111,
+      "end_index": 220,
+      "records": 110,
+      "sha": "da4b22cb4d4a297238a914baedd2a60c01fe51f4"
+    },
+    {
+      "file": "canonical-products.taxonomy.part-003a.csv",
+      "start_index": 221,
+      "end_index": 275,
+      "records": 55,
+      "sha": "e7666aa152e8eda1c4b18ed3801c04169bbbad42"
+    },
+    {
+      "file": "canonical-products.taxonomy.part-003b.csv",
+      "start_index": 276,
+      "end_index": 330,
+      "records": 55,
+      "sha": "3486b3f7feb1fb0cb9e99131cc8bc3ea8041423b"
+    },
+    {
+      "file": "canonical-products.taxonomy.part-004a.csv",
+      "start_index": 331,
+      "end_index": 384,
+      "records": 54,
+      "sha": "4cc1e47f25fac85ab0a94c77161e26cf3e579095"
+    },
+    {
+      "file": "canonical-products.taxonomy.part-004b.csv",
+      "start_index": 385,
+      "end_index": 438,
+      "records": 54,
+      "sha": "3544700b18ffe78bff56db397d361591bc4ef1c9"
+    }
+  ],
+  "integrity": {
+    "total_rows": 438,
+    "unique_indices": 438,
+    "gaps": [],
+    "duplicate_indices": []
+  }
+}
