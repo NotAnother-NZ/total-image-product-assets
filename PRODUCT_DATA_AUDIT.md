@@ -3496,3 +3496,108 @@ Promotional Merchandise remains under Accessories with supported product-type fi
 - no Webflow writes were performed
 
 Phase 3B is complete and ready for Phase 3C, where the same 438 canonical identities can be enriched with existing Webflow Product IDs, asset status/manual asset mappings, and migration blockers.
+
+
+---
+
+## 2026-09-22 — Webflow taxonomy hard normalization checkpoint
+
+Before continuing Phase 3C, the live Webflow CMS taxonomy was brought into exact alignment with the canonical 438-product reconciliation.
+
+Nothing was published.
+
+### Existing Product repairs
+
+The **198 existing Product records** were compared SKU-by-SKU against the committed Phase 3B canonical taxonomy.
+
+Initial differences found:
+
+- **54 Products** had at least one taxonomy mismatch
+- **42 Category mismatches**
+- **53 Subcategory mismatches**
+- **6 Industry mismatches**
+
+All 198 existing Products matched a canonical source SKU; there were no ambiguous or unmatched existing Product records.
+
+The 54 affected Products were updated by changing only:
+
+- `category`
+- `subcategories`
+- `industries`
+
+All other Product fields were preserved.
+
+Post-repair canonical comparison:
+
+- **198 / 198 Products matched**
+- canonical mismatches: **0**
+
+### Legacy Polos Category removed safely
+
+The old top-level Product Category:
+
+- `Polos` — `6ab0fa5cdbef6205f444d8af`
+
+initially still had 37 Product references.
+
+Those Products were first migrated to:
+
+- Product Category: **Tops**
+- Product Subcategory: **Polos**
+- appropriate Short Sleeve / Long Sleeve / Sustainable filters from the canonical map
+
+Only after legacy Product references reached **0** were the temporary reciprocal links removed from Short Sleeve / Long Sleeve and the legacy Polos Product Category deleted.
+
+### Final Product Categories
+
+The Product Categories collection now contains exactly **7 records**:
+
+- Accessories
+- Bottoms
+- Outerwear
+- Shoes
+- Suiting
+- Tops
+- Workwear & Hi-vis
+
+No legacy or provisional Category remains.
+
+### Final Product Subcategories
+
+The Product Subcategories collection contains exactly **35 records**.
+
+QA confirms:
+
+- legacy Polos Category links: **0**
+- invalid Category references: **0**
+- Category → Subcategory reciprocal errors: **0**
+- Subcategory → Category reciprocal errors: **0**
+
+### Final Industries
+
+The Industries collection contains exactly the **10 approved Figma Industries**:
+
+- Aged Care
+- Automotive
+- Corporate
+- Education
+- Government
+- Healthcare
+- Hospitality
+- Retail
+- Teamwear & Fitness
+- Workwear & Hi-Vis
+
+No Services, Beauty, Child Care, First Nations, Promotional Merchandise, or Sustainable Industry records exist.
+
+### Final Product reference QA
+
+Across all **198 existing Webflow Products**:
+
+- canonical taxonomy mismatches: **0**
+- invalid Category references: **0**
+- invalid Subcategory references: **0**
+- invalid Industry references: **0**
+- legacy Polos Category references: **0**
+
+This establishes a clean Webflow taxonomy baseline before the remaining Product migration and Phase 3C metadata enrichment.
