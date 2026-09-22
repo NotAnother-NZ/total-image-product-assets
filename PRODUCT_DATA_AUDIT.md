@@ -3256,3 +3256,116 @@ They should remain pending client guidance during later Product migration / repa
 - no unrelated CMS references were broken
 - no taxonomy changes outside Industries were made
 - nothing was published
+
+
+---
+
+## 2026-09-22 — Canonical migration map — Phase 3B complete
+
+Phase 3B applies the final reconciled taxonomy to all **438 canonical Product identities** created in Phase 3A.
+
+No Webflow records were modified during this phase.
+
+### Canonical Product Categories
+
+Exactly the seven approved Product Categories are used:
+
+- Tops — **160**
+- Accessories — **77**
+- Workwear & Hi-vis — **65**
+- Outerwear — **52**
+- Suiting — **38**
+- Bottoms — **32**
+- Shoes — **14**
+
+Total: **438**
+
+No additional Product Category is required.
+
+### Canonical Product Subcategories
+
+The canonical map uses only the 35 reusable Product Subcategories already prepared in Webflow during Phase 1.
+
+Important shared-filter rules are represented in the product-level map, including:
+
+- Scrubs across Tops + Bottoms
+- Sustainable across every applicable Category
+- Shirts across Tops + Workwear & Hi-vis
+- Polos under Tops
+- First Nations under Tops
+- Promotional Merchandise / Drinkware / Bags / Pens / Notebooks under Accessories
+- Suiting filters using Blazers / Trousers / Skirts / Dresses
+
+Exactly **14 Products** have no Product Subcategory. These are the **14 Shoes**, for which the supplied source data provides no supported Shoe filter.
+
+### Sustainable
+
+The final map contains **53 Products** with the reusable Sustainable Subcategory.
+
+This includes products where Sustainable came from:
+
+- the Sustainable source set
+- source Extra Filter Reference
+- source Industry Reference in Promotional Merchandise data
+
+Sustainable is not treated as a Product Category or Industry.
+
+### Canonical Industries
+
+Only the ten approved Industries are permitted in the canonical map:
+
+- Aged Care
+- Automotive
+- Workwear & Hi-Vis
+- Retail
+- Corporate
+- Hospitality
+- Healthcare
+- Education
+- Teamwear & Fitness
+- Government
+
+Industry status:
+
+- **393 Products** — `ready`
+- **45 Products** — `pending-client`
+
+The 45 pending Products are exactly:
+
+- **14 First Nations Products**
+- **31 Promotional Merchandise Products**
+
+No approved Industry was invented for these records.
+
+### QA
+
+Phase 3B validation result:
+
+- canonical Products: **438**
+- invalid Product Categories: **0**
+- invalid Product Subcategories: **0**
+- invalid approved Industries: **0**
+- ready Products without an approved Industry: **0**
+- pending-client Products with an invented approved Industry: **0**
+- taxonomy errors: **0**
+
+Canonical taxonomy SHA-256:
+
+`5c799e8616c85aa9f93939805ae122fbb24b55ebbc96cc37a60c730dcbfcc07a`
+
+### GitHub migration files
+
+The canonical taxonomy map is stored in deterministic canonical-index order:
+
+- `migration/phase3/canonical-products.taxonomy.part-001.csv` — 1–110
+- `migration/phase3/canonical-products.taxonomy.part-002.csv` — 111–220
+- `migration/phase3/canonical-products.taxonomy.part-003a.csv` — 221–275
+- `migration/phase3/canonical-products.taxonomy.part-003b.csv` — 276–330
+- `migration/phase3/canonical-products.taxonomy.part-004a.csv` — 331–384
+- `migration/phase3/canonical-products.taxonomy.part-004b.csv` — 385–438
+
+Manifest / QA summary:
+
+- `migration/phase3/phase3b-summary.json`
+
+Phase 3B is complete and ready for Phase 3C migration metadata enrichment.
