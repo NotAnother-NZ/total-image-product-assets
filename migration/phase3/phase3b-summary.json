@@ -1,0 +1,68 @@
+{
+  "phase": "3B",
+  "status": "complete",
+  "canonical_products": 438,
+  "category_counts": {
+    "Tops": 160,
+    "Accessories": 77,
+    "Workwear & Hi-vis": 65,
+    "Outerwear": 52,
+    "Suiting": 38,
+    "Bottoms": 32,
+    "Shoes": 14
+  },
+  "industry_status": {
+    "ready": 393,
+    "pending-client": 45
+  },
+  "pending_industry_products": {
+    "First Nations": 14,
+    "Promotional Merchandise": 31
+  },
+  "sustainable_products": 53,
+  "products_without_subcategories": 14,
+  "products_without_subcategories_reason": "All 14 are Shoes; no source-supported Shoe subcategory exists.",
+  "qa": {
+    "taxonomy_errors": 0,
+    "invalid_categories": 0,
+    "invalid_subcategories": 0,
+    "invalid_approved_industries": 0,
+    "ready_products_without_industry": 0,
+    "pending_products_with_invented_industry": 0
+  },
+  "canonical_taxonomy_sha256": "5c799e8616c85aa9f93939805ae122fbb24b55ebbc96cc37a60c730dcbfcc07a",
+  "chunks": [
+    {
+      "path": "migration/phase3/canonical-products.taxonomy.part-001.csv",
+      "canonical_index": "1-110"
+    },
+    {
+      "path": "migration/phase3/canonical-products.taxonomy.part-002.csv",
+      "canonical_index": "111-220"
+    },
+    {
+      "path": "migration/phase3/canonical-products.taxonomy.part-003a.csv",
+      "canonical_index": "221-275"
+    },
+    {
+      "path": "migration/phase3/canonical-products.taxonomy.part-003b.csv",
+      "canonical_index": "276-330"
+    },
+    {
+      "path": "migration/phase3/canonical-products.taxonomy.part-004a.csv",
+      "canonical_index": "331-384"
+    },
+    {
+      "path": "migration/phase3/canonical-products.taxonomy.part-004b.csv",
+      "canonical_index": "385-438"
+    }
+  ],
+  "notes": [
+    "Only the seven approved Product Categories are used.",
+    "Only the ten approved Industries are used in approved_industries.",
+    "First Nations remains a reusable Product Subcategory, not an Industry.",
+    "Promotional Merchandise remains under Accessories with reusable filter subcategories.",
+    "Sustainable is represented as a reusable Product Subcategory/filter on 53 products.",
+    "No Webflow writes were performed in Phase 3B."
+  ]
+}
