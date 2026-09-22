@@ -3369,3 +3369,130 @@ Manifest / QA summary:
 - `migration/phase3/phase3b-summary.json`
 
 Phase 3B is complete and ready for Phase 3C migration metadata enrichment.
+
+
+---
+
+## 2026-09-22 — Canonical migration map — Phase 3B complete
+
+Phase 3B applies the final reconciled taxonomy to all **438 canonical Product identities** produced by Phase 3A.
+
+No Webflow CMS records were changed during this phase.
+
+### Canonical taxonomy outputs
+
+The taxonomy map is stored in six deterministic CSV parts under `migration/phase3/`:
+
+- `canonical-products.taxonomy.part-001.csv` — canonical indices 1–110
+- `canonical-products.taxonomy.part-002.csv` — 111–220
+- `canonical-products.taxonomy.part-003a.csv` — 221–275
+- `canonical-products.taxonomy.part-003b.csv` — 276–330
+- `canonical-products.taxonomy.part-004a.csv` — 331–384
+- `canonical-products.taxonomy.part-004b.csv` — 385–438
+
+Supporting metadata:
+
+- `migration/phase3/phase3b-summary.json`
+- `migration/phase3/phase3b-manifest.json`
+
+The chunking is purely operational / timeout-safe. `canonical_index` remains continuous across all files, so together they represent one canonical ordered migration map.
+
+### Integrity QA
+
+Verified directly from the committed GitHub files:
+
+- total records: **438**
+- unique canonical indices: **438**
+- first index: **1**
+- last index: **438**
+- missing indices: **0**
+- duplicate indices: **0**
+- invalid Product Categories: **0**
+
+### Final Product Category allocation
+
+All 438 products map to one of the fixed seven approved Product Categories:
+
+- Tops — **160**
+- Accessories — **77**
+- Workwear & Hi-vis — **65**
+- Outerwear — **52**
+- Suiting — **38**
+- Bottoms — **32**
+- Shoes — **14**
+
+No additional Product Category is required.
+
+### Final Product Subcategory handling
+
+The reusable-filter model from Phase 1 is applied consistently across the canonical records.
+
+Important rules retained:
+
+- Scrubs is one reusable Subcategory shared by Tops and Bottoms.
+- Sustainable is one reusable Subcategory shared across every applicable Product Category.
+- Polos is a Subcategory of Tops.
+- First Nations is a Product Subcategory under Tops.
+- Promotional Merchandise is a Product Subcategory under Accessories, alongside supported type filters such as Drinkware, Bags, Pens and Notebooks.
+- Shirts can apply to Tops or Workwear & Hi-vis.
+- sleeve-length filters are reusable.
+- the known `3980` source anomaly is corrected to **Accessories + Headwear + Sustainable**; the erroneous Aprons filter is not carried into the canonical taxonomy.
+- Shoes intentionally have no Product Subcategory because no supported shoe filter exists in the supplied source.
+
+QA:
+
+- non-Shoes products without a Subcategory: **0**
+- Shoes without a Subcategory: **14**, intentionally
+
+### Sustainable reconciliation
+
+The full canonical map contains **53 Sustainable products**.
+
+Sustainable is applied when supported by the source regardless of whether the source carried it through the Sustainable dataset, Extra Filter Reference, or the source Industry field.
+
+This is important for Promotional Merchandise, where some rows carry Sustainable in the source Industry data rather than the ordinary filter field.
+
+### Approved Industry handling
+
+Only the ten approved Industries are retained in the canonical map:
+
+- Aged Care
+- Automotive
+- Workwear & Hi-Vis
+- Retail
+- Corporate
+- Hospitality
+- Healthcare
+- Education
+- Teamwear & Fitness
+- Government
+
+Results:
+
+- **393 / 438** products have at least one supported approved Industry and are marked `ready`.
+- **45 / 438** products are marked `pending-client`.
+- unexpected Industry-pending products: **0**.
+
+The 45 expected pending products are exactly:
+
+- **14 First Nations products**
+- **31 Promotional Merchandise products**
+
+No Industry was invented for these records.
+
+First Nations remains a Product Subcategory / collection-style filter, not an Industry.
+
+Promotional Merchandise remains under Accessories with supported product-type filters, not an Industry.
+
+### Phase 3B conclusion
+
+- final Category assigned to **438 / 438** canonical products
+- final reusable Subcategories reconciled
+- approved Industries reconciled
+- **393** Industry-ready products
+- exactly **45** deliberately Industry-pending products
+- **53** Sustainable products preserved
+- committed taxonomy map has no index gaps or duplicates
+- no Webflow writes were performed
+
+Phase 3B is complete and ready for Phase 3C, where the same 438 canonical identities can be enriched with existing Webflow Product IDs, asset status/manual asset mappings, and migration blockers.
