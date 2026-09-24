@@ -1,0 +1,4 @@
+.DS_Store
+mac-app/.build/
+mac-app/dist/
+assets/.total-image-classifier/
