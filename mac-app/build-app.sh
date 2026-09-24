@@ -10,7 +10,7 @@ BINARY_NAME="TotalImageAssetClassifier"
 DIST_DIR="$SCRIPT_DIR/dist"
 APP_DIR="$DIST_DIR/$APP_NAME.app"
 
-echo "Building $APP_NAME…"
+echo "Building ${APP_NAME}..."
 
 swift build -c release
 
