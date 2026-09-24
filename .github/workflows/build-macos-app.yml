@@ -1,0 +1,47 @@
+name: Build macOS App
+
+on:
+  push:
+    branches:
+      - main
+      - feature/mac-asset-classifier
+    paths:
+      - "mac-app/**"
+      - ".github/workflows/build-macos-app.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build downloadable macOS app
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show Swift version
+        run: swift --version
+
+      - name: Build app
+        working-directory: mac-app
+        run: ./build-app.sh
+
+      - name: Package app
+        working-directory: mac-app/dist
+        run: |
+          ditto -c -k --sequesterRsrc --keepParent             "Total Image Asset Classifier.app"             "Total-Image-Asset-Classifier-macOS.zip"
+          shasum -a 256 "Total-Image-Asset-Classifier-macOS.zip"             > "Total-Image-Asset-Classifier-macOS.zip.sha256"
+
+      - name: Upload downloadable app
+        uses: actions/upload-artifact@v4
+        with:
+          name: Total-Image-Asset-Classifier-macOS
+          path: |
+            mac-app/dist/Total-Image-Asset-Classifier-macOS.zip
+            mac-app/dist/Total-Image-Asset-Classifier-macOS.zip.sha256
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
