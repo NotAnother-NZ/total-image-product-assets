@@ -1270,6 +1270,14 @@ struct AuditView: View {
                         .sourceIssue
                     )
                 }
+            } else {
+                actionButton(
+                    "Delete",
+                    icon: "trash",
+                    destructive: true
+                ) {
+                    model.setDecision(.delete)
+                }
             }
 
             actionButton(
@@ -1665,21 +1673,16 @@ private struct AuditChangePlanView: View {
 
     @State private var confirmApply = false
 
-    private var queued:
-        [(AuditIssue, AuditDecision)]
-    {
-        model.issues.compactMap { issue in
-            let decision =
-                model.decision(for: issue)
-            guard decision.action == .delete
-                    || decision.action
-                        == .rename
-            else {
-                return nil
-            }
+    private var plan: AuditChangePlan? {
+        model.changePlan
+    }
 
-            return (issue, decision)
-        }
+    private var queued: [AuditPlannedChange] {
+        plan?.changes ?? []
+    }
+
+    private var conflicts: [AuditPlanConflict] {
+        plan?.conflicts ?? []
     }
 
     var body: some View {
@@ -1693,9 +1696,20 @@ private struct AuditChangePlanView: View {
                         .font(.title2.bold())
 
                     Text(
-                        "\(queued.count) filesystem change(s) queued"
+                        "\(queued.count) effective filesystem change(s)"
                     )
                     .foregroundStyle(.secondary)
+
+                    if let superseded =
+                        plan?.supersededDecisionCount,
+                       superseded > 0
+                    {
+                        Text(
+                            "\(superseded) older duplicate-path decision(s) were superseded by the latest review choice."
+                        )
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    }
                 }
 
                 Spacer()
@@ -1736,59 +1750,128 @@ private struct AuditChangePlanView: View {
                     Spacer()
                 }
             } else {
-                List {
-                    ForEach(
-                        queued,
-                        id: \.0.id
-                    ) { issue, decision in
-                        HStack(
-                            alignment: .top,
-                            spacing: 12
+                VStack(spacing: 0) {
+                    if !conflicts.isEmpty {
+                        VStack(
+                            alignment: .leading,
+                            spacing: 8
                         ) {
-                            Image(
-                                systemName:
-                                    decision.action
-                                        == .delete
-                                    ? "trash"
-                                    : "pencil"
+                            Label(
+                                "Resolve before applying",
+                                systemImage:
+                                    "exclamationmark.triangle.fill"
                             )
-                            .foregroundStyle(
-                                decision.action
-                                    == .delete
-                                ? .red
-                                : .blue
-                            )
-                            .frame(width: 24)
+                            .font(.headline)
+                            .foregroundStyle(.red)
 
-                            VStack(
-                                alignment: .leading,
-                                spacing: 4
-                            ) {
-                                Text(
-                                    decision.action.label
-                                )
-                                .font(.headline)
+                            ForEach(conflicts) { conflict in
+                                VStack(
+                                    alignment: .leading,
+                                    spacing: 3
+                                ) {
+                                    Text(conflict.message)
+                                        .font(.caption.bold())
 
-                                Text(
-                                    issue.primaryRelativePath
-                                )
-                                .font(.caption)
-                                .foregroundStyle(
-                                    .secondary
-                                )
-                                .textSelection(.enabled)
-
-                                if let proposed =
-                                    decision.proposedFileName
-                                {
-                                    Text(
-                                        "→ \(proposed)"
-                                    )
-                                    .font(.caption.bold())
+                                    ForEach(
+                                        conflict.paths,
+                                        id: \.self
+                                    ) { path in
+                                        Text(path)
+                                            .font(.caption2)
+                                            .foregroundStyle(
+                                                .secondary
+                                            )
+                                            .textSelection(
+                                                .enabled
+                                            )
+                                    }
                                 }
                             }
                         }
-                        .padding(.vertical, 5)
+                        .padding(14)
+                        .background(
+                            Color.red.opacity(0.06)
+                        )
+
+                        Divider()
+                    }
+
+                    List {
+                        ForEach(queued) { change in
+                            HStack(
+                                alignment: .top,
+                                spacing: 12
+                            ) {
+                                Image(
+                                    systemName:
+                                        change.action
+                                            == .delete
+                                        ? "trash"
+                                        : "pencil"
+                                )
+                                .foregroundStyle(
+                                    change.state
+                                        == .alreadySatisfied
+                                    ? .green
+                                    : (
+                                        change.action
+                                            == .delete
+                                        ? .red
+                                        : .blue
+                                    )
+                                )
+                                .frame(width: 24)
+
+                                VStack(
+                                    alignment: .leading,
+                                    spacing: 4
+                                ) {
+                                    HStack {
+                                        Text(
+                                            change.action.label
+                                        )
+                                        .font(.headline)
+
+                                        if change.state
+                                            == .alreadySatisfied
+                                        {
+                                            Text(
+                                                "Already satisfied"
+                                            )
+                                            .font(.caption.bold())
+                                            .foregroundStyle(.green)
+                                        }
+                                    }
+
+                                    Text(
+                                        change.originalRelativePath
+                                    )
+                                    .font(.caption)
+                                    .foregroundStyle(
+                                        .secondary
+                                    )
+                                    .textSelection(.enabled)
+
+                                    if let target =
+                                        change.targetRelativePath
+                                    {
+                                        Text(
+                                            "→ \(target)"
+                                        )
+                                        .font(.caption.bold())
+                                    }
+
+                                    if let note = change.note {
+                                        Text(note)
+                                            .font(.caption2)
+                                            .foregroundStyle(
+                                                .secondary
+                                            )
+                                    }
+                                }
+                            }
+                            .padding(.vertical, 5)
+                        }
                     }
                 }
             }
@@ -1810,10 +1893,16 @@ private struct AuditChangePlanView: View {
                 Spacer()
 
                 Text(
-                    "Apply creates a hash-verified backup in Downloads first."
+                    conflicts.isEmpty
+                    ? "Apply creates a hash-verified backup in Downloads first."
+                    : "Apply is disabled until the effective plan has no conflicts."
                 )
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(
+                    conflicts.isEmpty
+                    ? Color.secondary
+                    : Color.red
+                )
 
                 Button("Apply Changes…") {
                     confirmApply = true
@@ -1821,6 +1910,7 @@ private struct AuditChangePlanView: View {
                 .buttonStyle(.borderedProminent)
                 .disabled(
                     !model.canApplyChanges
+                        || !conflicts.isEmpty
                 )
             }
             .padding(18)

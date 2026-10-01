@@ -61,7 +61,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG="v0.4.1"
+          TAG="v0.4.2"
 
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" \
@@ -73,6 +73,6 @@ jobs:
               "mac-app/dist/Total-Image-Asset-Classifier-macOS.zip" \
               "mac-app/dist/Total-Image-Asset-Classifier-macOS.zip.sha256" \
               --target "${GITHUB_SHA}" \
-              --title "Total Image Asset Classifier v0.4.1" \
-              --notes "Fixes the Asset Audit Excel workbook hang by using deadlock-safe bounded archive reads, adds detailed live scan progress with elapsed/last-update timing, and keeps audit failures visible with safe retry options. Existing classifier/sync behavior remains unchanged."
+              --title "Total Image Asset Classifier v0.4.2" \
+              --notes "Fixes Asset Audit apply planning: collapses duplicate decisions for the same physical file, treats already-deleted files as satisfied, blocks rename-target conflicts before mutation, verifies rollback, and shows the effective plan before Apply."
           fi
