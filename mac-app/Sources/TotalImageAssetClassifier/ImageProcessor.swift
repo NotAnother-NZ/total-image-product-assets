@@ -65,11 +65,12 @@ enum ImageProcessor {
         magickPath: String
     ) throws -> ProcessingResult {
         let fileManager = FileManager.default
-        let parent = job.sourceURL.deletingLastPathComponent()
-
-        let outputDirectory = parent
+        let outputDirectory = job.outputProductFolderURL
             .appendingPathComponent("webp", isDirectory: true)
-            .appendingPathComponent(job.classification.outputFolderName, isDirectory: true)
+            .appendingPathComponent(
+                job.classification.outputFolderName,
+                isDirectory: true
+            )
 
         try fileManager.createDirectory(
             at: outputDirectory,
@@ -79,17 +80,28 @@ enum ImageProcessor {
         let outputURL = outputDirectory
             .appendingPathComponent(job.outputStem)
             .appendingPathExtension("webp")
-
-        let opposite: AssetClassification = job.classification == .model ? .product : .model
-        let staleOppositeURL = parent
-            .appendingPathComponent("webp", isDirectory: true)
-            .appendingPathComponent(opposite.outputFolderName, isDirectory: true)
-            .appendingPathComponent(job.outputStem)
+        let temporaryOutputURL = outputDirectory
+            .appendingPathComponent(
+                ".\(job.outputStem).\(UUID().uuidString).tmp"
+            )
             .appendingPathExtension("webp")
 
-        if fileManager.fileExists(atPath: staleOppositeURL.path) {
-            try? fileManager.removeItem(at: staleOppositeURL)
+        defer {
+            if fileManager.fileExists(atPath: temporaryOutputURL.path) {
+                try? fileManager.removeItem(at: temporaryOutputURL)
+            }
         }
+
+        let opposite: AssetClassification =
+            job.classification == .model ? .product : .model
+        let staleOppositeURL = job.outputProductFolderURL
+            .appendingPathComponent("webp", isDirectory: true)
+            .appendingPathComponent(
+                opposite.outputFolderName,
+                isDirectory: true
+            )
+            .appendingPathComponent(job.outputStem)
+            .appendingPathExtension("webp")
 
         var bboxDescription: String?
         var canvasDescription: String?
@@ -104,7 +116,7 @@ enum ImageProcessor {
                     "-resize", "1200x>",
                     "-strip",
                     "-quality", "88",
-                    outputURL.path
+                    temporaryOutputURL.path
                 ]
             )
 
@@ -115,7 +127,8 @@ enum ImageProcessor {
             )
 
             let canvas = normalizedCanvas(for: bbox)
-            bboxDescription = "\(bbox.width)x\(bbox.height)+\(bbox.x)+\(bbox.y)"
+            bboxDescription =
+                "\(bbox.width)x\(bbox.height)+\(bbox.x)+\(bbox.y)"
             canvasDescription = "\(canvas.width)x\(canvas.height)"
 
             try run(
@@ -123,7 +136,8 @@ enum ImageProcessor {
                 arguments: [
                     job.sourceURL.path,
                     "-auto-orient",
-                    "-crop", "\(bbox.width)x\(bbox.height)+\(bbox.x)+\(bbox.y)",
+                    "-crop",
+                    "\(bbox.width)x\(bbox.height)+\(bbox.x)+\(bbox.y)",
                     "+repage",
                     "-background", "#FFFFFF",
                     "-gravity", "center",
@@ -131,23 +145,41 @@ enum ImageProcessor {
                     "-resize", "1200x>",
                     "-strip",
                     "-quality", "88",
-                    outputURL.path
+                    temporaryOutputURL.path
                 ]
             )
         }
 
-        guard fileManager.fileExists(atPath: outputURL.path) else {
+        guard fileManager.fileExists(atPath: temporaryOutputURL.path) else {
             throw ImageProcessorError.commandFailed(
                 "ImageMagick finished without creating the expected output."
             )
         }
 
-        let rootPath = job.rootURL.standardizedFileURL.path
+        if fileManager.fileExists(atPath: outputURL.path) {
+            _ = try fileManager.replaceItemAt(
+                outputURL,
+                withItemAt: temporaryOutputURL
+            )
+        } else {
+            try fileManager.moveItem(
+                at: temporaryOutputURL,
+                to: outputURL
+            )
+        }
+
+        if fileManager.fileExists(atPath: staleOppositeURL.path) {
+            try? fileManager.removeItem(at: staleOppositeURL)
+        }
+
+        let rootPath = job.outputRootURL.standardizedFileURL.path
         let outputPath = outputURL.standardizedFileURL.path
         let relativeOutput: String
 
         if outputPath.hasPrefix(rootPath + "/") {
-            relativeOutput = String(outputPath.dropFirst(rootPath.count + 1))
+            relativeOutput = String(
+                outputPath.dropFirst(rootPath.count + 1)
+            )
         } else {
             relativeOutput = outputPath
         }
