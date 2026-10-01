@@ -8,7 +8,27 @@ struct DestinationAsset: Hashable, Sendable {
     let outputURL: URL
     let outputRelativePath: String
     let modificationTime: TimeInterval
-    let fileSize: Int64 = 0
+    let fileSize: Int64
+
+    init(
+        id: String,
+        productFolderName: String,
+        classification: AssetClassification,
+        outputStem: String,
+        outputURL: URL,
+        outputRelativePath: String,
+        modificationTime: TimeInterval,
+        fileSize: Int64 = 0
+    ) {
+        self.id = id
+        self.productFolderName = productFolderName
+        self.classification = classification
+        self.outputStem = outputStem
+        self.outputURL = outputURL
+        self.outputRelativePath = outputRelativePath
+        self.modificationTime = modificationTime
+        self.fileSize = fileSize
+    }
 }
 
 struct DestinationSnapshot: Sendable {
