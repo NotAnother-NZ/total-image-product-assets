@@ -539,14 +539,20 @@ final class AuditEngineTests: XCTestCase {
         ) { error in
             guard case
                 AuditApplyError
-                .activeOutputDeleteForbidden =
+                .changePlanConflict(let detail) =
                     error
             else {
                 XCTFail(
-                    "Expected active output delete guard, got \(error)"
+                    "Expected preflight change-plan conflict, got \(error)"
                 )
                 return
             }
+
+            XCTAssertTrue(
+                detail.contains(
+                    "still source-backed"
+                )
+            )
         }
     }
 
