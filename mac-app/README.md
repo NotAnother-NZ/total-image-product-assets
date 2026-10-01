@@ -4,7 +4,8 @@ A small native macOS app for manually classifying the Total Image product assets
 
 ## What it does
 
-- Drag and drop the main `assets` folder, or choose it with the file picker.
+- Drag and drop the full `ALL_PRODUCT_ASSETS` library, or choose it with the file picker.
+- You can also drop a **single SKU folder** later for incremental updates.
 - Shows one source image at a time.
 - Classify with:
   - **M** → Model
@@ -15,6 +16,8 @@ A small native macOS app for manually classifying the Total Image product assets
 - Reopening the app and dropping the same assets folder resumes at the first unclassified image.
 - If the app was closed while jobs were pending, those saved classifications are re-queued automatically.
 - Existing source images are never modified.
+- In single-SKU mode, only supported image files in the SKU folder root are scanned. Existing generated `webp/model` and `webp/product` folders are preserved and never treated as source files.
+- If a root image was previously classified, the app reuses that classification from saved library progress (or an existing generated output) and automatically refreshes changed/replacement files.
 
 ## Output rules
 
@@ -118,3 +121,31 @@ That action removes only:
 It does **not** remove the source JPG, JPEG, PNG, WebP or AVIF files.
 
 Do not use the reset action while background processing is still active.
+
+
+## Incremental single-SKU updates
+
+After the main library has been classified, you can process a later correction without reopening the whole library.
+
+Example:
+
+```
+ALL_PRODUCT_ASSETS/
+  J510M_UNISEX_CHARGER_JACKET/
+    J510M_..._BLACK_ROYAL_GREY_FRONT.jpg
+    J510M_..._BLACK_ROYAL_GREY_BACK.jpg
+    webp/
+      model/
+      product/
+```
+
+Drop `J510M_UNISEX_CHARGER_JACKET` directly into the app.
+
+The app will:
+
+- scan only supported image files in the SKU folder root;
+- ignore and preserve existing `webp/model` and `webp/product` outputs;
+- reuse saved classification for previously known filenames;
+- automatically reprocess replacement files into their existing Model/Product destination;
+- show only genuinely new, unclassified root images for manual classification;
+- mirror single-SKU progress back into the parent `ALL_PRODUCT_ASSETS` progress file when it exists.
