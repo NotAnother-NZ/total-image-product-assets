@@ -1874,7 +1874,6 @@ private struct AuditChangePlanView: View {
                         }
                     }
                 }
-                }
             }
 
             Divider()
