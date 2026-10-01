@@ -4,6 +4,10 @@ import Foundation
 @MainActor
 final class AppModel: ObservableObject {
     @Published private(set) var rootURL: URL?
+    @Published private(set) var destinationURL: URL?
+    @Published private(set) var comparisonSourceSelection: URL?
+    @Published private(set) var comparisonDestinationSelection: URL?
+    @Published private(set) var comparisonSummary: ComparisonSummary?
     @Published private(set) var scanMode: AssetScanMode?
     @Published private(set) var productFolderCount = 0
     @Published private(set) var items: [AssetItem] = []
@@ -19,6 +23,9 @@ final class AppModel: ObservableObject {
     private var queuedPaths: Set<String> = []
     private var activePaths: Set<String> = []
     private var parentLibraryURL: URL?
+    private var progressRootURL: URL?
+    private var comparisonProductFolderMap: [String: String] = [:]
+    private var comparisonSourceScanMode: AssetScanMode?
 
     private let maxConcurrentProcessors = 2
 
@@ -58,6 +65,14 @@ final class AppModel: ObservableObject {
         !history.isEmpty
     }
 
+    var isComparisonMode: Bool {
+        scanMode == .comparison
+    }
+
+    var manualRemainingCount: Int {
+        max(totalCount - classifiedCount, 0)
+    }
+
     func chooseFolder() {
         let panel = NSOpenPanel()
         panel.title = "Choose ALL_PRODUCT_ASSETS or a single SKU folder"
@@ -70,6 +85,63 @@ final class AppModel: ObservableObject {
         if panel.runModal() == .OK, let url = panel.url {
             openFolder(url)
         }
+    }
+
+    func chooseComparisonSourceFolder() {
+        let panel = NSOpenPanel()
+        panel.title = "Choose source ALL_PRODUCT_ASSETS"
+        panel.prompt = "Use as Source"
+        panel.canChooseDirectories = true
+        panel.canChooseFiles = false
+        panel.allowsMultipleSelection = false
+        panel.canCreateDirectories = false
+
+        if panel.runModal() == .OK, let url = panel.url {
+            setComparisonSourceFolder(url)
+        }
+    }
+
+    func chooseComparisonDestinationFolder() {
+        let panel = NSOpenPanel()
+        panel.title = "Choose finalized destination assets folder"
+        panel.prompt = "Use as Destination"
+        panel.canChooseDirectories = true
+        panel.canChooseFiles = false
+        panel.allowsMultipleSelection = false
+        panel.canCreateDirectories = false
+
+        if panel.runModal() == .OK, let url = panel.url {
+            setComparisonDestinationFolder(url)
+        }
+    }
+
+    func setComparisonSourceFolder(_ url: URL) {
+        comparisonSourceSelection = url.standardizedFileURL
+        tryOpenComparisonIfReady()
+    }
+
+    func setComparisonDestinationFolder(_ url: URL) {
+        comparisonDestinationSelection = url.standardizedFileURL
+        tryOpenComparisonIfReady()
+    }
+
+    private func tryOpenComparisonIfReady() {
+        guard let source = comparisonSourceSelection,
+              let destination = comparisonDestinationSelection
+        else {
+            return
+        }
+
+        guard source.path != destination.path else {
+            errorMessage =
+                "Source and destination must be two different folders."
+            return
+        }
+
+        openComparison(
+            sourceURL: source,
+            destinationURL: destination
+        )
     }
 
     func openFolder(_ url: URL) {
@@ -119,6 +191,71 @@ final class AppModel: ObservableObject {
         }
     }
 
+    func openComparison(
+        sourceURL: URL,
+        destinationURL: URL
+    ) {
+        guard magickPath != nil else {
+            errorMessage =
+                "ImageMagick was not found. Install it with: brew install imagemagick"
+            return
+        }
+
+        let source = sourceURL.standardizedFileURL
+        let destination = destinationURL.standardizedFileURL
+
+        guard source.path != destination.path else {
+            errorMessage =
+                "Source and destination must be two different folders."
+            return
+        }
+
+        isLoading = true
+        errorMessage = nil
+        message = nil
+
+        Task {
+            do {
+                let result = try await Task.detached(
+                    priority: .userInitiated
+                ) {
+                    let scanned = try AssetScanner.scan(
+                        rootURL: source
+                    )
+                    let destinationSnapshot =
+                        try DestinationScanner.scan(
+                            rootURL: destination
+                        )
+                    let storedProgress = try ProgressStore.load(
+                        rootURL: destination
+                    )
+                    let plan = ComparisonPlanner.makePlan(
+                        items: scanned.items,
+                        sourceScanMode: scanned.mode,
+                        sourceRootFolderName:
+                            source.lastPathComponent,
+                        destinationRootFolderName:
+                            destination.lastPathComponent,
+                        destination: destinationSnapshot,
+                        storedProgress: storedProgress
+                    )
+
+                    return (scanned, plan)
+                }.value
+
+                applyLoadedComparison(
+                    sourceURL: source,
+                    destinationURL: destination,
+                    scanResult: result.0,
+                    plan: result.1
+                )
+            } catch {
+                errorMessage = error.localizedDescription
+                isLoading = false
+            }
+        }
+    }
+
     func classify(_ classification: AssetClassification) {
         guard let item = currentItem,
               let rootURL
@@ -127,6 +264,26 @@ final class AppModel: ObservableObject {
         }
 
         let revision = UUID().uuidString
+
+        let destinationProductFolderName: String? = {
+            guard scanMode == .comparison,
+                  let comparisonSourceScanMode,
+                  let rootURL
+            else {
+                return nil
+            }
+
+            let sourceProduct =
+                ComparisonPlanner.sourceProductFolderName(
+                    for: item,
+                    sourceScanMode: comparisonSourceScanMode,
+                    sourceRootFolderName:
+                        rootURL.lastPathComponent
+                )
+
+            return comparisonProductFolderMap[sourceProduct]
+                ?? sourceProduct
+        }()
 
         let record = AssetProgressRecord(
             relativePath: item.relativePath,
@@ -137,7 +294,10 @@ final class AppModel: ObservableObject {
             error: nil,
             fileSize: item.fileSize,
             modificationTime: item.modificationTime,
-            updatedAt: Date()
+            updatedAt: Date(),
+            destinationProductFolderName:
+                destinationProductFolderName,
+            outputStemOverride: nil
         )
 
         setRecord(record, for: item.relativePath)
@@ -161,7 +321,8 @@ final class AppModel: ObservableObject {
         }
 
         if let output = previous.outputRelativePath {
-            let url = rootURL.appendingPathComponent(output)
+            let outputRoot = progressRootURL ?? rootURL
+            let url = outputRoot.appendingPathComponent(output)
             try? FileManager.default.removeItem(at: url)
         }
 
@@ -177,8 +338,8 @@ final class AppModel: ObservableObject {
     }
 
     func revealOutputFolder() {
-        guard let rootURL else { return }
-        NSWorkspace.shared.activateFileViewerSelecting([rootURL])
+        guard let url = destinationURL ?? rootURL else { return }
+        NSWorkspace.shared.activateFileViewerSelecting([url])
     }
 
     func resetGeneratedOutputsAndProgress() {
@@ -190,6 +351,26 @@ final class AppModel: ObservableObject {
         }
 
         do {
+            if scanMode == .comparison,
+               let destinationURL
+            {
+                try ProgressStore.reset(rootURL: destinationURL)
+                history.removeAll()
+                processingQueue.removeAll()
+                queuedPaths.removeAll()
+                activePaths.removeAll()
+                refreshQueueCounts()
+
+                message =
+                    "Saved comparison state was cleared. Finalized destination WebPs were preserved."
+
+                openComparison(
+                    sourceURL: rootURL,
+                    destinationURL: destinationURL
+                )
+                return
+            }
+
             try removeGeneratedWebPFolders(rootURL: rootURL)
             try ProgressStore.reset(rootURL: rootURL)
 
@@ -197,7 +378,9 @@ final class AppModel: ObservableObject {
             processingQueue.removeAll()
             queuedPaths.removeAll()
             activePaths.removeAll()
-            progress = ProgressDocument(rootFolderName: rootURL.lastPathComponent)
+            progress = ProgressDocument(
+                rootFolderName: rootURL.lastPathComponent
+            )
             refreshQueueCounts()
 
             message = "Generated WebP folders and saved classification progress were cleared. Original images were not touched."
@@ -214,10 +397,17 @@ final class AppModel: ObservableObject {
         parentProgress: ProgressDocument?
     ) {
         rootURL = url
+        destinationURL = nil
         scanMode = scanResult.mode
         productFolderCount = scanResult.productFolderCount
         items = scanResult.items
         parentLibraryURL = parentURL
+        progressRootURL = url
+        comparisonSummary = nil
+        comparisonProductFolderMap.removeAll()
+        comparisonSourceScanMode = nil
+        comparisonSourceSelection = nil
+        comparisonDestinationSelection = nil
 
         history.removeAll()
         processingQueue.removeAll()
@@ -314,6 +504,57 @@ final class AppModel: ObservableObject {
         }
     }
 
+    private func applyLoadedComparison(
+        sourceURL: URL,
+        destinationURL: URL,
+        scanResult: AssetScanResult,
+        plan: ComparisonPlan
+    ) {
+        rootURL = sourceURL
+        self.destinationURL = destinationURL
+        comparisonSourceSelection = sourceURL
+        comparisonDestinationSelection = destinationURL
+        scanMode = .comparison
+        productFolderCount = scanResult.productFolderCount
+        items = scanResult.items
+        progress = plan.progress
+        progressRootURL = destinationURL
+        parentLibraryURL = nil
+        comparisonSummary = plan.summary
+        comparisonProductFolderMap = plan.productFolderMap
+        comparisonSourceScanMode = scanResult.mode
+
+        history.removeAll()
+        processingQueue.removeAll()
+        queuedPaths.removeAll()
+        activePaths.removeAll()
+
+        isLoading = false
+        saveProgress()
+
+        for item in scanResult.items {
+            guard let record = progress.records[item.relativePath],
+                  record.status != .completed
+            else {
+                continue
+            }
+
+            enqueue(
+                item: item,
+                classification: record.classification,
+                revision: record.revision,
+                rootURL: sourceURL
+            )
+        }
+
+        let summary = plan.summary
+        message =
+            "Smart comparison loaded: \(summary.alreadyCurrentCount) already current, " +
+            "\(summary.automaticRefreshCount) refreshing automatically, " +
+            "\(summary.manualClassificationCount) need manual classification. " +
+            "\(summary.destinationOnlyOutputCount) destination-only output(s) are preserved."
+    }
+
     private func importParentProgress(
         _ parent: ProgressDocument,
         skuFolderName: String,
@@ -395,12 +636,44 @@ final class AppModel: ObservableObject {
             return
         }
 
+        let record = progress.records[item.relativePath]
+        let outputRootURL = destinationURL ?? rootURL
+        let outputProductFolderURL: URL
+        let outputStem = record?.outputStemOverride
+            ?? item.outputStem
+
+        if scanMode == .comparison {
+            let sourceProduct =
+                ComparisonPlanner.sourceProductFolderName(
+                    for: item,
+                    sourceScanMode:
+                        comparisonSourceScanMode ?? .library,
+                    sourceRootFolderName:
+                        rootURL.lastPathComponent
+                )
+            let destinationProduct =
+                record?.destinationProductFolderName
+                ?? comparisonProductFolderMap[sourceProduct]
+                ?? sourceProduct
+
+            outputProductFolderURL = outputRootURL
+                .appendingPathComponent(
+                    destinationProduct,
+                    isDirectory: true
+                )
+        } else {
+            outputProductFolderURL =
+                item.sourceURL.deletingLastPathComponent()
+        }
+
         processingQueue.append(
             ProcessingJob(
                 sourceURL: item.sourceURL,
-                rootURL: rootURL,
+                outputRootURL: outputRootURL,
+                outputProductFolderURL:
+                    outputProductFolderURL,
                 relativePath: item.relativePath,
-                outputStem: item.outputStem,
+                outputStem: outputStem,
                 classification: classification,
                 revision: revision
             )
@@ -534,10 +807,17 @@ final class AppModel: ObservableObject {
     }
 
     private func saveProgress() {
-        guard let rootURL else { return }
+        guard let rootURL,
+              let saveRootURL = progressRootURL ?? self.rootURL
+        else {
+            return
+        }
 
         do {
-            try ProgressStore.save(progress, rootURL: rootURL)
+            try ProgressStore.save(
+                progress,
+                rootURL: saveRootURL
+            )
 
             if scanMode == .singleSKU, let parentLibraryURL {
                 try mirrorSingleSKUProgressToParent(
@@ -593,6 +873,10 @@ final class AppModel: ObservableObject {
 
     private func removeGeneratedWebPFolders(rootURL: URL) throws {
         let fileManager = FileManager.default
+
+        if scanMode == .comparison {
+            return
+        }
 
         if scanMode == .singleSKU {
             let webpFolder = rootURL.appendingPathComponent("webp", isDirectory: true)
