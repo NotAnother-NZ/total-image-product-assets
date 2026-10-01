@@ -196,23 +196,27 @@ struct AuditView: View {
                         model.setExcelFile(nil)
                     }
                     .buttonStyle(.link)
+                    .disabled(
+                        model.isScanning
+                            || model.isApplying
+                    )
                 }
             }
 
             if model.isScanning {
-                VStack(spacing: 8) {
-                    ProgressView(
-                        value:
-                            model.scanProgress
-                    )
-                    .frame(maxWidth: 620)
-
-                    Text(model.scanStage)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
+                scanProgressPanel()
+                    .frame(maxWidth: 700)
             } else {
-                Button("Build Audit Queue") {
+                if model.lastScanError != nil {
+                    scanFailurePanel
+                        .frame(maxWidth: 700)
+                }
+
+                Button(
+                    model.lastScanError == nil
+                        ? "Build Audit Queue"
+                        : "Retry Audit"
+                ) {
                     model.startAudit()
                 }
                 .buttonStyle(.borderedProminent)
@@ -232,6 +236,212 @@ struct AuditView: View {
             Spacer()
         }
         .padding(34)
+    }
+
+    private func scanProgressPanel(
+        compact: Bool = false
+    ) -> some View {
+        TimelineView(
+            .periodic(
+                from: Date(),
+                by: 1
+            )
+        ) { context in
+            let startedAt =
+                model.scanStartedAt
+                ?? context.date
+            let updatedAt =
+                model.scanLastUpdateAt
+                ?? startedAt
+            let elapsed = max(
+                0,
+                context.date.timeIntervalSince(
+                    startedAt
+                )
+            )
+            let sinceUpdate = max(
+                0,
+                context.date.timeIntervalSince(
+                    updatedAt
+                )
+            )
+
+            VStack(
+                alignment: .leading,
+                spacing: compact ? 6 : 10
+            ) {
+                HStack(spacing: 10) {
+                    if !compact {
+                        ProgressView()
+                            .controlSize(.small)
+                    }
+
+                    Text(model.scanStage)
+                        .font(
+                            compact
+                            ? .caption.bold()
+                            : .headline
+                        )
+                        .foregroundStyle(.primary)
+                        .fixedSize(
+                            horizontal: false,
+                            vertical: true
+                        )
+
+                    Spacer()
+
+                    Text(
+                        "\(Int((model.scanProgress * 100).rounded()))%"
+                    )
+                    .font(
+                        .caption.monospacedDigit()
+                    )
+                    .foregroundStyle(.secondary)
+                }
+
+                ProgressView(
+                    value: model.scanProgress
+                )
+
+                HStack(spacing: 14) {
+                    Label(
+                        "Elapsed \(durationText(elapsed))",
+                        systemImage: "clock"
+                    )
+
+                    Label(
+                        "Last update \(durationText(sinceUpdate)) ago",
+                        systemImage:
+                            "arrow.triangle.2.circlepath"
+                    )
+
+                    Spacer()
+
+                    if model.scanStage
+                        .localizedCaseInsensitiveContains(
+                            "Excel"
+                        )
+                    {
+                        Text(
+                            "Excel reads time out after 30s"
+                        )
+                    }
+                }
+                .font(.caption)
+                .foregroundStyle(.secondary)
+
+                if sinceUpdate >= 15 {
+                    Label(
+                        "This step is taking longer than usual. The audit is still responsive; bounded file/image operations will surface an error instead of waiting indefinitely.",
+                        systemImage: "hourglass"
+                    )
+                    .font(.caption)
+                    .foregroundStyle(.orange)
+                    .fixedSize(
+                        horizontal: false,
+                        vertical: true
+                    )
+                }
+            }
+            .padding(
+                compact ? 8 : 14
+            )
+            .background(
+                RoundedRectangle(
+                    cornerRadius: 12
+                )
+                .fill(
+                    Color.secondary.opacity(
+                        compact ? 0.04 : 0.06
+                    )
+                )
+            )
+        }
+    }
+
+    private var scanFailurePanel: some View {
+        VStack(
+            alignment: .leading,
+            spacing: 10
+        ) {
+            Label(
+                "Audit stopped safely",
+                systemImage:
+                    "exclamationmark.triangle.fill"
+            )
+            .font(.headline)
+            .foregroundStyle(.red)
+
+            if let stage =
+                model.lastScanFailureStage
+            {
+                Text("Failed stage: \(stage)")
+                    .font(.caption.bold())
+                    .textSelection(.enabled)
+            }
+
+            if let detail =
+                model.lastScanError
+            {
+                Text(detail)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .textSelection(.enabled)
+                    .fixedSize(
+                        horizontal: false,
+                        vertical: true
+                    )
+            }
+
+            Text(
+                "No destination assets are modified while the audit queue is being built."
+            )
+            .font(.caption)
+            .foregroundStyle(.secondary)
+
+            if model.excelSelection != nil {
+                Button(
+                    "Retry Without Excel"
+                ) {
+                    model.retryWithoutExcel()
+                }
+                .buttonStyle(.bordered)
+            }
+        }
+        .padding(14)
+        .background(
+            RoundedRectangle(
+                cornerRadius: 12
+            )
+            .fill(
+                Color.red.opacity(0.06)
+            )
+        )
+        .overlay(
+            RoundedRectangle(
+                cornerRadius: 12
+            )
+            .strokeBorder(
+                Color.red.opacity(0.25)
+            )
+        )
+    }
+
+    private func durationText(
+        _ interval: TimeInterval
+    ) -> String {
+        let seconds = max(
+            0,
+            Int(interval.rounded(.down))
+        )
+
+        if seconds < 60 {
+            return "\(seconds)s"
+        }
+
+        let minutes = seconds / 60
+        let remaining = seconds % 60
+        return "\(minutes)m \(remaining)s"
     }
 
     private var reviewView: some View {
@@ -361,23 +571,16 @@ struct AuditView: View {
                 }
             }
 
-            if model.isScanning || model.isApplying {
+            if model.isScanning {
+                scanProgressPanel(compact: true)
+            } else if model.isApplying {
                 HStack(spacing: 10) {
-                    ProgressView(
-                        value:
-                            model.isScanning
-                            ? model.scanProgress
-                            : nil
-                    )
-                    .frame(width: 180)
+                    ProgressView()
+                        .frame(width: 180)
 
                     Text(
-                        model.isScanning
-                            ? model.scanStage
-                            : (
-                                model.message
-                                ?? "Applying changes…"
-                            )
+                        model.message
+                            ?? "Applying changes…"
                     )
                     .font(.caption)
                     .foregroundStyle(.secondary)
