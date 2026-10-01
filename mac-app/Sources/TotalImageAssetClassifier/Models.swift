@@ -19,11 +19,13 @@ enum AssetClassification: String, Codable, CaseIterable, Sendable {
 enum AssetScanMode: String, Sendable {
     case library
     case singleSKU
+    case comparison
 
     var label: String {
         switch self {
         case .library: return "Asset Library"
         case .singleSKU: return "Single SKU"
+        case .comparison: return "Source → Destination"
         }
     }
 }
@@ -68,17 +70,21 @@ struct AssetProgressRecord: Codable, Sendable {
     var fileSize: Int64
     var modificationTime: TimeInterval
     var updatedAt: Date
+    var destinationProductFolderName: String? = nil
+    var outputStemOverride: String? = nil
 }
 
 struct ProgressDocument: Codable, Sendable {
-    var version: Int = 1
+    var version: Int = 2
     var rootFolderName: String
+    var sourceRootFolderName: String? = nil
     var records: [String: AssetProgressRecord] = [:]
 }
 
 struct ProcessingJob: Sendable {
     let sourceURL: URL
-    let rootURL: URL
+    let outputRootURL: URL
+    let outputProductFolderURL: URL
     let relativePath: String
     let outputStem: String
     let classification: AssetClassification
