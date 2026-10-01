@@ -116,13 +116,31 @@ final class AppModel: ObservableObject {
     }
 
     func setComparisonSourceFolder(_ url: URL) {
+        guard canChangeComparisonFolders else {
+            errorMessage =
+                "Wait for the current comparison or background processing to finish before changing folders."
+            return
+        }
+
         comparisonSourceSelection = url.standardizedFileURL
         tryOpenComparisonIfReady()
     }
 
     func setComparisonDestinationFolder(_ url: URL) {
+        guard canChangeComparisonFolders else {
+            errorMessage =
+                "Wait for the current comparison or background processing to finish before changing folders."
+            return
+        }
+
         comparisonDestinationSelection = url.standardizedFileURL
         tryOpenComparisonIfReady()
+    }
+
+    var canChangeComparisonFolders: Bool {
+        !isLoading
+            && activeProcessingCount == 0
+            && queuedProcessingCount == 0
     }
 
     private func tryOpenComparisonIfReady() {
