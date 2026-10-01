@@ -54,11 +54,11 @@ struct ContentView: View {
             Text("Total Image Asset Classifier")
                 .font(.largeTitle.bold())
 
-            Text("Drop the main assets folder here.")
+            Text("Drop ALL_PRODUCT_ASSETS or a single SKU folder here.")
                 .font(.title3)
                 .foregroundStyle(.secondary)
 
-            Text("Classify each image as Model or Product. Conversion continues in the background and progress is saved immediately.")
+            Text("Use the full library for normal classification, or drop one SKU later to classify only new root images and refresh replacements without touching existing outputs.")
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
                 .frame(maxWidth: 620)
@@ -133,11 +133,20 @@ struct ContentView: View {
                     Text(model.rootURL?.lastPathComponent ?? "Assets")
                         .font(.headline)
 
-                    Text(model.rootURL?.path ?? "")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                        .lineLimit(1)
-                        .truncationMode(.middle)
+                    HStack(spacing: 8) {
+                        Text(model.scanMode?.label ?? "Assets")
+                            .font(.caption.bold())
+                            .padding(.horizontal, 7)
+                            .padding(.vertical, 2)
+                            .background(.secondary.opacity(0.12))
+                            .clipShape(Capsule())
+
+                        Text(model.rootURL?.path ?? "")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
+                            .truncationMode(.middle)
+                    }
                 }
 
                 Spacer()
@@ -397,7 +406,7 @@ struct ContentView: View {
                     isDirectory: &isDirectory
                 ), isDirectory.boolValue
                 else {
-                    model.errorMessage = "Please drop the main assets folder, not an individual file."
+                    model.errorMessage = "Please drop ALL_PRODUCT_ASSETS or a single SKU folder, not an individual file."
                     return
                 }
 
