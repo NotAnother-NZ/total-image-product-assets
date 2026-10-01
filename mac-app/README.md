@@ -46,6 +46,8 @@ Audit mode builds four queues:
 - **Naming warnings** — high-confidence filename typos such as `FRRONT`, `NACY`, or `CLOESUP`.
 - **Missing outputs** — current source records whose saved finalized output no longer exists.
 
+While the queue is being built, the app shows the current scan stage, overall percentage, elapsed time, and time since the last progress update. Excel archive reads write subprocess output to temporary files instead of pipes and are capped at 30 seconds per archive operation, preventing a large worksheet from deadlocking the app. Scan failures do not modify destination assets; the failed stage and error stay visible with retry options, including retrying without the optional Excel workbook.
+
 ### Visual review
 
 When a related output exists, the reviewer can switch between:
