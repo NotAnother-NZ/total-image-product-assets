@@ -62,7 +62,7 @@ final class ExcelCatalogTests: XCTestCase {
         for row in 2...(rowCount + 1) {
             let index = row - 1
             xml +=
-                #"<row r="#(row)"><c r="A#(row)" t="inlineStr"><is><t>Product #(index)</t></is></c><c r="B#(row)" t="inlineStr"><is><t>SKU#(index)</t></is></c><c r="C#(row)" t="inlineStr"><is><t>Navy</t></is></c></row>"#
+                "<row r=\"\(row)\"><c r=\"A\(row)\" t=\"inlineStr\"><is><t>Product \(index)</t></is></c><c r=\"B\(row)\" t=\"inlineStr\"><is><t>SKU\(index)</t></is></c><c r=\"C\(row)\" t=\"inlineStr\"><is><t>Navy</t></is></c></row>"
         }
 
         xml += "</sheetData></worksheet>"
