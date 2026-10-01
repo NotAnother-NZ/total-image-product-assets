@@ -5,7 +5,8 @@ import UniformTypeIdentifiers
 struct ContentView: View {
     @EnvironmentObject private var model: AppModel
 
-    @State private var isDropTargeted = false
+    @State private var sourceDropTargeted = false
+    @State private var destinationDropTargeted = false
     @State private var showResetConfirmation = false
 
     var body: some View {
@@ -31,43 +32,86 @@ struct ContentView: View {
             Text(model.errorMessage ?? "")
         }
         .confirmationDialog(
-            "Clear generated WebPs and saved progress?",
+            model.isComparisonMode
+                ? "Clear saved comparison state?"
+                : "Clear generated WebPs and saved progress?",
             isPresented: $showResetConfirmation,
             titleVisibility: .visible
         ) {
-            Button("Clear generated outputs & progress", role: .destructive) {
+            Button(
+                model.isComparisonMode
+                    ? "Clear saved comparison state"
+                    : "Clear generated outputs & progress",
+                role: .destructive
+            ) {
                 model.resetGeneratedOutputsAndProgress()
             }
         } message: {
-            Text("This removes nested webp folders and the classifier progress file. Original source images are not touched.")
+            Text(
+                model.isComparisonMode
+                    ? "This clears only the saved comparison state. Finalized destination WebPs are preserved."
+                    : "This removes nested webp folders and the classifier progress file. Original source images are not touched."
+            )
         }
     }
 
+    private enum ComparisonDropRole {
+        case source
+        case destination
+    }
+
     private var emptyState: some View {
-        VStack(spacing: 18) {
+        VStack(spacing: 22) {
             Spacer()
 
-            Image(systemName: "photo.on.rectangle.angled")
-                .font(.system(size: 52, weight: .light))
+            Image(systemName: "arrow.triangle.2.circlepath")
+                .font(.system(size: 48, weight: .light))
                 .foregroundStyle(.secondary)
 
             Text("Total Image Asset Classifier")
                 .font(.largeTitle.bold())
 
-            Text("Drop ALL_PRODUCT_ASSETS or a single SKU folder here.")
-                .font(.title3)
-                .foregroundStyle(.secondary)
+            Text("Smart source → destination comparison")
+                .font(.title3.bold())
 
-            Text("Use the full library for normal classification, or drop one SKU later to classify only new root images and refresh replacements without touching existing outputs.")
-                .multilineTextAlignment(.center)
-                .foregroundStyle(.secondary)
-                .frame(maxWidth: 620)
+            Text(
+                "Drop the current ALL_PRODUCT_ASSETS source and your finalized GitHub-synced assets destination. The app will reuse existing classifications, refresh known replacements automatically, and show only genuinely unresolved images for manual classification."
+            )
+            .multilineTextAlignment(.center)
+            .foregroundStyle(.secondary)
+            .frame(maxWidth: 760)
 
-            Button("Choose Assets Folder…") {
+            HStack(spacing: 18) {
+                comparisonDropZone(role: .source)
+
+                Image(systemName: "arrow.right")
+                    .font(.title2)
+                    .foregroundStyle(.secondary)
+
+                comparisonDropZone(role: .destination)
+            }
+            .frame(maxWidth: 900)
+
+            if model.isLoading {
+                HStack(spacing: 10) {
+                    ProgressView()
+                    Text("Comparing source and destination…")
+                        .foregroundStyle(.secondary)
+                }
+            }
+
+            Divider()
+                .frame(maxWidth: 760)
+
+            Button("Open one folder / single SKU instead…") {
                 model.chooseFolder()
             }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
+
+            Text(
+                "Classic mode remains available for the existing full-library or single-SKU workflow."
+            )
+            .font(.caption)
+            .foregroundStyle(.secondary)
 
             if model.magickPath == nil {
                 Label(
@@ -79,21 +123,92 @@ struct ContentView: View {
 
             Spacer()
         }
-        .padding(48)
+        .padding(40)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private func comparisonDropZone(
+        role: ComparisonDropRole
+    ) -> some View {
+        let isSource = role == .source
+        let selectedURL = isSource
+            ? model.comparisonSourceSelection
+            : model.comparisonDestinationSelection
+        let isTargeted = isSource
+            ? sourceDropTargeted
+            : destinationDropTargeted
+
+        return VStack(spacing: 12) {
+            Image(
+                systemName: isSource
+                    ? "tray.and.arrow.down"
+                    : "tray.and.arrow.up"
+            )
+            .font(.system(size: 30))
+            .foregroundStyle(
+                isTargeted ? Color.accentColor : Color.secondary
+            )
+
+            Text(isSource ? "Source" : "Destination")
+                .font(.headline)
+
+            Text(
+                isSource
+                    ? "ALL_PRODUCT_ASSETS"
+                    : "final assets folder"
+            )
+            .font(.caption.bold())
+            .foregroundStyle(.secondary)
+
+            if let selectedURL {
+                Text(selectedURL.path)
+                    .font(.caption)
+                    .lineLimit(2)
+                    .truncationMode(.middle)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.secondary)
+            } else {
+                Text("Drop folder here")
+                    .foregroundStyle(.secondary)
+            }
+
+            Button(isSource ? "Choose Source…" : "Choose Destination…") {
+                if isSource {
+                    model.chooseComparisonSourceFolder()
+                } else {
+                    model.chooseComparisonDestinationFolder()
+                }
+            }
+        }
+        .padding(20)
+        .frame(maxWidth: .infinity, minHeight: 190)
         .background(
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.secondary.opacity(0.04))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
                 .strokeBorder(
-                    isDropTargeted ? Color.accentColor : Color.secondary.opacity(0.35),
-                    style: StrokeStyle(lineWidth: 2, dash: [10, 8])
+                    isTargeted
+                        ? Color.accentColor
+                        : Color.secondary.opacity(0.35),
+                    style: StrokeStyle(
+                        lineWidth: 2,
+                        dash: [10, 8]
+                    )
                 )
-                .padding(24)
         )
         .onDrop(
             of: [UTType.fileURL.identifier],
-            isTargeted: $isDropTargeted,
-            perform: handleDrop
-        )
+            isTargeted: isSource
+                ? $sourceDropTargeted
+                : $destinationDropTargeted
+        ) { providers in
+            handleComparisonDrop(
+                providers,
+                role: role
+            )
+        }
     }
 
     private var classifier: some View {
@@ -130,8 +245,12 @@ struct ContentView: View {
         VStack(spacing: 10) {
             HStack {
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(model.rootURL?.lastPathComponent ?? "Assets")
-                        .font(.headline)
+                    Text(
+                        model.isComparisonMode
+                            ? "\(model.rootURL?.lastPathComponent ?? "Source") → \(model.destinationURL?.lastPathComponent ?? "Destination")"
+                            : (model.rootURL?.lastPathComponent ?? "Assets")
+                    )
+                    .font(.headline)
 
                     HStack(spacing: 8) {
                         Text(model.scanMode?.label ?? "Assets")
@@ -141,18 +260,52 @@ struct ContentView: View {
                             .background(.secondary.opacity(0.12))
                             .clipShape(Capsule())
 
-                        Text(model.rootURL?.path ?? "")
+                        if model.isComparisonMode {
+                            Text(
+                                "Source: \(model.rootURL?.path ?? "")"
+                            )
                             .font(.caption)
                             .foregroundStyle(.secondary)
                             .lineLimit(1)
                             .truncationMode(.middle)
+
+                            Text("→")
+                                .font(.caption)
+                                .foregroundStyle(.tertiary)
+
+                            Text(
+                                "Destination: \(model.destinationURL?.path ?? "")"
+                            )
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
+                            .truncationMode(.middle)
+                        } else {
+                            Text(model.rootURL?.path ?? "")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                                .lineLimit(1)
+                                .truncationMode(.middle)
+                        }
                     }
                 }
 
                 Spacer()
 
-                Button("Choose Folder…") {
-                    model.chooseFolder()
+                if model.isComparisonMode {
+                    Button("Source…") {
+                        model.chooseComparisonSourceFolder()
+                    }
+                    .disabled(!model.canChangeComparisonFolders)
+
+                    Button("Destination…") {
+                        model.chooseComparisonDestinationFolder()
+                    }
+                    .disabled(!model.canChangeComparisonFolders)
+                } else {
+                    Button("Choose Folder…") {
+                        model.chooseFolder()
+                    }
                 }
 
                 Button("Reveal") {
@@ -161,7 +314,9 @@ struct ContentView: View {
 
                 Menu {
                     Button(
-                        "Clear generated outputs & progress…",
+                        model.isComparisonMode
+                            ? "Clear saved comparison state…"
+                            : "Clear generated outputs & progress…",
                         role: .destructive
                     ) {
                         showResetConfirmation = true
@@ -181,6 +336,14 @@ struct ContentView: View {
                 Text("\(model.classifiedCount) / \(model.totalCount) classified")
                     .font(.caption.monospacedDigit())
                     .foregroundStyle(.secondary)
+
+                if model.isComparisonMode {
+                    Text(
+                        "\(model.manualRemainingCount) manual remaining"
+                    )
+                    .font(.caption.monospacedDigit())
+                    .foregroundStyle(.secondary)
+                }
 
                 Spacer()
 
@@ -363,11 +526,21 @@ struct ContentView: View {
                     .foregroundStyle(.secondary)
                     .frame(maxWidth: 560)
             } else {
-                Text("All \(model.totalCount) images are classified and processed.")
-                    .foregroundStyle(.secondary)
+                Text(
+                    model.isComparisonMode
+                        ? "All source images are matched or classified, and finalized outputs have been written to the destination."
+                        : "All \(model.totalCount) images are classified and processed."
+                )
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: 620)
             }
 
-            Button("Reveal Assets Folder") {
+            Button(
+                model.isComparisonMode
+                    ? "Reveal Destination Folder"
+                    : "Reveal Assets Folder"
+            ) {
                 model.revealOutputFolder()
             }
 
@@ -377,7 +550,10 @@ struct ContentView: View {
         .padding(40)
     }
 
-    private func handleDrop(_ providers: [NSItemProvider]) -> Bool {
+    private func handleComparisonDrop(
+        _ providers: [NSItemProvider],
+        role: ComparisonDropRole
+    ) -> Bool {
         guard let provider = providers.first else {
             return false
         }
@@ -391,7 +567,10 @@ struct ContentView: View {
             if let droppedURL = item as? URL {
                 url = droppedURL
             } else if let data = item as? Data {
-                url = URL(dataRepresentation: data, relativeTo: nil)
+                url = URL(
+                    dataRepresentation: data,
+                    relativeTo: nil
+                )
             } else {
                 url = nil
             }
@@ -406,14 +585,21 @@ struct ContentView: View {
                     isDirectory: &isDirectory
                 ), isDirectory.boolValue
                 else {
-                    model.errorMessage = "Please drop ALL_PRODUCT_ASSETS or a single SKU folder, not an individual file."
+                    model.errorMessage =
+                        "Please drop a folder, not an individual file."
                     return
                 }
 
-                model.openFolder(url)
+                switch role {
+                case .source:
+                    model.setComparisonSourceFolder(url)
+                case .destination:
+                    model.setComparisonDestinationFolder(url)
+                }
             }
         }
 
         return true
     }
+
 }
