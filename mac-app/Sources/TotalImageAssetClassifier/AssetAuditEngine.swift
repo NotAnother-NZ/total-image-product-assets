@@ -18,6 +18,10 @@ enum AssetAuditEngine {
         let sourceScan = try AssetScanner.scan(
             rootURL: sourceURL
         )
+        progressHandler?(
+            0.06,
+            "Source scan complete: \(sourceScan.items.count) image(s) across \(sourceScan.productFolderCount) product folder(s)."
+        )
         let sourceItemsByRelativePath = Dictionary(
             uniqueKeysWithValues: sourceScan.items.map {
                 ($0.relativePath, $0)
@@ -28,26 +32,48 @@ enum AssetAuditEngine {
         let destination = try DestinationScanner.scan(
             rootURL: destinationURL
         )
+        progressHandler?(
+            0.11,
+            "Destination scan complete: \(destination.assets.count) finalized WebP asset(s)."
+        )
         let destinationByPath = Dictionary(
             uniqueKeysWithValues: destination.assets.map {
                 ($0.outputRelativePath, $0)
             }
         )
 
-        progressHandler?(0.12, "Loading source-backed output map…")
+        progressHandler?(0.12, "Loading saved classifier progress…")
         let classifierProgress = try ProgressStore.load(
             rootURL: destinationURL
+        )
+        progressHandler?(
+            0.13,
+            "Loaded \(classifierProgress.records.count) saved classifier record(s)."
         )
 
         let excelCatalog: ExcelCatalog?
         if let excelURL {
-            progressHandler?(0.16, "Reading client Excel…")
+            progressHandler?(0.14, "Opening client Excel workbook…")
             excelCatalog = try ExcelCatalog.load(
                 from: excelURL
-            )
+            ) { fraction, detail in
+                progressHandler?(
+                    0.14 + (fraction * 0.07),
+                    detail
+                )
+            }
         } else {
             excelCatalog = nil
+            progressHandler?(
+                0.21,
+                "No client Excel selected; continuing with source/destination validation."
+            )
         }
+
+        progressHandler?(
+            0.22,
+            "Reconciling current source records with finalized outputs…"
+        )
 
         var activeOutputToSource: [String: String] = [:]
         var missingIssues: [AuditIssue] = []
@@ -85,7 +111,7 @@ enum AssetAuditEngine {
         }
 
         progressHandler?(
-            0.20,
+            0.23,
             "Finding exact duplicate candidates…"
         )
 
@@ -108,8 +134,9 @@ enum AssetAuditEngine {
                         ? 1
                         : Double(hashIndex) / Double(hashWorkCount)
                     progressHandler?(
-                        0.20 + (fraction * 0.32),
-                        "Hashing repeated-size files \(hashIndex)/\(hashWorkCount)…"
+                        0.23 + (fraction * 0.31),
+                        "Hashing duplicate candidate \(hashIndex)/\(hashWorkCount): \(asset.outputURL.lastPathComponent)"
+
                     )
                 }
 
@@ -157,7 +184,7 @@ enum AssetAuditEngine {
         }
 
         progressHandler?(
-            0.54,
+            0.55,
             "Checking differently encoded logical duplicates…"
         )
 
@@ -172,12 +199,12 @@ enum AssetAuditEngine {
         for group in logicalGroups {
             logicalIndex += 1
             progressHandler?(
-                0.54
+                0.55
                     + (
                         Double(logicalIndex)
                         / Double(max(logicalGroups.count, 1))
-                    ) * 0.22,
-                "Pixel-checking duplicate group \(logicalIndex)/\(logicalGroups.count)…"
+                    ) * 0.23,
+                "Pixel-checking duplicate group \(logicalIndex)/\(logicalGroups.count) (\(group.count) file(s))…"
             )
 
             guard let magickPath else { continue }
@@ -221,7 +248,7 @@ enum AssetAuditEngine {
         }
 
         progressHandler?(
-            0.78,
+            0.80,
             "Building destination-only review queue…"
         )
 
@@ -288,7 +315,7 @@ enum AssetAuditEngine {
         }
 
         progressHandler?(
-            0.84,
+            0.88,
             "Checking filename quality…"
         )
 
@@ -323,8 +350,8 @@ enum AssetAuditEngine {
         }
 
         progressHandler?(
-            0.90,
-            "Reconciling audit queue…"
+            0.94,
+            "Reconciling audit queue and saved review state…"
         )
 
         let issues = (

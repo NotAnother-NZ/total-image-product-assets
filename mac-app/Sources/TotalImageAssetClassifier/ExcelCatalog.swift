@@ -1,23 +1,59 @@
 import Foundation
 
+typealias ExcelCatalogProgressHandler = @Sendable (
+    Double,
+    String
+) -> Void
+
 struct ExcelCatalog: Sendable {
     let knownSKUs: Set<String>
     let knownColors: Set<String>
     let productNamesBySKU: [String: Set<String>]
 
-    static func load(from url: URL) throws -> ExcelCatalog {
-        let entries = try unzip(arguments: ["-Z1", url.path])
-            .split(separator: "\n")
-            .map(String.init)
+    static func load(
+        from url: URL,
+        progressHandler: ExcelCatalogProgressHandler? = nil
+    ) throws -> ExcelCatalog {
+        progressHandler?(0.02, "Opening Excel workbook archive…")
+
+        let entries = try unzip(
+            arguments: ["-Z1", url.path],
+            operation: "listing workbook contents"
+        )
+        .split(separator: "\n")
+        .map(String.init)
+
+        progressHandler?(
+            0.08,
+            "Workbook opened: \(entries.count) archive entries found."
+        )
 
         let sharedStrings: [String]
         if entries.contains("xl/sharedStrings.xml") {
+            progressHandler?(0.12, "Reading Excel shared strings…")
+
             let data = try unzipData(
-                arguments: ["-p", url.path, "xl/sharedStrings.xml"]
+                arguments: [
+                    "-p",
+                    url.path,
+                    "xl/sharedStrings.xml"
+                ],
+                operation: "reading Excel shared strings"
             )
+
+            progressHandler?(0.18, "Parsing Excel shared strings…")
             sharedStrings = try SharedStringsParser.parse(data)
+
+            progressHandler?(
+                0.24,
+                "Parsed \(sharedStrings.count) shared strings."
+            )
         } else {
             sharedStrings = []
+            progressHandler?(
+                0.24,
+                "Workbook uses inline values; no shared strings file."
+            )
         }
 
         let sheetPaths = entries
@@ -29,20 +65,58 @@ struct ExcelCatalog: Sendable {
             }
             .sorted()
 
+        guard !sheetPaths.isEmpty else {
+            throw ExcelCatalogError.noWorksheets
+        }
+
+        progressHandler?(
+            0.28,
+            "Found \(sheetPaths.count) worksheet(s)."
+        )
+
         var knownSKUs = Set<String>()
         var knownColors = Set<String>()
         var productNamesBySKU: [String: Set<String>] = [:]
 
-        for sheetPath in sheetPaths {
-            let data = try unzipData(
-                arguments: ["-p", url.path, sheetPath]
+        let sheetProgressSpan = 0.68
+        let perSheet = sheetProgressSpan
+            / Double(sheetPaths.count)
+
+        for (index, sheetPath) in sheetPaths.enumerated() {
+            let sheetNumber = index + 1
+            let base = 0.28 + (Double(index) * perSheet)
+
+            progressHandler?(
+                base,
+                "Reading worksheet \(sheetNumber)/\(sheetPaths.count)…"
             )
+
+            let data = try unzipData(
+                arguments: ["-p", url.path, sheetPath],
+                operation:
+                    "reading worksheet \(sheetNumber)/\(sheetPaths.count)"
+            )
+
+            progressHandler?(
+                base + (perSheet * 0.30),
+                "Parsing worksheet \(sheetNumber)/\(sheetPaths.count)…"
+            )
+
             let rows = try WorksheetParser.parse(
                 data,
                 sharedStrings: sharedStrings
             )
 
+            progressHandler?(
+                base + (perSheet * 0.60),
+                "Processing worksheet \(sheetNumber)/\(sheetPaths.count) (\(rows.count) rows)…"
+            )
+
             guard let header = findHeader(in: rows) else {
+                progressHandler?(
+                    base + perSheet,
+                    "Worksheet \(sheetNumber)/\(sheetPaths.count) has no SKU header; skipped."
+                )
                 continue
             }
 
@@ -80,7 +154,17 @@ struct ExcelCatalog: Sendable {
                     }
                 }
             }
+
+            progressHandler?(
+                base + perSheet,
+                "Finished worksheet \(sheetNumber)/\(sheetPaths.count)."
+            )
         }
+
+        progressHandler?(
+            1,
+            "Client Excel ready: \(knownSKUs.count) SKU(s), \(knownColors.count) colour value(s)."
+        )
 
         return ExcelCatalog(
             knownSKUs: knownSKUs,
@@ -218,9 +302,13 @@ struct ExcelCatalog: Sendable {
     }
 
     private static func unzip(
-        arguments: [String]
+        arguments: [String],
+        operation: String
     ) throws -> String {
-        let data = try unzipData(arguments: arguments)
+        let data = try unzipData(
+            arguments: arguments,
+            operation: operation
+        )
 
         guard let output = String(
             data: data,
@@ -233,11 +321,48 @@ struct ExcelCatalog: Sendable {
     }
 
     private static func unzipData(
-        arguments: [String]
+        arguments: [String],
+        operation: String,
+        timeout: TimeInterval = 30
     ) throws -> Data {
         let process = Process()
-        let stdout = Pipe()
-        let stderr = Pipe()
+        let fileManager = FileManager.default
+        let token = UUID().uuidString
+        let temporaryDirectory =
+            fileManager.temporaryDirectory
+        let outputURL = temporaryDirectory
+            .appendingPathComponent(
+                "total-image-excel-\(token).stdout"
+            )
+        let errorURL = temporaryDirectory
+            .appendingPathComponent(
+                "total-image-excel-\(token).stderr"
+            )
+
+        guard fileManager.createFile(
+            atPath: outputURL.path,
+            contents: nil
+        ),
+        fileManager.createFile(
+            atPath: errorURL.path,
+            contents: nil
+        ) else {
+            throw ExcelCatalogError.temporaryFileFailed
+        }
+
+        let stdout = try FileHandle(
+            forWritingTo: outputURL
+        )
+        let stderr = try FileHandle(
+            forWritingTo: errorURL
+        )
+
+        defer {
+            try? stdout.close()
+            try? stderr.close()
+            try? fileManager.removeItem(at: outputURL)
+            try? fileManager.removeItem(at: errorURL)
+        }
 
         process.executableURL = URL(
             fileURLWithPath: "/usr/bin/unzip"
@@ -247,15 +372,55 @@ struct ExcelCatalog: Sendable {
         process.standardError = stderr
 
         try process.run()
+
+        let deadline = Date()
+            .addingTimeInterval(timeout)
+
+        while process.isRunning && Date() < deadline {
+            Thread.sleep(
+                forTimeInterval: 0.05
+            )
+        }
+
+        if process.isRunning {
+            process.terminate()
+
+            let terminationDeadline = Date()
+                .addingTimeInterval(2)
+
+            while process.isRunning
+                && Date() < terminationDeadline
+            {
+                Thread.sleep(
+                    forTimeInterval: 0.05
+                )
+            }
+
+            throw ExcelCatalogError.unzipTimedOut(
+                operation,
+                Int(timeout)
+            )
+        }
+
         process.waitUntilExit()
 
-        let output = stdout.fileHandleForReading.readDataToEndOfFile()
-        let error = stderr.fileHandleForReading.readDataToEndOfFile()
+        let output = try Data(contentsOf: outputURL)
+        let error = try Data(contentsOf: errorURL)
 
         guard process.terminationStatus == 0 else {
-            let message = String(data: error, encoding: .utf8)
-                ?? "unzip failed"
-            throw ExcelCatalogError.unzipFailed(message)
+            let message = String(
+                data: error,
+                encoding: .utf8
+            )?
+            .trimmingCharacters(
+                in: .whitespacesAndNewlines
+            )
+
+            throw ExcelCatalogError.unzipFailed(
+                message?.isEmpty == false
+                    ? message!
+                    : "unzip exited with status \(process.terminationStatus)"
+            )
         }
 
         return output
@@ -264,6 +429,9 @@ struct ExcelCatalog: Sendable {
 
 enum ExcelCatalogError: LocalizedError {
     case invalidUTF8
+    case noWorksheets
+    case temporaryFileFailed
+    case unzipTimedOut(String, Int)
     case unzipFailed(String)
     case invalidXML
 
@@ -271,6 +439,12 @@ enum ExcelCatalogError: LocalizedError {
         switch self {
         case .invalidUTF8:
             return "Could not decode Excel workbook metadata."
+        case .noWorksheets:
+            return "The selected Excel workbook does not contain any readable worksheets."
+        case .temporaryFileFailed:
+            return "Could not create temporary files needed to read the Excel workbook."
+        case .unzipTimedOut(let operation, let seconds):
+            return "Excel workbook read timed out after \(seconds) seconds while \(operation). The audit was stopped safely; no destination files were changed."
         case .unzipFailed(let message):
             return "Could not read Excel workbook: \(message)"
         case .invalidXML:

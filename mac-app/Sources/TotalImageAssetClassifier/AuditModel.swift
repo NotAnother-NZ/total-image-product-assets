@@ -15,6 +15,10 @@ final class AuditModel: ObservableObject {
     @Published private(set) var isApplying = false
     @Published private(set) var scanProgress = 0.0
     @Published private(set) var scanStage = ""
+    @Published private(set) var scanStartedAt: Date?
+    @Published private(set) var scanLastUpdateAt: Date?
+    @Published private(set) var lastScanError: String?
+    @Published private(set) var lastScanFailureStage: String?
     @Published private(set) var currentIndex = 0
     @Published private(set) var relatedIndex = 0
     @Published var filter: AuditQueueFilter = .unresolved {
@@ -162,6 +166,7 @@ final class AuditModel: ObservableObject {
             return
         }
         sourceSelection = url.standardizedFileURL
+        clearLastScanFailure()
     }
 
     func setDestinationFolder(_ url: URL) {
@@ -170,6 +175,7 @@ final class AuditModel: ObservableObject {
         }
         destinationSelection =
             url.standardizedFileURL
+        clearLastScanFailure()
     }
 
     func setExcelFile(_ url: URL?) {
@@ -177,6 +183,7 @@ final class AuditModel: ObservableObject {
             return
         }
         excelSelection = url?.standardizedFileURL
+        clearLastScanFailure()
     }
 
     func startAudit() {
@@ -202,9 +209,23 @@ final class AuditModel: ObservableObject {
             return
         }
 
+        if let excelSelection,
+           !FileManager.default.fileExists(
+            atPath: excelSelection.path
+           )
+        {
+            errorMessage =
+                "The selected client Excel file no longer exists. Choose it again or remove Excel before retrying."
+            return
+        }
+
         isScanning = true
         scanProgress = 0
         scanStage = "Preparing audit…"
+        scanStartedAt = Date()
+        scanLastUpdateAt = scanStartedAt
+        lastScanError = nil
+        lastScanFailureStage = nil
         message = nil
         errorMessage = nil
         differenceURL = nil
@@ -216,8 +237,12 @@ final class AuditModel: ObservableObject {
             AuditProgressHandler = {
                 [weak self] fraction, stage in
                 Task { @MainActor in
-                    self?.scanProgress = fraction
+                    self?.scanProgress = min(
+                        max(fraction, 0),
+                        1
+                    )
                     self?.scanStage = stage
+                    self?.scanLastUpdateAt = Date()
                 }
             }
 
@@ -263,6 +288,9 @@ final class AuditModel: ObservableObject {
                 isScanning = false
                 scanProgress = 1
                 scanStage = "Audit ready"
+                scanLastUpdateAt = Date()
+                lastScanError = nil
+                lastScanFailureStage = nil
                 currentIndex = 0
                 filter = .unresolved
 
@@ -278,10 +306,41 @@ final class AuditModel: ObservableObject {
                 prepareCurrentIssue()
             } catch {
                 isScanning = false
-                errorMessage =
+                scanLastUpdateAt = Date()
+
+                let failedStage =
+                    scanStage.isEmpty
+                    ? "Unknown audit stage"
+                    : scanStage
+                let detail =
                     error.localizedDescription
+
+                lastScanFailureStage =
+                    failedStage
+                lastScanError = detail
+
+                if scanResult == nil {
+                    message = nil
+                    errorMessage =
+                        "Audit scan failed.\n\nStage: \(failedStage)\n\n\(detail)"
+                } else {
+                    message =
+                        "Re-scan failed at: \(failedStage). Existing audit results were preserved."
+                    errorMessage =
+                        "Audit re-scan failed. Existing results were preserved.\n\nStage: \(failedStage)\n\n\(detail)"
+                }
             }
         }
+    }
+
+    func retryWithoutExcel() {
+        guard !isScanning, !isApplying else {
+            return
+        }
+
+        excelSelection = nil
+        clearLastScanFailure()
+        startAudit()
     }
 
     func decision(
@@ -717,11 +776,22 @@ final class AuditModel: ObservableObject {
                 destinationRootName: ""
             )
         currentIndex = 0
+        scanProgress = 0
+        scanStage = ""
+        scanStartedAt = nil
+        scanLastUpdateAt = nil
+        lastScanError = nil
+        lastScanFailureStage = nil
         message = nil
         errorMessage = nil
         renameDraft = ""
         renameValidation = nil
         resetPreview()
+    }
+
+    private func clearLastScanFailure() {
+        lastScanError = nil
+        lastScanFailureStage = nil
     }
 
     private func chooseDirectory(
