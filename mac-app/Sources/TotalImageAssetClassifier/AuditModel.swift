@@ -688,6 +688,7 @@ final class AuditModel: ObservableObject {
             "Backing up and applying reviewed audit changes…"
 
         let issues = scanResult.issues
+        let planBeforeApply = changePlan
         var documentCopy = document
 
         Task {
@@ -726,8 +727,21 @@ final class AuditModel: ObservableObject {
                     )
 
                 isApplying = false
+                let reconciledCount =
+                    planBeforeApply?
+                    .alreadySatisfiedCount ?? 0
+                let supersededCount =
+                    planBeforeApply?
+                    .supersededDecisionCount ?? 0
+
                 message =
-                    "Applied \(result.0.operations.count) change(s). Backup: \(result.0.backupRootPath). Reports: \(reports.csvURL.lastPathComponent), \(reports.jsonURL.lastPathComponent)."
+                    "Applied \(result.0.operations.count) file change(s); reconciled \(reconciledCount) already-satisfied change(s)"
+                    + (
+                        supersededCount > 0
+                        ? "; ignored \(supersededCount) older duplicate-path decision(s)"
+                        : ""
+                    )
+                    + ". Backup: \(result.0.backupRootPath). Reports: \(reports.csvURL.lastPathComponent), \(reports.jsonURL.lastPathComponent)."
 
                 startAudit()
             } catch {
