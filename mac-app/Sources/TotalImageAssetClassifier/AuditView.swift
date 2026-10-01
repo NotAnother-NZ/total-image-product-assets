@@ -302,11 +302,7 @@ struct AuditView: View {
                 ) {
                     showChangePlan = true
                 }
-                .buttonStyle(
-                    model.queuedChangeCount > 0
-                        ? .borderedProminent
-                        : .bordered
-                )
+                .buttonStyle(.borderedProminent)
 
                 Menu {
                     Button(
@@ -1113,6 +1109,7 @@ struct AuditView: View {
         }
     }
 
+    @ViewBuilder
     private func actionButton(
         _ title: String,
         icon: String,
@@ -1120,25 +1117,40 @@ struct AuditView: View {
         destructive: Bool = false,
         action: @escaping () -> Void
     ) -> some View {
-        Button(action: action) {
-            HStack {
-                Image(systemName: icon)
-                    .frame(width: 24)
-                Text(title)
-                Spacer()
+        if prominent {
+            Button(action: action) {
+                actionButtonContent(
+                    title: title,
+                    icon: icon
+                )
             }
-            .frame(
-                maxWidth: .infinity,
-                minHeight: 34
-            )
+            .buttonStyle(.borderedProminent)
+            .tint(destructive ? .red : nil)
+        } else {
+            Button(action: action) {
+                actionButtonContent(
+                    title: title,
+                    icon: icon
+                )
+            }
+            .buttonStyle(.bordered)
+            .tint(destructive ? .red : nil)
         }
-        .buttonStyle(
-            prominent
-                ? .borderedProminent
-                : .bordered
-        )
-        .tint(
-            destructive ? .red : nil
+    }
+
+    private func actionButtonContent(
+        title: String,
+        icon: String
+    ) -> some View {
+        HStack {
+            Image(systemName: icon)
+                .frame(width: 24)
+            Text(title)
+            Spacer()
+        }
+        .frame(
+            maxWidth: .infinity,
+            minHeight: 34
         )
     }
 
