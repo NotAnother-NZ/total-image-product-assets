@@ -8,7 +8,7 @@ struct DestinationAsset: Hashable, Sendable {
     let outputURL: URL
     let outputRelativePath: String
     let modificationTime: TimeInterval
-    let fileSize: Int64
+    let fileSize: Int64 = 0
 }
 
 struct DestinationSnapshot: Sendable {
