@@ -61,7 +61,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG="v0.1.0"
+          TAG="v0.2.0"
 
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" \
@@ -73,6 +73,6 @@ jobs:
               "mac-app/dist/Total-Image-Asset-Classifier-macOS.zip" \
               "mac-app/dist/Total-Image-Asset-Classifier-macOS.zip.sha256" \
               --target "${GITHUB_SHA}" \
-              --title "Total Image Asset Classifier v0.1.0" \
-              --notes "Native macOS app for manually classifying Total Image assets as Model or Product while WebP processing runs in the background. Progress is saved locally and resumes when the same assets folder is opened again."
+              --title "Total Image Asset Classifier v0.2.0" \
+              --notes "Adds support for the full ALL_PRODUCT_ASSETS library and safe incremental single-SKU updates, including automatic refresh of changed/replacement files while preserving existing Model/Product outputs."
           fi
