@@ -16,6 +16,18 @@ enum AssetClassification: String, Codable, CaseIterable, Sendable {
     }
 }
 
+enum AssetScanMode: String, Sendable {
+    case library
+    case singleSKU
+
+    var label: String {
+        switch self {
+        case .library: return "Asset Library"
+        case .singleSKU: return "Single SKU"
+        }
+    }
+}
+
 enum ProcessingStatus: String, Codable, Sendable {
     case pending
     case processing
@@ -38,6 +50,12 @@ struct AssetItem: Identifiable, Hashable, Sendable {
     var productFolderName: String {
         sourceURL.deletingLastPathComponent().lastPathComponent
     }
+}
+
+struct AssetScanResult: Sendable {
+    let mode: AssetScanMode
+    let items: [AssetItem]
+    let productFolderCount: Int
 }
 
 struct AssetProgressRecord: Codable, Sendable {

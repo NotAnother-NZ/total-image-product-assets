@@ -12,6 +12,10 @@ enum ProgressStore {
         stateDirectory(rootURL: rootURL).appendingPathComponent(fileName)
     }
 
+    static func exists(rootURL: URL) -> Bool {
+        FileManager.default.fileExists(atPath: progressURL(rootURL: rootURL).path)
+    }
+
     static func load(rootURL: URL) throws -> ProgressDocument {
         let url = progressURL(rootURL: rootURL)
 

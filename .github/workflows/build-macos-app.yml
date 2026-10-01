@@ -7,6 +7,10 @@ on:
     paths:
       - "mac-app/**"
       - ".github/workflows/build-macos-app.yml"
+  pull_request:
+    paths:
+      - "mac-app/**"
+      - ".github/workflows/build-macos-app.yml"
   workflow_dispatch:
 
 permissions:
@@ -23,6 +27,10 @@ jobs:
 
       - name: Show Swift version
         run: swift --version
+
+      - name: Run tests
+        working-directory: mac-app
+        run: swift test
 
       - name: Build app
         working-directory: mac-app
