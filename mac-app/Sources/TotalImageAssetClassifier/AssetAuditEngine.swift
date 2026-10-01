@@ -788,23 +788,38 @@ enum AssetAuditEngine {
                         )
                     }
 
+                    let renamedRelativePath =
+                        relativePath(
+                            to,
+                            root:
+                                scan.destinationRootURL
+                        )
+
                     if operation.issue.primarySourceBacked {
                         updateClassifierProgress(
                             fromRelativePath:
                                 operation.issue
                                     .primaryRelativePath,
                             toRelativePath:
-                                relativePath(
-                                    to,
-                                    root:
-                                        scan.destinationRootURL
-                                ),
+                                renamedRelativePath,
                             newStem:
                                 to.deletingPathExtension()
                                     .lastPathComponent,
                             progress:
                                 &updatedProgress
                         )
+                    } else {
+                        let newIssueID =
+                            "destination-only:\(renamedRelativePath)"
+                        document.decisions[newIssueID] =
+                            AuditDecision(
+                                issueID: newIssueID,
+                                action: .keep,
+                                proposedFileName: nil,
+                                note:
+                                    "Reviewed and renamed during audit apply.",
+                                decidedAt: Date()
+                            )
                     }
 
                     manifestOperations.append(
