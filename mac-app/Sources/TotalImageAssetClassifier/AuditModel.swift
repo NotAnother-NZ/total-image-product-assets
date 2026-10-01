@@ -16,6 +16,7 @@ final class AuditModel: ObservableObject {
     @Published private(set) var scanProgress = 0.0
     @Published private(set) var scanStage = ""
     @Published private(set) var currentIndex = 0
+    @Published private(set) var relatedIndex = 0
     @Published var filter: AuditQueueFilter = .unresolved {
         didSet {
             currentIndex = 0
@@ -474,15 +475,44 @@ final class AuditModel: ObservableObject {
         return nil
     }
 
+    var currentRelatedPath: String? {
+        guard let issue = currentIssue,
+              issue.relatedRelativePaths.indices.contains(
+                relatedIndex
+              )
+        else {
+            return nil
+        }
+
+        return issue.relatedRelativePaths[relatedIndex]
+    }
+
+    func selectRelated(_ index: Int) {
+        guard let issue = currentIssue,
+              issue.relatedRelativePaths.indices.contains(index)
+        else {
+            return
+        }
+
+        relatedIndex = index
+        differenceURL = nil
+        generateDifferenceIfNeeded()
+    }
+
     func relatedURL(
         for issue: AuditIssue
     ) -> URL? {
-        guard let path =
-            issue.relatedRelativePaths.first,
+        guard !issue.relatedRelativePaths.isEmpty,
               let scanResult
         else {
             return nil
         }
+
+        let index = min(
+            relatedIndex,
+            issue.relatedRelativePaths.count - 1
+        )
+        let path = issue.relatedRelativePaths[index]
 
         let url =
             scanResult.destinationRootURL
@@ -753,6 +783,14 @@ final class AuditModel: ObservableObject {
 
     private func resetPreview() {
         previewMode = .sideBySide
+        relatedIndex = 0
+
+        if let differenceURL {
+            try? FileManager.default.removeItem(
+                at: differenceURL
+            )
+        }
+
         differenceURL = nil
         isGeneratingDifference = false
     }
