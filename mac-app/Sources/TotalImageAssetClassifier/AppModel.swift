@@ -560,6 +560,15 @@ final class AppModel: ObservableObject {
         let sku = rootURL.lastPathComponent
         let prefix = sku + "/"
 
+        // Mirror root-level SKU records exactly, rather than only upserting them.
+        // This keeps undo/removal behavior consistent between single-SKU mode
+        // and the parent ALL_PRODUCT_ASSETS progress document.
+        parent.records = parent.records.filter { path, _ in
+            guard path.hasPrefix(prefix) else { return true }
+            let suffix = String(path.dropFirst(prefix.count))
+            return suffix.contains("/")
+        }
+
         for (localPath, localRecord) in progress.records {
             guard !localPath.contains("/") else { continue }
 
