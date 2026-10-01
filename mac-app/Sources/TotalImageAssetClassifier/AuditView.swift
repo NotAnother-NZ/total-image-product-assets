@@ -580,6 +580,39 @@ struct AuditView: View {
                         }
                     }
 
+                    if issue.relatedRelativePaths.count > 1 {
+                        HStack {
+                            Text("Compare against")
+                                .font(.caption.bold())
+                                .foregroundStyle(.secondary)
+
+                            Picker(
+                                "Related image",
+                                selection: Binding(
+                                    get: { model.relatedIndex },
+                                    set: { model.selectRelated($0) }
+                                )
+                            ) {
+                                ForEach(
+                                    Array(
+                                        issue.relatedRelativePaths.enumerated()
+                                    ),
+                                    id: \.offset
+                                ) { index, path in
+                                    Text(
+                                        URL(fileURLWithPath: path)
+                                            .lastPathComponent
+                                    )
+                                    .tag(index)
+                                }
+                            }
+                            .labelsHidden()
+                            .frame(maxWidth: 520)
+
+                            Spacer()
+                        }
+                    }
+
                     auditPreview(issue)
 
                     VStack(spacing: 4) {
@@ -723,25 +756,54 @@ struct AuditView: View {
             model.sourceURL(for: issue),
            source.path != primary?.path
         {
-            HStack(spacing: 8) {
-                Image(
-                    systemName:
-                        "arrow.turn.down.right"
-                )
-                .foregroundStyle(.secondary)
+            sourceReferenceCard(source)
+        }
+    }
 
-                Text("Current source")
-                    .font(.caption.bold())
+    private func sourceReferenceCard(
+        _ source: URL
+    ) -> some View {
+        HStack(spacing: 12) {
+            ZStack {
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(
+                        Color.secondary.opacity(0.06)
+                    )
+
+                if let image = NSImage(contentsOf: source) {
+                    Image(nsImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .padding(6)
+                } else {
+                    Image(systemName: "photo")
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .frame(width: 92, height: 74)
+
+            VStack(alignment: .leading, spacing: 3) {
+                Label(
+                    "Current source",
+                    systemImage: "arrow.turn.down.right"
+                )
+                .font(.caption.bold())
 
                 Text(source.lastPathComponent)
                     .font(.caption)
                     .foregroundStyle(.secondary)
-                    .lineLimit(1)
+                    .lineLimit(2)
                     .truncationMode(.middle)
-
-                Spacer()
+                    .textSelection(.enabled)
             }
+
+            Spacer()
         }
+        .padding(8)
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.secondary.opacity(0.04))
+        )
     }
 
     private func imageCard(
