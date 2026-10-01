@@ -1388,8 +1388,7 @@ enum AssetAuditEngine {
 
                 current.append(
                     min(
-                        insertion,
-                        deletion,
+                        min(insertion, deletion),
                         substitution
                     )
                 )
