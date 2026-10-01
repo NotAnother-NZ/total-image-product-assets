@@ -1,8 +1,13 @@
 # Total Image Asset Classifier for macOS
 
-A small native macOS app for manually classifying the Total Image product assets while image processing continues in the background.
+A native macOS tool for classifying, syncing, and auditing the Total Image product asset migration.
 
 ## What it does
+
+The app opens with two isolated workflows:
+
+- **Classify / Sync Assets** — the existing classifier, smart source → destination comparison, and single-SKU update workflows.
+- **Audit Final Assets** — a visual review queue for destination-only files, source-backed pixel duplicates, naming warnings, and missing finalized outputs.
 
 - **Smart comparison mode:** drop the current `ALL_PRODUCT_ASSETS` source and the finalized GitHub-synced `assets` destination into separate drop zones.
 - Reuses existing destination classifications when the corresponding WebP already exists.
@@ -24,6 +29,84 @@ A small native macOS app for manually classifying the Total Image product assets
 - Existing source images are never modified.
 - In single-SKU mode, only supported image files in the SKU folder root are scanned. Existing generated `webp/model` and `webp/product` folders are preserved and never treated as source files.
 - If a root image was previously classified, the app reuses that classification from saved library progress (or an existing generated output) and automatically refreshes changed/replacement files.
+
+## Audit Final Assets
+
+Use this after classification/sync when the finalized `assets` directory needs a human review pass.
+
+1. Drop the current `ALL_PRODUCT_ASSETS` folder into **Current Source**.
+2. Drop the GitHub-synced `assets` folder into **Final Destination**.
+3. Optionally add the client `.xlsx` workbook for additional SKU-aware rename validation.
+4. Click **Build Audit Queue**.
+
+Audit mode builds four queues:
+
+- **Destination-only** — finalized WebPs that are no longer referenced by a current source record.
+- **Pixel duplicates** — current source-backed outputs that are byte-identical, or that decode to identical pixels inside a logical collision group.
+- **Naming warnings** — high-confidence filename typos such as `FRRONT`, `NACY`, or `CLOESUP`.
+- **Missing outputs** — current source records whose saved finalized output no longer exists.
+
+### Visual review
+
+When a related output exists, the reviewer can switch between:
+
+- side-by-side;
+- primary only;
+- related only;
+- generated pixel-difference preview.
+
+The current source path is shown whenever the output is source-backed.
+
+### Review decisions
+
+Destination-only outputs can be:
+
+- kept;
+- queued for deletion;
+- queued for rename;
+- marked for client review.
+
+Source-backed duplicate outputs can be:
+
+- kept both;
+- marked as an intentional duplicate;
+- flagged as a source issue;
+- marked for client review.
+
+**Source-backed outputs cannot be deleted from Audit mode.** This is enforced in both the UI and the apply engine.
+
+Naming warnings can be kept or renamed. Renames are validated for:
+
+- `.webp` extension;
+- path safety;
+- same-folder filename collisions;
+- known high-confidence typo patterns;
+- closeness to current source-backed output names;
+- optional direct-SKU presence in the supplied client workbook.
+
+### Review Changes → Apply
+
+Delete and rename decisions are staged in a change plan. Nothing is modified while reviewing.
+
+Before apply, the app:
+
+1. re-checks every selected file;
+2. creates a hash-verified backup under `~/Downloads/TotalImageAssetAuditBackups/`;
+3. applies the queued operations;
+4. updates `.total-image-classifier/progress.json` for active output renames so future syncs keep the corrected filename;
+5. verifies every delete/rename;
+6. writes JSON and CSV audit reports;
+7. stores a rollback manifest.
+
+The last apply can be rolled back from the app. Rollback is hash-guarded and stops if an affected file changed after the audit apply.
+
+Audit review state is stored in:
+
+```
+assets/.total-image-audit/decisions.json
+```
+
+The audit state directory is ignored by Git.
 
 ## Smart source → destination comparison
 
