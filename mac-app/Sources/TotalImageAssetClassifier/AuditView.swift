@@ -1900,8 +1900,8 @@ private struct AuditChangePlanView: View {
                 .font(.caption)
                 .foregroundStyle(
                     conflicts.isEmpty
-                    ? .secondary
-                    : .red
+                    ? Color.secondary
+                    : Color.red
                 )
 
                 Button("Apply Changes…") {
