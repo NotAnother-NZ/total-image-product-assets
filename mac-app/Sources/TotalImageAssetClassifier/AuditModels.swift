@@ -99,6 +99,56 @@ struct AuditDecision: Codable, Hashable, Sendable {
     var decidedAt: Date
 }
 
+enum AuditPlannedChangeState: String, Hashable, Sendable {
+    case ready
+    case alreadySatisfied
+}
+
+struct AuditPlannedChange: Identifiable, Hashable, Sendable {
+    let issueID: String
+    let action: AuditDecisionKind
+    let originalRelativePath: String
+    let targetRelativePath: String?
+    let sourceBacked: Bool
+    let decidedAt: Date
+    let state: AuditPlannedChangeState
+    let note: String?
+
+    var id: String {
+        originalRelativePath
+    }
+}
+
+struct AuditPlanConflict: Identifiable, Hashable, Sendable {
+    let id: String
+    let paths: [String]
+    let message: String
+}
+
+struct AuditChangePlan: Sendable {
+    let changes: [AuditPlannedChange]
+    let conflicts: [AuditPlanConflict]
+    let supersededDecisionCount: Int
+
+    var readyCount: Int {
+        changes.filter { $0.state == .ready }.count
+    }
+
+    var alreadySatisfiedCount: Int {
+        changes.filter {
+            $0.state == .alreadySatisfied
+        }.count
+    }
+
+    var effectiveChangeCount: Int {
+        changes.count
+    }
+
+    var canApply: Bool {
+        !changes.isEmpty && conflicts.isEmpty
+    }
+}
+
 struct AuditApplyOperation: Codable, Hashable, Sendable {
     enum Kind: String, Codable, Sendable {
         case delete
