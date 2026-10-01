@@ -4,6 +4,8 @@ import Foundation
 @MainActor
 final class AppModel: ObservableObject {
     @Published private(set) var rootURL: URL?
+    @Published private(set) var scanMode: AssetScanMode?
+    @Published private(set) var productFolderCount = 0
     @Published private(set) var items: [AssetItem] = []
     @Published private(set) var progress = ProgressDocument(rootFolderName: "")
     @Published private(set) var isLoading = false
@@ -16,6 +18,7 @@ final class AppModel: ObservableObject {
     private var processingQueue: [ProcessingJob] = []
     private var queuedPaths: Set<String> = []
     private var activePaths: Set<String> = []
+    private var parentLibraryURL: URL?
 
     private let maxConcurrentProcessors = 2
 
@@ -36,11 +39,15 @@ final class AppModel: ObservableObject {
     }
 
     var completedCount: Int {
-        progress.records.values.filter { $0.status == .completed }.count
+        items.reduce(0) { count, item in
+            count + (progress.records[item.relativePath]?.status == .completed ? 1 : 0)
+        }
     }
 
     var failedCount: Int {
-        progress.records.values.filter { $0.status == .failed }.count
+        items.reduce(0) { count, item in
+            count + (progress.records[item.relativePath]?.status == .failed ? 1 : 0)
+        }
     }
 
     var isClassificationComplete: Bool {
@@ -53,8 +60,8 @@ final class AppModel: ObservableObject {
 
     func chooseFolder() {
         let panel = NSOpenPanel()
-        panel.title = "Choose the main assets folder"
-        panel.prompt = "Use Assets Folder"
+        panel.title = "Choose ALL_PRODUCT_ASSETS or a single SKU folder"
+        panel.prompt = "Use Folder"
         panel.canChooseDirectories = true
         panel.canChooseFiles = false
         panel.allowsMultipleSelection = false
@@ -79,14 +86,31 @@ final class AppModel: ObservableObject {
             do {
                 let result = try await Task.detached(priority: .userInitiated) {
                     let scanned = try AssetScanner.scan(rootURL: url)
-                    let stored = try ProgressStore.load(rootURL: url)
-                    return (scanned, stored)
+                    let localProgress = try ProgressStore.load(rootURL: url)
+
+                    let parentURL: URL?
+                    let parentProgress: ProgressDocument?
+
+                    if scanned.mode == .singleSKU {
+                        let candidate = url.deletingLastPathComponent()
+                        parentURL = candidate
+                        parentProgress = ProgressStore.exists(rootURL: candidate)
+                            ? try ProgressStore.load(rootURL: candidate)
+                            : nil
+                    } else {
+                        parentURL = nil
+                        parentProgress = nil
+                    }
+
+                    return (scanned, localProgress, parentURL, parentProgress)
                 }.value
 
                 applyLoadedFolder(
                     url: url,
-                    scannedItems: result.0,
-                    storedProgress: result.1
+                    scanResult: result.0,
+                    storedProgress: result.1,
+                    parentURL: result.2,
+                    parentProgress: result.3
                 )
             } catch {
                 errorMessage = error.localizedDescription
@@ -184,11 +208,17 @@ final class AppModel: ObservableObject {
 
     private func applyLoadedFolder(
         url: URL,
-        scannedItems: [AssetItem],
-        storedProgress: ProgressDocument
+        scanResult: AssetScanResult,
+        storedProgress: ProgressDocument,
+        parentURL: URL?,
+        parentProgress: ProgressDocument?
     ) {
         rootURL = url
-        items = scannedItems
+        scanMode = scanResult.mode
+        productFolderCount = scanResult.productFolderCount
+        items = scanResult.items
+        parentLibraryURL = parentURL
+
         history.removeAll()
         processingQueue.removeAll()
         queuedPaths.removeAll()
@@ -197,8 +227,16 @@ final class AppModel: ObservableObject {
         var reconciled = storedProgress
         reconciled.rootFolderName = url.lastPathComponent
 
+        if scanResult.mode == .singleSKU, let parentProgress {
+            importParentProgress(
+                parentProgress,
+                skuFolderName: url.lastPathComponent,
+                into: &reconciled
+            )
+        }
+
         let itemByPath = Dictionary(
-            uniqueKeysWithValues: scannedItems.map { ($0.relativePath, $0) }
+            uniqueKeysWithValues: scanResult.items.map { ($0.relativePath, $0) }
         )
 
         for (path, var record) in reconciled.records {
@@ -229,11 +267,19 @@ final class AppModel: ObservableObject {
             }
         }
 
+        if scanResult.mode == .singleSKU {
+            inferExistingOutputClassifications(
+                rootURL: url,
+                items: scanResult.items,
+                progress: &reconciled
+            )
+        }
+
         progress = reconciled
         isLoading = false
         saveProgress()
 
-        for item in scannedItems {
+        for item in scanResult.items {
             guard let record = progress.records[item.relativePath],
                   record.status != .completed
             else {
@@ -248,9 +294,93 @@ final class AppModel: ObservableObject {
             )
         }
 
-        message = storedProgress.records.isEmpty
-            ? "Ready. Classification progress is saved after every click."
-            : "Previous progress loaded. Resuming from the first unclassified image."
+        let inferredCount = scanResult.items.filter {
+            progress.records[$0.relativePath] != nil
+        }.count
+        let remainingCount = scanResult.items.count - inferredCount
+
+        switch scanResult.mode {
+        case .library:
+            message = storedProgress.records.isEmpty
+                ? "Loaded \(scanResult.productFolderCount) SKU folders. Ready to classify the asset library."
+                : "Asset-library progress loaded. Resuming from the first unclassified image."
+
+        case .singleSKU:
+            if remainingCount == 0 {
+                message = "Single-SKU mode: existing classifications found. New or replaced root images are being refreshed automatically."
+            } else {
+                message = "Single-SKU mode: \(remainingCount) root image(s) need classification. Existing generated model/product folders are preserved."
+            }
+        }
+    }
+
+    private func importParentProgress(
+        _ parent: ProgressDocument,
+        skuFolderName: String,
+        into local: inout ProgressDocument
+    ) {
+        let prefix = skuFolderName + "/"
+
+        for (parentPath, parentRecord) in parent.records {
+            guard parentPath.hasPrefix(prefix) else { continue }
+
+            let localPath = String(parentPath.dropFirst(prefix.count))
+            guard !localPath.contains("/") else { continue }
+            guard local.records[localPath] == nil else { continue }
+
+            var imported = parentRecord
+            imported.relativePath = localPath
+
+            if let output = imported.outputRelativePath,
+               output.hasPrefix(prefix)
+            {
+                imported.outputRelativePath = String(output.dropFirst(prefix.count))
+            }
+
+            local.records[localPath] = imported
+        }
+    }
+
+    private func inferExistingOutputClassifications(
+        rootURL: URL,
+        items: [AssetItem],
+        progress: inout ProgressDocument
+    ) {
+        let fileManager = FileManager.default
+
+        for item in items where progress.records[item.relativePath] == nil {
+            var matches: [(AssetClassification, String)] = []
+
+            for classification in AssetClassification.allCases {
+                let relativeOutput = [
+                    "webp",
+                    classification.outputFolderName,
+                    item.outputStem + ".webp"
+                ].joined(separator: "/")
+
+                if fileManager.fileExists(
+                    atPath: rootURL.appendingPathComponent(relativeOutput).path
+                ) {
+                    matches.append((classification, relativeOutput))
+                }
+            }
+
+            guard matches.count == 1, let match = matches.first else {
+                continue
+            }
+
+            progress.records[item.relativePath] = AssetProgressRecord(
+                relativePath: item.relativePath,
+                classification: match.0,
+                status: .pending,
+                revision: UUID().uuidString,
+                outputRelativePath: nil,
+                error: nil,
+                fileSize: item.fileSize,
+                modificationTime: item.modificationTime,
+                updatedAt: Date()
+            )
+        }
     }
 
     private func enqueue(
@@ -285,7 +415,8 @@ final class AppModel: ObservableObject {
         guard let magickPath else { return }
 
         while activePaths.count < maxConcurrentProcessors,
-              !processingQueue.isEmpty {
+              !processingQueue.isEmpty
+        {
             let job = processingQueue.removeFirst()
             queuedPaths.remove(job.relativePath)
 
@@ -407,9 +538,43 @@ final class AppModel: ObservableObject {
 
         do {
             try ProgressStore.save(progress, rootURL: rootURL)
+
+            if scanMode == .singleSKU, let parentLibraryURL {
+                try mirrorSingleSKUProgressToParent(
+                    rootURL: rootURL,
+                    parentURL: parentLibraryURL
+                )
+            }
         } catch {
             errorMessage = "Could not save progress: \(error.localizedDescription)"
         }
+    }
+
+    private func mirrorSingleSKUProgressToParent(
+        rootURL: URL,
+        parentURL: URL
+    ) throws {
+        guard ProgressStore.exists(rootURL: parentURL) else { return }
+
+        var parent = try ProgressStore.load(rootURL: parentURL)
+        let sku = rootURL.lastPathComponent
+        let prefix = sku + "/"
+
+        for (localPath, localRecord) in progress.records {
+            guard !localPath.contains("/") else { continue }
+
+            let parentPath = prefix + localPath
+            var mirrored = localRecord
+            mirrored.relativePath = parentPath
+
+            if let output = mirrored.outputRelativePath {
+                mirrored.outputRelativePath = prefix + output
+            }
+
+            parent.records[parentPath] = mirrored
+        }
+
+        try ProgressStore.save(parent, rootURL: parentURL)
     }
 
     private func refreshQueueCounts() {
@@ -419,6 +584,14 @@ final class AppModel: ObservableObject {
 
     private func removeGeneratedWebPFolders(rootURL: URL) throws {
         let fileManager = FileManager.default
+
+        if scanMode == .singleSKU {
+            let webpFolder = rootURL.appendingPathComponent("webp", isDirectory: true)
+            if fileManager.fileExists(atPath: webpFolder.path) {
+                try fileManager.removeItem(at: webpFolder)
+            }
+            return
+        }
 
         let children = try fileManager.contentsOfDirectory(
             at: rootURL,
