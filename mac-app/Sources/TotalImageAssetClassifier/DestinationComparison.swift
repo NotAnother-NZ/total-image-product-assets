@@ -8,6 +8,7 @@ struct DestinationAsset: Hashable, Sendable {
     let outputURL: URL
     let outputRelativePath: String
     let modificationTime: TimeInterval
+    let fileSize: Int64
 }
 
 struct DestinationSnapshot: Sendable {
@@ -73,14 +74,19 @@ enum DestinationScanner {
                     at: classificationFolder,
                     includingPropertiesForKeys: [
                         .isRegularFileKey,
-                        .contentModificationDateKey
+                        .contentModificationDateKey,
+                        .fileSizeKey
                     ],
                     options: [.skipsHiddenFiles]
                 )
 
                 for file in files {
                     let fileValues = try file.resourceValues(
-                        forKeys: [.isRegularFileKey, .contentModificationDateKey]
+                        forKeys: [
+                            .isRegularFileKey,
+                            .contentModificationDateKey,
+                            .fileSizeKey
+                        ]
                     )
 
                     guard fileValues.isRegularFile == true,
@@ -111,7 +117,8 @@ enum DestinationScanner {
                             outputURL: file,
                             outputRelativePath: relativePath,
                             modificationTime: fileValues.contentModificationDate?
-                                .timeIntervalSince1970 ?? 0
+                                .timeIntervalSince1970 ?? 0,
+                            fileSize: Int64(fileValues.fileSize ?? 0)
                         )
                     )
                 }
