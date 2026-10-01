@@ -1942,8 +1942,9 @@ enum AssetAuditEngine {
         _ applied: [(from: URL, to: URL?)],
         backupRoot: URL,
         destinationRoot: URL,
-        progressBackup: URL
-    ) {
+        progressBackup: URL,
+        progressExistedBeforeApply: Bool
+    ) throws {
         let fileManager = FileManager.default
 
         for operation in applied.reversed() {
@@ -1954,64 +1955,96 @@ enum AssetAuditEngine {
             let backup = backupRoot
                 .appendingPathComponent(relative)
 
+            guard fileManager.fileExists(
+                atPath: backup.path
+            ) else {
+                throw AuditApplyError.backupInvalid(
+                    relative
+                )
+            }
+
             if let to = operation.to,
                fileManager.fileExists(
                 atPath: to.path
                )
             {
-                try? fileManager.removeItem(
-                    at: to
+                try fileManager.removeItem(at: to)
+            }
+
+            try fileManager.createDirectory(
+                at: operation.from
+                    .deletingLastPathComponent(),
+                withIntermediateDirectories: true
+            )
+
+            if fileManager.fileExists(
+                atPath: operation.from.path
+            ) {
+                try fileManager.removeItem(
+                    at: operation.from
                 )
             }
 
-            if fileManager.fileExists(
-                atPath: backup.path
-            ) {
-                try? fileManager.createDirectory(
-                    at: operation.from
-                        .deletingLastPathComponent(),
-                    withIntermediateDirectories: true
-                )
+            try fileManager.copyItem(
+                at: backup,
+                to: operation.from
+            )
 
-                if fileManager.fileExists(
-                    atPath: operation.from.path
-                ) {
-                    try? fileManager.removeItem(
-                        at: operation.from
+            guard try sha256(operation.from)
+                == sha256(backup)
+            else {
+                throw AuditApplyError
+                    .verificationFailed(
+                        "rollback \(relative)"
                     )
-                }
-
-                try? fileManager.copyItem(
-                    at: backup,
-                    to: operation.from
-                )
             }
         }
 
-        if fileManager.fileExists(
-            atPath: progressBackup.path
-        ) {
-            let progressURL =
-                ProgressStore.progressURL(
-                    rootURL: destinationRoot
+        let progressURL =
+            ProgressStore.progressURL(
+                rootURL: destinationRoot
+            )
+
+        if progressExistedBeforeApply {
+            guard fileManager.fileExists(
+                atPath: progressBackup.path
+            ) else {
+                throw AuditApplyError.backupInvalid(
+                    ProgressStore.fileName
                 )
+            }
 
             if fileManager.fileExists(
                 atPath: progressURL.path
             ) {
-                try? fileManager.removeItem(
+                try fileManager.removeItem(
                     at: progressURL
                 )
             }
 
-            try? fileManager.createDirectory(
+            try fileManager.createDirectory(
                 at: progressURL
                     .deletingLastPathComponent(),
                 withIntermediateDirectories: true
             )
-            try? fileManager.copyItem(
+            try fileManager.copyItem(
                 at: progressBackup,
                 to: progressURL
+            )
+
+            guard try sha256(progressURL)
+                == sha256(progressBackup)
+            else {
+                throw AuditApplyError
+                    .verificationFailed(
+                        "rollback \(ProgressStore.fileName)"
+                    )
+            }
+        } else if fileManager.fileExists(
+            atPath: progressURL.path
+        ) {
+            try fileManager.removeItem(
+                at: progressURL
             )
         }
     }
@@ -2019,6 +2052,12 @@ enum AssetAuditEngine {
 
 enum AuditApplyError: LocalizedError {
     case noChanges
+    case changePlanConflict(String)
+    case applyAndRollbackFailed(
+        apply: String,
+        rollback: String,
+        backup: String
+    )
     case activeOutputDeleteForbidden(String)
     case invalidRename(String)
     case missingFile(String)
@@ -2035,6 +2074,14 @@ enum AuditApplyError: LocalizedError {
         switch self {
         case .noChanges:
             return "There are no Delete or Rename decisions waiting to be applied."
+        case .changePlanConflict(let detail):
+            return "Review Changes contains a conflict that must be resolved before apply:\n\n\(detail)"
+        case .applyAndRollbackFailed(
+            let apply,
+            let rollback,
+            let backup
+        ):
+            return "Apply failed and automatic rollback could not be fully verified.\n\nApply error: \(apply)\n\nRollback error: \(rollback)\n\nBackup: \(backup)"
         case .activeOutputDeleteForbidden(let path):
             return "Refusing to delete a current source-backed output: \(path)"
         case .invalidRename(let detail):
