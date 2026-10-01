@@ -8,6 +8,27 @@ struct DestinationAsset: Hashable, Sendable {
     let outputURL: URL
     let outputRelativePath: String
     let modificationTime: TimeInterval
+    let fileSize: Int64
+
+    init(
+        id: String,
+        productFolderName: String,
+        classification: AssetClassification,
+        outputStem: String,
+        outputURL: URL,
+        outputRelativePath: String,
+        modificationTime: TimeInterval,
+        fileSize: Int64 = 0
+    ) {
+        self.id = id
+        self.productFolderName = productFolderName
+        self.classification = classification
+        self.outputStem = outputStem
+        self.outputURL = outputURL
+        self.outputRelativePath = outputRelativePath
+        self.modificationTime = modificationTime
+        self.fileSize = fileSize
+    }
 }
 
 struct DestinationSnapshot: Sendable {
@@ -73,14 +94,19 @@ enum DestinationScanner {
                     at: classificationFolder,
                     includingPropertiesForKeys: [
                         .isRegularFileKey,
-                        .contentModificationDateKey
+                        .contentModificationDateKey,
+                        .fileSizeKey
                     ],
                     options: [.skipsHiddenFiles]
                 )
 
                 for file in files {
                     let fileValues = try file.resourceValues(
-                        forKeys: [.isRegularFileKey, .contentModificationDateKey]
+                        forKeys: [
+                            .isRegularFileKey,
+                            .contentModificationDateKey,
+                            .fileSizeKey
+                        ]
                     )
 
                     guard fileValues.isRegularFile == true,
@@ -111,7 +137,8 @@ enum DestinationScanner {
                             outputURL: file,
                             outputRelativePath: relativePath,
                             modificationTime: fileValues.contentModificationDate?
-                                .timeIntervalSince1970 ?? 0
+                                .timeIntervalSince1970 ?? 0,
+                            fileSize: Int64(fileValues.fileSize ?? 0)
                         )
                     )
                 }

@@ -4,17 +4,39 @@ import UniformTypeIdentifiers
 
 struct ContentView: View {
     @EnvironmentObject private var model: AppModel
+    @StateObject private var auditModel = AuditModel()
 
+    @State private var workspace: WorkspaceMode = .home
     @State private var sourceDropTargeted = false
     @State private var destinationDropTargeted = false
     @State private var showResetConfirmation = false
 
+    private enum WorkspaceMode {
+        case home
+        case classifier
+        case audit
+    }
+
     var body: some View {
         Group {
-            if model.rootURL == nil {
-                emptyState
-            } else {
-                classifier
+            switch workspace {
+            case .home:
+                homeView
+
+            case .classifier:
+                if model.rootURL == nil {
+                    emptyState
+                } else {
+                    classifier
+                }
+
+            case .audit:
+                AuditView(
+                    model: auditModel,
+                    onBack: {
+                        workspace = .home
+                    }
+                )
             }
         }
         .frame(minWidth: 980, minHeight: 700)
@@ -55,6 +77,95 @@ struct ContentView: View {
         }
     }
 
+    private var homeView: some View {
+        VStack(spacing: 28) {
+            Spacer()
+
+            Image(systemName: "shippingbox.and.arrow.backward")
+                .font(.system(size: 52, weight: .light))
+                .foregroundStyle(.secondary)
+
+            Text("Total Image Asset Tools")
+                .font(.largeTitle.bold())
+
+            Text(
+                "Choose the workflow you need. Classification/sync remains unchanged; final-asset auditing is isolated in its own review mode."
+            )
+            .multilineTextAlignment(.center)
+            .foregroundStyle(.secondary)
+            .frame(maxWidth: 720)
+
+            HStack(spacing: 20) {
+                workspaceCard(
+                    title: "Classify / Sync Assets",
+                    subtitle:
+                        "Classify source images, sync ALL_PRODUCT_ASSETS into the finalized destination, or update a single SKU.",
+                    systemImage:
+                        "arrow.triangle.2.circlepath"
+                ) {
+                    workspace = .classifier
+                }
+
+                workspaceCard(
+                    title: "Audit Final Assets",
+                    subtitle:
+                        "Review destination-only files, pixel duplicates and naming issues visually before applying safe cleanup changes.",
+                    systemImage:
+                        "checklist.checked"
+                ) {
+                    workspace = .audit
+                }
+            }
+            .frame(maxWidth: 920)
+
+            Spacer()
+        }
+        .padding(40)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private func workspaceCard(
+        title: String,
+        subtitle: String,
+        systemImage: String,
+        action: @escaping () -> Void
+    ) -> some View {
+        Button(action: action) {
+            VStack(alignment: .leading, spacing: 16) {
+                Image(systemName: systemImage)
+                    .font(.system(size: 34))
+                    .foregroundStyle(Color.accentColor)
+
+                Text(title)
+                    .font(.title2.bold())
+                    .foregroundStyle(.primary)
+
+                Text(subtitle)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.leading)
+
+                Spacer()
+
+                Label(
+                    "Open",
+                    systemImage: "arrow.right.circle.fill"
+                )
+                .font(.headline)
+            }
+            .padding(24)
+            .frame(maxWidth: .infinity, minHeight: 240, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 18)
+                    .fill(Color.secondary.opacity(0.05))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 18)
+                    .strokeBorder(Color.secondary.opacity(0.18))
+            )
+        }
+        .buttonStyle(.plain)
+    }
+
     private enum ComparisonDropRole {
         case source
         case destination
@@ -62,6 +173,15 @@ struct ContentView: View {
 
     private var emptyState: some View {
         VStack(spacing: 22) {
+            HStack {
+                Button {
+                    workspace = .home
+                } label: {
+                    Label("Home", systemImage: "chevron.left")
+                }
+                Spacer()
+            }
+
             Spacer()
 
             Image(systemName: "arrow.triangle.2.circlepath")
@@ -244,6 +364,13 @@ struct ContentView: View {
     private var header: some View {
         VStack(spacing: 10) {
             HStack {
+                Button {
+                    workspace = .home
+                } label: {
+                    Image(systemName: "house")
+                }
+                .help("Back to workflow selection")
+
                 VStack(alignment: .leading, spacing: 3) {
                     Text(
                         model.isComparisonMode
