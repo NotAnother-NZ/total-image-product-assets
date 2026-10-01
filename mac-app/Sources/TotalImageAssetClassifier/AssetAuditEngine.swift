@@ -629,6 +629,328 @@ enum AssetAuditEngine {
         return difference
     }
 
+    static func buildChangePlan(
+        scan: AuditScanResult,
+        issues: [AuditIssue],
+        document: AuditDocument
+    ) -> AuditChangePlan {
+        let fileManager = FileManager.default
+        let issueByID = Dictionary(
+            uniqueKeysWithValues: issues.map {
+                ($0.id, $0)
+            }
+        )
+
+        struct Candidate {
+            let issue: AuditIssue
+            let decision: AuditDecision
+        }
+
+        let destructive = document.decisions.values.compactMap {
+            decision -> Candidate? in
+            guard decision.action == .delete
+                    || decision.action == .rename,
+                  let issue = issueByID[decision.issueID]
+            else {
+                return nil
+            }
+
+            return Candidate(
+                issue: issue,
+                decision: decision
+            )
+        }
+
+        let grouped = Dictionary(
+            grouping: destructive,
+            by: { $0.issue.primaryRelativePath }
+        )
+
+        var changes: [AuditPlannedChange] = []
+        var conflicts: [AuditPlanConflict] = []
+        var supersededDecisionCount = 0
+
+        for path in grouped.keys.sorted() {
+            guard let group = grouped[path] else {
+                continue
+            }
+
+            let sorted = group.sorted {
+                if $0.decision.decidedAt
+                    != $1.decision.decidedAt
+                {
+                    return $0.decision.decidedAt
+                        > $1.decision.decidedAt
+                }
+
+                return $0.issue.id > $1.issue.id
+            }
+
+            guard let selected = sorted.first else {
+                continue
+            }
+
+            supersededDecisionCount += max(
+                0,
+                sorted.count - 1
+            )
+
+            let issue = selected.issue
+            let decision = selected.decision
+            let from = scan.destinationRootURL
+                .appendingPathComponent(path)
+            let fromExists = fileManager.fileExists(
+                atPath: from.path
+            )
+
+            switch decision.action {
+            case .delete:
+                if issue.primarySourceBacked {
+                    conflicts.append(
+                        AuditPlanConflict(
+                            id: "active-delete:\(path)",
+                            paths: [path],
+                            message:
+                                "Delete is not allowed because this output is still source-backed."
+                        )
+                    )
+                    continue
+                }
+
+                changes.append(
+                    AuditPlannedChange(
+                        issueID: issue.id,
+                        action: .delete,
+                        originalRelativePath: path,
+                        targetRelativePath: nil,
+                        sourceBacked: false,
+                        decidedAt: decision.decidedAt,
+                        state:
+                            fromExists
+                            ? .ready
+                            : .alreadySatisfied,
+                        note:
+                            fromExists
+                            ? nil
+                            : "File is already absent; delete is already satisfied."
+                    )
+                )
+
+            case .rename:
+                guard let proposed =
+                    decision.proposedFileName?
+                        .trimmingCharacters(
+                            in: .whitespacesAndNewlines
+                        ),
+                      !proposed.isEmpty
+                else {
+                    conflicts.append(
+                        AuditPlanConflict(
+                            id: "missing-rename:\(path)",
+                            paths: [path],
+                            message:
+                                "Rename has no target filename."
+                        )
+                    )
+                    continue
+                }
+
+                let to = from
+                    .deletingLastPathComponent()
+                    .appendingPathComponent(proposed)
+                let targetRelativePath =
+                    relativePath(
+                        to,
+                        root:
+                            scan.destinationRootURL
+                    )
+                let targetExists =
+                    fileManager.fileExists(
+                        atPath: to.path
+                    )
+
+                if !fromExists {
+                    if targetExists {
+                        let targetOwnedByOtherSource =
+                            scan.progress.records.contains {
+                                sourcePath, record in
+                                record.outputRelativePath
+                                    == targetRelativePath
+                                    && sourcePath
+                                        != issue.sourceRelativePath
+                            }
+
+                        if targetOwnedByOtherSource {
+                            conflicts.append(
+                                AuditPlanConflict(
+                                    id:
+                                        "rename-target-owned:\(path)",
+                                    paths: [
+                                        path,
+                                        targetRelativePath
+                                    ],
+                                    message:
+                                        "The original file is missing and the rename target is already owned by another current source record."
+                                )
+                            )
+                            continue
+                        }
+
+                        changes.append(
+                            AuditPlannedChange(
+                                issueID: issue.id,
+                                action: .rename,
+                                originalRelativePath:
+                                    path,
+                                targetRelativePath:
+                                    targetRelativePath,
+                                sourceBacked:
+                                    issue.primarySourceBacked,
+                                decidedAt:
+                                    decision.decidedAt,
+                                state:
+                                    .alreadySatisfied,
+                                note:
+                                    "Original is already absent and the requested rename target exists; this will be reconciled without moving the file again."
+                            )
+                        )
+                    } else {
+                        conflicts.append(
+                            AuditPlanConflict(
+                                id:
+                                    "rename-source-missing:\(path)",
+                                paths: [
+                                    path,
+                                    targetRelativePath
+                                ],
+                                message:
+                                    "The file to rename no longer exists and the requested target does not exist either. Re-scan or restore the file before applying."
+                            )
+                        )
+                    }
+                    continue
+                }
+
+                let validation = validateRename(
+                    proposedFileName: proposed,
+                    issue: issue,
+                    scan: scan
+                )
+
+                if !validation.isValid {
+                    conflicts.append(
+                        AuditPlanConflict(
+                            id:
+                                "invalid-rename:\(path)",
+                            paths: [
+                                path,
+                                targetRelativePath
+                            ],
+                            message:
+                                validation.message
+                        )
+                    )
+                    continue
+                }
+
+                changes.append(
+                    AuditPlannedChange(
+                        issueID: issue.id,
+                        action: .rename,
+                        originalRelativePath: path,
+                        targetRelativePath:
+                            targetRelativePath,
+                        sourceBacked:
+                            issue.primarySourceBacked,
+                        decidedAt:
+                            decision.decidedAt,
+                        state: .ready,
+                        note: nil
+                    )
+                )
+
+            default:
+                break
+            }
+        }
+
+        let readyRenames = changes.filter {
+            $0.action == .rename
+                && $0.state == .ready
+        }
+
+        let byTarget = Dictionary(
+            grouping: readyRenames.compactMap {
+                change -> (String, AuditPlannedChange)? in
+                guard let target =
+                    change.targetRelativePath
+                else {
+                    return nil
+                }
+                return (target, change)
+            },
+            by: { $0.0 }
+        )
+
+        for (target, group) in byTarget
+            where group.count > 1
+        {
+            conflicts.append(
+                AuditPlanConflict(
+                    id: "duplicate-target:\(target)",
+                    paths:
+                        group.map {
+                            $0.1.originalRelativePath
+                        } + [target],
+                    message:
+                        "More than one queued rename points to the same destination filename."
+                )
+            )
+        }
+
+        let readyOriginals = Set(
+            changes
+                .filter { $0.state == .ready }
+                .map(\.originalRelativePath)
+        )
+
+        for change in readyRenames {
+            guard let target =
+                change.targetRelativePath,
+                  target
+                    != change.originalRelativePath,
+                  readyOriginals.contains(target)
+            else {
+                continue
+            }
+
+            conflicts.append(
+                AuditPlanConflict(
+                    id:
+                        "target-is-source:\(change.originalRelativePath)",
+                    paths: [
+                        change.originalRelativePath,
+                        target
+                    ],
+                    message:
+                        "A queued rename targets another file that is also scheduled to change. Resolve that chain before applying."
+                )
+            )
+        }
+
+        return AuditChangePlan(
+            changes: changes.sorted {
+                $0.originalRelativePath
+                    .localizedStandardCompare(
+                        $1.originalRelativePath
+                    ) == .orderedAscending
+            },
+            conflicts: conflicts,
+            supersededDecisionCount:
+                supersededDecisionCount
+        )
+    }
+
     static func applyChanges(
         scan: AuditScanResult,
         issues: [AuditIssue],
@@ -640,112 +962,38 @@ enum AssetAuditEngine {
                 ($0.id, $0)
             }
         )
+        let plan = buildChangePlan(
+            scan: scan,
+            issues: issues,
+            document: document
+        )
 
-        var pending: [(
-            issue: AuditIssue,
-            decision: AuditDecision,
-            from: URL,
-            to: URL?
-        )] = []
-
-        for decision in document.decisions.values {
-            guard let issue = issueByID[decision.issueID]
-            else {
-                continue
-            }
-
-            switch decision.action {
-            case .delete:
-                guard !issue.primarySourceBacked else {
-                    throw AuditApplyError
-                        .activeOutputDeleteForbidden(
-                            issue.primaryRelativePath
-                        )
-                }
-
-                pending.append(
-                    (
-                        issue,
-                        decision,
-                        scan.destinationRootURL
-                            .appendingPathComponent(
-                                issue.primaryRelativePath
-                            ),
-                        nil
-                    )
-                )
-
-            case .rename:
-                guard let proposed =
-                    decision.proposedFileName
-                else {
-                    throw AuditApplyError
-                        .invalidRename(
-                            issue.primaryRelativePath
-                        )
-                }
-
-                let validation = validateRename(
-                    proposedFileName: proposed,
-                    issue: issue,
-                    scan: scan
-                )
-                guard validation.isValid else {
-                    throw AuditApplyError
-                        .invalidRename(
-                            validation.message
-                        )
-                }
-
-                let from = scan.destinationRootURL
-                    .appendingPathComponent(
-                        issue.primaryRelativePath
-                    )
-                let to = from
-                    .deletingLastPathComponent()
-                    .appendingPathComponent(proposed)
-
-                pending.append(
-                    (
-                        issue,
-                        decision,
-                        from,
-                        to
-                    )
-                )
-
-            default:
-                continue
-            }
+        guard plan.conflicts.isEmpty else {
+            throw AuditApplyError.changePlanConflict(
+                plan.conflicts.map(\.message)
+                    .joined(separator: "\n")
+            )
         }
 
-        guard !pending.isEmpty else {
+        guard !plan.changes.isEmpty else {
             throw AuditApplyError.noChanges
         }
 
-        for operation in pending {
-            guard fileManager.fileExists(
-                atPath: operation.from.path
-            ) else {
-                throw AuditApplyError.missingFile(
-                    operation.issue.primaryRelativePath
-                )
-            }
-
-            if let to = operation.to,
-               to.path != operation.from.path,
-               fileManager.fileExists(atPath: to.path)
-            {
-                throw AuditApplyError.targetExists(
-                    to.lastPathComponent
-                )
-            }
+        let ready = plan.changes.filter {
+            $0.state == .ready
+        }
+        let reconciled = plan.changes.filter {
+            $0.state == .alreadySatisfied
         }
 
         let backupRoot = try AuditStore.backupRoot()
         let progressURL = ProgressStore.progressURL(
             rootURL: scan.destinationRootURL
         )
+        let progressExistedBeforeApply =
+            fileManager.fileExists(
+                atPath: progressURL.path
+            )
         let progressBackup = backupRoot
             .appendingPathComponent(
                 ".total-image-classifier",
@@ -755,9 +1003,7 @@ enum AssetAuditEngine {
                 ProgressStore.fileName
             )
 
-        if fileManager.fileExists(
-            atPath: progressURL.path
-        ) {
+        if progressExistedBeforeApply {
             try fileManager.createDirectory(
                 at: progressBackup
                     .deletingLastPathComponent(),
@@ -775,13 +1021,86 @@ enum AssetAuditEngine {
         var applied:
             [(from: URL, to: URL?)] = []
 
-        do {
-            for operation in pending {
-                let hashBefore = try sha256(
-                    operation.from
+        func reconcileRename(
+            _ change: AuditPlannedChange
+        ) {
+            guard change.action == .rename,
+                  let target =
+                    change.targetRelativePath,
+                  let issue =
+                    issueByID[change.issueID]
+            else {
+                return
+            }
+
+            let targetURL = scan.destinationRootURL
+                .appendingPathComponent(target)
+
+            if issue.primarySourceBacked {
+                updateClassifierProgress(
+                    fromRelativePath:
+                        change.originalRelativePath,
+                    toRelativePath: target,
+                    newStem:
+                        targetURL
+                        .deletingPathExtension()
+                        .lastPathComponent,
+                    progress: &updatedProgress
                 )
+            } else {
+                let newIssueID =
+                    "destination-only:\(target)"
+                document.decisions[newIssueID] =
+                    AuditDecision(
+                        issueID: newIssueID,
+                        action: .keep,
+                        proposedFileName: nil,
+                        note:
+                            "Reviewed and renamed during audit apply.",
+                        decidedAt: Date()
+                    )
+            }
+        }
+
+        for change in reconciled {
+            reconcileRename(change)
+        }
+
+        do {
+            for change in ready {
+                guard let issue =
+                    issueByID[change.issueID]
+                else {
+                    throw AuditApplyError
+                        .changePlanConflict(
+                            "A queued audit issue disappeared before apply: \(change.issueID)"
+                        )
+                }
+
+                let from = scan.destinationRootURL
+                    .appendingPathComponent(
+                        change.originalRelativePath
+                    )
+
+                if change.action == .delete,
+                   !fileManager.fileExists(
+                    atPath: from.path
+                   )
+                {
+                    continue
+                }
+
+                guard fileManager.fileExists(
+                    atPath: from.path
+                ) else {
+                    throw AuditApplyError.missingFile(
+                        change.originalRelativePath
+                    )
+                }
+
+                let hashBefore = try sha256(from)
                 let relativeBackup =
-                    operation.issue.primaryRelativePath
+                    change.originalRelativePath
                 let backupURL = backupRoot
                     .appendingPathComponent(
                         relativeBackup
@@ -793,109 +1112,90 @@ enum AssetAuditEngine {
                     withIntermediateDirectories: true
                 )
                 try fileManager.copyItem(
-                    at: operation.from,
+                    at: from,
                     to: backupURL
                 )
 
-                guard try sha256(operation.from)
+                guard try sha256(from)
                     == hashBefore
                 else {
                     throw AuditApplyError
                         .fileChangedDuringApply(
-                            operation.issue
-                                .primaryRelativePath
+                            change.originalRelativePath
                         )
                 }
 
-                if let to = operation.to {
-                    if to.path != operation.from.path {
-                        try fileManager.moveItem(
-                            at: operation.from,
-                            to: to
-                        )
-                    }
-
-                    let renamedRelativePath =
-                        relativePath(
-                            to,
-                            root:
-                                scan.destinationRootURL
-                        )
-
-                    if operation.issue.primarySourceBacked {
-                        updateClassifierProgress(
-                            fromRelativePath:
-                                operation.issue
-                                    .primaryRelativePath,
-                            toRelativePath:
-                                renamedRelativePath,
-                            newStem:
-                                to.deletingPathExtension()
-                                    .lastPathComponent,
-                            progress:
-                                &updatedProgress
-                        )
-                    } else {
-                        let newIssueID =
-                            "destination-only:\(renamedRelativePath)"
-                        document.decisions[newIssueID] =
-                            AuditDecision(
-                                issueID: newIssueID,
-                                action: .keep,
-                                proposedFileName: nil,
-                                note:
-                                    "Reviewed and renamed during audit apply.",
-                                decidedAt: Date()
+                if change.action == .rename {
+                    guard let target =
+                        change.targetRelativePath
+                    else {
+                        throw AuditApplyError
+                            .invalidRename(
+                                change.originalRelativePath
                             )
                     }
+
+                    let to = scan.destinationRootURL
+                        .appendingPathComponent(target)
+
+                    guard !fileManager.fileExists(
+                        atPath: to.path
+                    ) else {
+                        throw AuditApplyError
+                            .targetExists(
+                                to.lastPathComponent
+                            )
+                    }
+
+                    try fileManager.moveItem(
+                        at: from,
+                        to: to
+                    )
+
+                    reconcileRename(change)
 
                     manifestOperations.append(
                         AuditApplyOperation(
                             kind: .rename,
                             originalRelativePath:
-                                operation.issue
-                                    .primaryRelativePath,
-                            targetRelativePath:
-                                relativePath(
-                                    to,
-                                    root:
-                                        scan.destinationRootURL
-                                ),
+                                change.originalRelativePath,
+                            targetRelativePath: target,
                             backupRelativePath:
                                 relativeBackup,
-                            originalSHA256: hashBefore
+                            originalSHA256:
+                                hashBefore
                         )
                     )
-
                     applied.append(
-                        (
-                            operation.from,
-                            to.path
-                                == operation.from.path
-                                ? nil
-                                : to
-                        )
+                        (from: from, to: to)
                     )
                 } else {
+                    guard !issue.primarySourceBacked
+                    else {
+                        throw AuditApplyError
+                            .activeOutputDeleteForbidden(
+                                change.originalRelativePath
+                            )
+                    }
+
                     try fileManager.removeItem(
-                        at: operation.from
+                        at: from
                     )
 
                     manifestOperations.append(
                         AuditApplyOperation(
                             kind: .delete,
                             originalRelativePath:
-                                operation.issue
-                                    .primaryRelativePath,
+                                change.originalRelativePath,
                             targetRelativePath: nil,
                             backupRelativePath:
                                 relativeBackup,
-                            originalSHA256: hashBefore
+                            originalSHA256:
+                                hashBefore
                         )
                     )
-
                     applied.append(
-                        (operation.from, nil)
+                        (from: from, to: nil)
                     )
                 }
             }
@@ -950,13 +1250,30 @@ enum AssetAuditEngine {
                 }
             }
         } catch {
-            rollbackApplied(
-                applied,
-                backupRoot: backupRoot,
-                destinationRoot:
-                    scan.destinationRootURL,
-                progressBackup: progressBackup
-            )
+            do {
+                try rollbackApplied(
+                    applied,
+                    backupRoot: backupRoot,
+                    destinationRoot:
+                        scan.destinationRootURL,
+                    progressBackup:
+                        progressBackup,
+                    progressExistedBeforeApply:
+                        progressExistedBeforeApply
+                )
+            } catch let rollbackError {
+                throw AuditApplyError
+                    .applyAndRollbackFailed(
+                        apply:
+                            error.localizedDescription,
+                        rollback:
+                            rollbackError
+                            .localizedDescription,
+                        backup:
+                            backupRoot.path
+                    )
+            }
+
             throw error
         }
 
