@@ -267,8 +267,7 @@ final class AppModel: ObservableObject {
 
         let destinationProductFolderName: String? = {
             guard scanMode == .comparison,
-                  let comparisonSourceScanMode,
-                  let rootURL
+                  let comparisonSourceScanMode
             else {
                 return nil
             }
