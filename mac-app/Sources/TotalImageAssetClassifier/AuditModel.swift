@@ -86,20 +86,24 @@ final class AuditModel: ObservableObject {
         }
     }
 
-    var queuedChangeCount: Int {
-        document.decisions.values.reduce(0) {
-            count, decision in
-            switch decision.action {
-            case .delete, .rename:
-                return count + 1
-            default:
-                return count
-            }
+    var changePlan: AuditChangePlan? {
+        guard let scanResult else {
+            return nil
         }
+
+        return AssetAuditEngine.buildChangePlan(
+            scan: scanResult,
+            issues: scanResult.issues,
+            document: document
+        )
+    }
+
+    var queuedChangeCount: Int {
+        changePlan?.effectiveChangeCount ?? 0
     }
 
     var canApplyChanges: Bool {
-        queuedChangeCount > 0
+        changePlan?.canApply == true
             && !isApplying
             && !isScanning
     }
@@ -373,6 +377,30 @@ final class AuditModel: ObservableObject {
             errorMessage =
                 "This output is still source-backed. Audit mode will not delete it; use Keep Both, Intentional Duplicate, or Source Issue instead."
             return
+        }
+
+        if action == .delete || action == .rename {
+            let samePathIssueIDs = issues
+                .filter {
+                    $0.primaryRelativePath
+                        == issue.primaryRelativePath
+                        && $0.id != issue.id
+                }
+                .map(\.id)
+
+            for siblingID in samePathIssueIDs {
+                guard let existing =
+                    document.decisions[siblingID],
+                      existing.action == .delete
+                        || existing.action == .rename
+                else {
+                    continue
+                }
+
+                document.decisions.removeValue(
+                    forKey: siblingID
+                )
+            }
         }
 
         var proposed: String?
