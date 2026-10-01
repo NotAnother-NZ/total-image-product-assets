@@ -17,6 +17,11 @@ let package = Package(
         .executableTarget(
             name: "TotalImageAssetClassifier",
             path: "Sources/TotalImageAssetClassifier"
+        ),
+        .testTarget(
+            name: "TotalImageAssetClassifierTests",
+            dependencies: ["TotalImageAssetClassifier"],
+            path: "Tests/TotalImageAssetClassifierTests"
         )
     ]
 )
