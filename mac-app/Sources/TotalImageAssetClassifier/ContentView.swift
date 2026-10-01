@@ -296,10 +296,12 @@ struct ContentView: View {
                     Button("Source…") {
                         model.chooseComparisonSourceFolder()
                     }
+                    .disabled(!model.canChangeComparisonFolders)
 
                     Button("Destination…") {
                         model.chooseComparisonDestinationFolder()
                     }
+                    .disabled(!model.canChangeComparisonFolders)
                 } else {
                     Button("Choose Folder…") {
                         model.chooseFolder()
