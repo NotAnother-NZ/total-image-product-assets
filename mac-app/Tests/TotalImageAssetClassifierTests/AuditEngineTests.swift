@@ -549,4 +549,332 @@ final class AuditEngineTests: XCTestCase {
             }
         }
     }
+
+    func testChangePlanUsesLatestFilesystemDecisionForSamePath()
+        throws
+    {
+        let source = try makeTemporaryDirectory(
+            "AuditSource"
+        )
+        let destination =
+            try makeTemporaryDirectory(
+                "AuditDestination"
+            )
+        defer {
+            try? FileManager.default
+                .removeItem(at: source)
+            try? FileManager.default
+                .removeItem(at: destination)
+        }
+
+        let file = try destinationFile(
+            root: destination,
+            product: "SKU_A",
+            classification: .product,
+            name: "SKU_A_NACY_FRONT.webp",
+            contents: "asset"
+        )
+        let relative =
+            "SKU_A/webp/product/\(file.lastPathComponent)"
+
+        let destinationIssue = AuditIssue(
+            id: "destination-only:\(relative)",
+            kind: .destinationOnly,
+            primaryRelativePath: relative,
+            relatedRelativePaths: [],
+            sourceRelativePath: nil,
+            title: file.lastPathComponent,
+            detail: "destination",
+            primarySourceBacked: false,
+            relatedSourceBacked: [],
+            suggestedFileName: nil
+        )
+        let namingIssue = AuditIssue(
+            id: "naming:\(relative)",
+            kind: .namingWarning,
+            primaryRelativePath: relative,
+            relatedRelativePaths: [],
+            sourceRelativePath: nil,
+            title: file.lastPathComponent,
+            detail: "naming",
+            primarySourceBacked: false,
+            relatedSourceBacked: [],
+            suggestedFileName:
+                "SKU_A_NAVY_FRONT.webp"
+        )
+
+        var document = AuditDocument(
+            destinationRootName: "assets"
+        )
+        document.decisions[destinationIssue.id] =
+            AuditDecision(
+                issueID: destinationIssue.id,
+                action: .delete,
+                proposedFileName: nil,
+                note: nil,
+                decidedAt:
+                    Date(timeIntervalSince1970: 10)
+            )
+        document.decisions[namingIssue.id] =
+            AuditDecision(
+                issueID: namingIssue.id,
+                action: .rename,
+                proposedFileName:
+                    "SKU_A_NAVY_FRONT.webp",
+                note: nil,
+                decidedAt:
+                    Date(timeIntervalSince1970: 20)
+            )
+
+        let scan = AuditScanResult(
+            issues: [
+                destinationIssue,
+                namingIssue
+            ],
+            summary: AuditSummary(
+                totalDestinationAssets: 1,
+                sourceBackedOutputs: 0,
+                destinationOnlyCount: 1,
+                duplicateIssueCount: 0,
+                namingWarningCount: 1,
+                missingOutputCount: 0
+            ),
+            sourceRootURL: source,
+            destinationRootURL: destination,
+            excelURL: nil,
+            sourceItemsByRelativePath: [:],
+            destinationAssetsByRelativePath: [:],
+            progress:
+                ProgressDocument(
+                    rootFolderName: "assets"
+                ),
+            excelCatalog: nil
+        )
+
+        let plan = AssetAuditEngine
+            .buildChangePlan(
+                scan: scan,
+                issues: scan.issues,
+                document: document
+            )
+
+        XCTAssertEqual(
+            plan.changes.count,
+            1
+        )
+        XCTAssertEqual(
+            plan.supersededDecisionCount,
+            1
+        )
+        XCTAssertTrue(
+            plan.conflicts.isEmpty
+        )
+        XCTAssertEqual(
+            plan.changes[0].action,
+            .rename
+        )
+        XCTAssertEqual(
+            plan.changes[0].targetRelativePath,
+            "SKU_A/webp/product/SKU_A_NAVY_FRONT.webp"
+        )
+    }
+
+    func testMissingDeleteIsAlreadySatisfied()
+        throws
+    {
+        let source = try makeTemporaryDirectory(
+            "AuditSource"
+        )
+        let destination =
+            try makeTemporaryDirectory(
+                "AuditDestination"
+            )
+        defer {
+            try? FileManager.default
+                .removeItem(at: source)
+            try? FileManager.default
+                .removeItem(at: destination)
+        }
+
+        let relative =
+            "SKU_A/webp/product/OLD_FILE.webp"
+        let issue = AuditIssue(
+            id: "destination-only:\(relative)",
+            kind: .destinationOnly,
+            primaryRelativePath: relative,
+            relatedRelativePaths: [],
+            sourceRelativePath: nil,
+            title: "OLD_FILE.webp",
+            detail: "test",
+            primarySourceBacked: false,
+            relatedSourceBacked: [],
+            suggestedFileName: nil
+        )
+
+        var document = AuditDocument(
+            destinationRootName: "assets"
+        )
+        document.decisions[issue.id] =
+            AuditDecision(
+                issueID: issue.id,
+                action: .delete,
+                proposedFileName: nil,
+                note: nil,
+                decidedAt: Date()
+            )
+
+        let scan = AuditScanResult(
+            issues: [issue],
+            summary: AuditSummary(
+                totalDestinationAssets: 0,
+                sourceBackedOutputs: 0,
+                destinationOnlyCount: 1,
+                duplicateIssueCount: 0,
+                namingWarningCount: 0,
+                missingOutputCount: 0
+            ),
+            sourceRootURL: source,
+            destinationRootURL: destination,
+            excelURL: nil,
+            sourceItemsByRelativePath: [:],
+            destinationAssetsByRelativePath: [:],
+            progress:
+                ProgressDocument(
+                    rootFolderName: "assets"
+                ),
+            excelCatalog: nil
+        )
+
+        let plan = AssetAuditEngine
+            .buildChangePlan(
+                scan: scan,
+                issues: [issue],
+                document: document
+            )
+
+        XCTAssertEqual(
+            plan.changes.count,
+            1
+        )
+        XCTAssertEqual(
+            plan.changes[0].state,
+            .alreadySatisfied
+        )
+        XCTAssertTrue(
+            plan.conflicts.isEmpty
+        )
+    }
+
+    func testChangePlanBlocksTwoRenamesToSameTarget()
+        throws
+    {
+        let source = try makeTemporaryDirectory(
+            "AuditSource"
+        )
+        let destination =
+            try makeTemporaryDirectory(
+                "AuditDestination"
+            )
+        defer {
+            try? FileManager.default
+                .removeItem(at: source)
+            try? FileManager.default
+                .removeItem(at: destination)
+        }
+
+        let first = try destinationFile(
+            root: destination,
+            product: "SKU_A",
+            classification: .product,
+            name: "FIRST.webp",
+            contents: "one"
+        )
+        let second = try destinationFile(
+            root: destination,
+            product: "SKU_A",
+            classification: .product,
+            name: "SECOND.webp",
+            contents: "two"
+        )
+
+        let firstPath =
+            "SKU_A/webp/product/\(first.lastPathComponent)"
+        let secondPath =
+            "SKU_A/webp/product/\(second.lastPathComponent)"
+
+        let firstIssue = AuditIssue(
+            id: "naming:\(firstPath)",
+            kind: .namingWarning,
+            primaryRelativePath: firstPath,
+            relatedRelativePaths: [],
+            sourceRelativePath: nil,
+            title: first.lastPathComponent,
+            detail: "first",
+            primarySourceBacked: false,
+            relatedSourceBacked: [],
+            suggestedFileName: nil
+        )
+        let secondIssue = AuditIssue(
+            id: "naming:\(secondPath)",
+            kind: .namingWarning,
+            primaryRelativePath: secondPath,
+            relatedRelativePaths: [],
+            sourceRelativePath: nil,
+            title: second.lastPathComponent,
+            detail: "second",
+            primarySourceBacked: false,
+            relatedSourceBacked: [],
+            suggestedFileName: nil
+        )
+
+        var document = AuditDocument(
+            destinationRootName: "assets"
+        )
+        for issue in [firstIssue, secondIssue] {
+            document.decisions[issue.id] =
+                AuditDecision(
+                    issueID: issue.id,
+                    action: .rename,
+                    proposedFileName: "TARGET.webp",
+                    note: nil,
+                    decidedAt: Date()
+                )
+        }
+
+        let scan = AuditScanResult(
+            issues: [
+                firstIssue,
+                secondIssue
+            ],
+            summary: AuditSummary(
+                totalDestinationAssets: 2,
+                sourceBackedOutputs: 0,
+                destinationOnlyCount: 0,
+                duplicateIssueCount: 0,
+                namingWarningCount: 2,
+                missingOutputCount: 0
+            ),
+            sourceRootURL: source,
+            destinationRootURL: destination,
+            excelURL: nil,
+            sourceItemsByRelativePath: [:],
+            destinationAssetsByRelativePath: [:],
+            progress:
+                ProgressDocument(
+                    rootFolderName: "assets"
+                ),
+            excelCatalog: nil
+        )
+
+        let plan = AssetAuditEngine
+            .buildChangePlan(
+                scan: scan,
+                issues: scan.issues,
+                document: document
+            )
+
+        XCTAssertFalse(plan.conflicts.isEmpty)
+        XCTAssertFalse(plan.canApply)
+    }
+
 }
