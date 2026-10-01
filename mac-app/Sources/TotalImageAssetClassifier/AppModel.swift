@@ -501,6 +501,9 @@ final class AppModel: ObservableObject {
             } else {
                 message = "Single-SKU mode: \(remainingCount) root image(s) need classification. Existing generated model/product folders are preserved."
             }
+
+        case .comparison:
+            break
         }
     }
 
