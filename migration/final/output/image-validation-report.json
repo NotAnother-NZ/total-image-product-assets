@@ -1,5 +1,4 @@
 {
-  "generated_at": "2026-10-07T07:38:16.970Z",
   "products": 422,
   "asset_folders": 422,
   "images": 4464,
@@ -7,6 +6,6 @@
   "product_images": 2416,
   "images_without_colour_reference": 674,
   "hero_images": 422,
-  "folder_mapping_errors": [],
+  "image_slug_collisions_resolved": 37,
   "status": "ready"
 }
