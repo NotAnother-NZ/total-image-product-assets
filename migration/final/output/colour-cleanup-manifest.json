@@ -1,0 +1,662 @@
+{
+  "generated_at": "2026-10-07T07:41:59.421Z",
+  "current_count": 317,
+  "final_count": 202,
+  "extra_colours": [
+    {
+      "id": "6ab0f981d405290b0e173152",
+      "name": "13% Marle",
+      "slug": "13-marle"
+    },
+    {
+      "id": "6ab20d8989e6b34eb5d8178c",
+      "name": "All Black",
+      "slug": "all-black"
+    },
+    {
+      "id": "6ab0f981d405290b0e173154",
+      "name": "Aqua/Hot Pink",
+      "slug": "aqua-hot-pink"
+    },
+    {
+      "id": "6ab0f981d405290b0e173156",
+      "name": "Aqua/White",
+      "slug": "aqua-white"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee28",
+      "name": "Artic Blue",
+      "slug": "artic-blue"
+    },
+    {
+      "id": "6ab0f0838120e111700bbc3f",
+      "name": "Asphalt Marle/Black",
+      "slug": "asphalt-marle-black"
+    },
+    {
+      "id": "6ab0d2c66531aab7b662bae9",
+      "name": "Atlantic",
+      "slug": "atlantic"
+    },
+    {
+      "id": "6ab1f5240f4301c2d7502d55",
+      "name": "Auburn",
+      "slug": "auburn"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee7a",
+      "name": "Autumn",
+      "slug": "autumn"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee2a",
+      "name": "Berry",
+      "slug": "berry"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee2c",
+      "name": "Biscuit",
+      "slug": "biscuit"
+    },
+    {
+      "id": "6ab2155ae04b618f53d7720c",
+      "name": "Black Black",
+      "slug": "black-black"
+    },
+    {
+      "id": "6ab0d2c66531aab7b662baed",
+      "name": "Black Denim",
+      "slug": "black-denim"
+    },
+    {
+      "id": "6ab0d2c66531aab7b662baef",
+      "name": "Black W/Chalk Stripe",
+      "slug": "black-w-chalk-stripe"
+    },
+    {
+      "id": "6ab2b4f7a8160c5f30ae85cc",
+      "name": "Black with Black Trim",
+      "slug": "black-with-black-trim"
+    },
+    {
+      "id": "6ab2b4f7a8160c5f30ae85ca",
+      "name": "Black with Tan Trim",
+      "slug": "black-with-tan-trim"
+    },
+    {
+      "id": "6ab0f981d405290b0e17315a",
+      "name": "Black/Aqua",
+      "slug": "black-aqua"
+    },
+    {
+      "id": "6ab0f981d405290b0e17315c",
+      "name": "Black/Charcoal",
+      "slug": "black-charcoal"
+    },
+    {
+      "id": "6ab0f981d405290b0e17315e",
+      "name": "Black/Gold/Silver",
+      "slug": "black-gold-silver"
+    },
+    {
+      "id": "6ab0f0838120e111700bbc59",
+      "name": "Black/Green/Grey",
+      "slug": "black-green-grey"
+    },
+    {
+      "id": "6ab0f981d405290b0e173160",
+      "name": "Black/Pea Green",
+      "slug": "black-pea-green"
+    },
+    {
+      "id": "6ab0f981d405290b0e173162",
+      "name": "Black/Platinum",
+      "slug": "black-platinum"
+    },
+    {
+      "id": "6ab0f981d405290b0e173164",
+      "name": "Black/Red/Silver",
+      "slug": "black-red-silver"
+    },
+    {
+      "id": "6ab0d2c66531aab7b662baf5",
+      "name": "Blue Denim",
+      "slug": "blue-denim"
+    },
+    {
+      "id": "6ab0f981d405290b0e173170",
+      "name": "Blue Duck",
+      "slug": "blue-duck"
+    },
+    {
+      "id": "6ab1f5240f4301c2d7502d57",
+      "name": "Blush Pink",
+      "slug": "blush-pink"
+    },
+    {
+      "id": "6ab0d2c66531aab7b662baff",
+      "name": "Burgundy",
+      "slug": "burgundy"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee32",
+      "name": "Camel",
+      "slug": "camel"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee34",
+      "name": "Cardinal",
+      "slug": "cardinal"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee36",
+      "name": "Carolina Blue",
+      "slug": "carolina-blue"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee38",
+      "name": "Caroline Blue",
+      "slug": "caroline-blue"
+    },
+    {
+      "id": "6ab2bb6490b9828978fd8f53",
+      "name": "Charcoal Blue",
+      "slug": "charcoal-blue"
+    },
+    {
+      "id": "6ab29d458bebfc28111a5d2a",
+      "name": "Charcoal with Silver Trim",
+      "slug": "charcoal-with-silver-trim"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee3c",
+      "name": "Chocolate/Gold",
+      "slug": "chocolate-gold"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee3e",
+      "name": "Coffee",
+      "slug": "coffee"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee40",
+      "name": "Copper",
+      "slug": "copper"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee42",
+      "name": "Coral",
+      "slug": "coral"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee44",
+      "name": "Dark Chocolate",
+      "slug": "dark-chocolate"
+    },
+    {
+      "id": "6ab1f5240f4301c2d7502d3d",
+      "name": "Dark Teal",
+      "slug": "dark-teal"
+    },
+    {
+      "id": "6ab0f981d405290b0e17317a",
+      "name": "Dk Red",
+      "slug": "dk-red"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee7c",
+      "name": "Fluoro Orange",
+      "slug": "fluoro-orange"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee7e",
+      "name": "Fluoro Yellow/Lime",
+      "slug": "fluoro-yellow-lime"
+    },
+    {
+      "id": "6ab0f981d405290b0e173180",
+      "name": "Fuchsia",
+      "slug": "fuchsia"
+    },
+    {
+      "id": "6ab0f981d405290b0e173184",
+      "name": "Graphite Marle",
+      "slug": "graphite-marle"
+    },
+    {
+      "id": "6ab0f981d405290b0e173186",
+      "name": "Green/Navy",
+      "slug": "green-navy"
+    },
+    {
+      "id": "6ab0d2c66531aab7b662bb17",
+      "name": "Grey W/White Stripe",
+      "slug": "grey-w-white-stripe"
+    },
+    {
+      "id": "6ab0f981d405290b0e17318a",
+      "name": "Grey/Black/Fluoro Yellow",
+      "slug": "grey-black-fluoro-yellow"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba02",
+      "name": "Gunmetal/Aqua",
+      "slug": "gunmetal-aqua"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba04",
+      "name": "Gunmetal/Orange",
+      "slug": "gunmetal-orange"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba0a",
+      "name": "Hot Pink/White",
+      "slug": "hot-pink-white"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba0c",
+      "name": "Indigo",
+      "slug": "indigo"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba0e",
+      "name": "Iris",
+      "slug": "iris"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba14",
+      "name": "Jnr Navy",
+      "slug": "jnr-navy"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee48",
+      "name": "Lagoon",
+      "slug": "lagoon"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee4a",
+      "name": "Lavender",
+      "slug": "lavender"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee4c",
+      "name": "Lemon",
+      "slug": "lemon"
+    },
+    {
+      "id": "6ab2b4f7a8160c5f30ae85c2",
+      "name": "Light Green",
+      "slug": "light-green"
+    },
+    {
+      "id": "6ab2bb6490b9828978fd8f55",
+      "name": "Lime/Black",
+      "slug": "lime-black"
+    },
+    {
+      "id": "6ab2bb6490b9828978fd8f57",
+      "name": "Lime/Navy",
+      "slug": "lime-navy"
+    },
+    {
+      "id": "6ab2bb6490b9828978fd8f59",
+      "name": "Lime/Purple",
+      "slug": "lime-purple"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba1a",
+      "name": "Lt Blue/Navy",
+      "slug": "lt-blue-navy"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba1c",
+      "name": "Magenta/Black/Silver",
+      "slug": "magenta-black-silver"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba1e",
+      "name": "Maroon/White",
+      "slug": "maroon-white"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee4e",
+      "name": "Mauve",
+      "slug": "mauve"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba20",
+      "name": "Mid Blue/Navy",
+      "slug": "mid-blue-navy"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee50",
+      "name": "Mocha",
+      "slug": "mocha"
+    },
+    {
+      "id": "6ab2b4f7a8160c5f30ae85c0",
+      "name": "Moss Green",
+      "slug": "moss-green"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba24",
+      "name": "Mulberry",
+      "slug": "mulberry"
+    },
+    {
+      "id": "6ab0d2c66531aab7b662bb37",
+      "name": "Multi Colour",
+      "slug": "multiple-colours-available"
+    },
+    {
+      "id": "6ab2b4f7a8160c5f30ae85ce",
+      "name": "Natural Bamboo and Borosilicate Glass",
+      "slug": "natural-bamboo-and-borosilicate-glass"
+    },
+    {
+      "id": "6ab2b4f7a8160c5f30ae85c8",
+      "name": "Natural/Black",
+      "slug": "natural-black"
+    },
+    {
+      "id": "6ab2b4f7a8160c5f30ae85c6",
+      "name": "Natural/Green",
+      "slug": "natural-green"
+    },
+    {
+      "id": "6ab23d01147a961c660417b5",
+      "name": "Navy Chambray",
+      "slug": "navy-chambray"
+    },
+    {
+      "id": "6ab2155ae04b618f53d7720e",
+      "name": "Navy Charcoal",
+      "slug": "navy-charcoal-2"
+    },
+    {
+      "id": "6ab24b9dadfd94c8b67cb5ff",
+      "name": "Navy Melange",
+      "slug": "navy-melange"
+    },
+    {
+      "id": "6ab2155ae04b618f53d77212",
+      "name": "Navy Royal",
+      "slug": "navy-royal"
+    },
+    {
+      "id": "6ab2155ae04b618f53d77214",
+      "name": "Navy Teal",
+      "slug": "navy-teal"
+    },
+    {
+      "id": "6ab0d2c66531aab7b662bb41",
+      "name": "Navy W/Chalk Stripe",
+      "slug": "navy-w-chalk-stripe"
+    },
+    {
+      "id": "6ab29d46b137202eddb3fa19",
+      "name": "Navy with Royal Trim",
+      "slug": "navy-with-royal-trim"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba28",
+      "name": "Navy/Aqua",
+      "slug": "navy-aqua"
+    },
+    {
+      "id": "6ab1f5240f4301c2d7502d45",
+      "name": "Navy/Blue",
+      "slug": "navy-blue"
+    },
+    {
+      "id": "6ab2155ae04b618f53d77208",
+      "name": "Navy/Dark Royal",
+      "slug": "navy-dark-royal"
+    },
+    {
+      "id": "6ab2155ae04b618f53d7720a",
+      "name": "Navy/Dark Teal",
+      "slug": "navy-dark-teal"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba2a",
+      "name": "Navy/Lt Blue",
+      "slug": "navy-lt-blue"
+    },
+    {
+      "id": "6ab0f9b37fb8a4392922ba2c",
+      "name": "Navy/Platinum",
+      "slug": "navy-platinum"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee56",
+      "name": "Navy/Red",
+      "slug": "navy-red"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee80",
+      "name": "Neon Cyan",
+      "slug": "neon-cyan"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee82",
+      "name": "Neon Green",
+      "slug": "neon-green"
+    },
+    {
+      "id": "6ab0fa1eef7454be2f3f6b82",
+      "name": "Nordic Blue/Navy",
+      "slug": "nordic-blue-navy"
+    },
+    {
+      "id": "6ab2bb6490b9828978fd8f5b",
+      "name": "Orange/Black",
+      "slug": "orange-black"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee5a",
+      "name": "Pale Blue",
+      "slug": "pale-blue"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee5c",
+      "name": "Pale Pink",
+      "slug": "pale-pink"
+    },
+    {
+      "id": "6ab0f9e4c93edfa5e127e85e",
+      "name": "Pea Green/White",
+      "slug": "pea-green-white"
+    },
+    {
+      "id": "6ab2b4f7a8160c5f30ae85bc",
+      "name": "Peach",
+      "slug": "peach"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee5e",
+      "name": "Petrol Blue",
+      "slug": "petrol-blue"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee60",
+      "name": "Pine Green",
+      "slug": "pine-green"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee62",
+      "name": "Pink/Black",
+      "slug": "pink-black"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee64",
+      "name": "Plum",
+      "slug": "plum"
+    },
+    {
+      "id": "6ab0f9e4c93edfa5e127e862",
+      "name": "Purple/White",
+      "slug": "purple-white"
+    },
+    {
+      "id": "6ab0f9e4c93edfa5e127e864",
+      "name": "Red/Navy",
+      "slug": "red-navy"
+    },
+    {
+      "id": "6ab0f9e4c93edfa5e127e86a",
+      "name": "Red/White/Silver",
+      "slug": "red-white-silver"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee66",
+      "name": "Rose",
+      "slug": "rose"
+    },
+    {
+      "id": "6ab0f9e4c93edfa5e127e86e",
+      "name": "Royal Blue/Navy",
+      "slug": "royal-blue-navy"
+    },
+    {
+      "id": "6ab29d470299dd52500ca183",
+      "name": "Royal with Navy Trim",
+      "slug": "royal-with-navy-trim"
+    },
+    {
+      "id": "6ab2bb6490b9828978fd8f5f",
+      "name": "Royal/Navy",
+      "slug": "royal-navy"
+    },
+    {
+      "id": "6ab0f9e4c93edfa5e127e870",
+      "name": "Royal/Navy/Fluoro Orange",
+      "slug": "royal-navy-fluoro-orange"
+    },
+    {
+      "id": "6ab2bb6490b9828978fd8f63",
+      "name": "Royal/Royal",
+      "slug": "royal-royal"
+    },
+    {
+      "id": "6ab0f9e4c93edfa5e127e872",
+      "name": "Royal/White/Silver",
+      "slug": "royal-white-silver"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee68",
+      "name": "Sage",
+      "slug": "sage"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee6a",
+      "name": "Scarab Green",
+      "slug": "scarab-green"
+    },
+    {
+      "id": "6ab23d01147a961c660417b9",
+      "name": "Silver Chambray",
+      "slug": "silver-chambray"
+    },
+    {
+      "id": "6ab0f9e4c93edfa5e127e878",
+      "name": "Silver/Navy",
+      "slug": "silver-navy"
+    },
+    {
+      "id": "6ab0f9e4c93edfa5e127e87a",
+      "name": "Silver/White",
+      "slug": "silver-white"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee6c",
+      "name": "Sky/Navy",
+      "slug": "sky-navy"
+    },
+    {
+      "id": "6ab0f9e4c93edfa5e127e87c",
+      "name": "Snow Marle",
+      "slug": "snow-marle"
+    },
+    {
+      "id": "6ab0f9e4c93edfa5e127e87e",
+      "name": "Spring Blue",
+      "slug": "spring-blue"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee6e",
+      "name": "Steel Blue",
+      "slug": "steel-blue"
+    },
+    {
+      "id": "6ab23d01147a961c660417ab",
+      "name": "Storm Blue/White Check",
+      "slug": "storm-blue-white-check"
+    },
+    {
+      "id": "6ab0d98c92adb5d0d64c4932",
+      "name": "Taupe",
+      "slug": "taupe"
+    },
+    {
+      "id": "6ab23d01147a961c660417bb",
+      "name": "Teal Blue",
+      "slug": "teal-blue"
+    },
+    {
+      "id": "6ab29d47c70d075036b304e9",
+      "name": "Teal with Navy Trim",
+      "slug": "teal-with-navy-trim"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee72",
+      "name": "Washed Black",
+      "slug": "washed-black"
+    },
+    {
+      "id": "6ab0d2c66531aab7b662bb6b",
+      "name": "Washed Denim",
+      "slug": "washed-denim"
+    },
+    {
+      "id": "6ab2059c88152bfc276cee74",
+      "name": "Washed Pink",
+      "slug": "washed-pink"
+    },
+    {
+      "id": "6ab2b4f7a8160c5f30ae85d2",
+      "name": "Wheat Fibre",
+      "slug": "wheat-fibre"
+    },
+    {
+      "id": "6ab0f9e4c93edfa5e127e886",
+      "name": "White/Black/Red",
+      "slug": "white-black-red"
+    },
+    {
+      "id": "6ab23d01147a961c660417ad",
+      "name": "White/Storm Blue Check",
+      "slug": "white-storm-blue-check"
+    },
+    {
+      "id": "6ab2bb6490b9828978fd8f65",
+      "name": "White/White",
+      "slug": "white-white"
+    }
+  ],
+  "missing_colours": [
+    "Aegean Blue",
+    "Arctic Blue",
+    "Black Charcoal",
+    "Black/Black",
+    "Cool Grey",
+    "French Navy",
+    "Mineral Green",
+    "Multi Coloured",
+    "Patriot Blue",
+    "Ruby",
+    "Smoke Grey",
+    "Storm Grey",
+    "Vintage Blue"
+  ]
+}
