@@ -6,9 +6,9 @@ Item ID,Color Name,Slug,Color Families,Swatch Type,Swatch Color 1,Swatch Color 2
 6ab0f981d405290b0e173158,Ash,ash,grey,One Colour,#C7C9C7,,
 6ab2b4f7a8160c5f30ae85d0,Bamboo,bamboo,brown; stone,One Colour,#D7C59A,,
 6ab0d2c66531aab7b662baeb,Black,black,black,One Colour,#101820,,
-,Black Charcoal,black-charcoal-colour,black; charcoal,One Colour,#54585A,,
+,Black Charcoal,black-charcoal,black; charcoal,One Colour,#54585A,,
 6ab0f0838120e111700bbc41,Black Marle,black-marle,black,One Colour,#34383C,,
-,Black/Black,black-black-colour,black,One Colour,#101820,,
+,Black/Black,black-black,black,One Colour,#101820,,
 6ab20d8989e6b34eb5d81794,Black/Brown,black-brown,black; brown,Two Colour,#101820,#6B4F3A,
 6ab0f0838120e111700bbc53,Black/Cyan,black-cyan,black; blue; teal,Two Colour,#101820,#00A6CE,
 6ab0f0838120e111700bbc55,Black/Fluoro Orange/Grey,black-fluoro-orange-grey,black; grey; orange,Three Colour,#101820,#FF6A13,#8A8D8F
