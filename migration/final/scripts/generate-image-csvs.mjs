@@ -38,7 +38,11 @@ function walk(dir) {
     const d=stack.pop();
     for(const ent of fs.readdirSync(d,{withFileTypes:true})){
       const p=path.join(d,ent.name);
-      if(ent.isDirectory()) stack.push(p); else out.push(p);
+      if(ent.isDirectory()) {
+        if(!ent.name.startsWith('.')) stack.push(p);
+      } else {
+        out.push(p);
+      }
     }
   }
   return out;
@@ -65,8 +69,10 @@ function findColour(filename, colours) {
 const products=JSON.parse(fs.readFileSync(SOURCE,'utf8'));
 const assetsDir=path.join(ROOT,'assets');
 if(!fs.existsSync(assetsDir)) throw new Error('Run from a checkout containing the approved assets/ directory.');
-const folders=fs.readdirSync(assetsDir,{withFileTypes:true}).filter(x=>x.isDirectory()).map(x=>x.name);
-if(folders.length!==422) throw new Error(`Expected 422 asset folders, got ${folders.length}`);
+const folders=fs.readdirSync(assetsDir,{withFileTypes:true})
+  .filter(x=>x.isDirectory() && !x.name.startsWith('.'))
+  .map(x=>x.name);
+if(folders.length!==422) throw new Error(`Expected 422 approved asset folders, got ${folders.length}`);
 
 const prefixMap=new Map();
 for(const f of folders){ const k=normSku(f.split('_')[0]); if(!prefixMap.has(k)) prefixMap.set(k,[]); prefixMap.get(k).push(f); }
