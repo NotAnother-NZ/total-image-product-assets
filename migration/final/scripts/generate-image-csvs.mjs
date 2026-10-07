@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const FINAL_DIR = path.resolve(HERE, '..');
@@ -87,6 +88,27 @@ for(const p of products){
 if(folderErrors.length) throw new Error(JSON.stringify(folderErrors,null,2));
 
 const rows=[]; const manifest=[]; const heroMap={};
+const usedImageSlugs = new Set();
+let imageSlugCollisionsResolved = 0;
+
+function makeUniqueImageSlug(sku, kind, filename, rel) {
+  const stem = filename.replace(/\.webp$/i, '');
+  const base = slugify(`${sku}-${kind}-${stem}`);
+  let candidate = base;
+
+  if (usedImageSlugs.has(candidate)) {
+    const suffix = createHash('sha1').update(rel).digest('hex').slice(0, 8);
+    candidate = `${base.slice(0, 231)}-${suffix}`;
+    imageSlugCollisionsResolved++;
+  }
+
+  if (usedImageSlugs.has(candidate)) {
+    throw new Error(`Unable to generate unique Image slug for ${rel}: ${candidate}`);
+  }
+
+  usedImageSlugs.add(candidate);
+  return candidate;
+}
 for(const p of products){
   const folder=folderBySku.get(p.sku);
   const files=walk(path.join(assetsDir,folder,'webp')).filter(f=>f.toLowerCase().endsWith('.webp')).map(f=>{
@@ -95,12 +117,12 @@ for(const p of products){
     const filename=path.basename(f);
     const colourMatch=findColour(filename,p.website_colours||[]);
     return {rel,kind,filename,colourMatch,priority:(kind==='model'?0:100)+viewPriority(filename)};
-  }).sort((a,b)=>a.priority-b.priority||a.filename.localeCompare(b.filename));
+  }).sort((a,b)=>a.priority-b.priority||a.filename.localeCompare(b.filename)||a.rel.localeCompare(b.rel));
 
   let order=1; const per=[];
   for(const e of files){
     const colour=e.colourMatch.colour;
-    const imageSlug=slugify(`${p.sku}-${e.filename.replace(/\.webp$/i,'')}`);
+    const imageSlug=makeUniqueImageSlug(p.sku,e.kind,e.filename,e.rel);
     const url=`${ASSET_BASE_URL}/${e.rel.split('/').map(encodeURIComponent).join('/')}`;
     rows.push({'Image Name':`${p.name} — ${e.filename}`.slice(0,256),'Slug':imageSlug,'Image':url,'Product':p.slug,'Color':colour?slugify(colour):'','Sort Order':order});
     const m={sku:p.sku,product_slug:p.slug,folder,path:e.rel,filename:e.filename,kind:e.kind,colour,colour_match:e.colourMatch.reason,sort_order:order,image_slug:imageSlug,url,hero_candidate:e.kind==='model'&&e.priority===1};
@@ -124,6 +146,9 @@ fs.writeFileSync(path.join(OUTPUT,'image-validation-report.json'),JSON.stringify
   model_images:manifest.filter(x=>x.kind==='model').length,
   product_images:manifest.filter(x=>x.kind==='product').length,
   images_without_colour_reference:manifest.filter(x=>!x.colour).length,
-  hero_images:Object.keys(heroMap).length,status:'ready'
+  hero_images:Object.keys(heroMap).length,
+  image_slug_collisions_resolved:imageSlugCollisionsResolved,
+  status:'ready'
 },null,2)+'\n');
 console.log('Generated',rows.length,'image rows for',products.length,'products.');
+console.log('Resolved',imageSlugCollisionsResolved,'normalised Image slug collisions.');
