@@ -84,25 +84,3 @@ The final image generator now:
 - keeps Hero mappings aligned to the regenerated unique Image slugs.
 
 Expected collision resolutions during regeneration: 37.
-
-
-## 2026-10-07 Colour import retry
-
-The first final Colours CSV import created/updated 200 of 202 items. Webflow rejected:
-- Black Charcoal
-- Black/Black
-
-Import log: both reported Validation Failure.
-
-Root cause:
-- the earlier cleanup deleted legacy items named `Black/Charcoal` (slug `black-charcoal`) and `Black Black` (slug `black-black`);
-- the final approved names normalised to those same slugs;
-- Webflow continued to reject those slugs after the legacy items were deleted.
-
-Resolution:
-- final `Black Charcoal` slug: `black-charcoal-colour`
-- final `Black/Black` slug: `black-black-colour`
-- added `output/02b-colours-retry.csv` containing only the two missing final Colours;
-- updated 02 Colours, 03 Colour Family links, 04 Products, Image CSV Colour references, and the image generator to use the collision-safe slugs.
-
-No approved display names, colour families, product colours, or image assets were changed.
