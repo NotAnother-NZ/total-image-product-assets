@@ -69,7 +69,9 @@ Expected after this step:
 
 ### 4. Products
 
-Import the final `04-products.csv` into **Products** and choose **Import all as new items**.
+Before this step, place the final locally generated Product CSV at `migration/final/output/04-products.csv`. This file is intentionally supplied separately from the repository migration branch so it can be checked locally before import.
+
+Import `migration/final/output/04-products.csv` into **Products** and choose **Import all as new items**.
 
 Expected: 422 Products.
 
