@@ -1,0 +1,531 @@
+{
+  "created_at": "2026-10-07T07:20:53.125Z",
+  "products_count": 437,
+  "articles_with_product_refs": 36,
+  "article_product_references": [
+    {
+      "article_id": "6ab4c45adf2134dcf77d2e22",
+      "article_name": "The Best Merch For Trade Shows",
+      "article_slug": "the-best-merch-for-trade-shows",
+      "product_skus": [
+        "S3101"
+      ],
+      "old_product_ids": [
+        "6ab2b5f9a601e37292d7a60c"
+      ]
+    },
+    {
+      "article_id": "6ab4c41e3cf7dc1f01686601",
+      "article_name": "What to Wear to the Office in 2023",
+      "article_slug": "corporate-uniform-what-to-wear-to-the-office-in-2023",
+      "product_skus": [
+        "1062",
+        "N2306",
+        "BS022L",
+        "20115"
+      ],
+      "old_product_ids": [
+        "6ab0fbeac61cb35b551fd35e",
+        "6ab0fdaa7fb8a4392924036b",
+        "6ab0db40cb474cad9658c2bc",
+        "6ab27ea6bd8375af213856ce"
+      ]
+    },
+    {
+      "article_id": "6ab4c37dfe7bc5b03116f60c",
+      "article_name": "Style and Smiles: The Perfect Uniforms for Childcare Champions",
+      "article_slug": "the-perfect-uniforms-for-childcare-champions",
+      "product_skus": [
+        "P105MS",
+        "N2306",
+        "CST043LS",
+        "CL040LL"
+      ],
+      "old_product_ids": [
+        "6ab0fbeac61cb35b551fd362",
+        "6ab0fdaa7fb8a4392924036b",
+        "6ab2172a8afd4bb7c8b301e8",
+        "6ab0db40cb474cad9658c2a6"
+      ]
+    },
+    {
+      "article_id": "6ab4c338aa7a4188f8081058",
+      "article_name": "Our Top Outerwear Picks: Unveiling our fave Uniform Outerwear",
+      "article_slug": "our-top-outerwear-picks-unveiling-our-fave-uniform-outerwear",
+      "product_skus": [
+        "1512",
+        "J750M",
+        "J750L",
+        "J213M"
+      ],
+      "old_product_ids": [
+        "6ab0f1ac9deda070dc8c0ee0",
+        "6ab0f1b1899d126f4f52fcd7",
+        "6ab0f1c12d69a025c0ef07f6",
+        "6ab0f1b7be088685aac25109"
+      ]
+    },
+    {
+      "article_id": "6ab4c28d32153883b4858bfe",
+      "article_name": "THE ULTIMATE GUIDE TO CORPORATE UNIFORMS AND PROMOTIONAL MERCHANDISE",
+      "article_slug": "the-ultimate-guide-to-corporate-uniforms-and-promotional-merchandise",
+      "product_skus": [
+        "1520WL",
+        "1520L",
+        "PS92",
+        "PS91"
+      ],
+      "old_product_ids": [
+        "6ab2474c85d0d18e4b9d920e",
+        "6ab244d9f65abd8e7383e8a2",
+        "6ab0fdbb296069fab6cda8b3",
+        "6ab0fdbb296069fab6cda8b1"
+      ]
+    },
+    {
+      "article_id": "6ab4c2339d1fdfc032c973b2",
+      "article_name": "Beyond Blue Jeans: Our Top Denim Uniform Picks",
+      "article_slug": "beyond-blue-jeans-our-top-denim-uniform-picks",
+      "product_skus": [
+        "A27"
+      ],
+      "old_product_ids": [
+        "6ab0d4778049373d63f44d8d"
+      ]
+    },
+    {
+      "article_id": "6ab4c1dcf69974a9ef126036",
+      "article_name": "Mastering Retail Style: Your Handbook for Uniforms and Promotional Merch",
+      "article_slug": "mastering-retail-style-your-handbook-for-uniforms-and-promotional-merch",
+      "product_skus": [
+        "5001",
+        "BS022L"
+      ],
+      "old_product_ids": [
+        "6ab2099a3be5bd98091efc82",
+        "6ab0db40cb474cad9658c2bc"
+      ]
+    },
+    {
+      "article_id": "6ab4c197bc0b34c8055781f7",
+      "article_name": "How to create a Transeasonal Uniform range for your team!",
+      "article_slug": "how-to-create-transeasonal-uniform-range-for-your-team",
+      "product_skus": [
+        "99300",
+        "4171"
+      ],
+      "old_product_ids": [
+        "6ab2bcf2bcffe96ca43e33c5",
+        "6ab0d4778049373d63f44d65"
+      ]
+    },
+    {
+      "article_id": "6ab4c09569e55bc80bbd134e",
+      "article_name": "Deck the Halls in Style: Unveiling Christmas Casual Uniforms for Festive Fun!",
+      "article_slug": "deck-the-halls-in-style-unveiling-christmas-casual-uniforms-for-festive-fun",
+      "product_skus": [
+        "5001",
+        "4001W",
+        "4171",
+        "A03"
+      ],
+      "old_product_ids": [
+        "6ab2099a3be5bd98091efc82",
+        "6ab2074255c234c5d6d558bf",
+        "6ab0d4778049373d63f44d65",
+        "6ab0d4778049373d63f44d83"
+      ]
+    },
+    {
+      "article_id": "6ab4c05343f162c8ed37c8c0",
+      "article_name": "Top Trends in Promotional Merchandise for 2023",
+      "article_slug": "top-trends-in-promotional-merchandise-for-2023",
+      "product_skus": [
+        "D605.R",
+        "S777"
+      ],
+      "old_product_ids": [
+        "6ab2b5f9a601e37292d7a614",
+        "6ab2b5f9a601e37292d7a606"
+      ]
+    },
+    {
+      "article_id": "6ab4c01832153883b4844e1a",
+      "article_name": "Outdoor Work Essentials: Summer Edition",
+      "article_slug": "outdoor-work-essentials-summer-edition",
+      "product_skus": [
+        "4287",
+        "ZW765",
+        "ZW465",
+        "ZW760"
+      ],
+      "old_product_ids": [
+        "6ab0d4778049373d63f44d59",
+        "6ab0e8e806464c2a059a97c4",
+        "6ab0e8e806464c2a059a97c8",
+        "6ab0e8e806464c2a059a97ca"
+      ]
+    },
+    {
+      "article_id": "6ab4bf9ba886d71fbcfcbdb0",
+      "article_name": "Exploring the Benefits of Recycled Textiles in Uniforms",
+      "article_slug": "recycled-textiles-in-uniforms",
+      "product_skus": [
+        "PS91",
+        "2284",
+        "BS6266XT",
+        "CBZ02"
+      ],
+      "old_product_ids": [
+        "6ab0fdbb296069fab6cda8b1",
+        "6ab29ac159c4afe02ea695f5",
+        "6ab0e90657c5fa725519f312",
+        "6ab0f1b1899d126f4f52fcc7"
+      ]
+    },
+    {
+      "article_id": "6ab4bf9ba886d71fbcfcbdae",
+      "article_name": "Trends in Hospitality: The Rise of the Cargo Pant",
+      "article_slug": "trends-in-hospitality-the-rise-of-the-cargo-pant",
+      "product_skus": [
+        "CL959ML"
+      ],
+      "old_product_ids": [
+        "6ab0db40cb474cad9658c2b0"
+      ]
+    },
+    {
+      "article_id": "6ab4bf613cf7dc1f0167d7e4",
+      "article_name": "Summer to Autumn Wardrobe Transition: Seasonal Uniform Tips",
+      "article_slug": "seasonal-uniform-tips",
+      "product_skus": [
+        "RJP266M",
+        "J29123",
+        "CO342MJ",
+        "J740M"
+      ],
+      "old_product_ids": [
+        "6ab2bcf2bcffe96ca43e33f7",
+        "6ab2bcf2bcffe96ca43e33f1",
+        "6ab0f1b1899d126f4f52fcd1",
+        "6ab0f1ac9deda070dc8c0ed8"
+      ]
+    },
+    {
+      "article_id": "6ab4beb0f69974a9ef1088dc",
+      "article_name": "Frosty Essentials: Navigating the season with Winter Safety Gear",
+      "article_slug": "winter-safety-gear",
+      "product_skus": [
+        "ZJ240",
+        "ZMBEAN"
+      ],
+      "old_product_ids": [
+        "6ab2bcf2bcffe96ca43e33cf",
+        "6ab0e8eec19d5e5c0930a0ef"
+      ]
+    },
+    {
+      "article_id": "6ab4ba4d5d723cd03a27b840",
+      "article_name": "You’re Welcome! A Guide to Employee Welcome Packs, Onboarding Kits, and Starter Packs",
+      "article_slug": "a-guide-to-welcome-packs",
+      "product_skus": [
+        "LL9757"
+      ],
+      "old_product_ids": [
+        "6ab2b5f9a601e37292d7a62a"
+      ]
+    },
+    {
+      "article_id": "6ab4b99edf2134dcf77a47ac",
+      "article_name": "Must-have Uniform Essentials: Polos and Knitwear",
+      "article_slug": "must-have-uniform-essentials-polos-and-knitwear",
+      "product_skus": [
+        "TW1822",
+        "TW1824",
+        "TW1823",
+        "TW1825"
+      ],
+      "old_product_ids": [
+        "6ab0fbeac61cb35b551fd350",
+        "6ab0fbeac61cb35b551fd360",
+        "6ab0fbeac61cb35b551fd354",
+        "6ab0fbeac61cb35b551fd358"
+      ]
+    },
+    {
+      "article_id": "6ab4b95011189832d8064e55",
+      "article_name": "Elevate Your Winter Hospitality Uniform with Style and Warmth",
+      "article_slug": "elevate-your-winter-hospitality-uniform-with-style-and-warmth",
+      "product_skus": [
+        "RBL068M",
+        "TW1824"
+      ],
+      "old_product_ids": [
+        "6ab24ddecb87ea0b77a90a5d",
+        "6ab0fbeac61cb35b551fd360"
+      ]
+    },
+    {
+      "article_id": "6ab4b851ca32773948b6a102",
+      "article_name": "How to Achieve a Seamless Hospitality Uniform Transition",
+      "article_slug": "how-to-achieve-a-seamless-hospitality-uniform-transition",
+      "product_skus": [
+        "M9391",
+        "TW1822",
+        "A27",
+        "CH230ML-BIZ"
+      ],
+      "old_product_ids": [
+        "6ab0db40cb474cad9658c2c4",
+        "6ab0fbeac61cb35b551fd350",
+        "6ab0d4778049373d63f44d8d",
+        "6ab0f1b7be088685aac250fd"
+      ]
+    },
+    {
+      "article_id": "6ab4b821be9c9d69dc6e2a79",
+      "article_name": "The Importance of Sustainable Corporate Uniforms",
+      "article_slug": "the-importance-of-sustainable-corporate-uniforms",
+      "product_skus": [
+        "JK63"
+      ],
+      "old_product_ids": [
+        "6ab29ac159c4afe02ea695f7"
+      ]
+    },
+    {
+      "article_id": "6ab4b821be9c9d69dc6e2a77",
+      "article_name": "Corporate Workwear Trends Shaping the Future in 2025",
+      "article_slug": "corporate-workwear-trends-2025",
+      "product_skus": [
+        "TW1827",
+        "RJ401M"
+      ],
+      "old_product_ids": [
+        "6ab0f1bdb7052fb9dbc6eee6",
+        "6ab24df6cb87ea0b77a91310"
+      ]
+    },
+    {
+      "article_id": "6ab4b7e83e547936f719d3c9",
+      "article_name": "Branded Merchandise Trends: What’s Trending in 2025",
+      "article_slug": "branded-merchandise-whats-trending-in-2025",
+      "product_skus": [
+        "LL9757",
+        "LL0226",
+        "S777"
+      ],
+      "old_product_ids": [
+        "6ab2b5f9a601e37292d7a62a",
+        "6ab2b5f9a601e37292d7a62e",
+        "6ab2b5f9a601e37292d7a606"
+      ]
+    },
+    {
+      "article_id": "6ab4b76edf2134dcf779c829",
+      "article_name": "How to Choose the Right Extreme Temperature Work Uniform",
+      "article_slug": "how-to-choose-the-right-extreme-temperature-work-uniform",
+      "product_skus": [
+        "ZW400",
+        "ZW760",
+        "ZW229",
+        "ZJ240"
+      ],
+      "old_product_ids": [
+        "6ab0e90657c5fa725519f314",
+        "6ab0e8e806464c2a059a97ca",
+        "6ab0e90657c5fa725519f31a",
+        "6ab2bcf2bcffe96ca43e33cf"
+      ]
+    },
+    {
+      "article_id": "6ab4b72b11189832d805602a",
+      "article_name": "Elevate Your Campus Brand with Custom Merchandise",
+      "article_slug": "elevate-your-campus-brand-with-custom-merchandise",
+      "product_skus": [
+        "4171",
+        "S777"
+      ],
+      "old_product_ids": [
+        "6ab0d4778049373d63f44d65",
+        "6ab2b5f9a601e37292d7a606"
+      ]
+    },
+    {
+      "article_id": "6ab4b6df362cbf5ac70345f7",
+      "article_name": "How to Design Work Uniforms That Balance Fashion and Function",
+      "article_slug": "how-to-design-work-uniforms-that-balance-fashion-and-function",
+      "product_skus": [
+        "BA40",
+        "BCSZ009",
+        "CST043LS",
+        "CST141MS"
+      ],
+      "old_product_ids": [
+        "6ab0d4778049373d63f44d85",
+        "6ab0f1b1899d126f4f52fcd9",
+        "6ab2172a8afd4bb7c8b301e8",
+        "6ab219ae89e6b34eb5dc1283"
+      ]
+    },
+    {
+      "article_id": "6ab4b6946cc678d21aadc92f",
+      "article_name": "Uniform Essentials for Today’s Workplace",
+      "article_slug": "uniform-essentials-for-todays-workplace",
+      "product_skus": [
+        "20115",
+        "RGP315L",
+        "1797WL",
+        "1798WS"
+      ],
+      "old_product_ids": [
+        "6ab27ea6bd8375af213856ce",
+        "6ab0db40cb474cad9658c2a0",
+        "6ab200b52956eb57076ff11c",
+        "6ab200b52956eb57076ff11a"
+      ]
+    },
+    {
+      "article_id": "6ab4b64ef4dd33d81b1e6f60",
+      "article_name": "Why Uniforms Matter for Non-Profit and Volunteer Organisations",
+      "article_slug": "why-uniforms-matter-for-non-profit-and-volunteer-organisations",
+      "product_skus": [
+        "4001W",
+        "5001",
+        "TW1824",
+        "1172"
+      ],
+      "old_product_ids": [
+        "6ab2074255c234c5d6d558bf",
+        "6ab2099a3be5bd98091efc82",
+        "6ab0fbeac61cb35b551fd360",
+        "6ab0d4778049373d63f44d4d"
+      ]
+    },
+    {
+      "article_id": "6ab4b54e86fa970b58407f50",
+      "article_name": "What Business Casual Really Means for Workplace Uniforms",
+      "article_slug": "what-business-casual-really-means-for-workplace-uniforms",
+      "product_skus": [
+        "RGP404L",
+        "TW1822"
+      ],
+      "old_product_ids": [
+        "6ab27f714388b714d21585fe",
+        "6ab0fbeac61cb35b551fd350"
+      ]
+    },
+    {
+      "article_id": "6ab4b4be0f6d53d25086a8a7",
+      "article_name": "How to Prepare Your Staff Uniform Program for 2026",
+      "article_slug": "how-to-prepare-your-staff-uniform-program-for-2026",
+      "product_skus": [
+        "TW1823",
+        "RJ401M"
+      ],
+      "old_product_ids": [
+        "6ab0fbeac61cb35b551fd354",
+        "6ab24df6cb87ea0b77a91310"
+      ]
+    },
+    {
+      "article_id": "6ab4b45e11189832d803f181",
+      "article_name": "The Differences Between Oxford and Poplin Uniform Shirts",
+      "article_slug": "the-differences-between-oxford-and-poplin-uniform-shirts",
+      "product_skus": [
+        "1712L",
+        "1520WL"
+      ],
+      "old_product_ids": [
+        "6ab23f29938dc3ba56defb9a",
+        "6ab2474c85d0d18e4b9d920e"
+      ]
+    },
+    {
+      "article_id": "6ab4b45e11189832d803f17f",
+      "article_name": "How Do You Know When It’s Time to Update Your Uniform?",
+      "article_slug": "how-do-you-know-when-its-time-to-update-your-uniforms",
+      "product_skus": [
+        "CU544US",
+        "RGP404L"
+      ],
+      "old_product_ids": [
+        "6ab2172a8afd4bb7c8b301e6",
+        "6ab27f714388b714d21585fe"
+      ]
+    },
+    {
+      "article_id": "6ab4b3b04ceee35a741ea77d",
+      "article_name": "Beat the Chill with Smart Winter Uniform Updates",
+      "article_slug": "beat-the-chill-with-smart-winter-uniform-updates",
+      "product_skus": [
+        "TW1828",
+        "TW1919",
+        "2523"
+      ],
+      "old_product_ids": [
+        "6ab0f1bdb7052fb9dbc6eeea",
+        "6ab0f1c12d69a025c0ef07f4",
+        "6ab0f1b7be088685aac25107"
+      ]
+    },
+    {
+      "article_id": "6ab4b37252097ccf28644be4",
+      "article_name": "Understanding High Visibility Standards for Day and Night",
+      "article_slug": "understanding-high-visibility-standards-for-day-and-night",
+      "product_skus": [
+        "ZW468",
+        "ZJ616"
+      ],
+      "old_product_ids": [
+        "6ab0e8e806464c2a059a97c6",
+        "6ab2bcf2bcffe96ca43e33db"
+      ]
+    },
+    {
+      "article_id": "6ab4b37252097ccf28644be2",
+      "article_name": "What Should a Uniform Include?",
+      "article_slug": "what-should-a-uniform-include",
+      "product_skus": [
+        "RGP407M",
+        "TW1826"
+      ],
+      "old_product_ids": [
+        "6ab24ecf89dd527e4d570e00",
+        "6ab0f1bdb7052fb9dbc6eee4"
+      ]
+    },
+    {
+      "article_id": "6ab4ad594c3351bef24cad48",
+      "article_name": "The Most Common Uniform Mistakes (And How to Fix Them)",
+      "article_slug": "the-most-common-uniform-mistakes-and-how-to-fix-them",
+      "product_skus": [
+        "CSP047ML",
+        "CST043MS",
+        "TW1825",
+        "S421ML"
+      ],
+      "old_product_ids": [
+        "6ab21880bd396eb08e5b9e5d",
+        "6ab21880bd396eb08e5b9e57",
+        "6ab0fbeac61cb35b551fd358",
+        "6ab23f29938dc3ba56defba4"
+      ]
+    },
+    {
+      "article_id": "6ab3ad0df3f81f835e1cab7b",
+      "article_name": "EOFY Uniform Ordering: Why Now Is the Best Time to Plan Ahead",
+      "article_slug": "eofy-uniform-ordering-plan-ahead",
+      "product_skus": [
+        "RJ400L",
+        "ZW229",
+        "T10012"
+      ],
+      "old_product_ids": [
+        "6ab24df6cb87ea0b77a91314",
+        "6ab0e90657c5fa725519f31a",
+        "6ab2074255c234c5d6d558bd"
+      ]
+    }
+  ]
+}
