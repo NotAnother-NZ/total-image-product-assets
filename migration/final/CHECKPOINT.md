@@ -138,3 +138,17 @@ Live/staged CMS counts now reconcile with the migration target:
 Hero mapping was already verified against the locked 422-entry `hero-image-map.json` before applying references. Product/Image imports and repair batches reconcile to the expected final counts.
 
 Remaining action: final publish only after explicit go-ahead.
+
+
+## 2026-10-08 gallery sort-order correction
+
+- Updated `migration/final/scripts/generate-image-csvs.mjs` so future Image CSV generation preserves the existing model-image priority, then groups product images by each Product's existing Colour reference order, with view priority inside each colour group.
+- Live Webflow Images were recalculated using the same rule across all 422 Products / 4,464 Images.
+- 1,413 Image `sort-order` values changed; image files, slugs, Product refs, Colour refs, and Hero refs were not changed.
+- QA after write:
+  - 422/422 Products have contiguous Image sort orders starting at 1.
+  - 0 Products have model images appearing after product images.
+  - 0 Products violate Product Colour reference order for colour-matched product images.
+  - 73 product images remain intentionally unmatched to a Colour reference and are sorted after colour-matched product images rather than guessed.
+- Example ZWL120 now orders product images Black Front, Black Back, Blue Front, Blue Back, Grey Front, Grey Back, Sand Front, Sand Back after the model-image block.
+- No site publish was performed as part of this correction.
