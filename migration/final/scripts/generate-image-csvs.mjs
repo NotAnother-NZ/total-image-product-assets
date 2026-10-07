@@ -9,10 +9,6 @@ const ROOT = path.resolve(FINAL_DIR, '../..');
 const SOURCE = path.join(FINAL_DIR, 'source', 'final-image-products.json');
 const OUTPUT = path.join(FINAL_DIR, 'output');
 const ASSET_BASE_URL = 'https://notanother-nz.github.io/total-image-product-assets';
-const COLOUR_SLUG_OVERRIDES = {
-  'Black Charcoal': 'black-charcoal-colour',
-  'Black/Black': 'black-black-colour'
-};
 
 const OVERRIDES = {
   "2151": "2151_SILVERTECH_POLO_LADIES",
@@ -34,7 +30,6 @@ const slugify = v => clean(v).toLowerCase().replace(/&/g, ' and ').replace(/[’
   .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').replace(/-+/g, '-').slice(0, 240);
 const normSku = v => clean(v).toUpperCase().replace(/[^A-Z0-9]/g, '');
 const normColour = v => clean(v).toUpperCase().replace(/COLOU?RED/g, 'COLORED').replace(/[^A-Z0-9]/g, '');
-const colourSlug = v => COLOUR_SLUG_OVERRIDES[v] || slugify(v);
 const csvEscape = v => /[",\r\n]/.test(String(v ?? '')) ? '"' + String(v ?? '').replace(/"/g, '""') + '"' : String(v ?? '');
 const csv = (rows, headers) => [headers.join(','), ...rows.map(r => headers.map(h => csvEscape(r[h])).join(','))].join('\r\n') + '\r\n';
 
@@ -129,7 +124,7 @@ for(const p of products){
     const colour=e.colourMatch.colour;
     const imageSlug=makeUniqueImageSlug(p.sku,e.kind,e.filename,e.rel);
     const url=`${ASSET_BASE_URL}/${e.rel.split('/').map(encodeURIComponent).join('/')}`;
-    rows.push({'Image Name':`${p.name} — ${e.filename}`.slice(0,256),'Slug':imageSlug,'Image':url,'Product':p.slug,'Color':colour?colourSlug(colour):'','Sort Order':order});
+    rows.push({'Image Name':`${p.name} — ${e.filename}`.slice(0,256),'Slug':imageSlug,'Image':url,'Product':p.slug,'Color':colour?slugify(colour):'','Sort Order':order});
     const m={sku:p.sku,product_slug:p.slug,folder,path:e.rel,filename:e.filename,kind:e.kind,colour,colour_match:e.colourMatch.reason,sort_order:order,image_slug:imageSlug,url,hero_candidate:e.kind==='model'&&e.priority===1};
     manifest.push(m); per.push(m); order++;
   }
