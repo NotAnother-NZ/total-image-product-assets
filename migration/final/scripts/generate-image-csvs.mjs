@@ -111,13 +111,19 @@ function makeUniqueImageSlug(sku, kind, filename, rel) {
 }
 for(const p of products){
   const folder=folderBySku.get(p.sku);
+  const colourOrder = new Map((p.website_colours||[]).map((colour,index)=>[normColour(colour),index]));
   const files=walk(path.join(assetsDir,folder,'webp')).filter(f=>f.toLowerCase().endsWith('.webp')).map(f=>{
     const rel=path.relative(ROOT,f).split(path.sep).join('/');
     const kind=rel.includes('/webp/model/')?'model':'product';
     const filename=path.basename(f);
     const colourMatch=findColour(filename,p.website_colours||[]);
-    return {rel,kind,filename,colourMatch,priority:(kind==='model'?0:100)+viewPriority(filename)};
-  }).sort((a,b)=>a.priority-b.priority||a.filename.localeCompare(b.filename)||a.rel.localeCompare(b.rel));
+    const colourIndex=colourMatch.colour ? (colourOrder.get(normColour(colourMatch.colour)) ?? Number.MAX_SAFE_INTEGER) : Number.MAX_SAFE_INTEGER;
+    return {rel,kind,filename,colourMatch,colourIndex,viewPriority:viewPriority(filename)};
+  }).sort((a,b)=>{
+    if(a.kind!==b.kind) return a.kind==='model' ? -1 : 1;
+    if(a.kind==='model') return a.viewPriority-b.viewPriority||a.filename.localeCompare(b.filename)||a.rel.localeCompare(b.rel);
+    return a.colourIndex-b.colourIndex||a.viewPriority-b.viewPriority||a.filename.localeCompare(b.filename)||a.rel.localeCompare(b.rel);
+  });
 
   let order=1; const per=[];
   for(const e of files){
@@ -125,7 +131,7 @@ for(const p of products){
     const imageSlug=makeUniqueImageSlug(p.sku,e.kind,e.filename,e.rel);
     const url=`${ASSET_BASE_URL}/${e.rel.split('/').map(encodeURIComponent).join('/')}`;
     rows.push({'Image Name':`${p.name} — ${e.filename}`.slice(0,256),'Slug':imageSlug,'Image':url,'Product':p.slug,'Color':colour?slugify(colour):'','Sort Order':order});
-    const m={sku:p.sku,product_slug:p.slug,folder,path:e.rel,filename:e.filename,kind:e.kind,colour,colour_match:e.colourMatch.reason,sort_order:order,image_slug:imageSlug,url,hero_candidate:e.kind==='model'&&e.priority===1};
+    const m={sku:p.sku,product_slug:p.slug,folder,path:e.rel,filename:e.filename,kind:e.kind,colour,colour_match:e.colourMatch.reason,sort_order:order,image_slug:imageSlug,url,hero_candidate:e.kind==='model'&&e.viewPriority===1};
     manifest.push(m); per.push(m); order++;
   }
   const candidates=per.filter(x=>x.hero_candidate).sort((a,b)=>a.sort_order-b.sort_order||a.filename.localeCompare(b.filename));
