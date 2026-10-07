@@ -69,3 +69,18 @@ Next action requiring Webflow UI:
 5. Import 05 Image chunks.
 6. Export Products and generate/import the safe 06 Hero update.
 7. Restore Article references and run final QA.
+
+
+## 2026-10-07 image slug preflight fix
+
+Local preflight exposed Image CMS slug collisions caused by Webflow-style slug normalisation collapsing distinct approved filenames (apostrophes, repeated underscores, spacing/case differences) and, in a few cases, identical basenames across model/product folders.
+
+No approved assets were removed or renamed.
+
+The final image generator now:
+- includes the image kind (model/product) in every generated Image slug;
+- appends a deterministic 8-character SHA-1 suffix only when normalised slugs still collide;
+- preserves all 4,464 approved WebP assets;
+- keeps Hero mappings aligned to the regenerated unique Image slugs.
+
+Expected collision resolutions during regeneration: 37.
