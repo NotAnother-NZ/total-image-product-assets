@@ -1,24 +1,24 @@
 {
   "210": {
-    "product_slug": "210-polo-210",
+    "product_slug": "210-polo",
     "image_slug": "210-model-210-polo-white-hero-front",
     "path": "assets/210_POLO/webp/model/210_POLO_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "240": {
-    "product_slug": "elastic-sided-boot-240",
+    "product_slug": "elastic-sided-boot",
     "image_slug": "240-product-240-elastic-sided-boot-blackbrown",
     "path": "assets/240_ELASTIC_SIDED_BOOT/webp/product/240_ELASTIC_SIDED_BOOT_BLACKBROWN.webp",
     "selection": "first-image-fallback"
   },
   "261": {
-    "product_slug": "mens-zipsider-boot-261",
+    "product_slug": "mens-zipsider-boot",
     "image_slug": "261-product-261-mens-zipsider-boot-black",
     "path": "assets/261_MENS_ZIPSIDER_BOOT/webp/product/261_MENS_ZIPSIDER_BOOT_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "440": {
-    "product_slug": "premium-elastic-sided-boot-w-scuff-cap-440",
+    "product_slug": "premium-elastic-sided-boot-w-scuff-cap",
     "image_slug": "440-product-440-premium-elastic-sided-boot-w-scuff-cap",
     "path": "assets/440_PREMIUM_ELASTIC _SIDED_BOOT W SCUFF_ CAP/webp/product/440_PREMIUM_ELASTIC _SIDED_BOOT W SCUFF_ CAP.webp",
     "selection": "first-image-fallback"
@@ -36,43 +36,43 @@
     "selection": "first-image-fallback"
   },
   "1058": {
-    "product_slug": "silvertech-polo-mens-1058",
+    "product_slug": "silvertech-polo-mens",
     "image_slug": "1058-model-1058-silvertech-mens-s-s-polo-hero-front",
     "path": "assets/1058_SILVERTECH_MENS_S-S_POLO/webp/model/1058_SILVERTECH_MENS_S-S_POLO_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1061": {
-    "product_slug": "freshen-polo-mens-1061",
+    "product_slug": "freshen-polo-mens",
     "image_slug": "1061-model-1061-freshen-polo-mens-white-red-hero-front",
     "path": "assets/1061_FRESHEN_POLO_MENS/webp/model/1061_FRESHEN_POLO_MENS_WHITE_RED_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1062": {
-    "product_slug": "superdry-polo-mens-1062",
+    "product_slug": "superdry-polo-mens",
     "image_slug": "1062-model-1062-superdry-polo-mens-white-navy-hero-front",
     "path": "assets/1062_SUPERDRY_POLO_-_MEN'S/webp/model/1062_SUPERDRY_POLO_-_MEN'S_WHITE_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1064": {
-    "product_slug": "kahve-polo-mens-1064",
+    "product_slug": "kahve-polo-mens",
     "image_slug": "1064-model-1064-kahve-polo-mens-white-hero-front",
     "path": "assets/1064_KAHVE_POLO_MEN'S/webp/model/1064_KAHVE_POLO_MEN'S_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1080": {
-    "product_slug": "canvas-apron-1080",
+    "product_slug": "canvas-apron",
     "image_slug": "1080-model-1080-canvas-apron-hero-front",
     "path": "assets/1080_CANVAS_APRON/webp/model/1080_CANVAS_APRON_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1108": {
-    "product_slug": "trucker-cap-1108",
+    "product_slug": "trucker-cap",
     "image_slug": "1108-model-1108-stock-trucker-cap-hero-front",
     "path": "assets/1108_Stock_Trucker_Cap/webp/model/1108_Stock_Trucker_Cap_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1130": {
-    "product_slug": "access-cap-1130",
+    "product_slug": "access-cap",
     "image_slug": "1130-model-1130-access-cap-black-hero-front",
     "path": "assets/1130_ACCESS_CAP/webp/model/1130_ACCESS_CAP_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -90,61 +90,61 @@
     "selection": "hero-front"
   },
   "1161": {
-    "product_slug": "freshen-polo-ladies-1161",
+    "product_slug": "freshen-polo-ladies",
     "image_slug": "1161-model-1161-freshen-polo-ladies-white-navy-hero-front",
     "path": "assets/1161_FRESHEN_POLO_LADIES/webp/model/1161_FRESHEN_POLO_LADIES_WHITE_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1162": {
-    "product_slug": "superdry-polo-ladies-1162",
+    "product_slug": "superdry-polo-ladies",
     "image_slug": "1162-model-1162-superdry-polo-ladies-white-navy-hero-front",
     "path": "assets/1162_SUPERDRY_POLO_LADIES/webp/model/1162_SUPERDRY_POLO_LADIES_WHITE_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1164": {
-    "product_slug": "kahve-polo-ladies-1164",
+    "product_slug": "kahve-polo-ladies",
     "image_slug": "1164-model-1164-kahve-polo-ladies-white-hero-front",
     "path": "assets/1164_KAHVE_POLO_LADIES/webp/model/1164_KAHVE_POLO_LADIES_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1171": {
-    "product_slug": "nylon-bucket-hat-1171",
+    "product_slug": "nylon-bucket-hat",
     "image_slug": "1171-model-1171-nylon-bucket-hat-army-hero-front",
     "path": "assets/1171_NYLON_BUCKET_HAT/webp/model/1171_NYLON_BUCKET_HAT_ARMY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1172": {
-    "product_slug": "wide-brim-bucket-hat-1172",
+    "product_slug": "wide-brim-bucket-hat",
     "image_slug": "1172-model-1172-wide-brim-bucket-hat-main-black-hero-front",
     "path": "assets/1172_Wide_Brim_Bucket_Hat/webp/model/1172_WIDE_BRIM_BUCKET_HAT_MAIN_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1174": {
-    "product_slug": "nylon-wide-brim-bucket-hat-1174",
+    "product_slug": "nylon-wide-brim-bucket-hat",
     "image_slug": "1174-model-1174-nylon-wide-brim-bucket-hat-black-hero-front",
     "path": "assets/1174_NYLON_WIDE_BRIM_BUCKET_HAT/webp/model/1174_NYLON_WIDE_BRIM_BUCKET_HAT_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1204": {
-    "product_slug": "eureka-mens-tees-1204",
+    "product_slug": "eureka-mens-tees",
     "image_slug": "1204-model-1204-eureka-mens-tee-black-white-hero-front",
     "path": "assets/1204_EUREKA_MEN'S_TEE/webp/model/1204_EUREKA_MEN'S_TEE_BLACK_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1512": {
-    "product_slug": "selwyn-mens-jackets-1512",
+    "product_slug": "selwyn-mens-jackets",
     "image_slug": "1512-model-1512-selwyn-mens-jacket-hero-front",
     "path": "assets/1512_SELWYN_MENS_JACKET/webp/model/1512_SELWYN_MENS_JACKET_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1513": {
-    "product_slug": "mens-olympus-soft-shell-jacket-1513",
+    "product_slug": "mens-olympus-soft-shell-jacket",
     "image_slug": "1513-model-1513-mens-olympus-soft-shell-jacket-black-hero-front",
     "path": "assets/1513_MEN'S_OLYMPUS_SOFT_SHELL_JACKET/webp/model/1513_MEN'S_OLYMPUS_SOFT_SHELL_JACKET_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1523": {
-    "product_slug": "snowy-mens-vests-1523",
+    "product_slug": "snowy-mens-vests",
     "image_slug": "1523-model-1523-snowy-mens-vests-navy-hero-front",
     "path": "assets/1523_SNOWY_MEN'S_VESTS/webp/model/1523_SNOWY_MEN'S_VESTS_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -156,55 +156,55 @@
     "selection": "hero-front"
   },
   "2151": {
-    "product_slug": "silvertech-polo-ladies-2151",
+    "product_slug": "silvertech-polo-ladies",
     "image_slug": "2151-model-2151-silvertech-polo-ladies-white-silver-hero-front",
     "path": "assets/2151_SILVERTECH_POLO_LADIES/webp/model/2151_SILVERTECH_POLO_LADIES_WHITE_SILVER_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "2174": {
-    "product_slug": "city-stretch-spot-tunic-2174",
+    "product_slug": "city-stretch-spot-tunic",
     "image_slug": "2174-model-2174-city-stretch-spot-tunic-hero-front",
     "path": "assets/2174_CITY_STRETCH_SPOT_TUNIC/webp/model/2174_CITY_STRETCH_SPOT_TUNIC_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "2277": {
-    "product_slug": "petal-print-top-2277",
+    "product_slug": "petal-print-top",
     "image_slug": "2277-model-2277-petal-print-top-navy-white-hero-front",
     "path": "assets/2277_PETAL_PRINT_TOP/webp/model/2277_PETAL_PRINT_TOP_NAVY_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "2280": {
-    "product_slug": "4-way-stretch-tunic-2280",
+    "product_slug": "4-way-stretch-tunic",
     "image_slug": "2280-model-2280-4-way-stretch-tunic-heo-front",
     "path": "assets/2280_4_WAY_STRETCH_TUNIC/webp/model/2280_4_WAY_STRETCH_TUNIC_HEO_FRONT.webp",
     "selection": "first-image-fallback"
   },
   "2281": {
-    "product_slug": "heart-print-tunic-2281",
+    "product_slug": "heart-print-tunic",
     "image_slug": "2281-model-2281-heart-print-tunic-hero-front",
     "path": "assets/2281_HEART_PRINT_TUNIC/webp/model/2281_HEART_PRINT_TUNIC_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "2284": {
-    "product_slug": "zip-back-tunic-2284",
+    "product_slug": "zip-back-tunic",
     "image_slug": "2284-model-2284-zip-back-tunic-hero-front",
     "path": "assets/2284_ZIP_BACK_TUNIC/webp/model/2284_ZIP_BACK_TUNIC_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "2290": {
-    "product_slug": "smart-knit-3-4-2290",
+    "product_slug": "smart-knit-3-4",
     "image_slug": "2290-model-2290-smart-knit-3-4-navy-hero-front",
     "path": "assets/2290_SMART_KNIT_3-4/webp/model/2290_SMART_KNIT_3-4_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "2291": {
-    "product_slug": "smart-knit-top-2291",
+    "product_slug": "smart-knit-top",
     "image_slug": "2291-model-2291-smart-knit-top-navy-hero-front",
     "path": "assets/2291_SMART_KNIT_TOP/webp/model/2291_Smart_Knit_Top_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "2306": {
-    "product_slug": "keira-ladies-polos-2306",
+    "product_slug": "keira-ladies-polos",
     "image_slug": "2306-model-2306-keira-ladies-polos-white-hero-front",
     "path": "assets/2306_KEIRA_LADIES_POLOS/webp/model/2306_KEIRA_LADIES_POLOS_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -216,49 +216,49 @@
     "selection": "hero-front"
   },
   "2513": {
-    "product_slug": "ladies-olympus-soft-shell-jacket-2513",
+    "product_slug": "ladies-olympus-soft-shell-jacket",
     "image_slug": "2513-model-2513-ladies-olympus-soft-shell-jacket-black-hero-front",
     "path": "assets/2513_LADIES_OLYMPUS_SOFT_SHELL_JACKET/webp/model/2513_LADIES_OLYMPUS_SOFT_SHELL_JACKET_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "2523": {
-    "product_slug": "snowy-lady-vests-2523",
+    "product_slug": "snowy-lady-vests",
     "image_slug": "2523-model-2523-snowy-lady-vests-navy-hero-front",
     "path": "assets/2523_SNOWY_LADY_VESTS/webp/model/2523_SNOWY_LADY_VESTS_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "3791": {
-    "product_slug": "canvas-hat-3791",
+    "product_slug": "canvas-hat",
     "image_slug": "3791-model-3791-canvas-hat-natural-png",
     "path": "assets/3791_CANVAS_HAT/webp/model/3791_CANVAS_HAT_NATURAL__png.webp",
     "selection": "first-image-fallback"
   },
   "3803": {
-    "product_slug": "trucker-mesh-cap-3803",
+    "product_slug": "trucker-mesh-cap",
     "image_slug": "3803-model-3803-trucker-mesh-cap-black-hero-front",
     "path": "assets/3803_TRUCKER_MESH_CAP/webp/model/3803_TRUCKER_MESH_CAP_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "3980": {
-    "product_slug": "recycled-breathable-poly-twill-cap-3980",
+    "product_slug": "recycled-breathable-poly-twill-cap",
     "image_slug": "3980-model-3980-recycled-breathable-poly-twill-cap-front",
     "path": "assets/3980_Recycled_Breathable_Poly_Twill_Cap/webp/model/3980_Recycled_Breathable_Poly_Twill_Cap_Front.webp",
     "selection": "first-image-fallback"
   },
   "3987": {
-    "product_slug": "organic-brushed-heavy-cotton-mesh-back-cap-3987",
+    "product_slug": "organic-brushed-heavy-cotton-mesh-back-cap",
     "image_slug": "3987-model-3987-organic-brushed-heavy-cotton-mesh-black",
     "path": "assets/3987_ORGANIC_BRUSHED_HEAVY_COTTON_MESH_BACK_CAP/webp/model/3987_ORGANIC_BRUSHED_HEAVY_COTTON_MESH_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "4037": {
-    "product_slug": "wos-maple-stripe-tee-4037",
+    "product_slug": "wos-maple-stripe-tee",
     "image_slug": "4037-model-4037-wos-maple-stripe-tee-navy-white-hero-front",
     "path": "assets/4037_WO'S_MAPLE_STRIPE_TEE/webp/model/4037_WO'S_MAPLE_STRIPE_TEE_NAVY_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "4058": {
-    "product_slug": "mesh-sports-cap-4058",
+    "product_slug": "mesh-sports-cap",
     "image_slug": "4058-model-4058-mesh-sports-cap-royal-side-hero-front",
     "path": "assets/4058_MESH_SPORTS_CAP/webp/model/4058_MESH_SPORTS_CAP_ROYAL_SIDE_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -270,55 +270,55 @@
     "selection": "hero-front"
   },
   "4171": {
-    "product_slug": "heavy-brushed-cotton-cap-4171",
+    "product_slug": "heavy-brushed-cotton-cap",
     "image_slug": "4171-model-4171-heavy-brushed-cotton-cap-navy-front-hero-back",
     "path": "assets/4171_HEAVY_BRUSHED_COTTON_CAP/webp/model/4171_HEAVY_BRUSHED_COTTON_CAP_NAVY_FRONT_HERO_BACK.webp",
     "selection": "hero-front"
   },
   "4287": {
-    "product_slug": "surf-hat-4287",
+    "product_slug": "surf-hat",
     "image_slug": "4287-model-4287-surf-hat-black-hero-front",
     "path": "assets/4287_SURF_HAT/webp/model/4287_SURF_HAT_black_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "5001": {
-    "product_slug": "mens-staple-tee-5001",
+    "product_slug": "mens-staple-tee",
     "image_slug": "5001-model-5001-mens-staple-tee-light-grey-hero-front",
     "path": "assets/5001_MEN'S_STAPLE_TEE/webp/model/5001_MEN'S_STAPLE_TEE_LIGHT_GREY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "5026": {
-    "product_slug": "mens-classic-tee-5026",
+    "product_slug": "mens-classic-tee",
     "image_slug": "5026-model-5026-mens-classic-tee-white-hero-front",
     "path": "assets/5026_MEN'S_CLASSIC_TEE/webp/model/5026_MEN'S_CLASSIC_TEE_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "5038": {
-    "product_slug": "mens-plus-tee-5038",
+    "product_slug": "mens-plus-tee",
     "image_slug": "5038-model-5038-mens-plus-tee-grey-marle-hero-front",
     "path": "assets/5038_MEN'S_PLUS_TEE/webp/model/5038_MEN'S_PLUS_TEE_GREY_MARLE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "5044": {
-    "product_slug": "mens-classic-stripe-tee-5044",
+    "product_slug": "mens-classic-stripe-tee",
     "image_slug": "5044-model-5044-mens-classic-stripe-tee-black-white-hero-front",
     "path": "assets/5044_MEN'S_CLASSIC_STRIPE_TEE/webp/model/5044_MEN'S_CLASSIC_STRIPE_TEE_BLACK_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "5050": {
-    "product_slug": "mens-block-tee-5050",
+    "product_slug": "mens-block-tee",
     "image_slug": "5050-model-5050-block-tee-black-hero-front",
     "path": "assets/5050_MENS_BLOCK_TEE/webp/model/5050_BLOCK_TEE_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "5052": {
-    "product_slug": "mens-state-tee-5052",
+    "product_slug": "mens-state-tee",
     "image_slug": "5052-model-5052-mens-state-tee-white-hero-front",
     "path": "assets/5052_MEN'S_STATE_TEE/webp/model/5052_MEN'S_STATE_TEE_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "5053": {
-    "product_slug": "mens-ringer-tee-5053",
+    "product_slug": "mens-ringer-tee",
     "image_slug": "5053-model-5053-mens-ringer-tee-white-black-hero-front",
     "path": "assets/5053_MEN'S_RINGER_TEE/webp/model/5053_MEN'S_RINGER_TEE_WHITE_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -330,49 +330,49 @@
     "selection": "hero-front"
   },
   "5198": {
-    "product_slug": "urban-sports-backpack-5198",
+    "product_slug": "urban-sports-backpack",
     "image_slug": "5198-product-5198-urban-sports-backpack-black",
     "path": "assets/5198_URBAN_SPORTS_BACKPACK/webp/product/5198_URBAN_SPORTS_BACKPACK_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "7100": {
-    "product_slug": "nomad-dad-hat-7100",
+    "product_slug": "nomad-dad-hat",
     "image_slug": "7100-model-7100-nomad-dad-black-hat-hero-front",
     "path": "assets/7100_NOMAD_DAD_HAT/webp/model/7100_NOMAD_DAD_BLACK_HAT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "10121": {
-    "product_slug": "womens-cool-stretch-bandless-slim-leg-pant-10121",
+    "product_slug": "womens-cool-stretch-bandless-slim-leg-pant",
     "image_slug": "10121-model-10121-womens-cool-stretch-bandless-slim-leg-pant-navy-hero-front",
     "path": "assets/10121_WOMEN'S_COOL_STRETCH_BANDLESS_SLIM_LEG_PANT/webp/model/10121_WOMEN'S_COOL_STRETCH_BANDLESS_SLIM_LEG_PANT_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "10722": {
-    "product_slug": "womens-bandless-elastic-waist-pant-10722",
+    "product_slug": "womens-bandless-elastic-waist-pant",
     "image_slug": "10722-model-10722-siena-womens-bandless-elastic-waist-pant-hero-front",
     "path": "assets/10722_WOMEN'S_BANDLESS_ELASTIC_WAIST_PANT/webp/model/10722_Siena_Womens_Bandless_Elastic_Waist_Pant_Hero_Front.webp",
     "selection": "hero-front"
   },
   "20115": {
-    "product_slug": "womens-multi-pleat-skirt-20115",
+    "product_slug": "womens-multi-pleat-skirt",
     "image_slug": "20115-model-20115-womens-multi-pleat-skirt-navy-hero-front",
     "path": "assets/20115_WOMEN'S_MULTI_PLEAT_SKIRT/webp/model/20115_WOMEN'S_MULTI_PLEAT_SKIRT_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "20717": {
-    "product_slug": "womens-bandless-pencil-skirt-20717",
+    "product_slug": "womens-bandless-pencil-skirt",
     "image_slug": "20717-model-20717-siena-womens-bandless-pencil-skirt-hero-front",
     "path": "assets/20717_WOMEN'S_BANDLESS_PENCIL_SKIRT/webp/model/20717_Siena_Womens_Bandless_Pencil_Skirt_Hero_Front.webp",
     "selection": "hero-front"
   },
   "20720": {
-    "product_slug": "womens-front-pleat-detail-straight-skirt-20720",
+    "product_slug": "womens-front-pleat-detail-straight-skirt",
     "image_slug": "20720-model-20720-womens-front-pleat-detail-straight-skirt-marine-hero-front",
     "path": "assets/20720_WOMEN'S_FRONT_PLEAT_DETAIL_STRAIGHT_SKIRT/webp/model/20720_WOMEN'S_FRONT_PLEAT_DETAIL_STRAIGHT_SKIRT_MARINE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "34652": {
-    "product_slug": "mens-black-lace-up-derby-shoe-34652",
+    "product_slug": "mens-black-lace-up-derby-shoe",
     "image_slug": "34652-product-34652-mens-black-lace-up-derby-shoe-2",
     "path": "assets/34652_MENS_BLACK_LACE_UP_DERBY_SHOE/webp/product/34652_MENS_BLACK_LACE_UP_DERBY_SHOE 2.webp",
     "selection": "first-image-fallback"
@@ -396,61 +396,61 @@
     "selection": "hero-front"
   },
   "45627": {
-    "product_slug": "mens-brown-elastic-sided-boot-45627",
+    "product_slug": "mens-brown-elastic-sided-boot",
     "image_slug": "45627-product-45627-mens-brown-elastic-sided-boots-2",
     "path": "assets/45627_MENS_BROWN_ELASTIC_SIDED_BOOTS/webp/product/45627_MENS_BROWN_ELASTIC_SIDED_BOOTS_2.webp",
     "selection": "first-image-fallback"
   },
   "49430": {
-    "product_slug": "slip-on-shoe-49430",
+    "product_slug": "slip-on-shoe",
     "image_slug": "49430-product-49430-slip-on-shoes-black",
     "path": "assets/49430_SLIP_ON_SHOES_BLACK/webp/product/49430_SLIP_ON_SHOES_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "60717": {
-    "product_slug": "siena-womens-longline-jacket-60717",
+    "product_slug": "siena-womens-longline-jacket",
     "image_slug": "60717-model-60717-siena-womens-longline-jacket-hero-front",
     "path": "assets/60717_SIENA_WOMENS_LONGLINE_JACKET/webp/model/60717_SIENA_WOMENS_LONGLINE_JACKET_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "60719": {
-    "product_slug": "siena-womens-mid-length-jacket-60719",
+    "product_slug": "siena-womens-mid-length-jacket",
     "image_slug": "60719-model-60719-siena-womens-mid-length-jacket-marine-hero-front",
     "path": "assets/60719_SIENA_WOMEN'S_MID_LENGTH_JACKET/webp/model/60719_SIENA_WOMEN'S_MID_LENGTH_JACKET_MARINE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "80717": {
-    "product_slug": "mens-siena-2-button-jacket-80717",
+    "product_slug": "mens-siena-2-button-jacket",
     "image_slug": "80717-model-80717-siena-mens-2-button-jacket-hero-front",
     "path": "assets/80717_Siena_Mens_2_Button_Jacket/webp/model/80717_Siena_Mens_2_Button_Jacket_Hero_FRONT.webp",
     "selection": "hero-front"
   },
   "1272L": {
-    "product_slug": "mens-nicholson-premium-poplin-long-sleeve-shirt-1272l",
+    "product_slug": "mens-nicholson-premium-poplin-long-sleeve-shirt",
     "image_slug": "1272l-model-1272l-mens-nicholson-premium-poplin-long-sleeve-shirt-star-white-hero-front",
     "path": "assets/1272L_MEN'S_NICHOLSON_PREMIUM_POPLIN_LONG_SLEEVE_SHIRT/webp/model/1272L_MEN'S_NICHOLSON_PREMIUM_POPLIN_LONG_SLEEVE_SHIRT_STAR_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1272S": {
-    "product_slug": "mens-nicholson-premium-poplin-short-sleeve-shirt-1272s",
+    "product_slug": "mens-nicholson-premium-poplin-short-sleeve-shirt",
     "image_slug": "1272s-model-1272s-mens-nicholson-premium-poplin-short-sleeve-shirt-star-white-hero-front",
     "path": "assets/1272S_MEN'S_NICHOLSON_PREMIUM_POPLIN_SHORT_SLEEVE_SHIRT/webp/model/1272S_MEN'S_NICHOLSON_PREMIUM_POPLIN_SHORT_SLEEVE_SHIRT_STAR_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1520WL": {
-    "product_slug": "womens-nicholson-premium-poplin-long-sleeve-shirt-1520wl",
+    "product_slug": "womens-nicholson-premium-poplin-long-sleeve-shirt",
     "image_slug": "1520wl-model-1520wl-premium-poplin-long-sleeve-shirtstar-starwhite-white-hero-front",
     "path": "assets/1520WL_WOMEN'S_NICHOLSON_PREMIUM_POPLIN_LONG_SLEEVE_SHIRT/webp/model/1520WL_PREMIUM_POPLIN_LONG_SLEEVE_SHIRTSTAR_STARWHITE_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1520WS": {
-    "product_slug": "womens-nicholson-premium-poplin-short-sleeve-shirt-1520ws",
+    "product_slug": "womens-nicholson-premium-poplin-short-sleeve-shirt",
     "image_slug": "1520ws-model-garment-catalogue-shots-a-smiling-woman-with-dark-curly-hair-wears-a-eo0jkkye",
     "path": "assets/1520WS_WOMEN'S_NICHOLSON_PREMIUM_POPLIN_SHORT_SLEEVE_SHIRT/webp/model/Garment_Catalogue_Shots_A_smiling_woman_with_dark_curly_hair_wears_a_eO0jKkyE.webp",
     "selection": "first-image-fallback"
   },
   "1520WZ": {
-    "product_slug": "premium-poplin-3-4-sleeve-shirt-1520wz",
+    "product_slug": "premium-poplin-3-4-sleeve-shirt",
     "image_slug": "1520wz-model-1520wz-premium-poplin-34-sleeve-shirt-star-white-hero-front",
     "path": "assets/1520WZ_PREMIUM_POPLIN_3_4_SLEEVE_SHIRT/webp/model/1520WZ_PREMIUM_POPLIN_34_SLEEVE_SHIRT_STAR_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -468,79 +468,79 @@
     "selection": "hero-front"
   },
   "1637S": {
-    "product_slug": "mens-westgarth-gingham-short-sleeve-shirt-1637s",
+    "product_slug": "mens-westgarth-gingham-short-sleeve-shirt",
     "image_slug": "1637s-model-1637s-westgarth-gingham-short-sleeve-shirt-hero-front",
     "path": "assets/1637S_WESTGARTH_GINGHAM_SHORT_SLEEVE_SHIRT/webp/model/1637S_WESTGARTH_GINGHAM_SHORT_SLEEVE_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1637WHL": {
-    "product_slug": "womens-westgarth-gingham-long-sleeve-slim-fit-shirt-1637whl",
+    "product_slug": "womens-westgarth-gingham-long-sleeve-slim-fit-shirt",
     "image_slug": "1637whl-model-1637whl-womens-westgarth-gingham-long-sleeve-slim-fit-shirt-navy-hero-front",
     "path": "assets/1637WHL_WOMEN’S_WESTGARTH_GINGHAM_LONG_SLEEVE_SLIM_FIT_SHIRT/webp/model/1637WHL_WOMEN’S_WESTGARTH_GINGHAM_LONG_SLEEVE_SLIM_FIT_SHIRT_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1637WL": {
-    "product_slug": "westgarth-gingham-long-sleeve-slim-fit-shirt-1637wl",
+    "product_slug": "westgarth-gingham-long-sleeve-slim-fit-shirt",
     "image_slug": "1637wl-model-1637wl-westgarth-gingham-long-sleeve-slim-fit-shirt-sky-hero-front",
     "path": "assets/1637WL_WESTGARTH_GINGHAM_LONG_SLEEVE_SLIM_FIT_SHIRT/webp/model/1637WL_WESTGARTH_GINGHAM_LONG_SLEEVE_SLIM_FIT_SHIRT_SKY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1637WS": {
-    "product_slug": "womens-westgarth-gingham-short-sleeve-shirt-1637ws",
+    "product_slug": "womens-westgarth-gingham-short-sleeve-shirt",
     "image_slug": "1637ws-model-1637ws-westgarth-gingham-short-sleeve-shirt-hero-front",
     "path": "assets/1637WS_WESTGARTH_GINGHAM_SHORT_SLEEVE_SHIRT/webp/model/1637WS_WESTGARTH_GINGHAM_SHORT_SLEEVE_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1637WZ": {
-    "product_slug": "westgarth-gingham-3-4-sleeve-shirt-1637wz",
+    "product_slug": "westgarth-gingham-3-4-sleeve-shirt",
     "image_slug": "1637wz-model-1637wz-westgarth-gingham-3-4-sleeve-shirt-hero-front",
     "path": "assets/1637WZ_WESTGARTH_GINGHAM_3_4_SLEEVE_SHIRT/webp/model/1637WZ_WESTGARTH_GINGHAM_3_4_SLEEVE_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1701WL": {
-    "product_slug": "balmoral-royal-oxford-shirt-1701wl",
+    "product_slug": "balmoral-royal-oxford-shirt",
     "image_slug": "1701wl-model-1701wl-balmoral-royal-oxfor-shirt-hero-front",
     "path": "assets/1701WL_BALMORAL_ROYAL_OXFOR_SHIRT/webp/model/1701WL_BALMORAL_ROYAL_OXFOR_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1710WL": {
-    "product_slug": "royal-oxford-3-4-sleeve-shirt-1710wl",
+    "product_slug": "royal-oxford-3-4-sleeve-shirt",
     "image_slug": "1710wl-model-1710wl-degraves-royal-oxford-3-4-sleeve-shirt-hero-front",
     "path": "assets/1710WL_DEGRAVES_ROYAL_OXFORD_3-4_SLEEVE_SHIRT/webp/model/1710WL_DEGRAVES_ROYAL_OXFORD_3-4_SLEEVE_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1722MT": {
-    "product_slug": "mens-washable-pant-1722mt",
+    "product_slug": "mens-washable-pant",
     "image_slug": "1722mt-model-1722mt-mens-washable-pant-hero-front",
     "path": "assets/1722MT_MENS_WASHABLE_PANT/webp/model/1722MT_MENS_WASHABLE_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1724WSK": {
-    "product_slug": "womens-washable-pencil-skirt-1724wsk",
+    "product_slug": "womens-washable-pencil-skirt",
     "image_slug": "1724wsk-model-1724wsk-womens-washable-pencil-skirt-navy-hero-front",
     "path": "assets/1724WSK_WOMEN'S_WASHABLE_PENCIL_SKIRT/webp/model/1724WSK_WOMEN'S_WASHABLE_PENCIL_SKIRT_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1725WSK": {
-    "product_slug": "womens-washable-a-line-skirt-1725wsk",
+    "product_slug": "womens-washable-a-line-skirt",
     "image_slug": "1725wsk-model-1725wsk-womens-washable-a-line-skirt-hero-front",
     "path": "assets/1725WSK_WOMEN'S_WASHABLE_A_LINE_SKIRT/webp/model/1725WSK_WOMEN'S_WASHABLE_A_LINE_SKIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1728MJ": {
-    "product_slug": "mens-washable-jacket-1728mj",
+    "product_slug": "mens-washable-jacket",
     "image_slug": "1728mj-model-1728mj-mens-washable-jacket-hero-front",
     "path": "assets/1728MJ_MENS_WASHABLE_JACKET/webp/model/1728MJ_MENS_WASHABLE_JACKET_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1762WT": {
-    "product_slug": "womens-washable-slim-leg-pant-1762wt",
+    "product_slug": "womens-washable-slim-leg-pant",
     "image_slug": "1762wt-model-1762wt-womens-washable-slim-leg-pant-navy-hero-front",
     "path": "assets/1762WT_WOMEN'S_WASHABLE_SLIM_LEG_PANT/webp/model/1762WT_WOMEN'S_WASHABLE_SLIM_LEG_PANT_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1765WJ": {
-    "product_slug": "womens-washable-one-button-jacket-1765wj",
+    "product_slug": "womens-washable-one-button-jacket",
     "image_slug": "1765wj-model-1765wj-womens-washable-one-button-jacket-hero-front",
     "path": "assets/1765WJ_WOMEN'S_WASHABLE_ONE_BUTTON_JACKET/webp/model/1765WJ_WOMEN'S_WASHABLE_ONE_BUTTON_JACKET_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -552,67 +552,67 @@
     "selection": "hero-front"
   },
   "1797WL": {
-    "product_slug": "quinn-top-1797wl",
+    "product_slug": "quinn-top",
     "image_slug": "1797wl-model-1797wl-quinn-top-ivory-back-hero-front",
     "path": "assets/1797WL_QUINN_TOP/webp/model/1797WL_QUINN_TOP_IVORY_BACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1798WS": {
-    "product_slug": "taylor-top-1798ws",
+    "product_slug": "taylor-top",
     "image_slug": "1798ws-model-1798ws-taylor-top-ivory-hero-front",
     "path": "assets/1798WS_TAYLOR_TOP/webp/model/1798WS_TAYLOR_TOP_IVORY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1799WZ": {
-    "product_slug": "lola-3-4-sleeve-shirred-cuff-top-1799wz",
+    "product_slug": "lola-3-4-sleeve-shirred-cuff-top",
     "image_slug": "1799wz-model-1799wz-lola-3-4-sleeve-shirred-cuff-top-ivory-hero-front",
     "path": "assets/1799WZ_LOLA_3_4_SLEEVE_SHIRRED_CUFF_TOP/webp/model/1799WZ_LOLA_3_4_SLEEVE_SHIRRED_CUFF_TOP_IVORY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1800WZ": {
-    "product_slug": "ladies-reese-v-neck-top-1800wz",
+    "product_slug": "ladies-reese-v-neck-top",
     "image_slug": "1800wz-model-1800wz-ladies-reese-v-neck-top-ivory-hero-front",
     "path": "assets/1800WZ_LADIES_REESE_V_NECK_TOP/webp/model/1800WZ_LADIES_REESE_V_NECK_TOP_IVORY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1803WZ": {
-    "product_slug": "cleo-v-neck-shirred-cuff-top-1803wz",
+    "product_slug": "cleo-v-neck-shirred-cuff-top",
     "image_slug": "1803wz-model-1803wz-cleo-v-neck-shirred-cuff-top-ivory-hero-front",
     "path": "assets/1803WZ_CLEO_V_NECK_SHIRRED_CUFF_TOP/webp/model/1803WZ_CLEO_V_NECK_SHIRRED_CUFF_TOP_IVORY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1805WL": {
-    "product_slug": "marni-1-2-placket-top-1805wl",
+    "product_slug": "marni-1-2-placket-top",
     "image_slug": "1805wl-model-1805wl-marni-1-2-placket-top-navy-hero-front",
     "path": "assets/1805WL_MARNI_1_2_PLACKET_TOP/webp/model/1805WL_MARNI_1_2_PLACKET_TOP_NAVY__HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1807WS": {
-    "product_slug": "poppy-puff-sleeve-top-1807ws",
+    "product_slug": "poppy-puff-sleeve-top",
     "image_slug": "1807ws-model-1807ws-poppy-puff-sleeve-top-navy-hero-front",
     "path": "assets/1807WS_POPPY_PUFF_SLEEVE_TOP/webp/model/1807WS_POPPY_PUFF_SLEEVE_TOP_NAVY__HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1898L": {
-    "product_slug": "bradford-fine-oxford-long-sleeve-shirt-1898l",
+    "product_slug": "bradford-fine-oxford-long-sleeve-shirt",
     "image_slug": "1898l-model-1898l-bradford-fine-oxford-long-sleeve-shirt-white-hero-front",
     "path": "assets/1898L_BRADFORD_FINE_OXFORD_LONG_SLEEVE_SHIRT/webp/model/1898L_BRADFORD_FINE_OXFORD_LONG_SLEEVE_SHIRT_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "1899WL": {
-    "product_slug": "bradford-womens-fine-oxford-long-sleeve-shirt-1899wl",
+    "product_slug": "bradford-womens-fine-oxford-long-sleeve-shirt",
     "image_slug": "1899wl-model-1899wl-bradford-womens-fine-oxford-long-sleeve-shirt-white-hero-front",
     "path": "assets/1899WL_BRADFORD_WOMEN'S_FINE_OXFORD_LONG_SLEEVE_SHIRT/webp/model/1899WL_BRADFORD_WOMEN'S_FINE_OXFORD_LONG_SLEEVE_SHIRT_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "2102L": {
-    "product_slug": "olsen-cotton-stretch-shirt-slim-fit-2102l",
+    "product_slug": "olsen-cotton-stretch-shirt-slim-fit",
     "image_slug": "2102l-model-2102l-olsen-cotton-stretch-shirt-hero-front",
     "path": "assets/2102L_OLSEN_COTTON_STRETCH_SHIRT/webp/model/2102L_OLSEN_COTTON_STRETCH_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "2103WL": {
-    "product_slug": "ladies-ashton-cotton-oxford-shirt-2103wl",
+    "product_slug": "ladies-ashton-cotton-oxford-shirt",
     "image_slug": "2103wl-model-2103wl-ashton-cotton-oxford-shirt-hero-front",
     "path": "assets/2103WL_ASHTON_COTTON_OXFORD_SHIRT/webp/model/2103WL_ASHTON_COTTON_OXFORD_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -624,73 +624,73 @@
     "selection": "hero-front"
   },
   "2151CC": {
-    "product_slug": "ezylin-tunic-2151cc",
+    "product_slug": "ezylin-tunic",
     "image_slug": "2151cc-model-2151-ezylin-tunic-hero-front",
     "path": "assets/2151_EZYLIN_TUNIC/webp/model/2151_EZYLIN_TUNIC_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "2LCP": {
-    "product_slug": "ladies-contrast-polo-2lcp",
+    "product_slug": "ladies-contrast-polo",
     "image_slug": "2lcp-model-2lcp-ladies-contrast-polo-navy-white-hero-front",
     "path": "assets/2LCP_LADIES_CONTRAST_POLO/webp/model/2LCP_LADIES_CONTRAST_POLO_NAVY_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "2LPS": {
-    "product_slug": "ladies-210-polo-2lps",
+    "product_slug": "ladies-210-polo",
     "image_slug": "2lps-model-2lps-ladies-210-polo-white-hero-front",
     "path": "assets/2LPS_LADIES_210_POLO/webp/model/2LPS_LADIES_210_POLO_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "4001G": {
-    "product_slug": "maple-organic-tee-4001g",
+    "product_slug": "maple-organic-tee",
     "image_slug": "4001g-model-4001g-maple-organic-tee-white-hero-front",
     "path": "assets/4001G_MAPLE_ORGANIC_TEE/webp/model/4001G_MAPLE_ORGANIC_TEE_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "4001W": {
-    "product_slug": "womens-maple-tee-4001w",
+    "product_slug": "womens-maple-tee",
     "image_slug": "4001w-model-4001w-womens-maple-tee-white-hero-back",
     "path": "assets/4001W_WOMEN'S_MAPLE_TEE/webp/model/4001W_WOMEN'S_MAPLE_TEE_WHITE_HERO_BACK.webp",
     "selection": "first-image-fallback"
   },
   "49-432Z": {
-    "product_slug": "womens-wheat-zip-sided-boot-49-432z",
+    "product_slug": "womens-wheat-zip-sided-boot",
     "image_slug": "49-432z-product-49-432z-womens-wheat-zip-sided-boot-front",
     "path": "assets/49-432Z_WOMENS_WHEAT_ZIP_SIDED_BOOT/webp/product/49-432Z_WOMENS_WHEAT_ZIP_SIDED_BOOT_FRONT.webp",
     "selection": "first-image-fallback"
   },
   "49445Z": {
-    "product_slug": "womens-black-zip-sided-boot-49445z",
+    "product_slug": "womens-black-zip-sided-boot",
     "image_slug": "49445z-product-49445z-womens-black-zip-sided-boot-2",
     "path": "assets/49445Z_WOMENS_BLACK_ZIP_SIDED_BOOT/webp/product/49445Z_WOMENS_BLACK_ZIP_SIDED_BOOT_2.webp",
     "selection": "first-image-fallback"
   },
   "49450Z": {
-    "product_slug": "womens-stone-zip-sided-low-cut-boot-49450z",
+    "product_slug": "womens-stone-zip-sided-low-cut-boot",
     "image_slug": "49450z-product-49450z-womens-stone-zip-sided-low-cut-boot-2-1",
     "path": "assets/49450Z_Women’s_Stone_Zip_Sided_Low-Cut_Boot/webp/product/49450Z_Women’s_Stone_Zip_Sided_Low-Cut_Boot_2 (1).webp",
     "selection": "first-image-fallback"
   },
   "5001G": {
-    "product_slug": "mens-staple-organic-tee-5001g",
+    "product_slug": "mens-staple-organic-tee",
     "image_slug": "5001g-model-5001g-mens-staple-organic-tee-grey-marle-hero-front",
     "path": "assets/5001G_MEN'S_STAPLE_ORGANIC_TEE/webp/model/5001G_MENS_STAPLE_ORGANIC_TEE_GREY_MARLE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "5ACW": {
-    "product_slug": "waist-canvas-apron-including-strap-5acw",
+    "product_slug": "waist-canvas-apron-including-strap",
     "image_slug": "5acw-model-5acw-waist-canvas-apron-including-strap-latte-front",
     "path": "assets/5ACW_WAIST CANVAS APRON-INCLUDING STRAP/webp/model/5ACW_WAIST_CANVAS_APRON_INCLUDING_STRAP__LATTE_FRONT.webp",
     "selection": "first-image-fallback"
   },
   "5FC": {
-    "product_slug": "chefs-cap-5fc",
+    "product_slug": "chefs-cap",
     "image_slug": "5fc-model-5fc-chefs-cap-white-hero-front",
     "path": "assets/5FC_CHEF'S_CAP/webp/model/5FC_CHEF'S_CAP_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "630797W": {
-    "product_slug": "womens-tornado-630797w",
+    "product_slug": "womens-tornado",
     "image_slug": "630797w-product-630797w-womens-tornado-black",
     "path": "assets/630797W_WOMENS_TORNADO/webp/product/630797W_WOMENS_TORNADO_BLACK.webp",
     "selection": "first-image-fallback"
@@ -702,13 +702,13 @@
     "selection": "hero-front"
   },
   "6HFV": {
-    "product_slug": "fluro-vest-6hfv",
+    "product_slug": "fluro-vest",
     "image_slug": "6hfv-model-6hfv-fluro-vest-hero-front",
     "path": "assets/6HFV_FLURO_VEST/webp/model/6HFV_FLURO_VEST_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "6HVSV": {
-    "product_slug": "hi-vis-safety-vest-6hvsv",
+    "product_slug": "hi-vis-safety-vest",
     "image_slug": "6hvsv-model-6hvsv-hi-vis-safety-vest-hero-front",
     "path": "assets/6HVSV_HI_VIS_SAFETY_VEST/webp/model/6HVSV_HI_VIS_SAFETY_VEST_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -720,133 +720,133 @@
     "selection": "hero-front"
   },
   "A03": {
-    "product_slug": "bib-apron-a03-a03",
+    "product_slug": "bib-apron-a03",
     "image_slug": "a03-model-a03-bib-apron-black-hero-front",
     "path": "assets/A03_BIB APRON/webp/model/A03_BIB APRON_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "A100": {
-    "product_slug": "english-chef-apron-a100",
+    "product_slug": "english-chef-apron",
     "image_slug": "a100-model-a100-english-chef-apron-black-white-chalk-stripe-hero-front",
     "path": "assets/A100_ENGLISH CHEF APRON/webp/model/A100_ENGLISH_CHEF_APRON_BLACK_WHITE_CHALK_STRIPE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "A1000": {
-    "product_slug": "dad-hat-a1000",
+    "product_slug": "dad-hat",
     "image_slug": "a1000-model-a1000-dad-hat-black-hero-front",
     "path": "assets/A1000_DAD_HAT/webp/model/A1000_DAD_HAT_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "A27": {
-    "product_slug": "louie-apron-a27",
+    "product_slug": "louie-apron",
     "image_slug": "a27-model-a27-louie-apron-black-hero-front",
     "path": "assets/A27_LOUIE_APRON/webp/model/A27_LOUIE_APRON_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "A30": {
-    "product_slug": "alfie-bib-apron-a30",
+    "product_slug": "alfie-bib-apron",
     "image_slug": "a30-model-a30-alfie-bib-apron-hero-front",
     "path": "assets/A30_ALFIE_BIB_APRON/webp/model/A30_ALFIE_BIB_APRON_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "A31": {
-    "product_slug": "colby-waist-apron-a31",
+    "product_slug": "colby-waist-apron",
     "image_slug": "a31-model-a31-colby-waist-apron-hero-front",
     "path": "assets/A31_COLBY_WAIST_APRON/webp/model/A31_COLBY_WAIST_APRON_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "A33": {
-    "product_slug": "capri-waist-apron-a33",
+    "product_slug": "capri-waist-apron",
     "image_slug": "a33-model-a33-capri-waist-apron-black-hero-front",
     "path": "assets/A33_CAPRI_WAIST_APRON/webp/model/A33_CAPRI_WAIST_APRON_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "AB802": {
-    "product_slug": "lockharte-bib-apron-ab802",
+    "product_slug": "lockharte-bib-apron",
     "image_slug": "ab802-model-ab802-lockharte-bib-apron-hero-front",
     "path": "assets/AB802_LOCKHARTE_BIB_APRON/webp/model/AB802_LOCKHARTE_BIB_APRON_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ACS01": {
-    "product_slug": "berkeley-chefs-bib-apron-acs01",
+    "product_slug": "berkeley-chefs-bib-apron",
     "image_slug": "acs01-model-acs01-berkeley-chefs-bib-apron-black-hero-front",
     "path": "assets/ACS01_BERKELEY_CHEFS_BIB_APRON/webp/model/ACS01_BERKELEY_CHEFS_BIB_APRON_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "AH126": {
-    "product_slug": "pet-cotton-sandwich-cap-ah126",
+    "product_slug": "pet-cotton-sandwich-cap",
     "image_slug": "ah126-model-ah126-pet-cotton-sandwich-cap-black-white-hero-front",
     "path": "assets/AH126_PET_COTTON_SANDWICH_CAP/webp/model/AH126_PET_COTTON_SANDWICH_CAP_BLACK_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "AH127": {
-    "product_slug": "organic-cotton-sandwich-cap-ah127",
+    "product_slug": "organic-cotton-sandwich-cap",
     "image_slug": "ah127-model-ah127-organic-cotton-sandwich-cap-black-white-hero-front",
     "path": "assets/AH127_ORGANIC_COTTON_SANDWICH_CAP/webp/model/AH127_ORGANIC_COTTON_SANDWICH_CAP_BLACK_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "AH255": {
-    "product_slug": "premium-rpet-cap-ah255",
+    "product_slug": "premium-rpet-cap",
     "image_slug": "ah255-model-ah255-premium-rpet-cap-navy-hero-front",
     "path": "assets/AH255_PREMIUM_RPET_CAP/webp/model/AH255_PREMIUM_RPET_CAP_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "AH655": {
-    "product_slug": "premium-rpet-bucket-hat-ah655",
+    "product_slug": "premium-rpet-bucket-hat",
     "image_slug": "ah655-model-ah655-premium-rpet-bucket-hat-black-hero-front",
     "path": "assets/AH655_PREMIUM_RPET_BUCKET_HAT/webp/model/AH655_PREMIUM_RPET_BUCKET_HAT_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BA35": {
-    "product_slug": "barley-apron-ba35",
+    "product_slug": "barley-apron",
     "image_slug": "ba35-model-ba35-barley-apron-hero-front",
     "path": "assets/BA35_BARLEY_APRON/webp/model/BA35_BARLEY_APRON_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BA40": {
-    "product_slug": "clout-apron-ba40",
+    "product_slug": "clout-apron",
     "image_slug": "ba40-model-ba40-clout-apron-black-hero-front",
     "path": "assets/BA40_Clout Apron/webp/model/BA40_CLOUT_APRON_BLACK__HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BA54": {
-    "product_slug": "urban-1-2-waist-apron-ba54",
+    "product_slug": "urban-1-2-waist-apron",
     "image_slug": "ba54-model-ba54-urban-waist-apron-hero-front",
     "path": "assets/BA54_URBAN_WAIST_APRON/webp/model/BA54_URBAN_WAIST_APRON_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BA55": {
-    "product_slug": "urban-bib-apron-ba55",
+    "product_slug": "urban-bib-apron",
     "image_slug": "ba55-model-ba55-urban-bib-apron-black-hero-front",
     "path": "assets/BA55_URBAN_BIB_APRON/webp/model/BA55_URBAN_BIB_APRON_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BA75": {
-    "product_slug": "unisex-salt-bib-apron-ba75",
+    "product_slug": "unisex-salt-bib-apron",
     "image_slug": "ba75-model-ba75-unisex-salt-bib-apron-charcoal-white-hero-front",
     "path": "assets/BA75_UNISEX_SALT_BIB_APRON/webp/model/BA75_UNISEX_SALT_BIB_APRON_CHARCOAL_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BA94": {
-    "product_slug": "short-waisted-apron-ba94",
+    "product_slug": "short-waisted-apron",
     "image_slug": "ba94-model-ba94-short-waisted-apron-black-hero-front",
     "path": "assets/BA94_SHORT_WAISTED_APRON/webp/model/BA94_SHORT_WAISTED_APRON_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BB10929": {
-    "product_slug": "womens-slimline-belt-bb10929",
+    "product_slug": "womens-slimline-belt",
     "image_slug": "bb10929-model-bb10929-slimline-womens-belt-hero-front",
     "path": "assets/BB10929_WOMEN'S_SLIMLINE_BELT/webp/model/BB10929_SLIMLINE_WOMENS_BELT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BB248M": {
-    "product_slug": "mens-standard-belt-bb248m",
+    "product_slug": "mens-standard-belt",
     "image_slug": "bb248m-product-bb248m-mens-standard-belt",
     "path": "assets/BB248M_MENS_STANDARD_BELT/webp/product/BB248M_MENS_STANDARD_BELT.webp",
     "selection": "first-image-fallback"
   },
   "BB2606L": {
-    "product_slug": "womens-soft-stretch-pant-bb2606l",
+    "product_slug": "womens-soft-stretch-pant",
     "image_slug": "bb2606l-model-bb2606l-womens-soft-stretch-pant-hero-front",
     "path": "assets/BB2606L_WOMEN'S_SOFT_STRETCH_PANT/webp/model/BB2606L_WOMEN'S_SOFT_STRETCH_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -858,55 +858,55 @@
     "selection": "hero-front"
   },
   "BCSZ009": {
-    "product_slug": "springfield-chef-jacket-bcsz009",
+    "product_slug": "springfield-chef-jacket",
     "image_slug": "bcsz009-model-bcsz009-springfield-chef-jacket-grey-hero-front",
     "path": "assets/BCSZ009_SPRINGFIELD CHEF JACKET/webp/model/BCSZ009_SPRINGFIELD CHEF JACKET_GREY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BJ2602L": {
-    "product_slug": "womens-tailor-jacket-bj2602l",
+    "product_slug": "womens-tailor-jacket",
     "image_slug": "bj2602l-model-bj2602l-tailor-womens-jacket-black-hero-front",
     "path": "assets/BJ2602L_WOMEN'S_TAILOR_JACKET/webp/model/BJ2602L_TAILOR_WOMENS_JACKET_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BJ2602M": {
-    "product_slug": "mens-tailor-jacket-bj2602m",
+    "product_slug": "mens-tailor-jacket",
     "image_slug": "bj2602m-model-bj2602m-tailor-mens-jacket-hero-front",
     "path": "assets/BJ2602M_TAILOR_MENS_JACKET/webp/model/BJ2602M_TAILOR_MENS_JACKET_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BP2610LS": {
-    "product_slug": "phoenix-womens-short-sleeve-polo-bp2610ls",
+    "product_slug": "phoenix-womens-short-sleeve-polo",
     "image_slug": "bp2610ls-model-bp2610ls-phoenix-womens-short-sleeve-polo-charcoal-marle-hero-front",
     "path": "assets/BP2610LS_PHOENIX_WOMEN'S_SHORT_SLEEVE_POLO/webp/model/BP2610LS_PHOENIX_WOMENS_SHORT_SLEEVE_POLO_CHARCOAL_MARLE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BP2610MS": {
-    "product_slug": "mens-phoenix-short-sleeve-polo-bp2610ms",
+    "product_slug": "mens-phoenix-short-sleeve-polo",
     "image_slug": "bp2610ms-model-bp2610ms-mens-phoenix-short-sleeve-polo-charcoal-marle-hero-front",
     "path": "assets/BP2610MS_MEN'S_PHOENIX_SHORT_SLEEVE_POLO/webp/model/BP2610MS_MEN'S_PHOENIX_SHORT_SLEEVE_POLO_CHARCOAL_MARLE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BP2616LS": {
-    "product_slug": "womens-venture-short-sleeve-polo-bp2616ls",
+    "product_slug": "womens-venture-short-sleeve-polo",
     "image_slug": "bp2616ls-model-bp2616ls-womens-venture-short-sleeve-polo-denim-blue-hero-front",
     "path": "assets/BP2616LS_WOMEN'S_VENTURE_SHORT_SLEEVE_POLO/webp/model/BP2616LS_WOMEN'S_VENTURE_SHORT_SLEEVE_POLO_DENIM_BLUE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BP2616MS": {
-    "product_slug": "mens-venture-short-sleeve-polo-bp2616ms",
+    "product_slug": "mens-venture-short-sleeve-polo",
     "image_slug": "bp2616ms-model-bp2616ms-mens-venture-short-sleeve-polo-denim-blue-hero-front",
     "path": "assets/BP2616MS_MEN'S_VENTURE_SHORT_SLEEVE_POLO/webp/model/BP2616MS_MEN'S_VENTURE_SHORT_SLEEVE_POLO_DENIM_BLUE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BPC6008": {
-    "product_slug": "stretch-cotton-drill-cargo-pants-bpc6008",
+    "product_slug": "stretch-cotton-drill-cargo-pants",
     "image_slug": "bpc6008-model-bpc6008-stretch-cotton-drill-cargo-pants-hero-front",
     "path": "assets/BPC6008_STRETCH_COTTON_DRILL_CARGO_PANTS/webp/model/BPC6008_STRETCH_COTTON_DRILL_CARGO_PANTS_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BPC6088T": {
-    "product_slug": "recycle-taped-biomotion-cargo-work-pant-bpc6088t",
+    "product_slug": "recycle-taped-biomotion-cargo-work-pant",
     "image_slug": "bpc6088t-model-bpc6088t-recycle-taped-biomotion-cargo-work-pant-hero-front",
     "path": "assets/BPC6088T_RECYCLE_TAPED_BIOMOTION_CARGO_WORK_PANT/webp/model/BPC6088T_RECYCLE_TAPED_BIOMOTION_CARGO_WORK_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -918,37 +918,37 @@
     "selection": "hero-front"
   },
   "BR1013": {
-    "product_slug": "bellroy-classic-daypack-br1013",
+    "product_slug": "bellroy-classic-daypack",
     "image_slug": "br1013-product-br1013-bellroy-classic-daypack",
     "path": "assets/BR1013_BELLROY_CLASSIC_DAYPACK/webp/product/BR1013_BELLROY_CLASSIC_DAYPACK.webp",
     "selection": "first-image-fallback"
   },
   "BRIGHT-YARN": {
-    "product_slug": "a-bright-future-essence-polo-shirt-bright-yarn",
+    "product_slug": "a-bright-future-essence-polo-shirt",
     "image_slug": "bright-yarn-model-bright-yarn-a-bright-future-essence-polo-shirt-hero-front",
     "path": "assets/BRIGHT_YARN_A_BRIGHT_FUTURE_ESSENCE_POLO_SHIRT/webp/model/BRIGHT_YARN_A_BRIGHT_FUTURE_ESSENCE_POLO_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BRIGHT-YARN-UNISEX": {
-    "product_slug": "unisex-a-bright-future-essence-polo-shirt-bright-yarn-unisex",
+    "product_slug": "unisex-a-bright-future-essence-polo-shirt",
     "image_slug": "bright-yarn-unisex-model-bright-yarn-unisex-a-bright-future-essence-polo-shirt-hero-front",
     "path": "assets/BRIGHT_YARN_UNISEX_A_BRIGHT_FUTURE_ESSENCE_POLO_SHIRT/webp/model/BRIGHT_YARN_UNISEX_A_BRIGHT_FUTURE_ESSENCE_POLO_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BS021L": {
-    "product_slug": "lawson-ladies-chino-short-bs021l",
+    "product_slug": "lawson-ladies-chino-short",
     "image_slug": "bs021l-model-bs021l-lawson-ladies-chino-short-asian-navy-hero-front",
     "path": "assets/BS021L_LAWSON_LADIES_CHINO_SHORT/webp/model/BS021L_LAWSON_LADIES_CHINO_SHORT_ASIAN_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BS022L": {
-    "product_slug": "lawson-ladies-chino-skirt-bs022l",
+    "product_slug": "lawson-ladies-chino-skirt",
     "image_slug": "bs022l-model-bs022l-lawson-ladies-chino-skirt-grey-hero-front",
     "path": "assets/BS022L_LAWSON_LADIES_CHINO_SKIRT/webp/model/BS022L_LAWSON_LADIES_CHINO_SKIRT_GREY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BS125L": {
-    "product_slug": "ladies-bella-pant-bs125l",
+    "product_slug": "ladies-bella-pant",
     "image_slug": "bs125l-model-bs125l-bella-womens-pant-hero-front",
     "path": "assets/BS125L_LADIES_BELLA_PANT/webp/model/BS125L_Bella_Womens_Pant_Hero_Front.webp",
     "selection": "hero-front"
@@ -960,79 +960,79 @@
     "selection": "hero-front"
   },
   "BS423L": {
-    "product_slug": "womens-venture-pant-bs423l",
+    "product_slug": "womens-venture-pant",
     "image_slug": "bs423l-model-bs423l-womens-venture-pant-black-hero-front",
     "path": "assets/BS423L_WOMEN'S_VENTURE_PANT/webp/model/BS423L_Women's Venture Pant_Black_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BS6266XT": {
-    "product_slug": "bisley-recycle-x-taped-hi-vis-drill-shirt-bs6266xt",
+    "product_slug": "bisley-recycle-x-taped-hi-vis-drill-shirt",
     "image_slug": "bs6266xt-model-bs6266xt-bisley-recycle-x-taped-hi-vis-drill-shirt-hero-front",
     "path": "assets/BS6266XT_BISLEY_RECYCLE_X_TAPED_HI_VIS_DRILL_SHIRT/webp/model/BS6266XT_BISLEY_RECYCLE_X_TAPED_HI_VIS_DRILL_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BS6896": {
-    "product_slug": "taped-hi-vis-cool-lightweight-shirt-bs6896",
+    "product_slug": "taped-hi-vis-cool-lightweight-shirt",
     "image_slug": "bs6896-model-bs6896-taped-hi-vis-cool-lightweight-shirt-hero-front",
     "path": "assets/BS6896_TAPED_HI_VIS_COOL_LIGHTWEIGHT_SHIRT/webp/model/BS6896_TAPED_HI_VIS_COOL_LIGHTWEIGHT_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BS724L": {
-    "product_slug": "ladies-lawson-chino-pant-bs724l",
+    "product_slug": "ladies-lawson-chino-pant",
     "image_slug": "bs724l-model-bs724l-ladies-lawson-chino-pant-black-asian-hero-front",
     "path": "assets/BS724L_LADIES_LAWSON_CHINO_PANT/webp/model/BS724L_LADIES_LAWSON_CHINO_PANT_BLACK_ASIAN_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BS724M": {
-    "product_slug": "mens-lawson-chino-pant-bs724m",
+    "product_slug": "mens-lawson-chino-pant",
     "image_slug": "bs724m-model-bs724m-mens-lawson-chino-pant-african-black-hero-front",
     "path": "assets/BS724M_MEN'S_LAWSON_CHINO_PANT/webp/model/BS724M_MEN'S_LAWSON_CHINO_PANT_AFRICAN_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "BS732L": {
-    "product_slug": "ladies-bianca-jacket-bs732l",
+    "product_slug": "ladies-bianca-jacket",
     "image_slug": "bs732l-model-bs732l-bianca-womens-jacket-navy-hero-front-2",
     "path": "assets/BS732L_LADIES_BIANCA_JACKET/webp/model/BS732L_BIANCA_WOMEN'S_JACKET_NAVY_HERO_FRONT_2.webp",
     "selection": "hero-front"
   },
   "BS909L": {
-    "product_slug": "ladies-remy-pant-bs909l",
+    "product_slug": "ladies-remy-pant",
     "image_slug": "bs909l-model-bs909l-ladies-remy-pant-navy-hero-front-jpg",
     "path": "assets/BS909L_LADIES_REMY_PANT/webp/model/BS909L_LADIES_REMY_PANT_NAVY_HERO_FRONT__jpg.webp",
     "selection": "hero-front"
   },
   "CA3PSO": {
-    "product_slug": "so-ezy-pant-ca3pso",
+    "product_slug": "so-ezy-pant",
     "image_slug": "ca3pso-model-ca3pso-ezy-pant-navy-hero-front",
     "path": "assets/CA3PSO_EZY_ PANT/webp/model/CA3PSO_EZY_ PANT_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CA4P": {
-    "product_slug": "city-active-pant-ca4p",
+    "product_slug": "city-active-pant",
     "image_slug": "ca4p-model-ca4p-city-active-charcoal-african-hero-front",
     "path": "assets/CA4P_CITY_ACTIVE_PANT/webp/model/CA4P_CITY_ACTIVE_CHARCOAL_AFRICAN_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CA4T": {
-    "product_slug": "city-active-top-ca4t",
+    "product_slug": "city-active-top",
     "image_slug": "ca4t-model-ca4t-city-active-top-charcoal-hero-front",
     "path": "assets/CA4T_CITY_ACTIVE_TOP/webp/model/CA4T_CITY_ACTIVE_TOP_CHARCOAL_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CBZ02": {
-    "product_slug": "nepal-chef-jacket-cbz02",
+    "product_slug": "nepal-chef-jacket",
     "image_slug": "cbz02-model-cbz02-nepal-chef-jacket-ocean-blue-hero-front",
     "path": "assets/CBZ02_NEPAL_CHEF_JACKET/webp/model/CBZ02_NEPAL_CHEF_JACKET_OCEAN_BLUE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CH230ML": {
-    "product_slug": "al-dente-mens-chef-jacket-ch230ml",
+    "product_slug": "al-dente-mens-chef-jacket",
     "image_slug": "ch230ml-model-ch230ml-biz-al-dente-mens-chef-jacket-black-hero-front",
     "path": "assets/CH230ML_AL_DENTE_MEN'S_CHEF_JACKET/webp/model/CH230ML_BIZ_AL_DENTE_MEN'S_CHEF_JACKET_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CH232LS": {
-    "product_slug": "zest-womens-chef-jacket-ch232ls",
+    "product_slug": "zest-womens-chef-jacket",
     "image_slug": "ch232ls-model-ch232ls-zest-womens-chef-jacket-white-hero-front",
     "path": "assets/CH232LS_ZEST_WOMEN'S_CHEF_JACKET/webp/model/CH232LS_ZEST WOMEN'S_CHEF_JACKET_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -1050,367 +1050,367 @@
     "selection": "hero-front"
   },
   "CH330MS": {
-    "product_slug": "mens-alfresco-short-sleeve-chef-jacket-ch330ms",
+    "product_slug": "mens-alfresco-short-sleeve-chef-jacket",
     "image_slug": "ch330ms-model-ch330ms-mens-alfresco-short-sleeve-chef-jacket-grey-hero-front",
     "path": "assets/CH330MS_MEN'S_ALFRESCO_SHORT_SLEEVE_CHEF_JACKET/webp/model/CH330MS_MEN'S_ALFRESCO_SHORT_SLEEVE_CHEF_JACKET_GREY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CH333": {
-    "product_slug": "mesh-flat-top-hat-ch333",
+    "product_slug": "mesh-flat-top-hat",
     "image_slug": "ch333-model-ch333-mesh-flat-top-hat-black-hero",
     "path": "assets/CH333_MESH_FLAT_TOP_HAT/webp/model/CH333_MESH_FLAT_TOP_HAT_BLACK_HERO.webp",
     "selection": "first-image-fallback"
   },
   "CH432L": {
-    "product_slug": "womens-saffron-chef-flex-pant-ch432l",
+    "product_slug": "womens-saffron-chef-flex-pant",
     "image_slug": "ch432l-model-ch432l-womens-saffron-chef-flex-pant-black-hero-front",
     "path": "assets/CH432L_WOMEN'S_SAFFRON_CHEF_FLEX_PANT/webp/model/CH432L_WOMEN'S_SAFFRON_CHEF_FLEX_PANT_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CH432M": {
-    "product_slug": "mens-saffron-chef-flex-pant-ch432m",
+    "product_slug": "mens-saffron-chef-flex-pant",
     "image_slug": "ch432m-model-ch432m-mens-saffron-chef-flex-pant-black-hero-front",
     "path": "assets/CH432M_MEN'S_SAFFRON_CHEF_FLEX_PANT/webp/model/CH432M_MEN'S SAFFRON CHEF FLEX PANT_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CK962LC": {
-    "product_slug": "womens-zip-front-short-sleeve-knit-cardigan-ck962lc",
+    "product_slug": "womens-zip-front-short-sleeve-knit-cardigan",
     "image_slug": "ck962lc-model-ck962lc-zip-front-womens-short-sleeve-knit-cardigan-hero-front",
     "path": "assets/CK962LC_Zip_Front_Womens_Short_Sleeve_Knit_Cardigan/webp/model/CK962LC_Zip_Front_Womens_Short_Sleeve_Knit_Cardigan_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CL040LL": {
-    "product_slug": "jane-3-4-length-stretch-pant-cl040ll",
+    "product_slug": "jane-3-4-length-stretch-pant",
     "image_slug": "cl040ll-model-cl040ll-jane-3-4-length-pant-hero-front",
     "path": "assets/CL040LL_Jane_3_4_Length_Stretch_Pant/webp/model/CL040LL_JANE_3_4_LENGTH_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CL541LL": {
-    "product_slug": "womens-pulse-jogger-scrub-pant-cl541ll",
+    "product_slug": "womens-pulse-jogger-scrub-pant",
     "image_slug": "cl541ll-model-cl541ll-womens-pulse-jogger-scrub-pant-hero-front",
     "path": "assets/CL541LL_WOMEN'S_PULSE_JOGGER_SCRUB_PANT/webp/model/CL541LL_WOMEN'S_PULSE_JOGGER_SCRUB_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CL542UL": {
-    "product_slug": "unisex-pulse-straight-leg-scrub-pant-cl542ul",
+    "product_slug": "unisex-pulse-straight-leg-scrub-pant",
     "image_slug": "cl542ul-model-cl542ul-unisex-pulse-straight-leg-scrub-pant-hero-front",
     "path": "assets/CL542UL_UNISEX_PULSE_STRAIGHT_LEG_SCRUB_PANT/webp/model/CL542UL_UNISEX_PULSE_STRAIGHT_LEG_SCRUB_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CL954LL": {
-    "product_slug": "womens-comfort-waist-cargo-pant-cl954ll",
+    "product_slug": "womens-comfort-waist-cargo-pant",
     "image_slug": "cl954ll-model-cl954ll-womens-comfort-waist-cargo-pant-black-asian-hero-front",
     "path": "assets/CL954LL_WOMEN'S_COMFORT_WAIST_CARGO_PANT/webp/model/CL954LL_WOMEN'S_COMFORT_WAIST_CARGO_PANT_BLACK_ASIAN_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CL955LL": {
-    "product_slug": "womens-comfort-waist-straight-leg-pant-cl955ll",
+    "product_slug": "womens-comfort-waist-straight-leg-pant",
     "image_slug": "cl955ll-model-cl955ll-women-comfort-waist-straight-leg-pant-hero-front",
     "path": "assets/CL955LL_WOMEN'S_COMFORT_WAIST_STRAIGHT_LEG_PANT/webp/model/CL955LL_Women_Comfort_Waist Straight_Leg_Pant_HERO_Front.webp",
     "selection": "hero-front"
   },
   "CL956LS": {
-    "product_slug": "womens-comfort-waist-cargo-skirt-cl956ls",
+    "product_slug": "womens-comfort-waist-cargo-skirt",
     "image_slug": "cl956ls-model-cl956ls-womens-comfort-waist-cargo-skirt-navy-hero-front",
     "path": "assets/CL956LS_WOMEN'S_COMFORT_WAIST_CARGO_SKIRT/webp/model/CL956LS_WOMEN'S_COMFORT_WAIST_CARGO_SKIRT_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CL957LS": {
-    "product_slug": "womens-comfort-waist-cargo-short-cl957ls",
+    "product_slug": "womens-comfort-waist-cargo-short",
     "image_slug": "cl957ls-model-cl957ls-womens-comfort-waist-cargo-short-charcoal-african-hero-front",
     "path": "assets/CL957LS_WOMEN'S_COMFORT_WAIST_CARGO_SHORT/webp/model/CL957LS_WOMEN'S_COMFORT_WAIST_CARGO_SHORT_CHARCOAL_AFRICAN_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CL958ML": {
-    "product_slug": "mens-comfort-waist-flat-front-pant-cl958ml",
+    "product_slug": "mens-comfort-waist-flat-front-pant",
     "image_slug": "cl958ml-model-cl958ml-mens-comfort-waist-flat-front-pant-hero-front",
     "path": "assets/CL958ML_MEN'S_COMFORT_WAIST_FLAT_FRONT_PANT/webp/model/CL958ML_MEN'S_COMFORT_WAIST_FLAT_FRONT_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CL959ML": {
-    "product_slug": "mens-comfort-waist-cargo-pant-cl959ml",
+    "product_slug": "mens-comfort-waist-cargo-pant",
     "image_slug": "cl959ml-model-cl959ml-mens-comfort-waist-cargo-pant-black-asian-hero-front",
     "path": "assets/CL959ML_MEN'S_COMFORT_WAIST_CARGO_PANT/webp/model/CL959ML_MEN'S_COMFORT_WAIST_CARGO_PANT_BLACK_ASIAN_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CL960MS": {
-    "product_slug": "mens-comfort-waist-cargo-short-cl960ms",
+    "product_slug": "mens-comfort-waist-cargo-short",
     "image_slug": "cl960ms-model-cl960ms-comfort-waist-mens-cargo-short-hero-front",
     "path": "assets/CL960MS_MEN'S_COMFORT_WAIST_CARGO_SHORT/webp/model/CL960MS_Comfort_Waist_Mens_Cargo_Short_Hero_Front.webp",
     "selection": "hero-front"
   },
   "CO342LJ": {
-    "product_slug": "nova-womens-knit-jacket-co342lj",
+    "product_slug": "nova-womens-knit-jacket",
     "image_slug": "co342lj-model-co342lj-nova-womens-zip-front-jumper-black-marle-hero-front",
     "path": "assets/CO342LJ_NOVA_WOMEN'S_KNIT_JACKET/webp/model/CO342LJ_NOVA_WOMENS_ZIP_FRONT_JUMPER_BLACK_MARLE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CO342MJ": {
-    "product_slug": "nova-mens-knit-jacket-co342mj",
+    "product_slug": "nova-mens-knit-jacket",
     "image_slug": "co342mj-model-co342mj-nova-mens-knit-jacket-black-marle-back-hero-front",
     "path": "assets/CO342MJ_NOVA_MEN'S_KNIT_JACKET/webp/model/CO342MJ_NOVA_MEN'S_KNIT_JACKET_BLACK_MARLE_BACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CO343MV": {
-    "product_slug": "nova-mens-knit-vest-co343mv",
+    "product_slug": "nova-mens-knit-vest",
     "image_slug": "co343mv-model-co343mv-nova-mens-knit-vest-navy-marle-hero-front",
     "path": "assets/CO343MV_NOVA_MEN'S_KNIT_VEST/webp/model/CO343MV_NOVA_MEN'S_KNIT_VEST_NAVY_MARLE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CS450LS": {
-    "product_slug": "womens-florence-stardust-print-tunic-cs450ls",
+    "product_slug": "womens-florence-stardust-print-tunic",
     "image_slug": "cs450ls-model-cs450ls-womens-florence-stardust-print-tunic-hero-front",
     "path": "assets/CS450LS_WOMEN'S_FLORENCE_STARDUST_PRINT_TUNIC/webp/model/CS450LS_WOMEN'S_FLORENCE_STARDUST_PRINT_TUNIC_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CS948LS": {
-    "product_slug": "womens-florence-daisy-print-short-sleeve-shirt-cs948ls",
+    "product_slug": "womens-florence-daisy-print-short-sleeve-shirt",
     "image_slug": "cs948ls-model-cs948ls-florence-womens-daisy-print-s-s-shirt-hero-front",
     "path": "assets/CS948LS_Florence_Womens_Daisy_Print_S_S_Shirt/webp/model/CS948LS_Florence_Womens_Daisy_Print_S_S_Shirt_Hero_Front.webp",
     "selection": "hero-front"
   },
   "CS949LS": {
-    "product_slug": "ladies-florence-tunic-cs949ls",
+    "product_slug": "ladies-florence-tunic",
     "image_slug": "cs949ls-model-cs949ls-ladies-florence-tunic-hero-front",
     "path": "assets/CS949LS_LADIES_FLORENCE_TUNIC/webp/model/CS949LS_LADIES_FLORENCE_TUNIC_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CS950LS": {
-    "product_slug": "womens-florence-daisy-print-tunic-cs950ls",
+    "product_slug": "womens-florence-daisy-print-tunic",
     "image_slug": "cs950ls-model-cs950ls-womens-florence-daisy-print-tunic-hero-front",
     "path": "assets/CS950LS_WOMEN'S_FLORENCE_DAISY_PRINT_TUNIC/webp/model/CS950LS_WOMEN'S_FLORENCE_DAISY_PRINT_TUNIC_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CS952LS": {
-    "product_slug": "womens-marley-jersey-t-top-cs952ls",
+    "product_slug": "womens-marley-jersey-t-top",
     "image_slug": "cs952ls-model-cs952ls-womens-marley-jersey-t-top-charcoal-hero-front",
     "path": "assets/CS952LS_WOMEN'S_MARLEY_JERSEY_T_TOP/webp/model/CS952LS_WOMEN'S_MARLEY_JERSEY_T_TOP_CHARCOAL_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CSP042LL": {
-    "product_slug": "womens-riley-slim-leg-jogger-scrub-pant-csp042ll",
+    "product_slug": "womens-riley-slim-leg-jogger-scrub-pant",
     "image_slug": "csp042ll-model-csp042ll-womens-riley-slim-leg-jogger-scrub-pant-hero-front",
     "path": "assets/CSP042LL_WOMEN'S_RILEY_SLIM_LEG_JOGGER_SCRUB_PANT/webp/model/CSP042LL_WOMEN'S_RILEY_SLIM_LEG_JOGGER_SCRUB_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CSP042ML": {
-    "product_slug": "mens-riley-slim-leg-jogger-scrub-pant-csp042ml",
+    "product_slug": "mens-riley-slim-leg-jogger-scrub-pant",
     "image_slug": "csp042ml-model-csp042ml-mens-riley-slim-leg-jogger-scrub-pant-midnightnavy-hero-front",
     "path": "assets/CSP042ML_MEN'S_RILEY_SLIM_LEG_JOGGER_SCRUB_PANT/webp/model/CSP042ML_MEN'S_RILEY_SLIM_LEG_JOGGER_SCRUB_PANT_MIDNIGHTNAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CSP047LL": {
-    "product_slug": "womens-riley-straight-leg-scrub-pant-csp047ll",
+    "product_slug": "womens-riley-straight-leg-scrub-pant",
     "image_slug": "csp047ll-model-csp047ll-womens-riley-straight-leg-scrub-pant-electricblue-hero-front",
     "path": "assets/CSP047LL_WOMEN'S_RILEY_STRAIGHT_LEG_SCRUB_PANT/webp/model/CSP047LL_WOMEN'S_RILEY_STRAIGHT_LEG_SCRUB_PANT_ELECTRICBLUE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CSP047ML": {
-    "product_slug": "mens-riley-straight-scrub-pant-csp047ml",
+    "product_slug": "mens-riley-straight-scrub-pant",
     "image_slug": "csp047ml-model-csp047ml-mens-riley-straight-scrub-pant-hero-front",
     "path": "assets/CSP047ML_MEN'S_RILEY_STRAIGHT_SCRUB_PANT/webp/model/CSP047ML_MEN'S_RILEY_STRAIGHT_SCRUB_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CSP241LL": {
-    "product_slug": "womens-pink-jogger-scrub-pant-csp241ll",
+    "product_slug": "womens-pink-jogger-scrub-pant",
     "image_slug": "csp241ll-model-csp241ll-womens-pink-jogger-scrub-pant-hero-front",
     "path": "assets/CSP241LL_WOMEN'S_PINK_JOGGER_SCRUB_PANT/webp/model/CSP241LL_WOMEN'S_PINK_JOGGER_SCRUB_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CSP944LL": {
-    "product_slug": "womens-avery-multi-pocket-straight-leg-pant-csp944ll",
+    "product_slug": "womens-avery-multi-pocket-straight-leg-pant",
     "image_slug": "csp944ll-model-csp944ll-womens-avery-multi-pocket-straight-leg-pant-hero-front",
     "path": "assets/CSP944LL_WOMEN'S_AVERY_MULTI_POCKET_STRAIGHT_LEG_PANT/webp/model/CSP944LL_WOMEN'S_AVERY_MULTI_POCKET_STRAIGHT_LEG_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CST043LS": {
-    "product_slug": "womens-riley-v-neck-scrub-top-cst043ls",
+    "product_slug": "womens-riley-v-neck-scrub-top",
     "image_slug": "cst043ls-model-cst043ls-womens-riley-v-neck-scrub-top-midnightnavy-hero-front",
     "path": "assets/CST043LS_WOMEN'S_RILEY_V-NECK_SCRUB_TOP/webp/model/CST043LS_WOMEN'S_RILEY_V-NECK_SCRUB_TOP_MIDNIGHTNAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CST043MS": {
-    "product_slug": "mens-riley-v-neck-scrub-top-cst043ms",
+    "product_slug": "mens-riley-v-neck-scrub-top",
     "image_slug": "cst043ms-model-cst043ms-mens-riley-v-neck-scrub-top-electricblue-hero-front",
     "path": "assets/CST043MS_MEN'S_RILEY_V_NECK_SCRUB_TOP/webp/model/CST043MS_MEN'S_RILEY_V_NECK_SCRUB_TOP_ELECTRICBLUE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CST141LS": {
-    "product_slug": "womens-tokyo-scrub-top-cst141ls",
+    "product_slug": "womens-tokyo-scrub-top",
     "image_slug": "cst141ls-model-cst141ls-womens-tokyo-scrub-top-hero-front",
     "path": "assets/CST141LS_WOMEN'S_TOKYO_SCRUB_TOP/webp/model/CST141LS_WOMEN'S_TOKYO_SCRUB_TOP_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CST141MS": {
-    "product_slug": "mens-tokyo-scrub-top-cst141ms",
+    "product_slug": "mens-tokyo-scrub-top",
     "image_slug": "cst141ms-model-cst141ms-mens-tokyo-scrub-top-hero-front",
     "path": "assets/CST141MS_MEN'S_TOKYO_SCRUB_TOP/webp/model/CST141MS_MEN'S_TOKYO_SCRUB_TOP_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CST245LS": {
-    "product_slug": "womens-pink-v-neck-scrub-top-cst245ls",
+    "product_slug": "womens-pink-v-neck-scrub-top",
     "image_slug": "cst245ls-model-cst245ls-womens-pink-v-neck-scrub-top-hero-front",
     "path": "assets/CST245LS_WOMEN'S_PINK_V-NECK_SCRUB_TOP/webp/model/CST245LS_WOMEN'S_PINK_V-NECK_SCRUB_TOP_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CU543LS": {
-    "product_slug": "womens-pulse-v-neck-scrub-top-cu543ls",
+    "product_slug": "womens-pulse-v-neck-scrub-top",
     "image_slug": "cu543ls-model-cu543ls-womens-pulse-v-neck-scrub-top-hero-front",
     "path": "assets/CU543LS_WOMEN'S_PULSE_V-NECK_SCRUB_TOP/webp/model/CU543LS_WOMEN'S_PULSE_V-NECK_SCRUB_TOP_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "CU544US": {
-    "product_slug": "unisex-pulse-v-neck-scrub-top-cu544us",
+    "product_slug": "unisex-pulse-v-neck-scrub-top",
     "image_slug": "cu544us-model-cu544us-unisex-pulse-v-neck-scrub-top-hero-front",
     "path": "assets/CU544US_UNISEX_PULSE_V-NECK_SCRUB_TOP/webp/model/CU544US_UNISEX_PULSE_V-NECK_SCRUB_TOP_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "D605.R": {
-    "product_slug": "eco-nova-computer-backpack-d605-r",
+    "product_slug": "eco-nova-computer-backpack",
     "image_slug": "d605-r-product-d605-r-eco-nova-computer-backpack-back",
     "path": "assets/D605.R_ECO_NOVA_COMPUTER_BACKPACK/webp/product/D605.R_ECO_NOVA_COMPUTER_BACKPACK_BACK.webp",
     "selection": "first-image-fallback"
   },
   "DA1003": {
-    "product_slug": "darani-15-19l-computer-backpack-in-repreve-recycled-material-da1003",
+    "product_slug": "darani-15-19l-computer-backpack-in-repreve-recycled-material",
     "image_slug": "da1003-product-da1003-darani-1519l-computer-backpack-in-repreve-recycled-material-charcoal",
     "path": "assets/DA1003_DARANI_1519L_COMPUTER_BACKPACK_IN_REPREVE_RECYCLED_MATERIAL_CHARCOAL/webp/product/DA1003_DARANI_1519L_COMPUTER_BACKPACK_IN_REPREVE_RECYCLED_MATERIAL_CHARCOAL.webp",
     "selection": "first-image-fallback"
   },
   "DA1007": {
-    "product_slug": "darani-grs-recycled-canvas-anti-theft-15-21l-laptop-backpack-da1007",
+    "product_slug": "darani-grs-recycled-canvas-anti-theft-15-21l-laptop-backpack",
     "image_slug": "da1007-product-da1007-darani-grs-recycled-canvas-anti-theft-15-21l-laptop-backpack-black",
     "path": "assets/DA1007_Darani GRS Recycled Canvas Anti-Theft 15 21L Laptop Backpack/webp/product/DA1007_Darani GRS Recycled Canvas Anti-Theft 15 21L Laptop Backpack_black.webp",
     "selection": "first-image-fallback"
   },
   "F501": {
-    "product_slug": "bloa-pen-f501",
+    "product_slug": "bloa-pen",
     "image_slug": "f501-product-f501-bloa-pen",
     "path": "assets/F501_BLOA_PEN/webp/product/F501_BLOA_PEN.webp",
     "selection": "first-image-fallback"
   },
   "FAMILY-YARN-UNISEX": {
-    "product_slug": "unisex-family-black-bamboo-simpson-polo-shirt-family-yarn-unisex",
+    "product_slug": "unisex-family-black-bamboo-simpson-polo-shirt",
     "image_slug": "family-yarn-unisex-model-family-yarn-unisex-family-black-bamboo-simpson-polo-shirt-hero-front",
     "path": "assets/FAMILY_YARN_UNISEX_FAMILY_BLACK_BAMBOO_(SIMPSON)_POLO_SHIRT/webp/model/FAMILY_YARN_UNISEX_FAMILY_BLACK_BAMBOO_(SIMPSON)_POLO_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "FUTURE-YARN-UNISEX": {
-    "product_slug": "unisex-future-dreaming-essence-polo-shirt-future-yarn-unisex",
+    "product_slug": "unisex-future-dreaming-essence-polo-shirt",
     "image_slug": "future-yarn-unisex-model-future-yarn-unisex-future-dreaming-essence-polo-shirt-hero-front",
     "path": "assets/FUTURE_YARN_UNISEX_FUTURE_DREAMING_ESSENCE_POLO_SHIRT/webp/model/FUTURE_YARN_UNISEX_FUTURE_DREAMING_ESSENCE_POLO_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "GUIDING-YARN-UNISEX": {
-    "product_slug": "unisex-guiding-light-black-bamboo-simpson-polo-shirt-guiding-yarn-unisex",
+    "product_slug": "unisex-guiding-light-black-bamboo-simpson-polo-shirt",
     "image_slug": "guiding-yarn-unisex-model-guiding-yarn-unisex-guiding-light-black-bamboo-simpson-polo-shirt-hero-front",
     "path": "assets/GUIDING_YARN_UNISEX_GUIDING_LIGHT_BLACK_BAMBOO_(SIMPSON)_POLO_SHIRT/webp/model/GUIDING_YARN_UNISEX_GUIDING_LIGHT_BLACK_BAMBOO_(SIMPSON)_POLO_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "H1026": {
-    "product_slug": "slouch-hat-with-break-away-clip-strap-h1026",
+    "product_slug": "slouch-hat-with-break-away-clip-strap",
     "image_slug": "h1026-model-h1026-slouch-hat-with-break-away-clip-strap-black-hero-front",
     "path": "assets/H1026_SLOUCH_HAT_WITH_BREAK-AWAY_CLIP_STRAP/webp/model/H1026_SLOUCH_HAT_WITH_BREAK-AWAY_CLIP_STRAP_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "IV170": {
-    "product_slug": "bamboo-cap-iv170",
+    "product_slug": "bamboo-cap",
     "image_slug": "iv170-model-iv170-bamboo-cap-black-front-hero-back",
     "path": "assets/IV170_BAMBOO_CAP/webp/model/IV170_BAMBOO_CAP_BLACK_FRONT_HERO_BACK.webp",
     "selection": "hero-front"
   },
   "J211L": {
-    "product_slug": "alpine-ladies-puffer-vest-j211l",
+    "product_slug": "alpine-ladies-puffer-vest",
     "image_slug": "j211l-model-j211l-alpine-ladies-puffer-vest-navy-hero-front",
     "path": "assets/J211L_ALPINE_LADIES_PUFFER_VEST/webp/model/J211L_ALPINE_LADIES_PUFFER_VEST_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J211M": {
-    "product_slug": "alpine-mens-puffer-vest-j211m",
+    "product_slug": "alpine-mens-puffer-vest",
     "image_slug": "j211m-model-j211m-alpine-mens-puffer-vest-black-hero-front",
     "path": "assets/J211M_ALPINE_MEN'S_PUFFER_VEST/webp/model/J211M_ALPINE_MEN'S_PUFFER_VEST_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J212L": {
-    "product_slug": "alpine-ladies-puffer-jacket-j212l",
+    "product_slug": "alpine-ladies-puffer-jacket",
     "image_slug": "j212l-model-j212l-alpine-ladies-puffer-jacket-black-hero-front",
     "path": "assets/J212L_ALPINE_LADIES_PUFFER_JACKET/webp/model/J212L_ALPINE_LADIES_PUFFER_JACKET_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J212M": {
-    "product_slug": "alpine-mens-puffer-jacket-j212m",
+    "product_slug": "alpine-mens-puffer-jacket",
     "image_slug": "j212m-model-j212m-alpine-mens-jacket-hero-front",
     "path": "assets/J212M_Alpine_Mens_Jacket/webp/model/J212M_Alpine_Mens_Jacket_Hero_Front.webp",
     "selection": "hero-front"
   },
   "J213M": {
-    "product_slug": "expedition-mens-vest-j213m",
+    "product_slug": "expedition-mens-vest",
     "image_slug": "j213m-model-j213m-expedition-mens-vest-black-hero-front",
     "path": "assets/J213M_EXPEDITION_MEN'S_VEST/webp/model/J213M_EXPEDITION_MEN'S_VEST_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J307L": {
-    "product_slug": "ladies-geneva-jacket-j307l",
+    "product_slug": "ladies-geneva-jacket",
     "image_slug": "j307l-model-j307l-geneva-womens-jacket-black-cyan-african-hero-front",
     "path": "assets/J307L_LADIES_GENEVA_JACKET/webp/model/J307L_GENEVA_WOMENS_JACKET_BLACK_CYAN_AFRICAN_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J3881": {
-    "product_slug": "mens-soft-shell-vest-j3881",
+    "product_slug": "mens-soft-shell-vest",
     "image_slug": "j3881-model-j3881-mens-soft-shell-vest-black-hero-front",
     "path": "assets/J3881_MEN'S_SOFT_SHELL_VEST/webp/model/J3881_MEN'S_SOFT_SHELL_VEST_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J404L": {
-    "product_slug": "ladies-geneva-vest-j404l",
+    "product_slug": "ladies-geneva-vest",
     "image_slug": "j404l-model-j404l-ladies-geneva-vest-navy-graphite-hero-front",
     "path": "assets/J404L_LADIES_GENEVA_VEST/webp/model/J404L_LADIES_GENEVA_VEST_NAVY_GRAPHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J428U": {
-    "product_slug": "unisex-sphere-jacket-j428u",
+    "product_slug": "unisex-sphere-jacket",
     "image_slug": "j428u-model-j428u-sphere-unisex-jacket-black-hero-front",
     "path": "assets/J428U_UNISEX_SPHERE_JACKET/webp/model/J428U_SPHERE_UNISEX_JACKET_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J502M": {
-    "product_slug": "mens-atlas-jacket-j502m",
+    "product_slug": "mens-atlas-jacket",
     "image_slug": "j502m-model-j502m-atlas-mens-jacket-navy-hero-front",
     "path": "assets/J502M_MEN'S_ATLAS_JACKET/webp/model/J502M_ATLAS_MENS_JACKET_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J510M": {
-    "product_slug": "unisex-charger-jacket-j510m",
+    "product_slug": "unisex-charger-jacket",
     "image_slug": "j510m-model-j510m-charger-unisex-jacket-black-fluoro-orange-grey-african-hero-front",
     "path": "assets/J510M_UNISEX_CHARGER_JACKET/webp/model/J510M_CHARGER_UNISEX_JACKET_BLACK_FLUORO_ORANGE_GREY_AFRICAN_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J740L": {
-    "product_slug": "ladies-apex-lightweight-softshell-jacket-j740l",
+    "product_slug": "ladies-apex-lightweight-softshell-jacket",
     "image_slug": "j740l-model-j740l-apex-womens-jacket-navy-hero-front",
     "path": "assets/J740L_LADIES_APEX_LIGHTWEIGHT_SOFTSHELL_JACKET/webp/model/J740L_APEX_WOMENS_JACKET_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J740M": {
-    "product_slug": "mens-apex-lightweight-softshell-jacket-j740m",
+    "product_slug": "mens-apex-lightweight-softshell-jacket",
     "image_slug": "j740m-model-j740m-mens-apex-lightweight-softshell-jacket-black-asian-hero-front",
     "path": "assets/J740M_MEN'S_APEX_LIGHTWEIGHT_SOFTSHELL_JACKET/webp/model/J740M_MEN'S_APEX_LIGHTWEIGHT_SOFTSHELL_JACKET_BLACK_ASIAN_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J750L": {
-    "product_slug": "ladies-expedition-quilted-jacket-j750l",
+    "product_slug": "ladies-expedition-quilted-jacket",
     "image_slug": "j750l-model-j750l-ladies-expedition-quilted-jacket-navy-hero-front",
     "path": "assets/J750L_LADIES_EXPEDITION_QUILTED_JACKET/webp/model/J750L_LADIES_EXPEDITION_QUILTED_JACKET_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J750M": {
-    "product_slug": "mens-expedition-quilted-jacket-j750m",
+    "product_slug": "mens-expedition-quilted-jacket",
     "image_slug": "j750m-model-j750m-expedition-mens-jacket-black-hero-front",
     "path": "assets/J750M_MEN'S_EXPEDITION_QUILTED_JACKET/webp/model/J750M_EXPEDITION_MENS_JACKET_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "J830L": {
-    "product_slug": "ladies-apex-vest-j830l",
+    "product_slug": "ladies-apex-vest",
     "image_slug": "j830l-model-j830l-ladies-apex-vest-navy-hero-front",
     "path": "assets/J830L_LADIES_APEX_VEST/webp/model/J830L_LADIES_APEX_VEST_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -1428,115 +1428,115 @@
     "selection": "hero-front"
   },
   "JK63": {
-    "product_slug": "mens-sustainable-softshell-corporate-jacket-jk63",
+    "product_slug": "mens-sustainable-softshell-corporate-jacket",
     "image_slug": "jk63-model-jk63-mens-sustainable-softshell-corporate-jacket-black-hero-front",
     "path": "assets/JK63_MEN'S_SUSTAINABLE_SOFTSHELL_CORPORATE_JACKET/webp/model/JK63_MEN'S_SUSTAINABLE_SOFTSHELL_CORPORATE_JACKET_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "JLCV": {
-    "product_slug": "montreal-cool-vent-chef-jacket-jlcv",
+    "product_slug": "montreal-cool-vent-chef-jacket",
     "image_slug": "jlcv-model-jlcv-montreal-cool-vent-chef-jacket-white-hero-front",
     "path": "assets/JLCV_MONTREAL_COOL_VENT_CHEF_JACKET/webp/model/JLCV_MONTREAL_COOL_VENT_CHEF_JACKET_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "KNOWLEDGE-YARN-UNISEX": {
-    "product_slug": "unisex-knowledge-holders-black-bamboo-simpson-polo-shirt-knowledge-yarn-unisex",
+    "product_slug": "unisex-knowledge-holders-black-bamboo-simpson-polo-shirt",
     "image_slug": "knowledge-yarn-unisex-model-knowledge-yarn-unisex-knowledge-holders-black-bamboo-simpson-polo-shirt-hero-front",
     "path": "assets/KNOWLEDGE_YARN_UNISEX_KNOWLEDGE_HOLDERS_BLACK_BAMBOO_(SIMPSON)_POLO_SHIRT/webp/model/KNOWLEDGE_YARN_UNISEX_KNOWLEDGE_HOLDERS_BLACK_BAMBOO_(SIMPSON)_POLO_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "LB3600": {
-    "product_slug": "ladies-plain-oasis-3-4-sleeve-shirt-lb3600",
+    "product_slug": "ladies-plain-oasis-3-4-sleeve-shirt",
     "image_slug": "lb3600-model-lb3600-womens-oasis-3-4-sleeve-shirt-hero-front",
     "path": "assets/LB3600_Womens_Oasis_3_4_Sleeve_Shirt/webp/model/LB3600_Womens_Oasis_3_4_Sleeve_Shirt_Hero_Front.webp",
     "selection": "hero-front"
   },
   "LB3601": {
-    "product_slug": "ladies-plain-oasis-short-sleeve-shirt-lb3601",
+    "product_slug": "ladies-plain-oasis-short-sleeve-shirt",
     "image_slug": "lb3601-model-lb3601-ladies-plain-oasis-short-sleeve-shirt-white-hero-front",
     "path": "assets/LB3601_LADIES_PLAIN_OASIS_SHORT_SLEEVE_SHIRT/webp/model/LB3601_LADIES_PLAIN_OASIS_SHORT_SLEEVE_SHIRT_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "LEGACY-YARN-UNISEX": {
-    "product_slug": "unisex-legacy-polo-shirt-legacy-yarn-unisex",
+    "product_slug": "unisex-legacy-polo-shirt",
     "image_slug": "legacy-yarn-unisex-model-legacy-yarn-unisex-legacy-polo-shirt-hero-front",
     "path": "assets/LEGACY_YARN_UNISEX_LEGACY_POLO_SHIRT/webp/model/LEGACY_YARN_UNISEX_LEGACY_POLO_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "LL0226": {
-    "product_slug": "arc-eco-square-wireless-charger-ll0226",
+    "product_slug": "arc-eco-square-wireless-charger",
     "image_slug": "ll0226-product-ll0226-arc-eco-square-wireless-charger",
     "path": "assets/LL0226_ARC_ECO_SQUARE_WIRELESS_CHARGER/webp/product/LL0226_ARC_ECO_SQUARE_WIRELESS_CHARGER.webp",
     "selection": "first-image-fallback"
   },
   "LL0427": {
-    "product_slug": "vienna-coffee-cup-silicone-lid-ll0427",
+    "product_slug": "vienna-coffee-cup-silicone-lid",
     "image_slug": "ll0427-product-ll0427-vienna-coffe-cup-silicone-lid",
     "path": "assets/LL0427_VIENNA_COFFE_CUP_SILICONE_LID/webp/product/LL0427_VIENNA_COFFE_CUP_SILICONE_LID.webp",
     "selection": "first-image-fallback"
   },
   "LL0461": {
-    "product_slug": "vienna-coffee-cup-snap-lid-cork-band-ll0461",
+    "product_slug": "vienna-coffee-cup-snap-lid-cork-band",
     "image_slug": "ll0461-product-ll0461-vienna-coffe-cup-all-color",
     "path": "assets/LL0461_VIENNA_COFFE_CUP/webp/product/LL0461_VIENNA_COFFE_CUP_ALL_COLOR.webp",
     "selection": "first-image-fallback"
   },
   "LL0944": {
-    "product_slug": "tourist-a5-notebook-ll0944",
+    "product_slug": "tourist-a5-notebook",
     "image_slug": "ll0944-product-ll0944-tourist-a5-notebook",
     "path": "assets/LL0944_TOURIST_A5_NOTEBOOK/webp/product/LL0944_TOURIST_A5_NOTEBOOK.webp",
     "selection": "first-image-fallback"
   },
   "LL9753": {
-    "product_slug": "stone-paper-notebook-ll9753",
+    "product_slug": "stone-paper-notebook",
     "image_slug": "ll9753-product-ll9753-stone-paper-notebook",
     "path": "assets/LL9753_STONE_PAPER_NOTEBOOK/webp/product/LL9753_STONE_PAPER_NOTEBOOK.webp",
     "selection": "first-image-fallback"
   },
   "LL9757": {
-    "product_slug": "amazon-bamboo-notebook-ll9757",
+    "product_slug": "amazon-bamboo-notebook",
     "image_slug": "ll9757-product-ll9757-amazon-bamboo-notebook-brown",
     "path": "assets/LL9757_AMAZONZ-BAMBOO_NOTEBOOK_BROWN/webp/product/LL9757_AMAZON-BAMBOO_NOTEBOOK_BROWN.webp",
     "selection": "first-image-fallback"
   },
   "LV619L": {
-    "product_slug": "ladies-milano-vest-lv619l",
+    "product_slug": "ladies-milano-vest",
     "image_slug": "lv619l-model-lv619l-ladies-milano-vest-navy-hero-front",
     "path": "assets/LV619L_LADIES_MILANO_VEST/webp/model/LV619L_LADIES_MILANO_VEST_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "M7650": {
-    "product_slug": "mens-v-neck-contrast-trim-scrub-top-m7650",
+    "product_slug": "mens-v-neck-contrast-trim-scrub-top",
     "image_slug": "m7650-model-m7650-mens-v-neck-contrast-trim-scrub-top-hero-front",
     "path": "assets/M7650_MEN'S_V_NECK_CONTRAST_TRIM_SCRUB_TOP/webp/model/M7650_MEN'S_V_NECK_CONTRAST_TRIM_SCRUB_TOP_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "M7660": {
-    "product_slug": "ladies-scrub-v-neck-contrast-trim-top-m7660",
+    "product_slug": "ladies-scrub-v-neck-contrast-trim-top",
     "image_slug": "m7660-model-m7660-ladies-scrub-v-neck-contrast-trim-top-hero-front",
     "path": "assets/M7660_LADIES_SCRUB_V-NECK_CONTRAST_TRIM_TOP/webp/model/M7660_LADIES_SCRUB_V-NECK_CONTRAST_TRIM_TOP_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "M9380": {
-    "product_slug": "mens-boston-chino-m9380",
+    "product_slug": "mens-boston-chino",
     "image_slug": "m9380-model-m9380-mens-boston-chino-black-asian-hero-front",
     "path": "assets/M9380_MEN'S_BOSTON_CHINO/webp/model/M9380_MEN'S_BOSTON_CHINO_BLACK_ASIAN_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "M9381": {
-    "product_slug": "mens-stretch-slimfit-boston-chino-shorts-m9381",
+    "product_slug": "mens-stretch-slimfit-boston-chino-shorts",
     "image_slug": "m9381-model-m9381-mens-stretch-slimfit-boston-chino-shorts-navy-hero-front",
     "path": "assets/M9381_MEN'S_STRETCH_SLIMFIT_BOSTON_CHINO_SHORTS/webp/model/M9381_MEN'S_STRETCH_SLIMFIT_BOSTON_CHINO_SHORTS_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "M9390": {
-    "product_slug": "ladies-boston-chino-m9390",
+    "product_slug": "ladies-boston-chino",
     "image_slug": "m9390-model-m9390-ladies-boston-chino-black-hero-front",
     "path": "assets/M9390_LADIES_BOSTON_CHINO/webp/model/M9390_LADIES_BOSTON_CHINO_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "M9391": {
-    "product_slug": "ladies-stretch-slimfit-boston-chino-shorts-m9391",
+    "product_slug": "ladies-stretch-slimfit-boston-chino-shorts",
     "image_slug": "m9391-model-m9391-ladies-stretch-slimfit-boston-chino-shorts-black-hero-front",
     "path": "assets/M9391_LADIES_STRETCH_SLIMFIT_BOSTON_CHINO_SHORTS/webp/model/M9391_LADIES_STRETCH_SLIMFIT_BOSTON_CHINO_SHORTS_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -1548,13 +1548,13 @@
     "selection": "hero-front"
   },
   "MOUNTAINS-YARN-UNISEX": {
-    "product_slug": "unisex-mountains-white-bamboo-simpson-polo-shirt-mountains-yarn-unisex",
+    "product_slug": "unisex-mountains-white-bamboo-simpson-polo-shirt",
     "image_slug": "mountains-yarn-unisex-model-mountains-yarn-unisex-mountains-white-bamboo-simpson-polo-shirt-hero-front",
     "path": "assets/MOUNTAINS_YARN_UNISEX_MOUNTAINS_WHITE_BAMBOO_(SIMPSON)_POLO_SHIRT/webp/model/MOUNTAINS_YARN_UNISEX_MOUNTAINS_WHITE_BAMBOO_(SIMPSON)_POLO_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "P093": {
-    "product_slug": "the-gravity-3-1-metal-pen-p093",
+    "product_slug": "the-gravity-3-1-metal-pen",
     "image_slug": "p093-product-p093-the-gravity-3-1-metal-pen",
     "path": "assets/P093_THE_GRAVITY_3+1_METAL_PEN/webp/product/P093_THE_GRAVITY_3+1_METAL_PEN.webp",
     "selection": "first-image-fallback"
@@ -1572,43 +1572,43 @@
     "selection": "hero-front"
   },
   "P112LS": {
-    "product_slug": "ladies-ice-polo-p112ls",
+    "product_slug": "ladies-ice-polo",
     "image_slug": "p112ls-model-p112ls-ice-womens-short-sleeve-polo-hero-front",
     "path": "assets/P112LS_Ice_Womens_Short_Sleeve_Polo/webp/model/P112LS_Ice_Womens_Short_Sleeve_Polo_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "P112MS": {
-    "product_slug": "mens-ice-polo-p112ms",
+    "product_slug": "mens-ice-polo",
     "image_slug": "p112ms-model-p112ms-mens-ice-polo-black-hero-front",
     "path": "assets/P112MS_MEN'S_ICE_POLO/webp/model/P112MS_MEN'S_ICE_POLO_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "P129": {
-    "product_slug": "tirana-pen-p129",
+    "product_slug": "tirana-pen",
     "image_slug": "p129-product-p129-tirana-pen-allcolour",
     "path": "assets/P129_TIRANA_PEN_ALLCOLOUR/webp/product/P129_TIRANA_PEN_ALLCOLOUR.webp",
     "selection": "first-image-fallback"
   },
   "P131": {
-    "product_slug": "the-heritage-wooden-metal-ball-pen-p131",
+    "product_slug": "the-heritage-wooden-metal-ball-pen",
     "image_slug": "p131-product-p131-the-heritage-wooden-metal-ball-pen-black",
     "path": "assets/P131_THE_HERITAGE_WOODEN + METAL_BALL PEN/webp/product/P131_THE_HERITAGE_WOODEN + METAL_BALL PEN_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "P227LS": {
-    "product_slug": "ladies-cambridge-polo-p227ls",
+    "product_slug": "ladies-cambridge-polo",
     "image_slug": "p227ls-model-p227ls-ladies-cambridge-polo-black-red-white-hero-front",
     "path": "assets/P227LS_LADIES_CAMBRIDGE_POLO/webp/model/P227LS_LADIES_CAMBRIDGE_POLO_BLACK_RED_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "P227MS": {
-    "product_slug": "cambridge-mens-short-sleeve-polo-p227ms",
+    "product_slug": "cambridge-mens-short-sleeve-polo",
     "image_slug": "p227ms-model-garment-catalogue-images-1-cckzti-resizedpng-gjujgpjq",
     "path": "assets/P227MS_CAMBRIDGE_MEN'S_SHORT_SLEEVE_POLO/webp/model/Garment_Catalogue_Images_1-ccKzti_resizedpng_GJujgpJq.webp",
     "selection": "first-image-fallback"
   },
   "P381": {
-    "product_slug": "paper-pen-p381",
+    "product_slug": "paper-pen",
     "image_slug": "p381-product-p381-paper-pen-black",
     "path": "assets/P381_PAPER_PEN/webp/product/P381_PAPER_PEN_BLACK.webp",
     "selection": "first-image-fallback"
@@ -1620,7 +1620,7 @@
     "selection": "hero-front"
   },
   "P400LS": {
-    "product_slug": "ladies-crew-polo-p400ls",
+    "product_slug": "ladies-crew-polo",
     "image_slug": "p400ls-model-p400ls-ladies-crew-polo-white-hero-front",
     "path": "assets/P400LS_LADIES_CREW_POLO/webp/model/P400LS_LADIES_CREW_POLO_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -1632,7 +1632,7 @@
     "selection": "hero-front"
   },
   "P400MS": {
-    "product_slug": "mens-crew-polo-p400ms",
+    "product_slug": "mens-crew-polo",
     "image_slug": "p400ms-model-p400ms-mens-crew-polo-white-hero-front",
     "path": "assets/P400MS_MEN'S_CREW_POLO/webp/model/P400MS_MEN'S_CREW_POLO_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -1650,25 +1650,25 @@
     "selection": "hero-front"
   },
   "P602": {
-    "product_slug": "monarch-re-al-ball-pen-p602",
+    "product_slug": "monarch-re-al-ball-pen",
     "image_slug": "p602-product-p602-monarch-re-al-ball-pen-black",
     "path": "assets/P602_MONARCH_RE-AL_BALL_PEN/webp/product/P602_MONARCH_RE-AL_BALL_PEN_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "P603": {
-    "product_slug": "smartscribe-re-al-nfc-pen-p603",
+    "product_slug": "smartscribe-re-al-nfc-pen",
     "image_slug": "p603-product-p603-smartscribe-re-al-nfc-pen-black",
     "path": "assets/P603_SmartScribe_Re-AL_NFC Pen/webp/product/P603_SmartScribe_Re-AL_NFC Pen_Black.webp",
     "selection": "first-image-fallback"
   },
   "P700LS": {
-    "product_slug": "ladies-renegade-polo-p700ls",
+    "product_slug": "ladies-renegade-polo",
     "image_slug": "p700ls-model-p700ls-renegade-womens-short-sleeve-polo-front-view",
     "path": "assets/P700LS_Renegade_Womens_Short_Sleeve_Polo/webp/model/P700LS_Renegade_Womens_Short_Sleeve_Polo_FRONT_VIEW.webp",
     "selection": "first-image-fallback"
   },
   "P734": {
-    "product_slug": "rabs-mini-ballpoint-pen-p734",
+    "product_slug": "rabs-mini-ballpoint-pen",
     "image_slug": "p734-product-p734-rabs-mini-ballpoint-pen-black",
     "path": "assets/P734_RABS_MINI_BALLPOINT_PEN/webp/product/P734_RABS_MINI_BALLPOINT_PEN_BLACK.webp",
     "selection": "first-image-fallback"
@@ -1680,25 +1680,25 @@
     "selection": "first-image-fallback"
   },
   "P901LS": {
-    "product_slug": "ladies-sonar-polo-p901ls",
+    "product_slug": "ladies-sonar-polo",
     "image_slug": "p901ls-model-p901ls-ladies-sonar-polo-black-white-hero-front",
     "path": "assets/P901LS_LADIES_SONAR_POLO/webp/model/P901LS_LADIES_SONAR_POLO_BLACK_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "P901MS": {
-    "product_slug": "mens-sonar-polo-p901ms",
+    "product_slug": "mens-sonar-polo",
     "image_slug": "p901ms-model-p901ms-mens-sonar-polo-black-white-hero-front",
     "path": "assets/P901MS_MEN'S_SONAR_POLO/webp/model/P901MS_MEN'S_SONAR_POLO_BLACK_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "PF631": {
-    "product_slug": "ladies-plain-micro-fleece-jacket-pf631",
+    "product_slug": "ladies-plain-micro-fleece-jacket",
     "image_slug": "pf631-model-pf631-ladies-plain-micro-fleece-jacket-navy-hero-front",
     "path": "assets/PF631_LADIES_PLAIN_MICRO_FLEECE_JACKET/webp/model/PF631_LADIES_PLAIN_MICRO_FLEECE_JACKET_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "PF905": {
-    "product_slug": "ladies-plain-micro-fleece-vest-pf905",
+    "product_slug": "ladies-plain-micro-fleece-vest",
     "image_slug": "pf905-model-pf905-ladies-plain-micro-fleece-vest-navy-hero-front",
     "path": "assets/PF905_LADIES_PLAIN_MICRO_FLEECE_VEST/webp/model/PF905_LADIES_PLAIN_MICRO_FLEECE_VEST_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -1710,13 +1710,13 @@
     "selection": "hero-front"
   },
   "PS91": {
-    "product_slug": "mens-sustainable-poly-cotton-corporate-ss-polo-ps91",
+    "product_slug": "mens-sustainable-poly-cotton-corporate-ss-polo",
     "image_slug": "ps91-model-ps91-mens-sustainable-polycotton-corporate-ss-polo-white-front-hero-back",
     "path": "assets/PS91_MEN'S_SUSTAINABLE_POLYCOTTON_CORPORATE_SS_POLO/webp/model/PS91_MEN'S_SUSTAINABLE_POLYCOTTON_CORPORATE_SS_POLO_WHITE_FRONT_HERO_BACK.webp",
     "selection": "hero-front"
   },
   "PS92": {
-    "product_slug": "ladies-sustainable-poly-cotton-corporate-ss-polo-ps92",
+    "product_slug": "ladies-sustainable-poly-cotton-corporate-ss-polo",
     "image_slug": "ps92-model-ps92-ladies-sustainable-poly-cotton-corporate-ss-polo-white-hero-front",
     "path": "assets/PS92_LADIES_SUSTAINABLE_POLY_COTTON_CORPORATE_SS_POLO/webp/model/PS92_LADIES_SUSTAINABLE_POLY_COTTON_CORPORATE_SS_POLO_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -1728,127 +1728,127 @@
     "selection": "hero-front"
   },
   "RA268U": {
-    "product_slug": "casual-braided-belt-ra268u",
+    "product_slug": "casual-braided-belt",
     "image_slug": "ra268u-product-ra268u-casual-braided-belt-blackblack",
     "path": "assets/RA268U__CASUAL_BRAIDED_BELT/webp/product/RA268U__CASUAL_BRAIDED_BELT_BLACKBLACK.webp",
     "selection": "first-image-fallback"
   },
   "RA572M": {
-    "product_slug": "mens-leather-belt-ra572m",
+    "product_slug": "mens-leather-belt",
     "image_slug": "ra572m-product-ra572m-mens-leather-belt-2",
     "path": "assets/RA572M_MENS_LEATHER_BELT/webp/product/RA572M_MENS_LEATHER_BELT_2.webp",
     "selection": "first-image-fallback"
   },
   "RA972L": {
-    "product_slug": "womens-belt-ra972l",
+    "product_slug": "womens-belt",
     "image_slug": "ra972l-model-womens-belt-hero-front",
     "path": "assets/RA972L_WOMEN'S_BELT/webp/model/WOMEN'S_BELT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RB1040": {
-    "product_slug": "rara-cooler-bag-rb1040",
+    "product_slug": "rara-cooler-bag",
     "image_slug": "rb1040-product-rb1040-rara-cooler-bag-black",
     "path": "assets/RB1040_RARA_COOLER_BAG/webp/product/RB1040_RARA_COOLER_BAG_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "RB1043": {
-    "product_slug": "willow-natural-tote-rb1043",
+    "product_slug": "willow-natural-tote",
     "image_slug": "rb1043-product-rb1043-willow-natural-tote-brown",
     "path": "assets/RB1043_WILLOW_NATURAL_TOTE_BROWN/webp/product/RB1043_WILLOW_NATURAL_TOTE_BROWN.webp",
     "selection": "first-image-fallback"
   },
   "RB1053": {
-    "product_slug": "the-buddy-drawstring-bag-rb1053",
+    "product_slug": "the-buddy-drawstring-bag",
     "image_slug": "rb1053-product-rb1053-the-buddy-drawstring-bag-allcolour",
     "path": "assets/RB1053_THE_BUDDY_DRAWSTRING_BAG/webp/product/RB1053_THE_BUDDY_DRAWSTRING_BAG_ALLCOLOUR.webp",
     "selection": "first-image-fallback"
   },
   "RB966LS": {
-    "product_slug": "womens-aria-fluted-sleeve-blouse-rb966ls",
+    "product_slug": "womens-aria-fluted-sleeve-blouse",
     "image_slug": "rb966ls-model-studio-portraits-3cftbaapng-scytikqt",
     "path": "assets/RB966LS_WOMEN'S_ARIA_FLUTED_SLEEVE_BLOUSE/webp/model/Studio_Portraits_-3CftBaapng_scyTiKqt.webp",
     "selection": "first-image-fallback"
   },
   "RB967LS": {
-    "product_slug": "womens-kayla-v-neck-pleat-blouse-rb967ls",
+    "product_slug": "womens-kayla-v-neck-pleat-blouse",
     "image_slug": "rb967ls-model-rb967ls-womens-kayla-v-neck-pleat-blouse-navy-hero-front",
     "path": "assets/RB967LS_WOMEN'S_KAYLA_V-NECK_PLEAT_BLOUSE/webp/model/RB967LS_WOMEN'S_KAYLA_V-NECK_PLEAT_BLOUSE_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RB973LN": {
-    "product_slug": "womens-estelle-pleat-blouse-rb973ln",
+    "product_slug": "womens-estelle-pleat-blouse",
     "image_slug": "rb973ln-model-rb973ln-womens-estelle-pleat-blouse-silver-hero-front",
     "path": "assets/RB973LN_WOMEN'S_ESTELLE_PLEAT_BLOUSE/webp/model/RB973LN_WOMEN'S_ESTELLE_PLEAT_BLOUSE_SILVER_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RD409L": {
-    "product_slug": "renew-womens-short-sleeve-dress-rd409l",
+    "product_slug": "renew-womens-short-sleeve-dress",
     "image_slug": "rd409l-model-renew-womens-short-sleeve-dress-navy-dusk-hero-front",
     "path": "assets/RD409L_RENEW_WOMEN'S_SHORT_SLEEVE_DRESS/webp/model/RENEW_WOMEN'S_SHORT_SLEEVE_DRESS_NAVY_DUSK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RGP263L": {
-    "product_slug": "traveller-womens-slim-leg-chino-rgp263l",
+    "product_slug": "traveller-womens-slim-leg-chino",
     "image_slug": "rgp263l-model-rgp263l-traveller-womens-slim-leg-chino-navy-hero-front",
     "path": "assets/RGP263L_TRAVELLER_WOMEN'S_SLIM_LEG_CHINO/webp/model/RGP263L_TRAVELLER_WOMEN'S_SLIM_LEG_CHINO_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RGP263M": {
-    "product_slug": "traveller-mens-tapered-chino-rgp263m",
+    "product_slug": "traveller-mens-tapered-chino",
     "image_slug": "rgp263m-model-rgp263m-traveller-mens-tapered-chino-black-hero-front",
     "path": "assets/RGP263M_TRAVELLER_MEN'S_TAPERED_CHINO/webp/model/RGP263M_TRAVELLER_MEN'S_TAPERED_CHINO_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RGP308L": {
-    "product_slug": "siena-7-8-mid-waist-slim-leg-pant-rgp308l",
+    "product_slug": "siena-7-8-mid-waist-slim-leg-pant",
     "image_slug": "rgp308l-model-rgp308l-siena-7-8-mid-waist-slim-leg-pant-marine-hero-front",
     "path": "assets/RGP308L_SIENA_7_8_MID-WAIST_SLIM_LEG_PANT/webp/model/RGP308L_SIENA_7_8_MID-WAIST_SLIM_LEG_PANT_MARINE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RGP315L": {
-    "product_slug": "cool-stretch-womens-tapered-leg-adjustable-waist-pant-rgp315l",
+    "product_slug": "cool-stretch-womens-tapered-leg-adjustable-waist-pant",
     "image_slug": "rgp315l-model-cool-stretch-womens-tapered-leg-adjustable-waist-pant-navy-hero-front",
     "path": "assets/RGP315L_COOL_STRETCH_WOMEN'S_TAPERED_LEG_ADJUSTABLE_WAIST_PANT/webp/model/COOL_STRETCH_WOMEN'S_TAPERED_LEG_ADJUSTABLE_WAIST_PANT_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RGP404L": {
-    "product_slug": "renew-womens-tapered-adjustable-waist-pant-rgp404l",
+    "product_slug": "renew-womens-tapered-adjustable-waist-pant",
     "image_slug": "rgp404l-model-rgp404l-renew-womens-tapered-adjustable-waist-pant-hero-front",
     "path": "assets/RGP404L_RENEW_WOMEN'S_TAPERED_ADJUSTABLE_WAIST_PANT/webp/model/RGP404L_RENEW_WOMEN'S_TAPERED_ADJUSTABLE_WAIST_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RGP406L": {
-    "product_slug": "renew-womens-7-8-mid-waist-slim-leg-pant-rgp406l",
+    "product_slug": "renew-womens-7-8-mid-waist-slim-leg-pant",
     "image_slug": "rgp406l-model-rgp406l-renew-womens-7-8-mid-waist-slim-leg-pant-hero-front",
     "path": "assets/RGP406L_RENEW_WOMEN'S_7_8_MID_WAIST_SLIM_LEG_PANT/webp/model/RGP406L_RENEW_WOMEN'S_7_8_MID_WAIST_SLIM_LEG_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RGP407M": {
-    "product_slug": "renew-mens-slim-fit-flat-front-pant-rgp407m",
+    "product_slug": "renew-mens-slim-fit-flat-front-pant",
     "image_slug": "rgp407m-model-rgp407m-renew-mens-slim-fit-flat-front-pant-navy-dusk-hero-front",
     "path": "assets/RGP407M_RENEW_MEN'S_SLIM_FIT_FLAT_FRONT_PANT/webp/model/RGP407M_RENEW_MEN'S_SLIM_FIT_FLAT_FRONT_PANT_NAVY_DUSK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RGP408M": {
-    "product_slug": "renew-mens-adjustable-waist-straight-leg-pant-rgp408m",
+    "product_slug": "renew-mens-adjustable-waist-straight-leg-pant",
     "image_slug": "rgp408m-model-rgp408m-renew-mens-adjustable-waist-straight-leg-pant-hero-front",
     "path": "assets/RGP408M_Renew_Mens_Adjustable_Waist_Straight_Leg_Pant/webp/model/RGP408M_Renew_Mens_Adjustable_Waist_Straight_Leg_Pant_Hero_FRONT.webp",
     "selection": "hero-front"
   },
   "RGP975L": {
-    "product_slug": "womens-siena-adjustable-waist-pant-rgp975l",
+    "product_slug": "womens-siena-adjustable-waist-pant",
     "image_slug": "rgp975l-model-rgp975l-womens-siena-adjustable-waist-pant-marine-hero-front",
     "path": "assets/RGP975L_WOMEN'S_SIENA_ADJUSTABLE_WAIST_PANT/webp/model/RGP975L_WOMEN'S_SIENA_ADJUSTABLE_WAIST_PANT_MARINE__HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RGP976M": {
-    "product_slug": "mens-siena-adjustable-waist-pant-rgp976m",
+    "product_slug": "mens-siena-adjustable-waist-pant",
     "image_slug": "rgp976m-model-rgp976m-siena-mens-adjustable-waist-pant-hero-front",
     "path": "assets/RGP976M_Siena_Mens_Adjustable_Waist_Pant/webp/model/RGP976M_Siena_Mens_Adjustable_Waist_Pant_Hero_Front.webp",
     "selection": "hero-front"
   },
   "RGS264L": {
-    "product_slug": "traveller-womens-chino-skirt-rgs264l",
+    "product_slug": "traveller-womens-chino-skirt",
     "image_slug": "rgs264l-model-rgs264l-traveller-womens-chino-skirt-desert-hero-front",
     "path": "assets/RGS264L_TRAVELLER_WOMEN'S_CHINO_SKIRT/webp/model/RGS264L_TRAVELLER_WOMEN'S_CHINO_SKIRT_DESERT_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -1860,43 +1860,43 @@
     "selection": "hero-front"
   },
   "RGS312L": {
-    "product_slug": "cool-stretch-womens-mid-waist-pencil-skirt-rgs312l",
+    "product_slug": "cool-stretch-womens-mid-waist-pencil-skirt",
     "image_slug": "rgs312l-model-rgs312l-cool-stretch-womens-mid-waist-pencil-skirt-navy-hero-front",
     "path": "assets/RGS312L_COOL_STRETCH_WOMEN'S_MID_WAIST_PENCIL_SKIRT/webp/model/RGS312L_COOL_STRETCH_WOMEN'S_MID_WAIST_PENCIL_SKIRT_NAVY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RGS403L": {
-    "product_slug": "renew-womens-functional-pencil-skirt-rgs403l",
+    "product_slug": "renew-womens-functional-pencil-skirt",
     "image_slug": "rgs403l-model-rgs403l-renew-womens-functional-pencil-skirt-navy-dusk-hero-front",
     "path": "assets/RGS403L_RENEW_WOMEN'S_FUNCTIONAL_PENCIL_SKIRT/webp/model/RGS403L_RENEW_WOMEN'S_FUNCTIONAL_PENCIL_SKIRT_NAVY_DUSK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RJ400L": {
-    "product_slug": "renew-womens-double-breasted-longline-jacket-rj400l",
+    "product_slug": "renew-womens-double-breasted-longline-jacket",
     "image_slug": "rj400l-model-rj400l-renew-womens-double-breasted-longline-jacket-hero-front",
     "path": "assets/RJ400L_RENEW_WOMENS_DOUBLE_BREASTED_LONGLINE_JACKET/webp/model/RJ400L_Renew_Womens_Double_Breasted_Longline_Jacket_Hero_Front.webp",
     "selection": "hero-front"
   },
   "RJ401L": {
-    "product_slug": "renew-womens-single-button-mid-length-jacket-rj401l",
+    "product_slug": "renew-womens-single-button-mid-length-jacket",
     "image_slug": "rj401l-model-rj401l-renew-womens-single-button-mid-length-jacket-black-african-hero-front",
     "path": "assets/RJ401L_RENEW_WOMEN'S_SINGLE_BUTTON_MID_LENGTH_JACKET/webp/model/RJ401L_RENEW_WOMEN'S_SINGLE_BUTTON_MID_LENGTH_JACKET_BLACK_AFRICAN_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RJ401M": {
-    "product_slug": "renew-mens-city-fit-jacket-rj401m",
+    "product_slug": "renew-mens-city-fit-jacket",
     "image_slug": "rj401m-model-rj401m-renew-mens-city-fit-jacket-navy-dusk-hero-front",
     "path": "assets/RJ401M_RENEW_MEN'S_CITY_FIT_JACKET/webp/model/RJ401M_RENEW_MENS_CITY_FIT_JACKET_NAVY_DUSK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ROLLIE-CLUB": {
-    "product_slug": "mens-courtclub-rollie-club",
+    "product_slug": "mens-courtclub",
     "image_slug": "rollie-club-product-rollie-club-mens-courtclub-black",
     "path": "assets/ROLLIE-CLUB_MENS_COURTCLUB_BLACK/webp/product/ROLLIE-CLUB_MENS_COURTCLUB_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "ROLLIE-DERBY": {
-    "product_slug": "mens-derby-rollie-derby",
+    "product_slug": "mens-derby",
     "image_slug": "rollie-derby-product-rollie-derby-mens-derby-black",
     "path": "assets/ROLLIE-DERBY_MENS_DERBY/webp/product/ROLLIE-DERBY_MENS_DERBY_BLACK.webp",
     "selection": "first-image-fallback"
@@ -1914,91 +1914,91 @@
     "selection": "hero-front"
   },
   "RS968LT": {
-    "product_slug": "womens-charlie-3-4-shirt-rs968lt",
+    "product_slug": "womens-charlie-3-4-shirt",
     "image_slug": "rs968lt-model-rs968lt-womens-charlie-3-4-sleeve-shirt-hero-front",
     "path": "assets/RS968LT_Womens_Charlie_3-4_Sleeve_Shirt/webp/model/RS968LT_Womens_Charlie_3-4_Sleeve_Shirt_Hero_Front.webp",
     "selection": "hero-front"
   },
   "RT065LS": {
-    "product_slug": "sydney-t-top-rt065ls",
+    "product_slug": "sydney-t-top",
     "image_slug": "rt065ls-model-rt065ls-sydney-t-top-black-hero-front",
     "path": "assets/RT065LS_SYDNEY_T_TOP/webp/model/RT065LS_SYDNEY_T_TOP_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RT262LS": {
-    "product_slug": "marli-stretch-tunic-t-top-rt262ls",
+    "product_slug": "marli-stretch-tunic-t-top",
     "image_slug": "rt262ls-model-rt262ls-marli-stretch-tunic-t-top-hero-front",
     "path": "assets/RT262LS_MARLI_STRETCH_TUNIC_T_TOP/webp/model/RT262LS_MARLI_STRETCH_TUNIC_T_TOP_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RU568LL": {
-    "product_slug": "womens-ruche-long-sleeve-blouse-ru568ll",
+    "product_slug": "womens-ruche-long-sleeve-blouse",
     "image_slug": "ru568ll-model-ru568ll-womens-ruche-long-sleeve-blouse-powder-blue-hero-front",
     "path": "assets/RU568LL_WOMEN'S_RUCHE_LONG_SLEEVE_BLOUSE/webp/model/RU568LL_WOMEN'S_RUCHE_LONG_SLEEVE_BLOUSE_POWDER_BLUE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RU568LS": {
-    "product_slug": "womens-ruche-short-sleeve-blouse-ru568ls",
+    "product_slug": "womens-ruche-short-sleeve-blouse",
     "image_slug": "ru568ls-model-ru568ls-womens-ruche-short-sleeve-blouse-powder-blue-asian-hero-front",
     "path": "assets/RU568LS_WOMEN'S_RUCHE_SHORT_SLEEVE_BLOUSE/webp/model/RU568LS_WOMEN'S_RUCHE_SHORT_SLEEVE_BLOUSE_POWDER_BLUE_ASIAN_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RU569LL": {
-    "product_slug": "womens-evelyn-long-sleeve-blouse-ru569ll",
+    "product_slug": "womens-evelyn-long-sleeve-blouse",
     "image_slug": "ru569ll-model-ru569ll-womens-evelyn-long-sleeve-blouse-ivory-hero-front",
     "path": "assets/RU569LL_WOMEN'S_EVELYN_LONG_SLEEVE_BLOUSE/webp/model/RU569LL_WOMEN'S_EVELYN_LONG_SLEEVE_BLOUSE_IVORY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RU569LS": {
-    "product_slug": "womens-evelyn-short-sleeve-blouse-ru569ls",
+    "product_slug": "womens-evelyn-short-sleeve-blouse",
     "image_slug": "ru569ls-model-ru569ls-womens-evelyn-short-sleeve-blouse-ivory-hero-front",
     "path": "assets/RU569LS_WOMEN'S_EVELYN_SHORT_SLEEVE_BLOUSE/webp/model/RU569LS_WOMEN'S_EVELYN_SHORT_SLEEVE_BLOUSE_IVORY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "RU570LL": {
-    "product_slug": "womens-evelyn-long-sleeve-shirt-ru570ll",
+    "product_slug": "womens-evelyn-long-sleeve-shirt",
     "image_slug": "ru570ll-model-ru570ll-womens-evelyn-long-sleeve-shirthero-back",
     "path": "assets/RU570LL_WOMENS_EVELYN_LONG_SLEEVE_SHIRT/webp/model/_RU570LL_WOMENS_EVELYN_LONG_SLEEVE_SHIRTHERO_BACK.webp",
     "selection": "first-image-fallback"
   },
   "S127LL": {
-    "product_slug": "ladies-memphis-shirt-s127ll",
+    "product_slug": "ladies-memphis-shirt",
     "image_slug": "s127ll-model-s127ll-ladies-memphis-shirt-white-hero-front",
     "path": "assets/S127LL_LADIES_MEMPHIS_SHIRT/webp/model/S127LL_LADIES_MEMPHIS_SHIRT_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "S127ML": {
-    "product_slug": "mens-memphis-shirt-s127ml",
+    "product_slug": "mens-memphis-shirt",
     "image_slug": "s127ml-model-s127ml-mens-memphis-shirt-white-hero-front",
     "path": "assets/S127ML_MEN'S_MEMPHIS_SHIRT/webp/model/S127ML_MEN'S_MEMPHIS_SHIRT_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "S3101": {
-    "product_slug": "vidro-750ml-bottle-s3101",
+    "product_slug": "vidro-750ml-bottle",
     "image_slug": "s3101-product-s3101-vidr0-750ml-bottle",
     "path": "assets/S3101_VIDR0_750ml_BOTTLE/webp/product/S3101_VIDR0_750ml_BOTTLE.webp",
     "selection": "first-image-fallback"
   },
   "S400": {
-    "product_slug": "oakleigh-coffee-cup-354ml-s400",
+    "product_slug": "oakleigh-coffee-cup-354ml",
     "image_slug": "s400-product-s400-oakleigh-coffee-cup-354ml-black",
     "path": "assets/S400_OAKLEIGH_COFFEE_CUP_354ML/webp/product/S400_OAKLEIGH_COFFEE_CUP_354ML_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "S421LL": {
-    "product_slug": "womens-soul-long-sleeve-shirt-s421ll",
+    "product_slug": "womens-soul-long-sleeve-shirt",
     "image_slug": "s421ll-model-s421ll-soul-womens-long-sleeve-shirt-hero-front",
     "path": "assets/S421LL_WOMEN'S_SOUL_LONG_SLEEVE_SHIRT/webp/model/S421LL_Soul_Womens_Long_Sleeve_Shirt_HERO_Front.webp",
     "selection": "hero-front"
   },
   "S421ML": {
-    "product_slug": "mens-soul-long-sleeve-shirt-s421ml",
+    "product_slug": "mens-soul-long-sleeve-shirt",
     "image_slug": "s421ml-model-s421ml-mens-soul-ls-shirt-hero-front",
     "path": "assets/S421ML_Mens_Soul_Long_Sleeve_Shirt/webp/model/S421ML_Mens_Soul_LS_Shirt_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "S626LL": {
-    "product_slug": "ladies-madison-long-sleeve-blouse-s626ll",
+    "product_slug": "ladies-madison-long-sleeve-blouse",
     "image_slug": "s626ll-model-s626ll-ladies-madison-long-sleeve-blouse-ivory-hero-front",
     "path": "assets/S626LL_Ladies_Madison_Long_Sleeve_Blouse/webp/model/S626LL_LADIES_MADISON_LONG_SLEEVE_BLOUSE_IVORY_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -2016,73 +2016,73 @@
     "selection": "hero-front"
   },
   "S777": {
-    "product_slug": "byron-1l-drink-bottle-s777",
+    "product_slug": "byron-1l-drink-bottle",
     "image_slug": "s777-model-s777-byron-1l-drink-bottle-navy",
     "path": "assets/S777_BYRON_1L_DRINK_BOTTLE/webp/model/S777_BYRON_1L_DRINK_BOTTLE_NAVY.webp",
     "selection": "first-image-fallback"
   },
   "S828LL": {
-    "product_slug": "ladies-madison-boatneck-blouse-s828ll",
+    "product_slug": "ladies-madison-boatneck-blouse",
     "image_slug": "s828ll-model-s828ll-ladies-madison-boatneck-blouse-ivory-hero-front",
     "path": "assets/S828LL_LADIES_MADISON_BOATNECK_BLOUSE/webp/model/S828LL_LADIES_MADISON_BOATNECK_BLOUSE_IVORY_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "S895": {
-    "product_slug": "sunrise-smoothie-500ml-tumbler-s895",
+    "product_slug": "sunrise-smoothie-500ml-tumbler",
     "image_slug": "s895-product-s895-sunrise-smooties-500ml-tumbler-black",
     "path": "assets/S895_SUNRISE_SMOOTIES_500ML_TUMBLER/webp/product/S895_SUNRISE_SMOOTIES_500ML_TUMBLER_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "S901": {
-    "product_slug": "allegra-750ml-bottle-s901",
+    "product_slug": "allegra-750ml-bottle",
     "image_slug": "s901-product-s901-allegra-750ml-bottle-black",
     "path": "assets/S901_ALLEGRA_750ML_BOTTLE/webp/product/S901_ALLEGRA_750ML_BOTTLE_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "S909": {
-    "product_slug": "summit-750ml-drink-bottle-s909",
+    "product_slug": "summit-750ml-drink-bottle",
     "image_slug": "s909-product-s909-summit-750ml-drink-bottle-black",
     "path": "assets/S909_SUMMIT_750ML_DRINK_BOTTLE/webp/product/S909_SUMMIT_750ML_DRINK_BOTTLE_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "S990": {
-    "product_slug": "arlo-1l-glass-water-bottle-s990",
+    "product_slug": "arlo-1l-glass-water-bottle",
     "image_slug": "s990-product-s990-arlo-1l-glass-water-bottle-black",
     "path": "assets/S990_ARLO_1L_GLASS_WATER_BOTTLE/webp/product/S990_ARLO_1L_GLASS_WATER_BOTTLE_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "SC00129": {
-    "product_slug": "womens-derby-city-sc00129",
+    "product_slug": "womens-derby-city",
     "image_slug": "sc00129-product-sc00129-womens-derby-city-black",
     "path": "assets/SC00129_WOMENS_DERBY_CITY_BLACK/webp/product/SC00129_WOMENS_DERBY_CITY_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "SC01535": {
-    "product_slug": "womens-court-club-sc01535",
+    "product_slug": "womens-court-club",
     "image_slug": "sc01535-product-sc01535-womens-court-club-black",
     "path": "assets/SC01535_WOMENS_COURT_CLUB/webp/product/SC01535_WOMENS_COURT_CLUB_BLACK.webp",
     "selection": "first-image-fallback"
   },
   "SH3603": {
-    "product_slug": "mens-plain-oasis-short-sleeve-shirt-sh3603",
+    "product_slug": "mens-plain-oasis-short-sleeve-shirt",
     "image_slug": "sh3603-model-sh3603-mensplainoasiss-sshirt-hero-front",
     "path": "assets/SH3603_Mens_Plain_Oasis_Short_Sleeve_Shirt/webp/model/SH3603_MensPlainOasisS:SShirt_Hero_Front.webp",
     "selection": "hero-front"
   },
   "SW19A": {
-    "product_slug": "hi-vis-reversible-safety-vest-with-3m-tapes-sw19a",
+    "product_slug": "hi-vis-reversible-safety-vest-with-3m-tapes",
     "image_slug": "sw19a-model-sw19a-hi-vis-reversible-safety-vest-with-3m-tapes-hero-front",
     "path": "assets/SW19A_HI_VIS_REVERSIBLE_SAFETY_VEST_WITH_3M_TAPES/webp/model/SW19A_HI_VIS_REVERSIBLE_SAFETY_VEST_WITH_3M_TAPES_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "T10012": {
-    "product_slug": "mens-ice-tee-t10012",
+    "product_slug": "mens-ice-tee",
     "image_slug": "t10012-model-t10012-mens-ice-tee-white-hero-front",
     "path": "assets/T10012_MEN'S_ICE_TEE/webp/model/T10012_MEN'S_ICE_TEE_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "T10022": {
-    "product_slug": "ladies-ice-tee-t10022",
+    "product_slug": "ladies-ice-tee",
     "image_slug": "t10022-model-t10022-ladies-ice-tee-white-hero-front",
     "path": "assets/T10022_LADIES_ICE_TEE/webp/model/T10022_LADIES_ICE_TEE_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -2094,13 +2094,13 @@
     "selection": "hero-front"
   },
   "T207MS": {
-    "product_slug": "mens-action-short-sleeve-tee-t207ms",
+    "product_slug": "mens-action-short-sleeve-tee",
     "image_slug": "t207ms-model-t207ms-mens-action-short-sleeve-tee-black-hero-front",
     "path": "assets/T207MS_MEN'S_ACTION_SHORT_SLEEVE_TEE/webp/model/T207MS_MEN'S_ACTION_SHORT_SLEEVE_TEE_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "TL1001": {
-    "product_slug": "thule-achiever-16-laptop-backpack-tl1001",
+    "product_slug": "thule-achiever-16-laptop-backpack",
     "image_slug": "tl1001-product-tl1001-thule-achiever-16-laptop-backpack",
     "path": "assets/TL1001_THULE_ACHIEVER_16_LAPTOP_BACKPACK/webp/product/TL1001_THULE_ACHIEVER_16_LAPTOP_BACKPACK.webp",
     "selection": "first-image-fallback"
@@ -2118,43 +2118,43 @@
     "selection": "hero-front"
   },
   "TW1822": {
-    "product_slug": "mens-signature-polo-tw1822",
+    "product_slug": "mens-signature-polo",
     "image_slug": "tw1822-model-tw1822-mens-signature-polo-black-hero-front",
     "path": "assets/TW1822_MEN'S_SIGNATURE_POLO/webp/model/TW1822_MEN'S_SIGNATURE_POLO_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "TW1823": {
-    "product_slug": "womens-signature-polo-tw1823",
+    "product_slug": "womens-signature-polo",
     "image_slug": "tw1823-model-tw1823-womens-signature-polo-black-hero-front",
     "path": "assets/TW1823_WOMEN'S_SIGNATURE_POLO/webp/model/TW1823_WOMEN'S_SIGNATURE_POLO_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "TW1824": {
-    "product_slug": "mens-signature-long-sleeve-polo-tw1824",
+    "product_slug": "mens-signature-long-sleeve-polo",
     "image_slug": "tw1824-model-tw1824-mens-signature-long-sleeve-polo-black-hero-front",
     "path": "assets/TW1824_MEN'S_SIGNATURE_LONG_SLEEVE_POLO/webp/model/TW1824_MEN'S_SIGNATURE_LONG_SLEEVE_POLO_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "TW1825": {
-    "product_slug": "womens-signature-long-sleeve-polo-tw1825",
+    "product_slug": "womens-signature-long-sleeve-polo",
     "image_slug": "tw1825-model-e-commerce-catalogue-in-a-minimalist-photographic-style-the-back-view-olwy-ca",
     "path": "assets/TW1825_WOMEN'S_SIGNATURE_LONG_SLEEVE_POLO/webp/model/E-commerce_Catalogue_In_a_minimalist_photographic_style_the_back_view_OlWY_-cA.webp",
     "selection": "first-image-fallback"
   },
   "TW1826": {
-    "product_slug": "womens-crew-pullover-tw1826",
+    "product_slug": "womens-crew-pullover",
     "image_slug": "tw1826-model-tw1826-womens-crew-pullover-front",
     "path": "assets/TW1826_WOMENS_CREW_PULLOVER/webp/model/TW1826_WOMENS_CREW_PULLOVER_FRONT.webp",
     "selection": "first-image-fallback"
   },
   "TW1827": {
-    "product_slug": "mens-crew-pullover-tw1827",
+    "product_slug": "mens-crew-pullover",
     "image_slug": "tw1827-model-tw1827-mens-crew-pullover-hero-front",
     "path": "assets/TW1827_MEN'S_CREW_PULLOVER/webp/model/TW1827_MEN'S_CREW_PULLOVER_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "TW1828": {
-    "product_slug": "mens-1-4-zip-pullover-tw1828",
+    "product_slug": "mens-1-4-zip-pullover",
     "image_slug": "tw1828-model-tw1828-mens-1-4-zip-pullover-black-hero-front",
     "path": "assets/TW1828_MEN'S_1-4_ZIP_PULLOVER/webp/model/TW1828_MEN'S_1_4_ZIP_PULLOVER_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -2172,37 +2172,37 @@
     "selection": "hero-front"
   },
   "TW1919": {
-    "product_slug": "signature-hoodie-tw1919",
+    "product_slug": "signature-hoodie",
     "image_slug": "tw1919-model-tw1919-signature-hoodie-black-hero-front",
     "path": "assets/TW1919_SIGNATURE_HOODIE/webp/model/TW1919_SIGNATURE_HOODIE_BLACK_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "W44": {
-    "product_slug": "mens-miller-long-sleeve-shirt-w44",
+    "product_slug": "mens-miller-long-sleeve-shirt",
     "image_slug": "w44-model-w44-mens-miller-long-sleeve-shirt-black-white-hero-front",
     "path": "assets/W44_MEN’S_MILLER_LONG_SLEEVE_SHIRT/webp/model/W44_MEN’S_MILLER_LONG_SLEEVE_SHIRT_BLACK_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "W45": {
-    "product_slug": "ladies-miller-long-sleeve-shirt-w45",
+    "product_slug": "ladies-miller-long-sleeve-shirt",
     "image_slug": "w45-model-w45-ladies-miller-long-sleeve-shirt-blackwhite-hero-front",
     "path": "assets/W45_LADIES_MILLER_LONG_SLEEVE_SHIRT/webp/model/W45_LADIES_MILLER_LONG_SLEEVE_SHIRT_BLACKWHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "W46": {
-    "product_slug": "mens-miller-short-sleeve-shirt-w46",
+    "product_slug": "mens-miller-short-sleeve-shirt",
     "image_slug": "w46-model-w46-mens-miller-short-sleeve-shirt-black-white-hero-front",
     "path": "assets/W46_MEN’S_MILLER_SHORT_SLEEVE_SHIRT/webp/model/W46_MEN’S_MILLER_SHORT_SLEEVE_SHIRT_BLACK_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "W47": {
-    "product_slug": "ladies-miller-short-sleeve-shirt-w47",
+    "product_slug": "ladies-miller-short-sleeve-shirt",
     "image_slug": "w47-model-w47-ladies-miller-short-sleeve-shirt-black-white-hero-front",
     "path": "assets/W47_LADIES_MILLER_SHORT_SLEEVE_SHIRT/webp/model/W47_LADIES_MILLER_SHORT_SLEEVE_SHIRT_BLACK_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "W47Q": {
-    "product_slug": "ladies-miller-3-4-sleeve-shirt-w47q",
+    "product_slug": "ladies-miller-3-4-sleeve-shirt",
     "image_slug": "w47q-model-w47q-ladiesmiller34shirt-hero-front",
     "path": "assets/W47Q_LADIES MILLER 3:4 SLEEVE SHIRT/webp/model/W47Q_LadiesMiller34Shirt_Hero_Front.webp",
     "selection": "hero-front"
@@ -2250,43 +2250,43 @@
     "selection": "hero-front"
   },
   "WP417M": {
-    "product_slug": "mens-milano-pullover-wp417m",
+    "product_slug": "mens-milano-pullover",
     "image_slug": "wp417m-model-wp417m-mens-milano-pullover-charcoal-hero-front",
     "path": "assets/WP417M_MEN'S_MILANO_PULLOVER/webp/model/WP417M_MEN'S_MILANO_PULLOVER_CHARCOAL_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "X1001M": {
-    "product_slug": "basis-short-sleeve-tee-mens-x1001m",
+    "product_slug": "basis-short-sleeve-tee-mens",
     "image_slug": "x1001m-model-x1001m-basis-short-sleeve-tee-mens-white-hero-front",
     "path": "assets/X1001M_BASIS_SHORT_SLEEVE_TEE_MENS/webp/model/X1001M_BASIS_SHORT_SLEEVE_TEE_MENS_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "X1001W": {
-    "product_slug": "womens-basis-short-sleeve-tee-x1001w",
+    "product_slug": "womens-basis-short-sleeve-tee",
     "image_slug": "x1001w-model-x1001w-womens-basis-short-sleeve-tee-white-hero-front",
     "path": "assets/X1001W_WOMEN'S_BASIS_SHORT_SLEEVE_TEE/webp/model/X1001W_WOMEN'S_BASIS_SHORT_SLEEVE_TEE_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "X1002M": {
-    "product_slug": "black-mens-basis-long-sleeve-tee-x1002m",
+    "product_slug": "black-mens-basis-long-sleeve-tee",
     "image_slug": "x1002m-model-x1002m-mens-basis-long-sleeve-tee-white-hero-front",
     "path": "assets/X1002M_MEN'S_BASIS_LONG_SLEEVE_TEE/webp/model/X1002M_MEN'S_BASIS_LONG_SLEEVE_TEE_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "X1002W": {
-    "product_slug": "womens-basis-long-sleeve-tee-x1002w",
+    "product_slug": "womens-basis-long-sleeve-tee",
     "image_slug": "x1002w-model-x1002w-womens-basis-long-sleeve-tee-white-hero-front",
     "path": "assets/X1002W_WOMEN'S_BASIS_LONG_SLEEVE_TEE/webp/model/X1002W_WOMEN'S_BASIS_LONG_SLEEVE_TEE_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "X2001M": {
-    "product_slug": "everyday-short-sleeve-tee-mens-x2001m",
+    "product_slug": "everyday-short-sleeve-tee-mens",
     "image_slug": "x2001m-model-x2001m-everyday-short-sleeve-tee-mens-white-hero-front",
     "path": "assets/X2001M_EVERYDAY_SHORT_SLEEVE_TEE_MENS/webp/model/X2001M_EVERYDAY_SHORT_SLEEVE_TEE_MENS_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "X2001W": {
-    "product_slug": "womens-everyday-short-sleeve-tee-x2001w",
+    "product_slug": "womens-everyday-short-sleeve-tee",
     "image_slug": "x2001w-model-x2001w-womens-everyday-short-sleeve-tee-white-hero-front",
     "path": "assets/X2001W_WOMEN'S_EVERYDAY_SHORT_SLEEVE_TEE/webp/model/X2001W_WOMEN'S_EVERYDAY_SHORT_SLEEVE_TEE_WHITE_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -2298,151 +2298,151 @@
     "selection": "hero-front"
   },
   "ZJ355": {
-    "product_slug": "mens-hi-vis-waterproof-lightweight-jacket-zj355",
+    "product_slug": "mens-hi-vis-waterproof-lightweight-jacket",
     "image_slug": "zj355-model-zj355-mens-hi-vis-waterproof-lightweight-jacket-hero-front",
     "path": "assets/ZJ355_MEN'S_HI_VIS_WATERPROOF_LIGHTWEIGHT_JACKET/webp/model/ZJ355_MEN'S_HI_VIS_WATERPROOF_LIGHTWEIGHT_JACKET_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZMBEAN": {
-    "product_slug": "unisex-streetworx-beanie-zmbean",
+    "product_slug": "unisex-streetworx-beanie",
     "image_slug": "zmbean-model-zmbean-unisex-streetworx-beanie-hero-front",
     "path": "assets/ZMBEAN_UNISEX_STREETWORX_BEANIE/webp/model/ZMBEAN_UNISEX_STREETWORX_BEANIE_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP230": {
-    "product_slug": "mens-essential-basic-stretch-cargo-pant-zp230",
+    "product_slug": "mens-essential-basic-stretch-cargo-pant",
     "image_slug": "zp230-model-zp230-mens-essential-basic-stretch-cargo-pant-hero-front",
     "path": "assets/ZP230_MEN'S_ESSENTIAL_BASIC_STRETCH_CARGO_PANT/webp/model/ZP230_MEN'S_ESSENTIAL_BASIC_STRETCH_CARGO_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP320": {
-    "product_slug": "mens-streetworx-stretch-pant-non-cuffed-zp320",
+    "product_slug": "mens-streetworx-stretch-pant-non-cuffed",
     "image_slug": "zp320-model-zp320-mens-streetworx-stretch-pant-non-cuffed-hero-front",
     "path": "assets/ZP320_MEN'S_STREETWORX_STRETCH_PANT_NON_CUFFED/webp/model/ZP320_MEN'S_STREETWORX_STRETCH_PANT_NON_CUFFED_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP501": {
-    "product_slug": "mens-basic-cargo-pant-regular-zp501",
+    "product_slug": "mens-basic-cargo-pant-regular",
     "image_slug": "zp501-model-zp501-mens-basic-cargo-pant-regular-hero-front",
     "path": "assets/ZP501_MEN'S_BASIC_CARGO_PANT_(REGULAR)/webp/model/ZP501_MEN'S_BASIC_CARGO_PANT_(REGULAR)_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP504": {
-    "product_slug": "mens-rugged-cooling-cargo-pant-regular-zp504",
+    "product_slug": "mens-rugged-cooling-cargo-pant-regular",
     "image_slug": "zp504-model-zp504-mens-rugged-cooling-cargo-pant-regular-hero-front",
     "path": "assets/ZP504_MEN'S_RUGGED_COOLING_CARGO_PANT_(REGULAR)/webp/model/ZP504_MEN'S_RUGGED_COOLING_CARGO_PANT_(REGULAR)_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP505": {
-    "product_slug": "mens-lightweight-drill-cargo-pant-zp505",
+    "product_slug": "mens-lightweight-drill-cargo-pant",
     "image_slug": "zp505-model-zp505-mens-lightweight-drill-cargo-pant-hero-front",
     "path": "assets/ZP505_MEN'S_LIGHTWEIGHT_DRILL_CARGO_PANT/webp/model/ZP505_MEN'S_LIGHTWEIGHT_DRILL_CARGO_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP604": {
-    "product_slug": "mens-rugged-cooling-stretch-pant-zp604",
+    "product_slug": "mens-rugged-cooling-stretch-pant",
     "image_slug": "zp604-model-zp604-mens-rugged-cooling-stretch-pant-hero-front",
     "path": "assets/ZP604_MEN'S_RUGGED_COOLING_STRETCH_PANT/webp/model/ZP604_MEN'S_RUGGED_COOLING_STRETCH_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP730": {
-    "product_slug": "womens-essential-basic-stretch-cargo-pant-zp730",
+    "product_slug": "womens-essential-basic-stretch-cargo-pant",
     "image_slug": "zp730-model-zp730-womens-essential-basic-stretch-cargo-pant-hero-front",
     "path": "assets/ZP730_WOMEN'S_ESSENTIAL_BASIC_STRETCH_CARGO_PANT/webp/model/ZP730_WOMEN'S_ESSENTIAL_BASIC_STRETCH_CARGO_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP733": {
-    "product_slug": "womens-essential-stretch-taped-cargo-pant-zp733",
+    "product_slug": "womens-essential-stretch-taped-cargo-pant",
     "image_slug": "zp733-model-zp733-womens-essential-stretch-taped-cargo-pant-hero-front",
     "path": "assets/ZP733_WOMEN'S_ESSENTIAL_STRETCH_TAPED_CARGO_PANT/webp/model/ZP733_WOMEN'S_ESSENTIAL_STRETCH_TAPED_CARGO_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP735": {
-    "product_slug": "womens-essential-stretch-taped-cargo-pant-cuffed-zp735",
+    "product_slug": "womens-essential-stretch-taped-cargo-pant-cuffed",
     "image_slug": "zp735-model-zp735-womens-essential-stretch-taped-cargo-pant-cuffed-hero-front",
     "path": "assets/ZP735_WOMEN'S_ESSENTIAL_STRETCH_TAPED_CARGO_PANT_CUFFED/webp/model/ZP735_WOMEN'S_ESSENTIAL_STRETCH_TAPED_CARGO_PANT_CUFFED_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP750": {
-    "product_slug": "womens-streetworx-tough-pant-zp750",
+    "product_slug": "womens-streetworx-tough-pant",
     "image_slug": "zp750-model-zp750-womens-streetworx-tough-pant-hero-front",
     "path": "assets/ZP750_WOMEN'S_STREETWORX_TOUGH_PANT/webp/model/ZP750_WOMEN'S_STREETWORX_TOUGH_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP820": {
-    "product_slug": "mens-streetworx-heritage-pant-zp820",
+    "product_slug": "mens-streetworx-heritage-pant",
     "image_slug": "zp820-model-zp820-mens-streetworx-heritage-pant-hero-front",
     "path": "assets/ZP820_MEN'S_STREETWORX_HERITAGE_PANT/webp/model/ZP820_MEN'S_STREETWORX_HERITAGE_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP923": {
-    "product_slug": "mens-essential-stretch-taped-cargo-pant-zp923",
+    "product_slug": "mens-essential-stretch-taped-cargo-pant",
     "image_slug": "zp923-model-zp923-mens-essential-stretch-taped-cargo-pant-hero-front",
     "path": "assets/ZP923_MEN'S_ESSENTIAL_STRETCH_TAPED_CARGO_PANT/webp/model/ZP923_MEN'S_ESSENTIAL_STRETCH_TAPED_CARGO_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP924": {
-    "product_slug": "mens-rugged-cooling-stretch-segmented-taped-pant-zp924",
+    "product_slug": "mens-rugged-cooling-stretch-segmented-taped-pant",
     "image_slug": "zp924-model-zp924-mens-rugged-cooling-stretch-segmented-taped-pant-hero-front",
     "path": "assets/ZP924_MEN'S_RUGGED_COOLING_STRETCH_SEGMENTED_TAPED_PANT/webp/model/ZP924_MEN'S_RUGGED_COOLING_STRETCH_SEGMENTED_TAPED_PANT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZP935": {
-    "product_slug": "mens-essential-stretch-taped-cargo-pant-cuffed-zp935",
+    "product_slug": "mens-essential-stretch-taped-cargo-pant-cuffed",
     "image_slug": "zp935-model-zp935-mens-essential-stretch-taped-cargo-pant-cuffed-hero-front",
     "path": "assets/ZP935_MEN'S_ESSENTIAL_STRETCH_TAPED_CARGO_PANT_CUFFED/webp/model/ZP935_MEN'S_ESSENTIAL_STRETCH_TAPED_CARGO_PANT_CUFFED_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZS146": {
-    "product_slug": "mens-summer-cargo-short-zs146",
+    "product_slug": "mens-summer-cargo-short",
     "image_slug": "zs146-model-zs146-mens-summer-cargo-short-hero-front",
     "path": "assets/ZS146_MEN'S_SUMMER_CARGO_SHORT/webp/model/ZS146_MEN'S_SUMMER_CARGO_SHORT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZS502": {
-    "product_slug": "mens-basic-cargo-short-zs502",
+    "product_slug": "mens-basic-cargo-short",
     "image_slug": "zs502-model-zs502-mens-basic-cargo-short-hero-front",
     "path": "assets/ZS502_MEN'S_BASIC_CARGO_SHORT/webp/model/ZS502_MEN'S_BASIC_CARGO_SHORT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZS822": {
-    "product_slug": "mens-streetworx-heritage-short-zs822",
+    "product_slug": "mens-streetworx-heritage-short",
     "image_slug": "zs822-model-zs822-mens-streetworx-heritage-short-hero-front",
     "path": "assets/ZS822_MEN'S_STREETWORX_HERITAGE_SHORT/webp/model/ZS822_MEN'S_STREETWORX_HERITAGE_SHORT_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZT460": {
-    "product_slug": "hi-vis-half-zip-polar-fleece-jumper-zt460",
+    "product_slug": "hi-vis-half-zip-polar-fleece-jumper",
     "image_slug": "zt460-model-zt460-hi-vis-half-zip-polar-fleece-jumper-hero-front",
     "path": "assets/ZT460_HI_VIS_HALF_ZIP_POLAR_FLEECE_JUMPER/webp/model/ZT460_HI_VIS_HALF_ZIP_POLAR_FLEECE_JUMPER_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZT461": {
-    "product_slug": "hi-vis-polar-fleece-jumper-hoop-taped-zt461",
+    "product_slug": "hi-vis-polar-fleece-jumper-hoop-taped",
     "image_slug": "zt461-model-zt461-hi-vis-polar-fleece-jumper-hoop-taped-hero-front",
     "path": "assets/ZT461_HI_VIS_POLAR_FLEECE_JUMPER_HOOP_TAPED/webp/model/ZT461_HI_VIS_POLAR_FLEECE_JUMPER_HOOP_TAPED_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZV245": {
-    "product_slug": "unisex-streetworx-hooded-puffer-vest-zv245",
+    "product_slug": "unisex-streetworx-hooded-puffer-vest",
     "image_slug": "zv245-model-zv245-unisex-streetworx-hooded-puffer-vest-hero-front",
     "path": "assets/ZV245_UNISEX_STREETWORX_HOODED_PUFFER_VEST/webp/model/ZV245_UNISEX_STREETWORX_HOODED_PUFFER_VEST_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZW001S": {
-    "product_slug": "mens-midweight-drill-cargo-pant-stout-zw001s",
+    "product_slug": "mens-midweight-drill-cargo-pant-stout",
     "image_slug": "zw001s-model-zw001s-mens-midweight-drill-cargo-pant-stout-hero-front",
     "path": "assets/ZW001S_MEN'S_MIDWEIGHT_DRILL_CARGO_PANT_(STOUT)/webp/model/ZW001S_MEN'S_MIDWEIGHT_DRILL_CARGO_PANT_(STOUT)_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZW004": {
-    "product_slug": "mens-taped-utility-pant-regular-zw004",
+    "product_slug": "mens-taped-utility-pant-regular",
     "image_slug": "zw004-model-zw004-mens-taped-utility-pant-regular-hero-front",
     "path": "assets/ZW004_MEN'S_TAPED_UTILITY_PANT_(REGULAR)/webp/model/ZW004_MEN'S_TAPED_UTILITY_PANT_(REGULAR)_HERO_FRONT.webp",
     "selection": "hero-front"
   },
   "ZW115": {
-    "product_slug": "mens-hi-vis-short-sleeve-shirt-zw115",
+    "product_slug": "mens-hi-vis-short-sleeve-shirt",
     "image_slug": "zw115-model-zw115-mens-hi-vis-short-sleeve-shirt-hero-front",
     "path": "assets/ZW115_MEN'S_HI_VIS_SHORT_SLEEVE_SHIRT/webp/model/ZW115_MEN'S_HI_VIS_SHORT_SLEEVE_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -2460,7 +2460,7 @@
     "selection": "hero-front"
   },
   "ZW128": {
-    "product_slug": "mens-rugged-cooling-hi-vis-spliced-shirt-zw128",
+    "product_slug": "mens-rugged-cooling-hi-vis-spliced-shirt",
     "image_slug": "zw128-model-zw128-mens-rugged-cooling-hi-vis-spliced-shirt-hero-front",
     "path": "assets/ZW128_MEN'S_RUGGED_COOLING_HI_VIS_SPLICED_SHIRT/webp/model/ZW128_MEN'S_RUGGED_COOLING_HI_VIS_SPLICED_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -2496,7 +2496,7 @@
     "selection": "hero-front"
   },
   "ZW680": {
-    "product_slug": "mens-bio-motion-vic-rail-shirt-zw680",
+    "product_slug": "mens-bio-motion-vic-rail-shirt",
     "image_slug": "zw680-model-zw680-mens-bio-motion-vic-rail-shirt-hero-front",
     "path": "assets/ZW680_MEN'S_BIO_MOTION_VIC_RAIL_SHIRT/webp/model/ZW680_MEN'S_BIO_MOTION_VIC_RAIL_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
@@ -2508,7 +2508,7 @@
     "selection": "hero-front"
   },
   "ZW765": {
-    "product_slug": "womens-outdoor-short-sleeve-shirt-zw765",
+    "product_slug": "womens-outdoor-short-sleeve-shirt",
     "image_slug": "zw765-model-zw765-womens-outdoor-short-sleeve-shirt-hero-front",
     "path": "assets/ZW765_WOMEN'S_OUTDOOR_SHORT_SLEEVE_SHIRT/webp/model/ZW765_WOMEN'S_OUTDOOR_SHORT_SLEEVE_SHIRT_HERO_FRONT.webp",
     "selection": "hero-front"
