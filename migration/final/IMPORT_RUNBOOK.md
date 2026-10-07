@@ -35,10 +35,12 @@ Import `output/02-colours.csv` into **Colors**.
 
 Choose **Link and update matching items and import remaining as new**.
 
-Expected:
+Expected on a clean run:
 - 189 linked/updated
 - 13 created
 - 202 total after import
+
+If resuming the 2026-10-07 in-progress migration where only Black Charcoal and Black/Black failed, do not re-import all 202 rows. Import `output/02b-colours-retry.csv` as new items, then continue to Step 3.
 
 Map:
 - Item ID → Item ID
