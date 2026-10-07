@@ -35,12 +35,10 @@ Import `output/02-colours.csv` into **Colors**.
 
 Choose **Link and update matching items and import remaining as new**.
 
-Expected on a clean run:
+Expected:
 - 189 linked/updated
 - 13 created
 - 202 total after import
-
-If resuming the 2026-10-07 in-progress migration where only Black Charcoal and Black/Black failed, do not re-import all 202 rows. Import `output/02b-colours-retry.csv` as new items, then continue to Step 3.
 
 Map:
 - Item ID → Item ID
@@ -78,29 +76,6 @@ Import `migration/final/output/04-products.csv` into **Products** and choose **I
 Expected: 422 Products.
 
 The final CSV deliberately uses final Website colour slugs. Optional content fields are blank where the supplied product-data workbooks contain no reliable content.
-
-### 4b. Product retry for reserved deleted slugs
-
-If the first Product import creates 63 of 422 items and the remaining 359 report Validation Failure, this is the known reserved-slug collision from the earlier deleted Product migration.
-
-Do **not** re-import all 422 rows.
-
-Import `output/04b-products-retry.csv` into **Products** and choose **Import all as new items**.
-
-Expected:
-- existing Products before retry: 63
-- retry rows: 359
-- final Products after retry: 422
-
-The retry file keeps all Product data identical and changes only the failed Product slugs by appending the Product SKU, e.g.:
-`womens-cool-stretch-bandless-slim-leg-pant` → `womens-cool-stretch-bandless-slim-leg-pant-10121`.
-
-After this retry succeeds, regenerate the Image outputs locally before importing Images:
-
-```bash
-node migration/final/scripts/generate-image-csvs.mjs
-node migration/final/scripts/validate-migration.mjs
-```
 
 ### 5. Images
 
