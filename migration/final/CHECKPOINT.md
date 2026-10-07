@@ -98,3 +98,43 @@ Expected collision resolutions during regeneration: 37.
 - No publish was performed. Changes remain staged for the migration QA flow.
 
 Next migration step: restore Article -> Product references from `article-product-reference-backup.json`, then run final referential/count QA before publish.
+
+
+## 2026-10-08 Article -> Product references restored
+
+- Backup source: `migration/final/article-product-reference-backup.json`
+- Articles in backup: 36
+- Legacy Product references in backup: 100
+- Unique legacy Product SKUs referenced: 74
+- Final Products matched by SKU: 64
+- Final Product references restored: 88
+- Legacy references intentionally not restored: 12, covering 10 SKUs absent from the final 422-product set:
+  - N2306
+  - 1520L
+  - 99300
+  - RJP266M
+  - J29123
+  - ZJ240
+  - RBL068M
+  - CH230ML-BIZ
+  - 1712L
+  - ZJ616
+- All 36 Article items still exist and were updated successfully.
+- Post-write check: exactly 36 Articles now have Product references.
+- No publish was performed; the restored references remain staged.
+
+## 2026-10-08 final migration QA checkpoint
+
+Live/staged CMS counts now reconcile with the migration target:
+- Colour Families: 17
+- Colours: 202
+- Products: 422
+- Images: 4,464
+- Products with Hero Image: 422
+- Products missing Hero Image: 0
+- Images missing Product reference: 0
+- Articles with Product references: 36
+
+Hero mapping was already verified against the locked 422-entry `hero-image-map.json` before applying references. Product/Image imports and repair batches reconcile to the expected final counts.
+
+Remaining action: final publish only after explicit go-ahead.
