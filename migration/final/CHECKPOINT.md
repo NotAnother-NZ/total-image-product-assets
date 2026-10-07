@@ -84,3 +84,17 @@ The final image generator now:
 - keeps Hero mappings aligned to the regenerated unique Image slugs.
 
 Expected collision resolutions during regeneration: 37.
+
+
+## 2026-10-08 Hero Image references applied
+
+- Live Products: 422
+- Live Images: 4,464
+- Locked Hero mapping: 422 unique Product -> Image mappings
+- Verified the locked `hero-image-map.json` exactly matches the 422 live Image CMS items at Sort Order 1.
+- Verified those 422 Image items reference 422 unique Products.
+- Applied all 422 Product `hero-image` references directly through the Webflow CMS API in 5 batches.
+- Post-write verification: 422/422 Products have a Hero Image; 0 Products are missing a Hero Image.
+- No publish was performed. Changes remain staged for the migration QA flow.
+
+Next migration step: restore Article -> Product references from `article-product-reference-backup.json`, then run final referential/count QA before publish.
