@@ -1,0 +1,4784 @@
+[
+  {
+    "sku": "10121",
+    "name": "Women's Cool Stretch Bandless Slim Leg Pant",
+    "slug": "womens-cool-stretch-bandless-slim-leg-pant",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1043",
+    "name": "Freshen Polo L/S Men's",
+    "slug": "freshen-polo-l-s-mens",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy",
+      "Royal Blue",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1054",
+    "name": "Glacier Men's S/S Polos",
+    "slug": "glacier-mens-s-s-polos",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Dusty Blue",
+      "Navy",
+      "Ocean Blue",
+      "Purple",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1058",
+    "name": "Silvertech Polo - Men's",
+    "slug": "silvertech-polo-mens",
+    "website_colours": [
+      "Black/Silver",
+      "Charcoal/Silver",
+      "Navy/Silver",
+      "Ocean Blue/Silver",
+      "Red/Silver",
+      "Teal/Silver",
+      "White/Silver"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1061",
+    "name": "Freshen Polo Men's",
+    "slug": "freshen-polo-mens",
+    "website_colours": [
+      "Red/White",
+      "White/Navy",
+      "White/Red"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1062",
+    "name": "Superdry Polo - Men's",
+    "slug": "superdry-polo-mens",
+    "website_colours": [
+      "White/Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "1064",
+    "name": "Kahve Polo - Men's",
+    "slug": "kahve-polo-mens",
+    "website_colours": [
+      "Black",
+      "Royal Blue",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "10722",
+    "name": "Women's Bandless Elastic Waist Pant",
+    "slug": "womens-bandless-elastic-waist-pant",
+    "website_colours": [
+      "Black",
+      "Marine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1080",
+    "name": "Canvas Apron",
+    "slug": "canvas-apron",
+    "website_colours": [
+      "Black",
+      "Walnut"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "1108",
+    "name": "Trucker Cap",
+    "slug": "trucker-cap",
+    "website_colours": [
+      "Black",
+      "Khaki",
+      "Navy",
+      "Walnut"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1130",
+    "name": "Access Cap",
+    "slug": "access-cap",
+    "website_colours": [
+      "Black",
+      "Bone",
+      "Coal",
+      "Cypress",
+      "Ecru",
+      "Hazy Pink",
+      "Khaki",
+      "Midnight Blue",
+      "Walnut"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1143",
+    "name": "Freshen Polo L/S Ladies",
+    "slug": "freshen-polo-l-s-ladies",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy",
+      "Royal Blue",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1154",
+    "name": "Glacier Ladies S/S Polos",
+    "slug": "glacier-ladies-s-s-polos",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Dusty Blue",
+      "Navy",
+      "Ocean Blue",
+      "Purple",
+      "Red",
+      "Sandstone",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1161",
+    "name": "Freshen Polo - Ladies",
+    "slug": "freshen-polo-ladies",
+    "website_colours": [
+      "White/Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "1162",
+    "name": "Superdry Polo Ladies",
+    "slug": "superdry-polo-ladies",
+    "website_colours": [
+      "Black Charcoal",
+      "Charcoal/Black",
+      "Latte/Charcoal",
+      "Navy/Silver",
+      "Platinum/Charcoal",
+      "White/Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1164",
+    "name": "Kahve Polo - Ladies",
+    "slug": "kahve-polo-ladies",
+    "website_colours": [
+      "Charcoal",
+      "Navy",
+      "Royal",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1171",
+    "name": "Nylon Bucket Hat",
+    "slug": "nylon-bucket-hat",
+    "website_colours": [
+      "Army",
+      "Black",
+      "Bone",
+      "Ecru",
+      "Lapis",
+      "Lime",
+      "Mushroom",
+      "Navy",
+      "Pistachio",
+      "Powder",
+      "Sand"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "1172",
+    "name": "Wide Brim Bucket Hat",
+    "slug": "wide-brim-bucket-hat",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1174",
+    "name": "Nylon Wide Brim Bucket Hat",
+    "slug": "nylon-wide-brim-bucket-hat",
+    "website_colours": [
+      "Black",
+      "Ecru",
+      "Khaki",
+      "Navy",
+      "Storm"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "1204",
+    "name": "Eureka Men's Tees",
+    "slug": "eureka-mens-tees",
+    "website_colours": [
+      "Black/Gold",
+      "Black/Red",
+      "Black/White",
+      "Navy/White",
+      "Orange"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1272L",
+    "name": "Men's Nicholson Premium Poplin Long Sleeve Shirt",
+    "slug": "mens-nicholson-premium-poplin-long-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "French Blue",
+      "Navy",
+      "Silver",
+      "Sky",
+      "Star White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1272S",
+    "name": "Men's Nicholson Premium Poplin Short Sleeve Shirt",
+    "slug": "mens-nicholson-premium-poplin-short-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "French Blue",
+      "Navy",
+      "Silver",
+      "Sky",
+      "Star White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1512",
+    "name": "Selwyn Men's Jackets",
+    "slug": "selwyn-mens-jackets",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "Slate"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "1513",
+    "name": "Men's Olympus Soft Shell Jacket",
+    "slug": "mens-olympus-soft-shell-jacket",
+    "website_colours": [
+      "Black/Black",
+      "Navy",
+      "Slate"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1520WL",
+    "name": "Women's Nicholson Premium Poplin Long Sleeve Shirt",
+    "slug": "womens-nicholson-premium-poplin-long-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "French Blue",
+      "Navy",
+      "Silver",
+      "Sky",
+      "Star White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1520WS",
+    "name": "Women's Nicholson Premium Poplin Short Sleeve Shirt",
+    "slug": "womens-nicholson-premium-poplin-short-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "French Blue",
+      "Navy",
+      "Silver",
+      "Sky",
+      "Star White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1520WZ",
+    "name": "Premium Poplin 3/4 Sleeve Shirt",
+    "slug": "premium-poplin-3-4-sleeve-shirt",
+    "website_colours": [
+      "Star White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "1523",
+    "name": "Snowy Men's Vests",
+    "slug": "snowy-mens-vests",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "1529",
+    "name": "Selwyn Men's Vest",
+    "slug": "selwyn-mens-vest",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "Slate"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "1637HL",
+    "name": "Men's Westgarth Gingham Long Sleeve Slim Fit Shirt",
+    "slug": "mens-westgarth-gingham-long-sleeve-slim-fit-shirt",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1637L",
+    "name": "Men's Westgarth Gingham Long Sleeve Shirt",
+    "slug": "mens-westgarth-gingham-long-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Crimson",
+      "Emerald",
+      "Grey",
+      "Lilac",
+      "Navy",
+      "Pink",
+      "Sky",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1637S",
+    "name": "Men's Westgarth Gingham Short Sleeve Shirt",
+    "slug": "mens-westgarth-gingham-short-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Grey",
+      "Lilac",
+      "Navy",
+      "Sky",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1637WHL",
+    "name": "Women's Westgarth Gingham Long Sleeve Slim Fit Shirt",
+    "slug": "womens-westgarth-gingham-long-sleeve-slim-fit-shirt",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1637WL",
+    "name": "Westgarth Gingham Long Sleeve Slim Fit Shirt",
+    "slug": "westgarth-gingham-long-sleeve-slim-fit-shirt",
+    "website_colours": [
+      "Black",
+      "Crimson",
+      "Emerald",
+      "Grey",
+      "Lilac",
+      "Navy",
+      "Pink",
+      "Sky",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1637WS",
+    "name": "Women's Westgarth Gingham Short Sleeve Shirt",
+    "slug": "womens-westgarth-gingham-short-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Crimson",
+      "Grey",
+      "Lilac",
+      "Navy",
+      "Pink",
+      "Sky",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1637WZ",
+    "name": "Westgarth Gingham 3/4 Sleeve Shirt",
+    "slug": "westgarth-gingham-3-4-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Grey",
+      "Lilac",
+      "Navy",
+      "Sky",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1701WL",
+    "name": "Balmoral Royal Oxford Shirt",
+    "slug": "balmoral-royal-oxford-shirt",
+    "website_colours": [
+      "Blue",
+      "Charcoal",
+      "Grey",
+      "Ink",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1710WL",
+    "name": "Royal Oxford 3/4 Sleeve Shirt",
+    "slug": "royal-oxford-3-4-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1722MT",
+    "name": "Men's Washable Pant",
+    "slug": "mens-washable-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1724WSK",
+    "name": "Women's Washable Pencil Skirt",
+    "slug": "womens-washable-pencil-skirt",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1725WSK",
+    "name": "Women's Washable 'A' Line Skirt",
+    "slug": "womens-washable-a-line-skirt",
+    "website_colours": [
+      "Charcoal"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "1728MJ",
+    "name": "Men's Washable Jacket",
+    "slug": "mens-washable-jacket",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1762WT",
+    "name": "Women's Washable Slim Leg Pant",
+    "slug": "womens-washable-slim-leg-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1765WJ",
+    "name": "Women's Washable One Button Jacket",
+    "slug": "womens-washable-one-button-jacket",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1796WL",
+    "name": "Freya Shirred Cuff Soft Top",
+    "slug": "freya-shirred-cuff-soft-top",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Denim",
+      "Emerald",
+      "Ivory",
+      "Navy",
+      "Ocean",
+      "Silver"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1797WL",
+    "name": "Quinn Top",
+    "slug": "quinn-top",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Denim",
+      "Ivory",
+      "Navy",
+      "Silver"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1798WS",
+    "name": "Taylor Top",
+    "slug": "taylor-top",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Denim",
+      "Ivory",
+      "Navy",
+      "Silver"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1799WZ",
+    "name": "Lola 3/4 Sleeve Shirred Cuff Top",
+    "slug": "lola-3-4-sleeve-shirred-cuff-top",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Denim",
+      "Ivory",
+      "Navy",
+      "Silver"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1800WZ",
+    "name": "Ladies Reese V Neck Top",
+    "slug": "ladies-reese-v-neck-top",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Denim",
+      "Emerald",
+      "Ivory",
+      "Navy",
+      "Ocean",
+      "Silver"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1803WZ",
+    "name": "Cleo V Neck Shirred Cuff Top",
+    "slug": "cleo-v-neck-shirred-cuff-top",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Denim",
+      "Emerald",
+      "Ivory",
+      "Navy",
+      "Ocean",
+      "Silver"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1805WL",
+    "name": "Marni 1/2 Placket Top",
+    "slug": "marni-1-2-placket-top",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "Peacock"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1807WS",
+    "name": "Poppy Puff Sleeve Top",
+    "slug": "poppy-puff-sleeve-top",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "Peacock"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1898L",
+    "name": "Bradford Fine Oxford Long Sleeve Shirt",
+    "slug": "bradford-fine-oxford-long-sleeve-shirt",
+    "website_colours": [
+      "Blue",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "1899WL",
+    "name": "Bradford Women's Fine Oxford Long Sleeve Shirt",
+    "slug": "bradford-womens-fine-oxford-long-sleeve-shirt",
+    "website_colours": [
+      "Blue",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "20115",
+    "name": "Women's Multi-Pleat Skirt",
+    "slug": "womens-multi-pleat-skirt",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "20717",
+    "name": "Women's Bandless Pencil Skirt",
+    "slug": "womens-bandless-pencil-skirt",
+    "website_colours": [
+      "Black",
+      "Marine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "20720",
+    "name": "Women's Front Pleat Detail Straight Skirt",
+    "slug": "womens-front-pleat-detail-straight-skirt",
+    "website_colours": [
+      "Black",
+      "Marine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "210",
+    "name": "210 Polo",
+    "slug": "210-polo",
+    "website_colours": [
+      "Aqua",
+      "Black",
+      "Bottle",
+      "Charcoal Marle",
+      "Gold",
+      "Gunmetal",
+      "Hot Pink",
+      "Jade",
+      "Kelly Green",
+      "Lt Blue",
+      "Maroon",
+      "Navy",
+      "Orange",
+      "Pea Green",
+      "Purple",
+      "Red",
+      "Royal",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "2102L",
+    "name": "Olsen Cotton Stretch Shirt- Slim Fit",
+    "slug": "olsen-cotton-stretch-shirt-slim-fit",
+    "website_colours": [
+      "Black",
+      "Denim",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "2103WL",
+    "name": "Ladies Ashton Cotton Oxford Shirt",
+    "slug": "ladies-ashton-cotton-oxford-shirt",
+    "website_colours": [
+      "Blue",
+      "Chalk",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "210XL",
+    "name": "L/S 210 Polo",
+    "slug": "l-s-210-polo",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "2151",
+    "name": "Silvertech Polo - Ladies",
+    "slug": "silvertech-polo-ladies",
+    "website_colours": [
+      "Black/Silver",
+      "Blue",
+      "Charcoal/Silver",
+      "Grey/Silver",
+      "Red/Silver",
+      "Teal/Silver",
+      "White/Silver"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "2151CC",
+    "name": "Ezylin Tunic",
+    "slug": "ezylin-tunic",
+    "website_colours": [
+      "Royal"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "2174",
+    "name": "City Stretch® Spot Tunic",
+    "slug": "city-stretch-spot-tunic",
+    "website_colours": [
+      "Blue"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "2277",
+    "name": "Petal Print Top",
+    "slug": "petal-print-top",
+    "website_colours": [
+      "Navy/White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "2280",
+    "name": "4 Way Stretch Tunic",
+    "slug": "4-way-stretch-tunic",
+    "website_colours": [
+      "Blue with Navy Trim"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "2281",
+    "name": "Heart Print Tunic",
+    "slug": "heart-print-tunic",
+    "website_colours": [
+      "Blue"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "2284",
+    "name": "Zip Back Tunic",
+    "slug": "zip-back-tunic",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "2290",
+    "name": "Smart Knit 3/4",
+    "slug": "smart-knit-3-4",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "Royal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "2291",
+    "name": "Smart Knit Top",
+    "slug": "smart-knit-top",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "2306",
+    "name": "Keira Ladies' Polos",
+    "slug": "keira-ladies-polos",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "Pacific Blue",
+      "Red",
+      "Royal",
+      "Slate",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "240",
+    "name": "Elastic Sided Boot",
+    "slug": "elastic-sided-boot",
+    "website_colours": [
+      "Black/Brown",
+      "Tan"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "2512",
+    "name": "Selwyn Lady Jacket",
+    "slug": "selwyn-lady-jacket",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "Slate"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "2513",
+    "name": "Ladies Olympus Soft Shell Jacket",
+    "slug": "ladies-olympus-soft-shell-jacket",
+    "website_colours": [
+      "Black",
+      "Bottle",
+      "Cyan",
+      "Maroon",
+      "Navy",
+      "Slate"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "2523",
+    "name": "SNOWY LADY VESTS",
+    "slug": "snowy-lady-vests",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "261",
+    "name": "Men's Zipsider Boot",
+    "slug": "mens-zipsider-boot",
+    "website_colours": [
+      "Black",
+      "Light Brown",
+      "Wheat"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "2LCP",
+    "name": "Ladies Contrast Polo",
+    "slug": "ladies-contrast-polo",
+    "website_colours": [
+      "Black/White",
+      "Gunmetal/Red",
+      "Navy/White",
+      "Royal/White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "2LPS",
+    "name": "Ladies 210 Polo",
+    "slug": "ladies-210-polo",
+    "website_colours": [
+      "Aqua",
+      "Black",
+      "Jade",
+      "Musk",
+      "Navy",
+      "Pea Green",
+      "Purple",
+      "Red",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "34652",
+    "name": "Men's Black Lace Up Derby Shoe",
+    "slug": "mens-black-lace-up-derby-shoe",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "3791",
+    "name": "Canvas Hat",
+    "slug": "canvas-hat",
+    "website_colours": [
+      "Natural",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "3803",
+    "name": "Trucker Mesh Cap",
+    "slug": "trucker-mesh-cap",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Red",
+      "Royal",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "3980",
+    "name": "Recycled Breathable Poly Twill Cap",
+    "slug": "recycled-breathable-poly-twill-cap",
+    "website_colours": [
+      "Black",
+      "Bottle",
+      "Charcoal",
+      "Navy",
+      "Red",
+      "Royal",
+      "Stone",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "3987",
+    "name": "Organic Brushed Heavy Cotton/Mesh Back Cap",
+    "slug": "organic-brushed-heavy-cotton-mesh-back-cap",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "4001G",
+    "name": "Maple Organic Tee",
+    "slug": "maple-organic-tee",
+    "website_colours": [
+      "Black",
+      "Natural",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "4001W",
+    "name": "Women's Maple Tee",
+    "slug": "womens-maple-tee",
+    "website_colours": [
+      "Black",
+      "Coal",
+      "Natural",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "40310",
+    "name": "Womens Hudson L/S Shirt",
+    "slug": "womens-hudson-l-s-shirt",
+    "website_colours": [
+      "Patriot Blue",
+      "White",
+      "Wine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "40320",
+    "name": "Mens Hudson L/S Shirt",
+    "slug": "mens-hudson-l-s-shirt",
+    "website_colours": [
+      "Patriot Blue",
+      "White",
+      "Wine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "4037",
+    "name": "Wo's Maple Stripe Tee",
+    "slug": "wos-maple-stripe-tee",
+    "website_colours": [
+      "Black/White",
+      "Natural/Mid Blue",
+      "Natural/Walnut",
+      "Navy/White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "4058",
+    "name": "Mesh Sports Cap",
+    "slug": "mesh-sports-cap",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "Royal",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "4073",
+    "name": "Wo's Classic L/S Tee",
+    "slug": "wos-classic-l-s-tee",
+    "website_colours": [
+      "Black",
+      "Ecru",
+      "Grey Marle",
+      "Navy",
+      "Orchid",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "4171",
+    "name": "Heavy Brushed Cotton Cap",
+    "slug": "heavy-brushed-cotton-cap",
+    "website_colours": [
+      "Black",
+      "Bottle",
+      "Maroon",
+      "Navy",
+      "Pink",
+      "Red",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "4287",
+    "name": "Surf Hat",
+    "slug": "surf-hat",
+    "website_colours": [
+      "Black",
+      "Bottle",
+      "Natural",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "43411",
+    "name": "Springfield Womens 3/4 Sleeve Shirt",
+    "slug": "springfield-womens-3-4-sleeve-shirt",
+    "website_colours": [
+      "French Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "440",
+    "name": "Premium Elastic Sided Boot W/ Scuff Cap",
+    "slug": "premium-elastic-sided-boot-w-scuff-cap",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "45627",
+    "name": "Men's Brown Elastic Sided Boot",
+    "slug": "mens-brown-elastic-sided-boot",
+    "website_colours": [
+      "Brown"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "49-432Z",
+    "name": "Women's Wheat Zip Sided Boot",
+    "slug": "womens-wheat-zip-sided-boot",
+    "website_colours": [
+      "Wheat"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "49430",
+    "name": "Slip On Shoe",
+    "slug": "slip-on-shoe",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "49445Z",
+    "name": "Women's Black Zip Sided Boot",
+    "slug": "womens-black-zip-sided-boot",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "49450Z",
+    "name": "Women’s Stone Zip Sided Low-Cut Boot",
+    "slug": "womens-stone-zip-sided-low-cut-boot",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "5001",
+    "name": "Men's Staple Tee",
+    "slug": "mens-staple-tee",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Light Grey",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "5001G",
+    "name": "Men's Staple Organic Tee",
+    "slug": "mens-staple-organic-tee",
+    "website_colours": [
+      "Grey Marle",
+      "Natural",
+      "Walnut",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "5026",
+    "name": "Men's Classic Tee",
+    "slug": "mens-classic-tee",
+    "website_colours": [
+      "Black",
+      "Coal",
+      "Ecru",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "5038",
+    "name": "Men's Plus Tee",
+    "slug": "mens-plus-tee",
+    "website_colours": [
+      "Grey Marle"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "5044",
+    "name": "Men's Classic Stripe Tee",
+    "slug": "mens-classic-stripe-tee",
+    "website_colours": [
+      "Black/White",
+      "Yellow/Black"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "5050",
+    "name": "Men's Block Tee",
+    "slug": "mens-block-tee",
+    "website_colours": [
+      "Army",
+      "Black",
+      "Bright Royal",
+      "Coal",
+      "Ecru",
+      "Forest Green",
+      "Khaki",
+      "Navy",
+      "Red",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "5052",
+    "name": "Men's State Tee",
+    "slug": "mens-state-tee",
+    "website_colours": [
+      "Black",
+      "Ecru",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "5053",
+    "name": "Men's Ringer Tee",
+    "slug": "mens-ringer-tee",
+    "website_colours": [
+      "White/Black",
+      "White/Navy",
+      "White/Red"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "5071",
+    "name": "Classic L/S Tee",
+    "slug": "classic-l-s-tee",
+    "website_colours": [
+      "Black",
+      "Ecru",
+      "Navy",
+      "White Marle"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "5198",
+    "name": "Urban Sports Backpack",
+    "slug": "urban-sports-backpack",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "5ACW",
+    "name": "Waist Canvas Apron-Including Strap",
+    "slug": "waist-canvas-apron-including-strap",
+    "website_colours": [
+      "Black",
+      "Latte"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "5FC",
+    "name": "Chefs Cap",
+    "slug": "chefs-cap",
+    "website_colours": [
+      "Black",
+      "Check",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "60717",
+    "name": "Siena Women's Longline Jacket",
+    "slug": "siena-womens-longline-jacket",
+    "website_colours": [
+      "Black",
+      "Marine"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "60719",
+    "name": "Siena Women's Mid Length Jacket",
+    "slug": "siena-womens-mid-length-jacket",
+    "website_colours": [
+      "Black",
+      "Marine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "630797W",
+    "name": "Women's Tornado",
+    "slug": "womens-tornado",
+    "website_colours": [
+      "Black",
+      "Stone",
+      "Wheat"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "6HDNL",
+    "name": "L/S 190g Shirt With 3m Tape",
+    "slug": "l-s-190g-shirt-with-3m-tape",
+    "website_colours": [
+      "Navy",
+      "Orange"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "6HFV",
+    "name": "Fluro Vest",
+    "slug": "fluro-vest",
+    "website_colours": [
+      "Aqua",
+      "Black",
+      "Hot Pink",
+      "Light Blue",
+      "Pea Green",
+      "Purple",
+      "Red",
+      "Royal",
+      "White",
+      "Yellow"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "6HVSV",
+    "name": "Hi Vis Safety Vest",
+    "slug": "hi-vis-safety-vest",
+    "website_colours": [
+      "Lime",
+      "Orange",
+      "Pink"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "70716R",
+    "name": "Mens Siena Slim Fit Flat Front Pant (Regular)",
+    "slug": "mens-siena-slim-fit-flat-front-pant-regular",
+    "website_colours": [
+      "Black",
+      "Marine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "7100",
+    "name": "Nomad Dad Hat",
+    "slug": "nomad-dad-hat",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Hunter Green",
+      "Khaki",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "80717",
+    "name": "Men's Siena 2 Button Jacket",
+    "slug": "mens-siena-2-button-jacket",
+    "website_colours": [
+      "Black",
+      "Marine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "A03",
+    "name": "Bib Apron - A03",
+    "slug": "bib-apron-a03",
+    "website_colours": [
+      "Aqua",
+      "Black",
+      "Bottle Green",
+      "Brown",
+      "Charcoal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "A100",
+    "name": "English Chef Apron",
+    "slug": "english-chef-apron",
+    "website_colours": [
+      "Black/White",
+      "Chalk",
+      "Navy/White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "A1000",
+    "name": "Dad Hat",
+    "slug": "dad-hat",
+    "website_colours": [
+      "Black",
+      "Khaki",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "A27",
+    "name": "Louie Apron",
+    "slug": "louie-apron",
+    "website_colours": [
+      "Stonewash Black",
+      "Stonewash Blue"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "A30",
+    "name": "Alfie Bib Apron",
+    "slug": "alfie-bib-apron",
+    "website_colours": [
+      "Black",
+      "Grey",
+      "Khaki",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "A31",
+    "name": "Colby Waist Apron",
+    "slug": "colby-waist-apron",
+    "website_colours": [
+      "Black",
+      "Grey",
+      "Khaki",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "A33",
+    "name": "Capri Waist Apron",
+    "slug": "capri-waist-apron",
+    "website_colours": [
+      "Black",
+      "Grey",
+      "Khaki",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "AB802",
+    "name": "Lockharte Bib Apron",
+    "slug": "lockharte-bib-apron",
+    "website_colours": [
+      "Black",
+      "Ecru",
+      "Espresso",
+      "Military Green",
+      "Mustard",
+      "Navy",
+      "Rust"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "ACS01",
+    "name": "Berkeley Chefs Bib Apron",
+    "slug": "berkeley-chefs-bib-apron",
+    "website_colours": [
+      "Indigo Blue",
+      "Jet Black",
+      "Medium Blue"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "AH126",
+    "name": "Pet/Cotton Sandwich Cap",
+    "slug": "pet-cotton-sandwich-cap",
+    "website_colours": [
+      "Black/White",
+      "Navy/White",
+      "Royal/White",
+      "White/Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "AH127",
+    "name": "Organic Cotton Sandwich Cap",
+    "slug": "organic-cotton-sandwich-cap",
+    "website_colours": [
+      "Black/White",
+      "Navy/White",
+      "White/Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "AH255",
+    "name": "Premium Rpet Cap",
+    "slug": "premium-rpet-cap",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "AH655",
+    "name": "Premium Rpet Bucket Hat",
+    "slug": "premium-rpet-bucket-hat",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BA35",
+    "name": "Barley Apron",
+    "slug": "barley-apron",
+    "website_colours": [
+      "Black",
+      "Cinnamon",
+      "Ink",
+      "Olive"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BA40",
+    "name": "Clout Apron",
+    "slug": "clout-apron",
+    "website_colours": [
+      "Black",
+      "Dark Blue"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BA54",
+    "name": "Urban 1/2 Waist Apron",
+    "slug": "urban-1-2-waist-apron",
+    "website_colours": [
+      "Black",
+      "Denim",
+      "Natural",
+      "Slate"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BA55",
+    "name": "Urban Bib Apron",
+    "slug": "urban-bib-apron",
+    "website_colours": [
+      "Black",
+      "Denim",
+      "Natural",
+      "Slate"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BA75",
+    "name": "Unisex Salt Bib Apron",
+    "slug": "unisex-salt-bib-apron",
+    "website_colours": [
+      "Charcoal/White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BA94",
+    "name": "Short Waisted Apron",
+    "slug": "short-waisted-apron",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BB10929",
+    "name": "Women's Slimline Belt",
+    "slug": "womens-slimline-belt",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BB248M",
+    "name": "Men's Standard Belt",
+    "slug": "mens-standard-belt",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BB2606L",
+    "name": "Women's Soft Stretch Pant",
+    "slug": "womens-soft-stretch-pant",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BBS2605L",
+    "name": "Womens Grace T-Shirt Midi Dress",
+    "slug": "womens-grace-t-shirt-midi-dress",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BCSZ009",
+    "name": "Springfield Chef Jacket",
+    "slug": "springfield-chef-jacket",
+    "website_colours": [
+      "Black",
+      "Brick",
+      "Grey",
+      "Ink Blue"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BJ2602L",
+    "name": "Women's Tailor Jacket",
+    "slug": "womens-tailor-jacket",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BJ2602M",
+    "name": "Men's Tailor Jacket",
+    "slug": "mens-tailor-jacket",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BP2610LS",
+    "name": "Phoenix Women's Short Sleeve Polo",
+    "slug": "phoenix-womens-short-sleeve-polo",
+    "website_colours": [
+      "Black",
+      "Charcoal Marle",
+      "Navy",
+      "Ocean Marle"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BP2610MS",
+    "name": "Men's Phoenix Short Sleeve Polo",
+    "slug": "mens-phoenix-short-sleeve-polo",
+    "website_colours": [
+      "Black",
+      "Charcoal Marle",
+      "Navy",
+      "Ocean Marle"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BP2616LS",
+    "name": "Women's Venture Short Sleeve Polo",
+    "slug": "womens-venture-short-sleeve-polo",
+    "website_colours": [
+      "Black",
+      "Denim Blue"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BP2616MS",
+    "name": "Men's Venture Short Sleeve Polo",
+    "slug": "mens-venture-short-sleeve-polo",
+    "website_colours": [
+      "Black",
+      "Denim Blue"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BPC6008",
+    "name": "Stretch Cotton Drill Cargo Pants",
+    "slug": "stretch-cotton-drill-cargo-pants",
+    "website_colours": [
+      "Black",
+      "Bottle",
+      "Charcoal",
+      "Khaki",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BPC6088T",
+    "name": "Recycle Taped Biomotion Cargo Work Pant",
+    "slug": "recycle-taped-biomotion-cargo-work-pant",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BPC6334T",
+    "name": "Flx And Move™ Taped Stretch Cargo Cuffed Pants",
+    "slug": "flx-and-move-taped-stretch-cargo-cuffed-pants",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BR1013",
+    "name": "Bellroy Classic Daypack",
+    "slug": "bellroy-classic-daypack",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BRIGHT-YARN",
+    "name": "A Bright Future Essence Polo Shirt",
+    "slug": "a-bright-future-essence-polo-shirt",
+    "website_colours": [
+      "Pink"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BRIGHT-YARN-UNISEX",
+    "name": "Unisex -A Bright Future Essence Polo Shirt",
+    "slug": "unisex-a-bright-future-essence-polo-shirt",
+    "website_colours": [
+      "Pink"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BS021L",
+    "name": "Lawson Ladies Chino Short",
+    "slug": "lawson-ladies-chino-short",
+    "website_colours": [
+      "Black",
+      "Dark Stone",
+      "Grey",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BS022L",
+    "name": "Lawson Ladies Chino Skirt",
+    "slug": "lawson-ladies-chino-skirt",
+    "website_colours": [
+      "Black",
+      "Dark Stone",
+      "Grey",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BS125L",
+    "name": "Ladies Bella Pant",
+    "slug": "ladies-bella-pant",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BS1896",
+    "name": "Taped Hi Vis Cool Lightweight S/S Shirt",
+    "slug": "taped-hi-vis-cool-lightweight-s-s-shirt",
+    "website_colours": [
+      "Orange/Navy",
+      "Yellow/Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BS423L",
+    "name": "Women's Venture Pant",
+    "slug": "womens-venture-pant",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BS6266XT",
+    "name": "Bisley Recycle X Taped Hi Vis Drill Shirt",
+    "slug": "bisley-recycle-x-taped-hi-vis-drill-shirt",
+    "website_colours": [
+      "Orange"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "BS6896",
+    "name": "Taped Hi Vis Cool Lightweight Shirt",
+    "slug": "taped-hi-vis-cool-lightweight-shirt",
+    "website_colours": [
+      "Orange/Navy",
+      "Pink/Navy",
+      "Yellow/Bottle",
+      "Yellow/Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BS724L",
+    "name": "Ladies Lawson Chino Pant",
+    "slug": "ladies-lawson-chino-pant",
+    "website_colours": [
+      "Black",
+      "Dark Stone",
+      "Grey",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BS724M",
+    "name": "Men's Lawson Chino Pant",
+    "slug": "mens-lawson-chino-pant",
+    "website_colours": [
+      "Black",
+      "Dark Stone",
+      "Grey",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BS732L",
+    "name": "Ladies Bianca Jacket",
+    "slug": "ladies-bianca-jacket",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "BS909L",
+    "name": "Ladies Remy Pant",
+    "slug": "ladies-remy-pant",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CA3PSO",
+    "name": "So Ezy Pant",
+    "slug": "so-ezy-pant",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CA4P",
+    "name": "City Active Pant",
+    "slug": "city-active-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CA4T",
+    "name": "City Active Top",
+    "slug": "city-active-top",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy",
+      "Royal",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CBZ02",
+    "name": "Nepal Chef Jacket",
+    "slug": "nepal-chef-jacket",
+    "website_colours": [
+      "Black",
+      "Grey",
+      "Ocean Blue",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CH230ML",
+    "name": "Al Dente Men's Chef Jacket",
+    "slug": "al-dente-mens-chef-jacket",
+    "website_colours": [
+      "Black",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CH232LS",
+    "name": "Zest Women's Chef Jacket",
+    "slug": "zest-womens-chef-jacket",
+    "website_colours": [
+      "Black",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CH232ML",
+    "name": "Zest Men's L/S Chef Jacket",
+    "slug": "zest-mens-l-s-chef-jacket",
+    "website_colours": [
+      "Black",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CH232MS",
+    "name": "Zest Men's S/S Chef Jacket",
+    "slug": "zest-mens-s-s-chef-jacket",
+    "website_colours": [
+      "Black",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CH330MS",
+    "name": "Men's Alfresco Short Sleeve Chef Jacket",
+    "slug": "mens-alfresco-short-sleeve-chef-jacket",
+    "website_colours": [
+      "Grey Smoke"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CH333",
+    "name": "Mesh Flat Top Hat",
+    "slug": "mesh-flat-top-hat",
+    "website_colours": [
+      "Black",
+      "True White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CH432L",
+    "name": "Women's Saffron Chef Flex Pant",
+    "slug": "womens-saffron-chef-flex-pant",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CH432M",
+    "name": "Men's Saffron Chef Flex Pant",
+    "slug": "mens-saffron-chef-flex-pant",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CK962LC",
+    "name": "Women's Zip Front Short Sleeve Knit Cardigan",
+    "slug": "womens-zip-front-short-sleeve-knit-cardigan",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CL040LL",
+    "name": "Jane 3/4 Length Stretch Pant",
+    "slug": "jane-3-4-length-stretch-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CL541LL",
+    "name": "Women's Pulse Jogger Scrub Pant",
+    "slug": "womens-pulse-jogger-scrub-pant",
+    "website_colours": [
+      "Caribbean Blue",
+      "Midnight Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CL542UL",
+    "name": "Unisex Pulse Straight Leg Scrub Pant",
+    "slug": "unisex-pulse-straight-leg-scrub-pant",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CL954LL",
+    "name": "Women's Comfort Waist Cargo Pant",
+    "slug": "womens-comfort-waist-cargo-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CL955LL",
+    "name": "Women's Comfort Waist Straight Leg Pant",
+    "slug": "womens-comfort-waist-straight-leg-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CL956LS",
+    "name": "Women's Comfort Waist Cargo Skirt",
+    "slug": "womens-comfort-waist-cargo-skirt",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CL957LS",
+    "name": "Women's Comfort Waist Cargo Short",
+    "slug": "womens-comfort-waist-cargo-short",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CL958ML",
+    "name": "Men's Comfort Waist Flat Front Pant",
+    "slug": "mens-comfort-waist-flat-front-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CL959ML",
+    "name": "Men's Comfort Waist Cargo Pant",
+    "slug": "mens-comfort-waist-cargo-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CL960MS",
+    "name": "Men's Comfort Waist Cargo Short",
+    "slug": "mens-comfort-waist-cargo-short",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CO342LJ",
+    "name": "Nova Women's Knit Jacket",
+    "slug": "nova-womens-knit-jacket",
+    "website_colours": [
+      "Black Marle",
+      "Navy Marle"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CO342MJ",
+    "name": "Nova Men's Knit Jacket",
+    "slug": "nova-mens-knit-jacket",
+    "website_colours": [
+      "Black Marle",
+      "Navy Marle"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CO343MV",
+    "name": "Nova Men's Knit Vest",
+    "slug": "nova-mens-knit-vest",
+    "website_colours": [
+      "Black Marle",
+      "Navy Marle"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CS450LS",
+    "name": "Women's Florence Stardust Print Tunic",
+    "slug": "womens-florence-stardust-print-tunic",
+    "website_colours": [
+      "Mid Blue",
+      "Navy",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CS948LS",
+    "name": "Women's Florence Daisy Print Short Sleeve Shirt",
+    "slug": "womens-florence-daisy-print-short-sleeve-shirt",
+    "website_colours": [
+      "Electric Blue",
+      "Navy",
+      "Purple",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CS949LS",
+    "name": "Ladies Florence Tunic",
+    "slug": "ladies-florence-tunic",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Cherry",
+      "Electric Blue",
+      "Mid Blue",
+      "Navy",
+      "Purple",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CS950LS",
+    "name": "Women's Florence Daisy Print Tunic",
+    "slug": "womens-florence-daisy-print-tunic",
+    "website_colours": [
+      "Electric Blue",
+      "Navy",
+      "Purple",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CS952LS",
+    "name": "Women's Marley Jersey T-Top",
+    "slug": "womens-marley-jersey-t-top",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Cherry",
+      "Purple",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "CSP042LL",
+    "name": "Women's Riley Slim Leg Jogger Scrub Pant",
+    "slug": "womens-riley-slim-leg-jogger-scrub-pant",
+    "website_colours": [
+      "Midnight Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CSP042ML",
+    "name": "Men's Riley Slim Leg Jogger Scrub Pant",
+    "slug": "mens-riley-slim-leg-jogger-scrub-pant",
+    "website_colours": [
+      "Midnight Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CSP047LL",
+    "name": "Women's Riley Straight Leg Scrub Pant",
+    "slug": "womens-riley-straight-leg-scrub-pant",
+    "website_colours": [
+      "Electric Blue"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CSP047ML",
+    "name": "Men's Riley Straight Scrub Pant",
+    "slug": "mens-riley-straight-scrub-pant",
+    "website_colours": [
+      "Electric Blue",
+      "Midnight Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CSP241LL",
+    "name": "Women's Pink Jogger Scrub Pant",
+    "slug": "womens-pink-jogger-scrub-pant",
+    "website_colours": [
+      "Pink"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CSP944LL",
+    "name": "Women's Avery Multi-Pocket Straight Leg Pant",
+    "slug": "womens-avery-multi-pocket-straight-leg-pant",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CST043LS",
+    "name": "Women's Riley V-Neck Scrub Top",
+    "slug": "womens-riley-v-neck-scrub-top",
+    "website_colours": [
+      "Electric Blue",
+      "Midnight Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CST043MS",
+    "name": "Men's Riley V-Neck Scrub Top",
+    "slug": "mens-riley-v-neck-scrub-top",
+    "website_colours": [
+      "Electric Blue",
+      "Midnight Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CST141LS",
+    "name": "Women's Tokyo Scrub Top",
+    "slug": "womens-tokyo-scrub-top",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CST141MS",
+    "name": "Men's Tokyo Scrub Top",
+    "slug": "mens-tokyo-scrub-top",
+    "website_colours": [
+      "Midnight Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CST245LS",
+    "name": "Women's Pink V-Neck Scrub Top",
+    "slug": "womens-pink-v-neck-scrub-top",
+    "website_colours": [
+      "Pink"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CU543LS",
+    "name": "Women's Pulse V-Neck Scrub Top",
+    "slug": "womens-pulse-v-neck-scrub-top",
+    "website_colours": [
+      "Midnight Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "CU544US",
+    "name": "Unisex Pulse V-Neck Scrub Top",
+    "slug": "unisex-pulse-v-neck-scrub-top",
+    "website_colours": [
+      "Black",
+      "Caribbean Blue"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "D605.R",
+    "name": "ECO NOVA Computer Backpack",
+    "slug": "eco-nova-computer-backpack",
+    "website_colours": [
+      "Black",
+      "Brown"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "DA1003",
+    "name": "Darani 15\" 19L Computer Backpack In Repreve Recycled Material",
+    "slug": "darani-15-19l-computer-backpack-in-repreve-recycled-material",
+    "website_colours": [
+      "Charcoal"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "DA1007",
+    "name": "Darani GRS Recycled Canvas Anti-Theft 15\" 21L Laptop Backpack",
+    "slug": "darani-grs-recycled-canvas-anti-theft-15-21l-laptop-backpack",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "F501",
+    "name": "Bloa Pen",
+    "slug": "bloa-pen",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "FAMILY-YARN-UNISEX",
+    "name": "Unisex - Family Black Bamboo (Simpson) Polo Shirt",
+    "slug": "unisex-family-black-bamboo-simpson-polo-shirt",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "FUTURE-YARN-UNISEX",
+    "name": "Unisex - Future Dreaming Essence Polo Shirt",
+    "slug": "unisex-future-dreaming-essence-polo-shirt",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "GUIDING-YARN-UNISEX",
+    "name": "Unisex - Guiding Light Black Bamboo (Simpson) Polo Shirt",
+    "slug": "unisex-guiding-light-black-bamboo-simpson-polo-shirt",
+    "website_colours": [
+      "Multi Coloured"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "H1026",
+    "name": "Slouch Hat With Break-Away Clip Strap",
+    "slug": "slouch-hat-with-break-away-clip-strap",
+    "website_colours": [
+      "Black",
+      "Bottle",
+      "Gold",
+      "Maroon",
+      "Navy",
+      "Red",
+      "Royal",
+      "Sky Blue",
+      "Sky/White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "IV170",
+    "name": "Bamboo Cap",
+    "slug": "bamboo-cap",
+    "website_colours": [
+      "Black",
+      "Light Grey",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "J211L",
+    "name": "Alpine Ladies Puffer Vest",
+    "slug": "alpine-ladies-puffer-vest",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "J211M",
+    "name": "Alpine Men's Puffer Vest",
+    "slug": "alpine-mens-puffer-vest",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "J212L",
+    "name": "Alpine Ladies Puffer Jacket",
+    "slug": "alpine-ladies-puffer-jacket",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "J212M",
+    "name": "Alpine Men's Puffer Jacket",
+    "slug": "alpine-mens-puffer-jacket",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "J213M",
+    "name": "Expedition Men's Vest",
+    "slug": "expedition-mens-vest",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "J307L",
+    "name": "Ladies Geneva Jacket",
+    "slug": "ladies-geneva-jacket",
+    "website_colours": [
+      "Black/Cyan",
+      "Black/Graphite",
+      "Black/Red",
+      "Navy/Graphite"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "J3881",
+    "name": "Men's Soft Shell Vest",
+    "slug": "mens-soft-shell-vest",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "J404L",
+    "name": "Ladies Geneva Vest",
+    "slug": "ladies-geneva-vest",
+    "website_colours": [
+      "Black/Cyan",
+      "Black/Graphite",
+      "Black/Red",
+      "Navy/Graphite"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "J428U",
+    "name": "Unisex Sphere Jacket",
+    "slug": "unisex-sphere-jacket",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "J502M",
+    "name": "Men's Atlas Jacket",
+    "slug": "mens-atlas-jacket",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "J510M",
+    "name": "Unisex Charger Jacket",
+    "slug": "unisex-charger-jacket",
+    "website_colours": [
+      "Black/Fluoro Orange/Grey",
+      "Black/Purple/Grey",
+      "Black/Red/Grey",
+      "Black/Royal/Grey",
+      "Green"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "J740L",
+    "name": "Ladies Apex Lightweight Softshell Jacket",
+    "slug": "ladies-apex-lightweight-softshell-jacket",
+    "website_colours": [
+      "Black",
+      "Grey",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "J740M",
+    "name": "Men's Apex Lightweight Softshell Jacket",
+    "slug": "mens-apex-lightweight-softshell-jacket",
+    "website_colours": [
+      "Black",
+      "Grey",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "J750L",
+    "name": "Ladies Expedition Quilted Jacket",
+    "slug": "ladies-expedition-quilted-jacket",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "J750M",
+    "name": "Men's Expedition Quilted Jacket",
+    "slug": "mens-expedition-quilted-jacket",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "J830L",
+    "name": "Ladies Apex Vest",
+    "slug": "ladies-apex-vest",
+    "website_colours": [
+      "Black",
+      "Grey",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "JH130W",
+    "name": "Arches Women's Padded Jacket",
+    "slug": "arches-womens-padded-jacket",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "JH135",
+    "name": "Arches Men's Padded Vest",
+    "slug": "arches-mens-padded-vest",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "JK63",
+    "name": "MEN'S_SUSTAINABLE_SOFTSHELL_CORPORATE_JACKET",
+    "slug": "mens-sustainable-softshell-corporate-jacket",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "JLCV",
+    "name": "Montreal Cool Vent Chef Jacket",
+    "slug": "montreal-cool-vent-chef-jacket",
+    "website_colours": [
+      "Black",
+      "Blue",
+      "Grey",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "KNOWLEDGE-YARN-UNISEX",
+    "name": "Unisex - Knowledge Holders Black Bamboo (Simpson) Polo Shirt",
+    "slug": "unisex-knowledge-holders-black-bamboo-simpson-polo-shirt",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "LB3600",
+    "name": "Ladies Plain Oasis 3/4 Sleeve Shirt",
+    "slug": "ladies-plain-oasis-3-4-sleeve-shirt",
+    "website_colours": [
+      "Charcoal",
+      "Electric Blue",
+      "Grape",
+      "Navy",
+      "Teal",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "LB3601",
+    "name": "Ladies Plain Oasis Short Sleeve Shirt",
+    "slug": "ladies-plain-oasis-short-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Cherry",
+      "Electric Blue",
+      "Grape",
+      "Mid Blue",
+      "Navy",
+      "Teal",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "LEGACY-YARN-UNISEX",
+    "name": "Unisex - Legacy Polo Shirt",
+    "slug": "unisex-legacy-polo-shirt",
+    "website_colours": [
+      "Multi Coloured"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "LL0226",
+    "name": "Arc Eco Square Wireless Charger",
+    "slug": "arc-eco-square-wireless-charger",
+    "website_colours": [
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "LL0427",
+    "name": "Vienna Coffee Cup / Silicone Lid",
+    "slug": "vienna-coffee-cup-silicone-lid",
+    "website_colours": [
+      "Black",
+      "Blue",
+      "Green",
+      "Navy",
+      "Orange",
+      "Pink",
+      "Purple",
+      "Red",
+      "Teal",
+      "White",
+      "Yellow"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "LL0461",
+    "name": "Vienna Coffee Cup / Snap Lid / Cork Band",
+    "slug": "vienna-coffee-cup-snap-lid-cork-band",
+    "website_colours": [
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "LL0944",
+    "name": "Tourist A5 Notebook",
+    "slug": "tourist-a5-notebook",
+    "website_colours": [
+      "Brown"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "LL9753",
+    "name": "Stone Paper Notebook",
+    "slug": "stone-paper-notebook",
+    "website_colours": [
+      "Brown"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "LL9757",
+    "name": "Amazon Bamboo Notebook",
+    "slug": "amazon-bamboo-notebook",
+    "website_colours": [
+      "Bamboo",
+      "Brown"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "LV619L",
+    "name": "Ladies Milano Vest",
+    "slug": "ladies-milano-vest",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "M7650",
+    "name": "Men's V-Neck Contrast Trim Scrub Top",
+    "slug": "mens-v-neck-contrast-trim-scrub-top",
+    "website_colours": [
+      "Navy/Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "M7660",
+    "name": "Ladies Scrub V-Neck Contrast Trim Top",
+    "slug": "ladies-scrub-v-neck-contrast-trim-top",
+    "website_colours": [
+      "Navy/Charcoal"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "M9380",
+    "name": "Men's Boston Chino",
+    "slug": "mens-boston-chino",
+    "website_colours": [
+      "Black",
+      "Dark Grey",
+      "Dark Stone",
+      "Navy",
+      "Olive",
+      "Toffee"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "M9381",
+    "name": "Men's Stretch Slimfit Boston Chino Shorts",
+    "slug": "mens-stretch-slimfit-boston-chino-shorts",
+    "website_colours": [
+      "Black",
+      "Dark Grey",
+      "Navy",
+      "Stone"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "M9390",
+    "name": "Ladies Boston Chino",
+    "slug": "ladies-boston-chino",
+    "website_colours": [
+      "Black",
+      "Dark Grey",
+      "Navy",
+      "Olive",
+      "Stone",
+      "Toffee"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "M9391",
+    "name": "Ladies Stretch Slimfit Boston Chino Shorts",
+    "slug": "ladies-stretch-slimfit-boston-chino-shorts",
+    "website_colours": [
+      "Black",
+      "Dark Grey",
+      "Navy",
+      "Stone",
+      "Toffee"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "MJ365",
+    "name": "Standard Jeans MENS R Jean",
+    "slug": "standard-jeans-mens-r-jean",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "MOUNTAINS-YARN-UNISEX",
+    "name": "Unisex - Mountains White Bamboo (Simpson) Polo Shirt",
+    "slug": "unisex-mountains-white-bamboo-simpson-polo-shirt",
+    "website_colours": [
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "P093",
+    "name": "The Gravity 3+1 Metal Pen",
+    "slug": "the-gravity-3-1-metal-pen",
+    "website_colours": [
+      "Black",
+      "Grey"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "P105LS",
+    "name": "City Womens Short Sleeve Polo",
+    "slug": "city-womens-short-sleeve-polo",
+    "website_colours": [
+      "Black",
+      "Mineral Blue",
+      "Navy",
+      "Teal",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P105MS",
+    "name": "City Mens Short Sleeve Polo",
+    "slug": "city-mens-short-sleeve-polo",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P112LS",
+    "name": "Ladies Ice Polo",
+    "slug": "ladies-ice-polo",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P112MS",
+    "name": "Men's Ice Polo",
+    "slug": "mens-ice-polo",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P129",
+    "name": "Tirana Pen",
+    "slug": "tirana-pen",
+    "website_colours": [
+      "Grey",
+      "Navy",
+      "Orange",
+      "Red",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "P131",
+    "name": "The Heritage Wooden + Metal Ball Pen",
+    "slug": "the-heritage-wooden-metal-ball-pen",
+    "website_colours": [
+      "Black",
+      "Brown"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "P227LS",
+    "name": "Ladies Cambridge Polo",
+    "slug": "ladies-cambridge-polo",
+    "website_colours": [
+      "Black/Red/White",
+      "Black/White/White",
+      "Grey",
+      "Navy/Red/White",
+      "Navy/White/White",
+      "Royal/White/White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P227MS",
+    "name": "Cambridge Men's Short Sleeve Polo",
+    "slug": "cambridge-mens-short-sleeve-polo",
+    "website_colours": [
+      "Black/Red/White",
+      "Black/White/White",
+      "Navy/Red/White",
+      "Navy/White/White",
+      "Royal/White/White",
+      "Steel Grey/Black/White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P381",
+    "name": "Paper Pen",
+    "slug": "paper-pen",
+    "website_colours": [
+      "Black",
+      "Blue",
+      "Green",
+      "Orange",
+      "Red",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "P400LL",
+    "name": "Crew Ladies L/S Polo",
+    "slug": "crew-ladies-l-s-polo",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P400LS",
+    "name": "Ladies Crew Polo",
+    "slug": "ladies-crew-polo",
+    "website_colours": [
+      "Black",
+      "Cyan",
+      "Red",
+      "Royal",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P400ML",
+    "name": "Crew Men's L/S Polo",
+    "slug": "crew-mens-l-s-polo",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P400MS",
+    "name": "Men's Crew Polo",
+    "slug": "mens-crew-polo",
+    "website_colours": [
+      "Charcoal",
+      "Forest",
+      "Orange",
+      "Red",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P515LS",
+    "name": "Womens Lotus Short Sleeve Polo",
+    "slug": "womens-lotus-short-sleeve-polo",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Mineral Blue",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P515MS",
+    "name": "Mens Lotus Short Sleeve Polo",
+    "slug": "mens-lotus-short-sleeve-polo",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Mineral Blue",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P602",
+    "name": "Monarch Re-AL Ball Pen",
+    "slug": "monarch-re-al-ball-pen",
+    "website_colours": [
+      "Black",
+      "Blue",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P603",
+    "name": "SmartScribe Re-AL NFC Pen",
+    "slug": "smartscribe-re-al-nfc-pen",
+    "website_colours": [
+      "Black",
+      "Blue",
+      "Red"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P700LS",
+    "name": "Ladies Renegade Polo",
+    "slug": "ladies-renegade-polo",
+    "website_colours": [
+      "Black/Teal/Silver",
+      "Black/White/Silver",
+      "Grey/Fluoro Lime/Silver",
+      "Navy/Red/Silver",
+      "Navy/Sky/Silver",
+      "Navy/White/Silver",
+      "White/Black/Silver"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P734",
+    "name": "RABS Mini Ballpoint Pen",
+    "slug": "rabs-mini-ballpoint-pen",
+    "website_colours": [
+      "Black",
+      "Blue",
+      "Red",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P740",
+    "name": "Cambridge Colorful Gel Ink Pen",
+    "slug": "cambridge-colorful-gel-ink-pen",
+    "website_colours": [
+      "Black",
+      "Blue",
+      "Green",
+      "Orange",
+      "Purple",
+      "Red"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "P901LS",
+    "name": "Ladies Sonar Polo",
+    "slug": "ladies-sonar-polo",
+    "website_colours": [
+      "Black/Red",
+      "Black/White",
+      "Navy/White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "P901MS",
+    "name": "Men's Sonar Polo",
+    "slug": "mens-sonar-polo",
+    "website_colours": [
+      "Black/Red",
+      "Black/White",
+      "Gold",
+      "Navy",
+      "Sky"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "PF631",
+    "name": "Ladies Plain Micro Fleece Jacket",
+    "slug": "ladies-plain-micro-fleece-jacket",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "PF905",
+    "name": "Ladies Plain Micro Fleece Vest",
+    "slug": "ladies-plain-micro-fleece-vest",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "PS60",
+    "name": "Ladies Bamboo Charcoal Short Sleeve Polo",
+    "slug": "ladies-bamboo-charcoal-short-sleeve-polo",
+    "website_colours": [
+      "Aegean Blue",
+      "Arctic Blue",
+      "Black",
+      "Cool Grey",
+      "Mineral Green",
+      "Navy",
+      "Ocean Blue",
+      "Ruby",
+      "Storm Grey",
+      "Teal"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "PS91",
+    "name": "Men's Sustainable Poly/Cotton Corporate SS Polo",
+    "slug": "mens-sustainable-poly-cotton-corporate-ss-polo",
+    "website_colours": [
+      "Ash",
+      "Black",
+      "Heavy Cloud",
+      "Navy",
+      "Teal",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "PS92",
+    "name": "Ladies Sustainable Poly/Cotton Corporate SS Polo",
+    "slug": "ladies-sustainable-poly-cotton-corporate-ss-polo",
+    "website_colours": [
+      "Ash",
+      "Black",
+      "Navy",
+      "Teal",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "R900M",
+    "name": "Printable Recycled 3-Layer Softshell Jacket",
+    "slug": "printable-recycled-3-layer-softshell-jacket",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "RA268U",
+    "name": "Casual Braided Belt",
+    "slug": "casual-braided-belt",
+    "website_colours": [
+      "Black/Black",
+      "Navy/Brown"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RA572M",
+    "name": "Men's Leather Belt",
+    "slug": "mens-leather-belt",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "RA972L",
+    "name": "Women's Belt",
+    "slug": "womens-belt",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "RB1040",
+    "name": "Rara Cooler Bag",
+    "slug": "rara-cooler-bag",
+    "website_colours": [
+      "Black",
+      "Grey",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "RB1043",
+    "name": "Willow Natural Tote",
+    "slug": "willow-natural-tote",
+    "website_colours": [
+      "Brown",
+      "Natural"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RB1053",
+    "name": "The Buddy Drawstring Bag",
+    "slug": "the-buddy-drawstring-bag",
+    "website_colours": [
+      "Black",
+      "Blue",
+      "Red"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RB966LS",
+    "name": "Women's Aria Fluted Sleeve Blouse",
+    "slug": "womens-aria-fluted-sleeve-blouse",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "Raspberry",
+      "Storm Blue"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RB967LS",
+    "name": "Women's Kayla V-Neck Pleat Blouse",
+    "slug": "womens-kayla-v-neck-pleat-blouse",
+    "website_colours": [
+      "Aqua",
+      "Black",
+      "Dusty Rose",
+      "Navy",
+      "Raspberry",
+      "Silver"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RB973LN",
+    "name": "Women's Estelle Pleat Blouse",
+    "slug": "womens-estelle-pleat-blouse",
+    "website_colours": [
+      "Aqua",
+      "Black",
+      "Dusty Rose",
+      "Navy",
+      "Raspberry",
+      "Silver"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RD409L",
+    "name": "Renew Women's Short Sleeve Dress",
+    "slug": "renew-womens-short-sleeve-dress",
+    "website_colours": [
+      "Navy Dusk",
+      "Pencil Black"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RGP263L",
+    "name": "Traveller Women's Slim Leg Chino",
+    "slug": "traveller-womens-slim-leg-chino",
+    "website_colours": [
+      "Black",
+      "Desert",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RGP263M",
+    "name": "Traveller Men's Tapered Chino",
+    "slug": "traveller-mens-tapered-chino",
+    "website_colours": [
+      "Black",
+      "Desert",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RGP308L",
+    "name": "Siena 7/8 Mid-Waist Slim Leg Pant",
+    "slug": "siena-7-8-mid-waist-slim-leg-pant",
+    "website_colours": [
+      "Black",
+      "Marine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RGP315L",
+    "name": "Cool Stretch Women's Tapered Leg Adjustable Waist Pant",
+    "slug": "cool-stretch-womens-tapered-leg-adjustable-waist-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RGP404L",
+    "name": "Renew Women's Tapered Adjustable Waist Pant",
+    "slug": "renew-womens-tapered-adjustable-waist-pant",
+    "website_colours": [
+      "Navy Dusk",
+      "Pencil Black"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RGP406L",
+    "name": "Renew Women's 7/8 Mid-Waist Slim Leg Pant",
+    "slug": "renew-womens-7-8-mid-waist-slim-leg-pant",
+    "website_colours": [
+      "Navy Dusk",
+      "Pencil Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "RGP407M",
+    "name": "Renew Men's Slim Fit Flat Front Pant",
+    "slug": "renew-mens-slim-fit-flat-front-pant",
+    "website_colours": [
+      "Navy Dusk",
+      "Pencil Black"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RGP408M",
+    "name": "Renew Men's Adjustable Waist Straight Leg Pant",
+    "slug": "renew-mens-adjustable-waist-straight-leg-pant",
+    "website_colours": [
+      "Black",
+      "Navy Dusk"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RGP975L",
+    "name": "Women's Siena Adjustable Waist Pant",
+    "slug": "womens-siena-adjustable-waist-pant",
+    "website_colours": [
+      "Black",
+      "Marine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RGP976M",
+    "name": "Men's Siena Adjustable Waist Pant",
+    "slug": "mens-siena-adjustable-waist-pant",
+    "website_colours": [
+      "Black",
+      "Marine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RGS264L",
+    "name": "Traveller Women's Chino Skirt",
+    "slug": "traveller-womens-chino-skirt",
+    "website_colours": [
+      "Black",
+      "Desert",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RGS2670L",
+    "name": "Womens Sammy Skirt",
+    "slug": "womens-sammy-skirt",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "RGS312L",
+    "name": "Cool Stretch Women's Mid-Waist Pencil Skirt",
+    "slug": "cool-stretch-womens-mid-waist-pencil-skirt",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RGS403L",
+    "name": "Renew Women's Functional Pencil Skirt",
+    "slug": "renew-womens-functional-pencil-skirt",
+    "website_colours": [
+      "Navy Dusk",
+      "Pencil Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "RJ400L",
+    "name": "Renew Women's Double Breasted Longline Jacket",
+    "slug": "renew-womens-double-breasted-longline-jacket",
+    "website_colours": [
+      "Navy Dusk",
+      "Pencil Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "RJ401L",
+    "name": "Renew Women's Single Button Mid Length Jacket",
+    "slug": "renew-womens-single-button-mid-length-jacket",
+    "website_colours": [
+      "Navy Dusk",
+      "Pencil Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "RJ401M",
+    "name": "Renew Men's City Fit Jacket",
+    "slug": "renew-mens-city-fit-jacket",
+    "website_colours": [
+      "Navy Dusk",
+      "Pencil Black"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ROLLIE-CLUB",
+    "name": "Men's Courtclub",
+    "slug": "mens-courtclub",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "ROLLIE-DERBY",
+    "name": "Men’s Derby",
+    "slug": "mens-derby",
+    "website_colours": [
+      "Black",
+      "Vintage Brown",
+      "Vintage Cognac"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RS968LL",
+    "name": "Women's Charlie L/S Shirt",
+    "slug": "womens-charlie-l-s-shirt",
+    "website_colours": [
+      "Black",
+      "Blue Chambray",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RS968LS",
+    "name": "Women's Charlie S/S Shirt",
+    "slug": "womens-charlie-s-s-shirt",
+    "website_colours": [
+      "Black",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RS968LT",
+    "name": "Women's Charlie 3/4 Shirt",
+    "slug": "womens-charlie-3-4-shirt",
+    "website_colours": [
+      "Black",
+      "Blue Chambray",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RT065LS",
+    "name": "Sydney T-Top",
+    "slug": "sydney-t-top",
+    "website_colours": [
+      "Black",
+      "Storm Blue"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RT262LS",
+    "name": "Marli Stretch Tunic T-Top",
+    "slug": "marli-stretch-tunic-t-top",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RU568LL",
+    "name": "Women's Ruche Long Sleeve Blouse",
+    "slug": "womens-ruche-long-sleeve-blouse",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "Powder Blue"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RU568LS",
+    "name": "Women's Ruche Short Sleeve Blouse",
+    "slug": "womens-ruche-short-sleeve-blouse",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "Powder Blue"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RU569LL",
+    "name": "Women's Evelyn Long Sleeve Blouse",
+    "slug": "womens-evelyn-long-sleeve-blouse",
+    "website_colours": [
+      "Black",
+      "Ivory",
+      "Mineral Blue",
+      "Navy",
+      "Wine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RU569LS",
+    "name": "Women's Evelyn Short Sleeve Blouse",
+    "slug": "womens-evelyn-short-sleeve-blouse",
+    "website_colours": [
+      "Black",
+      "Ivory",
+      "Mineral Blue",
+      "Navy",
+      "Powder Blue",
+      "Wine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "RU570LL",
+    "name": "Women's Evelyn Long Sleeve Shirt",
+    "slug": "womens-evelyn-long-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Ivory",
+      "Mineral Blue",
+      "Navy",
+      "Wine"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "S127LL",
+    "name": "Ladies Memphis Shirt",
+    "slug": "ladies-memphis-shirt",
+    "website_colours": [
+      "Black",
+      "Grey Smoke",
+      "Jasper Green",
+      "Mineral Blue",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "S127ML",
+    "name": "Men's Memphis Shirt",
+    "slug": "mens-memphis-shirt",
+    "website_colours": [
+      "Black",
+      "Grey Smoke",
+      "Jasper Green",
+      "Mineral Blue",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "S3101",
+    "name": "Vidro 750ml Bottle",
+    "slug": "vidro-750ml-bottle",
+    "website_colours": [],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "S400",
+    "name": "Oakleigh Coffee Cup (354mL)",
+    "slug": "oakleigh-coffee-cup-354ml",
+    "website_colours": [
+      "Black",
+      "Green",
+      "Pink",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "S421LL",
+    "name": "Women's Soul Long Sleeve Shirt",
+    "slug": "womens-soul-long-sleeve-shirt",
+    "website_colours": [
+      "Grey",
+      "Navy",
+      "Olive",
+      "Rust"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "S421ML",
+    "name": "Men's Soul Long Sleeve Shirt",
+    "slug": "mens-soul-long-sleeve-shirt",
+    "website_colours": [
+      "Grey",
+      "Navy",
+      "Olive",
+      "Rust"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "S626LL",
+    "name": "Ladies Madison Long Sleeve Blouse",
+    "slug": "ladies-madison-long-sleeve-blouse",
+    "website_colours": [
+      "Black",
+      "Ivory",
+      "Midnight Blue",
+      "Silver Mist"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "S627LN",
+    "name": "Ladies Madison Sleeveless Top",
+    "slug": "ladies-madison-sleeveless-top",
+    "website_colours": [
+      "Black",
+      "Ivory",
+      "Midnight Blue",
+      "Silver Mist"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "S628LS",
+    "name": "Ladies Madison Short Sleeve Shirt",
+    "slug": "ladies-madison-short-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Ivory",
+      "Midnight Blue",
+      "Seafoam",
+      "Silver Mist",
+      "Storm Blue"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "S777",
+    "name": "Byron 1L Drink Bottle",
+    "slug": "byron-1l-drink-bottle",
+    "website_colours": [
+      "Black",
+      "Olive",
+      "Green",
+      "Stone",
+      "White",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "S828LL",
+    "name": "Ladies Madison Boatneck Blouse",
+    "slug": "ladies-madison-boatneck-blouse",
+    "website_colours": [
+      "Black",
+      "Ivory",
+      "Midnight Blue",
+      "Silver Mist"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "S895",
+    "name": "Sunrise Smoothie 500mL Tumbler",
+    "slug": "sunrise-smoothie-500ml-tumbler",
+    "website_colours": [
+      "Black",
+      "Green",
+      "Grey",
+      "Pink",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "S901",
+    "name": "Allegra 750ml Bottle",
+    "slug": "allegra-750ml-bottle",
+    "website_colours": [
+      "Black",
+      "Blue",
+      "Brown",
+      "Green",
+      "Grey",
+      "Navy",
+      "Pink",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "S909",
+    "name": "Summit 750ml Drink Bottle",
+    "slug": "summit-750ml-drink-bottle",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "S990",
+    "name": "Arlo 1L Glass Water Bottle",
+    "slug": "arlo-1l-glass-water-bottle",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "SC00129",
+    "name": "Women's Derby City",
+    "slug": "womens-derby-city",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "SC01535",
+    "name": "Women's Court Club",
+    "slug": "womens-court-club",
+    "website_colours": [
+      "Black",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "SH3603",
+    "name": "Men's Plain Oasis Short Sleeve Shirt",
+    "slug": "mens-plain-oasis-short-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Electric Blue",
+      "Grape",
+      "Mid Blue",
+      "Navy",
+      "Teal"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "SW19A",
+    "name": "Hi-Vis Reversible Safety Vest With 3m Tapes",
+    "slug": "hi-vis-reversible-safety-vest-with-3m-tapes",
+    "website_colours": [
+      "Orange",
+      "Yellow"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "T10012",
+    "name": "Men's Ice Tee",
+    "slug": "mens-ice-tee",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Grey Marle",
+      "Khaki",
+      "Navy",
+      "Royal",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "T10022",
+    "name": "Ladies Ice Tee",
+    "slug": "ladies-ice-tee",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Denim",
+      "Khaki",
+      "Navy",
+      "Royal",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "T14",
+    "name": "Men's Stevie",
+    "slug": "mens-stevie",
+    "website_colours": [
+      "Black/White",
+      "Navy/White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "T207MS",
+    "name": "Men's Action Short Sleeve Tee",
+    "slug": "mens-action-short-sleeve-tee",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "TL1001",
+    "name": "Thule Achiever 16\" Laptop Backpack",
+    "slug": "thule-achiever-16-laptop-backpack",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "TW1639",
+    "name": "Mens Signature Trouser",
+    "slug": "mens-signature-trouser",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "TW1643",
+    "name": "Mens Signature Shorts",
+    "slug": "mens-signature-shorts",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "TW1822",
+    "name": "Men's Signature Polo",
+    "slug": "mens-signature-polo",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "TW1823",
+    "name": "Women's Signature Polo",
+    "slug": "womens-signature-polo",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "TW1824",
+    "name": "Men's Signature Long Sleeve Polo",
+    "slug": "mens-signature-long-sleeve-polo",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "TW1825",
+    "name": "Women's Signature Long Sleeve Polo",
+    "slug": "womens-signature-long-sleeve-polo",
+    "website_colours": [
+      "Black",
+      "Brown"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "TW1826",
+    "name": "Women's Crew Pullover",
+    "slug": "womens-crew-pullover",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "TW1827",
+    "name": "Men's Crew Pullover",
+    "slug": "mens-crew-pullover",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "TW1828",
+    "name": "MEN'S_1-4_ZIP_PULLOVER",
+    "slug": "mens-1-4-zip-pullover",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "TW1829",
+    "name": "Women's Signature Cardiagn",
+    "slug": "womens-signature-cardiagn",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "TW1838",
+    "name": "Ladies Signature Trouser",
+    "slug": "ladies-signature-trouser",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "TW1919",
+    "name": "SIGNATURE_HOODIE",
+    "slug": "signature-hoodie",
+    "website_colours": [
+      "Black"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "W44",
+    "name": "Men’s Miller Long Sleeve Shirt",
+    "slug": "mens-miller-long-sleeve-shirt",
+    "website_colours": [
+      "Black/White",
+      "Green/White",
+      "Navy/White",
+      "Red/White",
+      "Sky Blue"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "W45",
+    "name": "Ladies Miller Long Sleeve Shirt",
+    "slug": "ladies-miller-long-sleeve-shirt",
+    "website_colours": [
+      "Black/White",
+      "Navy/White",
+      "Racing Green/White",
+      "Red/White",
+      "Sky/White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "W46",
+    "name": "Men’s Miller Short Sleeve Shirt",
+    "slug": "mens-miller-short-sleeve-shirt",
+    "website_colours": [
+      "Black/White",
+      "Green/White",
+      "Navy/White",
+      "Red/White",
+      "Sky/White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "W47",
+    "name": "Ladies Miller Short Sleeve Shirt",
+    "slug": "ladies-miller-short-sleeve-shirt",
+    "website_colours": [
+      "Black/White",
+      "Navy/White",
+      "Racing Green/White",
+      "Red/White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "W47Q",
+    "name": "Ladies Miller 3/4 Sleeve Shirt",
+    "slug": "ladies-miller-3-4-sleeve-shirt",
+    "website_colours": [
+      "Black/White",
+      "Navy/White",
+      "Racing Green/White",
+      "Red/White",
+      "Sky/White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "W49",
+    "name": "Mens Blue Denim Shirt Men’s Dylan Short Sleeve Shirt",
+    "slug": "mens-blue-denim-shirt-mens-dylan-short-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Indigo Blue",
+      "Vintage Blue"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "W71",
+    "name": "Men's Floyd Long Sleeve",
+    "slug": "mens-floyd-long-sleeve",
+    "website_colours": [
+      "Black",
+      "French Blue",
+      "Navy",
+      "Smoke Grey",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "W73",
+    "name": "Ladies Floyd Long Sleeve",
+    "slug": "ladies-floyd-long-sleeve",
+    "website_colours": [
+      "Black",
+      "French Blue",
+      "Navy",
+      "Smoke Grey",
+      "White"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "W90",
+    "name": "Men's Blake Long Sleeve Shirt",
+    "slug": "mens-blake-long-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "W91",
+    "name": "Men's Blake Short Sleeve Shirt",
+    "slug": "mens-blake-short-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "W92",
+    "name": "Ladies Blake Long Sleeve Shirt",
+    "slug": "ladies-blake-long-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "W93",
+    "name": "Ladies Blake Short Sleeve Shirt",
+    "slug": "ladies-blake-short-sleeve-shirt",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "WP417M",
+    "name": "Men's Milano Pullover",
+    "slug": "mens-milano-pullover",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "X1001M",
+    "name": "Basis Short Sleeve Tee Men's",
+    "slug": "basis-short-sleeve-tee-mens",
+    "website_colours": [
+      "Black",
+      "Charcoal Marle",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "X1001W",
+    "name": "Women's Basis Short Sleeve Tee",
+    "slug": "womens-basis-short-sleeve-tee",
+    "website_colours": [
+      "Black",
+      "Grey Marle",
+      "Ink",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "X1002M",
+    "name": "Black Men's Basis Long Sleeve Tee",
+    "slug": "black-mens-basis-long-sleeve-tee",
+    "website_colours": [
+      "Army",
+      "Black",
+      "Grey Marle",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "X1002W",
+    "name": "Women's Basis Long Sleeve Tee",
+    "slug": "womens-basis-long-sleeve-tee",
+    "website_colours": [
+      "Black",
+      "Ecru",
+      "Grey Marle",
+      "Red",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "X2001M",
+    "name": "Everyday Short Sleeve Tee Men's",
+    "slug": "everyday-short-sleeve-tee-mens",
+    "website_colours": [
+      "Black",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "X2001W",
+    "name": "Women's Everyday Short Sleeve Tee",
+    "slug": "womens-everyday-short-sleeve-tee",
+    "website_colours": [
+      "Black",
+      "Espresso",
+      "Grey Marle",
+      "Navy",
+      "White"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZH415",
+    "name": "Men's Comfort Back S/S Polo",
+    "slug": "mens-comfort-back-s-s-polo",
+    "website_colours": [
+      "Orange/Charcoal",
+      "Orange/Navy",
+      "Yellow/Charcoal",
+      "Yellow/Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZJ355",
+    "name": "Men's Hi Vis Waterproof Lightweight Jacket",
+    "slug": "mens-hi-vis-waterproof-lightweight-jacket",
+    "website_colours": [
+      "Orange/Navy",
+      "Yellow/Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZMBEAN",
+    "name": "Unisex Streetworx Beanie",
+    "slug": "unisex-streetworx-beanie",
+    "website_colours": [
+      "Black",
+      "Grey",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZP230",
+    "name": "Men's Essential Basic Stretch Cargo Pant",
+    "slug": "mens-essential-basic-stretch-cargo-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Khaki",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZP320",
+    "name": "Men's Streetworx Stretch Pant Non-Cuffed",
+    "slug": "mens-streetworx-stretch-pant-non-cuffed",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Khaki",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZP501",
+    "name": "Men's Basic Cargo Pant (Regular)",
+    "slug": "mens-basic-cargo-pant-regular",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "ZP504",
+    "name": "Men's Rugged Cooling Cargo Pant (Regular)",
+    "slug": "mens-rugged-cooling-cargo-pant-regular",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Khaki",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZP505",
+    "name": "Men's Lightweight Drill Cargo Pant",
+    "slug": "mens-lightweight-drill-cargo-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZP604",
+    "name": "Men's Rugged Cooling Stretch Pant",
+    "slug": "mens-rugged-cooling-stretch-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Khaki",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZP730",
+    "name": "Women's Essential Basic Stretch Cargo Pant",
+    "slug": "womens-essential-basic-stretch-cargo-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Khaki",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZP733",
+    "name": "Women's Essential Stretch Taped Cargo Pant",
+    "slug": "womens-essential-stretch-taped-cargo-pant",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "ZP735",
+    "name": "Women's Essential Stretch Taped Cargo Pant - Cuffed",
+    "slug": "womens-essential-stretch-taped-cargo-pant-cuffed",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "ZP750",
+    "name": "Women's Streetworx Tough Pant",
+    "slug": "womens-streetworx-tough-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Khaki",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZP820",
+    "name": "Men's Streetworx Heritage Pant",
+    "slug": "mens-streetworx-heritage-pant",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy",
+      "Stone"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZP923",
+    "name": "Men's Essential Stretch Taped Cargo Pant",
+    "slug": "mens-essential-stretch-taped-cargo-pant",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "ZP924",
+    "name": "Men's Rugged Cooling Stretch Segmented Taped Pant",
+    "slug": "mens-rugged-cooling-stretch-segmented-taped-pant",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "ZP935",
+    "name": "Men's Essential Stretch Taped Cargo Pant - Cuffed",
+    "slug": "mens-essential-stretch-taped-cargo-pant-cuffed",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "ZS146",
+    "name": "Men's Summer Cargo Short",
+    "slug": "mens-summer-cargo-short",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Khaki",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZS502",
+    "name": "Men's Basic Cargo Short",
+    "slug": "mens-basic-cargo-short",
+    "website_colours": [
+      "Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "ZS822",
+    "name": "Men's Streetworx Heritage Short",
+    "slug": "mens-streetworx-heritage-short",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy",
+      "Stone"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZT460",
+    "name": "Hi Vis Half Zip Polar Fleece Jumper",
+    "slug": "hi-vis-half-zip-polar-fleece-jumper",
+    "website_colours": [
+      "Orange/Navy",
+      "Yellow/Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZT461",
+    "name": "Hi Vis Polar Fleece Jumper - Hoop Taped",
+    "slug": "hi-vis-polar-fleece-jumper-hoop-taped",
+    "website_colours": [
+      "Orange/Navy",
+      "Yellow/Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZV245",
+    "name": "Unisex Streetworx Hooded Puffer Vest",
+    "slug": "unisex-streetworx-hooded-puffer-vest",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW001S",
+    "name": "Men's Midweight Drill Cargo Pant (Stout)",
+    "slug": "mens-midweight-drill-cargo-pant-stout",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW004",
+    "name": "Men's Taped Utility Pant (Regular)",
+    "slug": "mens-taped-utility-pant-regular",
+    "website_colours": [
+      "Black",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW115",
+    "name": "Men's Hi Vis Short Sleeve Shirt",
+    "slug": "mens-hi-vis-short-sleeve-shirt",
+    "website_colours": [
+      "Orange/Navy",
+      "Yellow/Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW120",
+    "name": "Men's Light Weight Tradie S/S Shirt",
+    "slug": "mens-light-weight-tradie-s-s-shirt",
+    "website_colours": [
+      "Black",
+      "Blue",
+      "Grey",
+      "Sand"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW121",
+    "name": "Men's Lightweight Tradie L/S Shirt",
+    "slug": "mens-lightweight-tradie-l-s-shirt",
+    "website_colours": [
+      "Black",
+      "Blue",
+      "Grey",
+      "Sand"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW128",
+    "name": "Men's Rugged Cooling Hi Vis Spliced Shirt",
+    "slug": "mens-rugged-cooling-hi-vis-spliced-shirt",
+    "website_colours": [
+      "Orange/Charcoal",
+      "Orange/Navy",
+      "Yellow/Charcoal",
+      "Yellow/Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW229",
+    "name": "Men's Rugged Cooling Hi Vis Segmented Tape L/S Shirt",
+    "slug": "mens-rugged-cooling-hi-vis-segmented-tape-l-s-shirt",
+    "website_colours": [
+      "Orange/Navy",
+      "Yellow/Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW400",
+    "name": "Men's Rugged Cooling Men's L/S Shirt",
+    "slug": "mens-rugged-cooling-mens-l-s-shirt",
+    "website_colours": [
+      "Black",
+      "Charcoal",
+      "Khaki",
+      "Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW460",
+    "name": "Men's Outdoor L/S Shirt",
+    "slug": "mens-outdoor-l-s-shirt",
+    "website_colours": [
+      "Army",
+      "Black",
+      "Blue",
+      "Green",
+      "Natural",
+      "Navy",
+      "Sand",
+      "Stone"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW465",
+    "name": "Men's Outdoor S/S Shirt",
+    "slug": "mens-outdoor-s-s-shirt",
+    "website_colours": [
+      "Army",
+      "Black",
+      "Blue",
+      "Green",
+      "Natural",
+      "Navy",
+      "Sand",
+      "Stone"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW468",
+    "name": "Men's Hi Vis Outdoor L/S Shirt",
+    "slug": "mens-hi-vis-outdoor-l-s-shirt",
+    "website_colours": [
+      "Orange/Navy",
+      "Yellow/Navy"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "ZW680",
+    "name": "Men's Bio Motion Vic Rail Shirt",
+    "slug": "mens-bio-motion-vic-rail-shirt",
+    "website_colours": [
+      "Vic Rail Orange"
+    ],
+    "colour_disclaimer": "No"
+  },
+  {
+    "sku": "ZW760",
+    "name": "Women's Outdoor Long Sleeve Shirt",
+    "slug": "womens-outdoor-long-sleeve-shirt",
+    "website_colours": [
+      "Army",
+      "Black",
+      "Blue",
+      "Green",
+      "Natural",
+      "Navy",
+      "Pink",
+      "Sand",
+      "Stone"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW765",
+    "name": "Women's Outdoor Short Sleeve Shirt",
+    "slug": "womens-outdoor-short-sleeve-shirt",
+    "website_colours": [
+      "Army",
+      "Black",
+      "Blue",
+      "Natural",
+      "Navy",
+      "Pink",
+      "Sand",
+      "Stone"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW815",
+    "name": "Men's Rugged Cooling Hi Vis Spliced S/S Shirt",
+    "slug": "mens-rugged-cooling-hi-vis-spliced-s-s-shirt",
+    "website_colours": [
+      "Orange/Charcoal",
+      "Orange/Navy",
+      "Yellow/Charcoal",
+      "Yellow/Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZW835",
+    "name": "Men's Rugged Cooling Taped Hi Vis Spliced S/S Shirt",
+    "slug": "mens-rugged-cooling-taped-hi-vis-spliced-s-s-shirt",
+    "website_colours": [
+      "Orange/Charcoal",
+      "Orange/Navy",
+      "Yellow/Charcoal",
+      "Yellow/Navy"
+    ],
+    "colour_disclaimer": "Yes"
+  },
+  {
+    "sku": "ZWL120",
+    "name": "Women's Lightweight Tradie S/S Shirt",
+    "slug": "womens-lightweight-tradie-s-s-shirt",
+    "website_colours": [
+      "Black",
+      "Blue",
+      "Grey",
+      "Sand"
+    ],
+    "colour_disclaimer": "Yes"
+  }
+]
