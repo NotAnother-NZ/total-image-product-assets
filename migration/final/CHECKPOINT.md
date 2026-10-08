@@ -152,3 +152,25 @@ Remaining action: final publish only after explicit go-ahead.
   - 73 product images remain intentionally unmatched to a Colour reference and are sorted after colour-matched product images rather than guessed.
 - Example ZWL120 now orders product images Black Front, Black Back, Blue Front, Blue Back, Grey Front, Grey Back, Sand Front, Sand Back after the model-image block.
 - No site publish was performed as part of this correction.
+
+
+## 2026-10-08 Related Products populated
+
+- Reviewed source mapping checkpointed at `migration/final/source/07-related-products-reviewed.csv`.
+- Source rows: 422 Products, exactly matching the 422 live Webflow Product slugs.
+- Source validation passed:
+  - 422 unique Product slugs
+  - 0 unknown Product slugs
+  - 0 unknown Related Product slugs
+  - 0 self-references
+  - 0 duplicate references within a Product
+- Applied `related-products` MultiReference values to all 422 Products using live Webflow Product item IDs while preserving the CSV order.
+- Total Related Product references applied and verified: 1,945.
+- 419 Products have one or more Related Products.
+- 3 Products intentionally remain with no Related Products because their reviewed CSV rows are blank:
+  - arc-eco-square-wireless-charger
+  - mens-stevie
+  - standard-jeans-mens-r-jean
+- Maximum references on one Product: 13 (`unisex-streetworx-hooded-puffer-vest`).
+- Post-write full verification passed for all 422 Products: every live `related-products` ID array exactly matches the reviewed CSV mapping and order.
+- No site publish was performed as part of this update.
