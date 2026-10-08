@@ -174,3 +174,25 @@ Remaining action: final publish only after explicit go-ahead.
 - Maximum references on one Product: 13 (`unisex-streetworx-hooded-puffer-vest`).
 - Post-write full verification passed for all 422 Products: every live `related-products` ID array exactly matches the reviewed CSV mapping and order.
 - No site publish was performed as part of this update.
+
+
+## 2026-10-08 QA base Product fully populated
+
+QA base Product: `womens-lightweight-tradie-s-s-shirt` (SKU `ZWL120`).
+
+- Audited every Product CMS field in live Webflow.
+- The only blank custom field was `related-testimonials`.
+- Added two broad uniform/product-quality testimonials suitable for QA display:
+  1. Canterbury Leagues Club
+  2. The Albury SS&A Club
+- Post-write verification:
+  - 0 blank custom Product fields
+  - 4 Related Products
+  - 2 Related Testimonials
+  - 4 Colours
+  - 3 Subcategories
+  - 1 Industry
+  - 12 Image CMS items
+  - Hero Image is present and references one of those 12 images
+- Caveat: there is currently no Automotive-tagged testimonial in the Testimonials CMS, so these are general uniform/product-quality testimonials rather than Automotive-specific customer proof.
+- No site publish was performed as part of this update.
