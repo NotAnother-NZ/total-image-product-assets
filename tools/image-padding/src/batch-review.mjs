@@ -22,12 +22,13 @@ export function escapeXml(value) {
 export function groupEntries(summary) {
   if (!Array.isArray(summary?.entries)) throw Error('Missing batch summary entries');
   const images = new Set();
-  const grouped = { ready: [], unresolved: [] };
+  const grouped = { ready: [], unresolved: [], unchanged: [] };
   for (const entry of summary.entries) {
     if (!entry.imageItemId || !entry.slug || !entry.status) throw Error('Invalid summary entry');
     if (images.has(entry.imageItemId)) throw Error('Duplicate image ID in summary');
     images.add(entry.imageItemId);
     if (['ready', 'applied'].includes(entry.status)) grouped.ready.push(entry);
+    else if (entry.status === 'unchanged') grouped.unchanged.push(entry);
     else grouped.unresolved.push(entry);
   }
   return grouped;
@@ -104,7 +105,7 @@ export async function buildReviewSheets(folder = defaultFolder) {
   await mkdir(output, { recursive: true });
   const sheetIndex = [];
   const problems = [];
-  for (const [key, items] of [['ready', grouped.ready], ['needs-attention', grouped.unresolved]]) {
+  for (const [key, items] of [['ready', grouped.ready], ['needs-attention', grouped.unresolved], ['unchanged', grouped.unchanged]]) {
     for (let start = 0; start < items.length; start += pageSize) {
       const pageNumber = Math.floor(start / pageSize) + 1;
       const filename = key + '-' + String(pageNumber).padStart(2, '0') + '.webp';
