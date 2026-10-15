@@ -12,6 +12,7 @@ import {
   uploadAsset, updateImageOnly, waitForHostedAsset, EXPECTED_IMAGES
 } from './batch-cms.mjs';
 import { aggregateUsage, printTotalUsage, createProgress } from './batch-report.mjs';
+import { verifyStagedAssetBytes, preserveCanonicalAsset } from './staged-asset.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 config({ path: resolve(root, '.env'), quiet: true });
@@ -226,35 +227,62 @@ async function applyOne(t) {
   if (!['ready', 'applied'].includes(state.status)) return 'not-ready';
 
   const webp = await readFile(join(dir, 'preview.webp'));
-  if (hash(webp) !== state.previewHash) throw Error('Preview checksum mismatch');
+  if (hash(webp) !== state.previewHash) throw Error('Approved preview checksum mismatch');
   const originalImage = state.source?.image;
-  if (!originalImage) throw Error('Missing original CMS backup in manifest');
+  if (!originalImage) throw Error('Missing original CMS backup in checkpoint');
+
+  async function acceptVerifiedCmsAsset(image) {
+    assertOtherFieldsUnchanged(originalImage, image);
+    if (!state.uploaded?.fileId) {
+      throw Error('Image changed but no matching upload receipt exists; refusing to overwrite');
+    }
+    if ((image.fieldData.image.alt ?? null) !== (originalImage.fieldData.image.alt ?? null)) {
+      throw Error('CMS image alt text changed during staged update');
+    }
+    // A CMS image field can receive a *new* Webflow file ID/URL when the
+    // upload is assigned to it. The real bytes must match our approved
+    // WebP preview exactly before accepting this as a successful update.
+    const canonical = await verifyStagedAssetBytes(t, image.fieldData.image, state.previewHash);
+    preserveCanonicalAsset(state, canonical);
+    await saveState(t, state);
+    return 'applied';
+  }
+
   const { image, product } = await readVerifiedTarget(t);
   assertOtherFieldsUnchanged(originalImage, image);
-  if (product.fieldData?.slug !== state.source?.product?.fieldData?.slug) throw Error('Product identity changed');
-  if (t.isHero && product.fieldData['hero-image'] !== t.imageItemId) throw Error('Hero image reference changed');
-
-  if (state.uploaded?.fileId && image.fieldData.image.fileId === state.uploaded.fileId) {
-    if (image.fieldData.image.url !== state.uploaded.url) throw Error('Uploaded URL mismatch');
-    state.status = 'applied';
-    await saveState(t, state);
-    return 'cached-applied';
+  if (product.fieldData?.slug !== state.source?.product?.fieldData?.slug) {
+    throw Error('Product identity changed since preview');
   }
-  if (image.fieldData.image.fileId !== t.originalFileId || image.lastUpdated !== originalImage.lastUpdated) {
-    throw Error('Current CMS image changed since preview; refusing to overwrite');
+  if (t.isHero && product.fieldData?.['hero-image'] !== t.imageItemId) {
+    throw Error('Product hero image reference changed since preview');
+  }
+
+  // Resume partially completed PATCHs. The first four Allegra records were
+  // successfully changed but the old script rejected their canonicalized
+  // CMS asset IDs. This route performs only GET/read/hash; NO upload or PATCH.
+  if (image.fieldData.image.fileId !== t.originalFileId) {
+    await acceptVerifiedCmsAsset(image);
+    console.log('Recovered already-staged image:', t.imageItemId);
+    return 'recovered-applied';
+  }
+
+  if (image.lastUpdated !== originalImage.lastUpdated) {
+    throw Error('Current CMS record was edited since the preview; refusing to overwrite');
   }
   if (!state.uploaded) {
     state.uploaded = await uploadAsset(webp, t);
-    await saveState(t, state); // Uploaded asset can be reused if a later step fails.
+    await saveState(t, state); // Persist temporary upload receipt for safe retry.
   }
 
-  // Recheck after uploading so concurrent CMS changes are never overwritten.
+  // Recheck before writing, since another editor could have modified the item
+  // while an asset was uploading. Never repeat an upload we already saved.
   const latest = await readVerifiedTarget(t);
   assertOtherFieldsUnchanged(originalImage, latest.image);
   if (latest.image.fieldData.image.fileId !== t.originalFileId ||
       latest.image.lastUpdated !== originalImage.lastUpdated) {
-    throw Error('CMS changed during upload; uploaded asset retained for safe retry, no field updated');
+    throw Error('CMS changed during upload; keep uploaded asset for manual reconciliation');
   }
+
   await waitForHostedAsset(state.uploaded.url);
   const replacement = {
     fileId: state.uploaded.fileId,
@@ -262,14 +290,19 @@ async function applyOne(t) {
     alt: originalImage.fieldData.image.alt ?? null
   };
   await updateImageOnly(t, replacement);
-  const verified = await readVerifiedTarget(t);
-  assertOtherFieldsUnchanged(originalImage, verified.image);
-  if (verified.image.fieldData.image.fileId !== replacement.fileId ||
-      verified.image.fieldData.image.url !== replacement.url) {
-    throw Error('Webflow returned unexpected image field after update; check CMS before proceeding');
+
+  // Webflow may return a canonical CMS-local copy of the uploaded asset and
+  // may take a moment to expose it via GET.
+  let verified;
+  for (let attempt = 0; attempt < 6; attempt++) {
+    verified = (await readVerifiedTarget(t)).image;
+    if (verified.fieldData.image.fileId !== t.originalFileId) break;
+    await new Promise(done => setTimeout(done, 900 * (attempt + 1)));
   }
-  state.status = 'applied';
-  await saveState(t, state);
+  if (verified.fieldData.image.fileId === t.originalFileId) {
+    throw Error('Webflow PATCH returned but the staged image field is still original. Check CMS; upload receipt retained.');
+  }
+  await acceptVerifiedCmsAsset(verified);
   return 'applied';
 }
 
