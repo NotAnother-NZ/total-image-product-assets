@@ -134,6 +134,7 @@ async function previewOne(t, engine, model, retryFailed) {
     return 'cached';
   }
   if (state?.status === 'skipped') return 'skipped';
+  if (state?.status === 'unchanged') return 'unchanged';
   if (['failed', 'manual-review'].includes(state?.status) && !retryFailed) return 'manual-review';
 
   const { image, product } = await readVerifiedTarget(t);
@@ -292,16 +293,17 @@ async function rollbackOne(t) {
 }
 
 async function summarize(plan, results = []) {
-  const counts = { ready: 0, applied: 0, skipped: 0, failed: 0, manualReview: 0, notStarted: 0, rolledBack: 0 };
+  const counts = { ready: 0, applied: 0, unchanged: 0, skipped: 0, failed: 0, manualReview: 0, notStarted: 0, rolledBack: 0 };
   const entries = [], reports = [];
   let uncertainCalls = 0;
   for (const t of plan.targets) {
     const state = await getState(t);
     const status = state?.status ?? 'not-started';
     const key = ({ ready: 'ready', applied: 'applied', skipped: 'skipped', failed: 'failed',
-      'manual-review': 'manualReview', 'not-started': 'notStarted', 'rolled-back': 'rolledBack' })[status] ?? 'notStarted';
+      'manual-review': 'manualReview', 'not-started': 'notStarted', 'rolled-back': 'rolledBack', unchanged: 'unchanged' })[status] ?? 'notStarted';
     counts[key]++;
     const receipt = file(t.slug, t.imageItemId, 'usage.json');
+    uncertainCalls += state?.previousUnreceiptedAttempts?.length ?? 0;
     if (await hasFile(receipt)) reports.push(await readJson(receipt));
     else if (state?.aiCallStartedAt) uncertainCalls++;
     entries.push({
@@ -362,7 +364,7 @@ async function main() {
       if (shouldStop || attempted >= limit) break;
       if (command === 'preview') {
         const state = await getState(t);
-        if (state && ['ready', 'applied', 'skipped'].includes(state.status)) {
+        if (state && ['ready', 'applied', 'skipped', 'unchanged'].includes(state.status)) {
           try {
             const result = await previewOne(t, engine, model, retryFailed);
             results.push({ image: t.imageItemId, result });
@@ -381,7 +383,7 @@ async function main() {
         }
       } else if (command === 'apply') {
         const state = await getState(t);
-        if (!state || ['skipped', 'manual-review', 'failed', 'processing'].includes(state.status)) {
+        if (!state || ['skipped', 'unchanged', 'manual-review', 'failed', 'processing'].includes(state.status)) {
           complete++;
           progress.step('no approved preview');
           continue;
