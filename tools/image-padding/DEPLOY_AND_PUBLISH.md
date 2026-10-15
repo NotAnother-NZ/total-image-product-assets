@@ -1,4 +1,4 @@
-# Deploy and publish 106 restored Total Image images
+# Deploy and stage 106 restored Total Image images — publishing currently disabled
 
 Updated 15 October 2026.
 
@@ -106,3 +106,28 @@ Official reference:
 - [Update staged CMS items](https://developers.webflow.com/data/reference/cms/collection-items/staged-items/update-items)
 - [Publish selected CMS items](https://developers.webflow.com/data/reference/cms/collection-items/staged-items/publish-item)
 - [Read live CMS item](https://developers.webflow.com/data/reference/cms/collection-items/live-items/get-item-live)
+
+
+## Webflow canonical image IDs: staged PATCH recovery
+
+If staging previously printed `Webflow returned unexpected image field after update`, **do not delete files, reset checkpoints, or regenerate images.** Webflow can accept the image PATCH while returning a new CMS-specific `fileId` and canonical CDN URL, different from the initial site-asset upload receipt.
+
+As of the 15 October interrupted run, **four Allegra Images CMS items were verified to contain the replacement image links**, while none of the four local manifests was marked `applied`. The current batch script now handles this correctly:
+
+- It checks that product, hero, locale, and unrelated CMS fields are unchanged.
+- It checks the **actual Webflow CDN WebP bytes** against the already approved local preview SHA-256 and verifies the 1200 x 1600 WebP format.
+- If the hash matches, it saves the canonical `fileId` and URL in the checkpoint, retains the original upload receipt in `assetUpload`, and **skips uploading/PATCHing that item again**.
+- If the actual CDN image bytes do not match, the tool stops on that item with a specific error. It does not overwrite the existing CMS image or upload a replacement blindly.
+- All subsequent images use this canonical verification immediately after staging.
+
+Resume safely with:
+
+```bash
+git pull --ff-only origin feat/image-padding-restoration-test
+npm test
+npm run batch:deploy:stage -- --reviewed yes --confirm APPLY_REVIEWED_108_IMAGES
+npm run batch:summary
+```
+
+The expected result after a successful run is **106 applied, 2 unchanged**. Publication remains **blocked** on this site because the selected-item publish endpoint is not staging-domain-only and could affect `totalimage.com.au`.
+
