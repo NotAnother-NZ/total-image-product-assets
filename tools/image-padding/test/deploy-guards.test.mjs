@@ -79,6 +79,9 @@ test('live validator accepts only the old image or the exact uploaded asset',()=
   live.fieldData.image.fileId=oid(9001);
   assert.throws(()=>classifyLiveImage(original,live,uploaded,t),/outside this migration/);
   live.fieldData.image.fileId=uploaded.fileId;
+  live.fieldData.image.alt='Unapproved alt';
+  assert.throws(()=>classifyLiveImage(original,live,uploaded,t),/alt text changed/);
+  live.fieldData.image.alt=null;
   live.fieldData.name='Externally modified';
   assert.throws(()=>classifyLiveImage(original,live,uploaded,t),/unrelated changes/);
 });
