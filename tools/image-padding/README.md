@@ -1,5 +1,7 @@
 # Single-image padding restoration test
 
+**Deployment/publishing:** The 106-image final upload and selected CMS item publishing workflow is documented in [DEPLOY_AND_PUBLISH.md](./DEPLOY_AND_PUBLISH.md). Run the read-only preflight before any Webflow write; live CMS publication can affect custom production domains.
+
 Isolated proof of concept for the Total Image Webflow hero image **Men’s Derby**. It does not change any existing migration scripts or bulk-process other products.
 
 ## Target
