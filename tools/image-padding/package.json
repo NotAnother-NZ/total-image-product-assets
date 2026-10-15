@@ -16,7 +16,9 @@
     "batch:apply": "node src/batch.mjs apply",
     "batch:rollback": "node src/batch.mjs rollback",
     "batch:summary": "node src/batch.mjs summary",
-    "batch:review": "node src/batch-review.mjs"
+    "batch:review": "node src/batch-review.mjs",
+    "batch:resolve": "node src/batch-resolve.mjs resolve",
+    "batch:retry-oakleigh": "node src/batch-resolve.mjs retry-oakleigh"
   },
   "dependencies": {
     "dotenv": "17.2.3",
