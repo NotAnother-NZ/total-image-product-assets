@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
-import { createTargetPlan, EXPECTED_IMAGES, assertOtherFieldsUnchanged } from '../src/batch-cms.mjs';
+import { createTargetPlan, EXPECTED_IMAGES, assertOtherFieldsUnchanged, assetFilenameFor } from '../src/batch-cms.mjs';
 import { AFFECTED_PRODUCT_SLUGS } from '../src/batch-targets.mjs';
 import { aggregateUsage } from '../src/batch-report.mjs';
 import { normalize, inspect, solid, encode, W, H } from '../src/image.mjs';
@@ -80,4 +80,17 @@ test('3:4 restoration preserves the complete protected rectangle', async () => {
   assert.equal(meta.width,W);
   assert.equal(meta.height,H);
   assert.equal(meta.format,'webp');
+});
+
+test('Webflow uploaded filenames never reach the 100-character fileName limit', () => {
+  const longs = [
+    'darani-15-19l-computer-backpack-in-repreve-recycled-material',
+    'darani-grs-recycled-canvas-anti-theft-15-21l-laptop-backpack'
+  ];
+  for (const slug of longs) {
+    const name = assetFilenameFor({slug,imageItemId:'6ac6885ec493e681acaeda61'});
+    assert.ok(name.length < 100);
+    assert.ok(name.endsWith('-6ac6885ec493e681acaeda61-padding-restored.webp'));
+    assert.ok(name.startsWith('darani-'));
+  }
 });
