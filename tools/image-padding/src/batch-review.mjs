@@ -55,7 +55,7 @@ function labelSvg(entry, x, y, availablePreview) {
     '<text x="' + (x + 12) + '" y="' + (y + 42) + '" font-size="12" fill="#555">' + type + ' | ' + status + ' | ' + id + '</text>',
     '<text x="' + (x + 12) + '" y="' + (y + 62) + '" font-size="12" fill="#555">' + (statusLine || ' ') + '</text>',
     '<text x="' + (x + 14) + '" y="' + (y + 329) + '" font-size="12" fill="#555">ORIGINAL</text>',
-    '<text x="' + (x + 218) + '" y="' + (y + 329) + '" font-size="12" fill="#555">' + (availablePreview ? 'RESTORED PREVIEW' : 'NO PREVIEW / MANUAL REVIEW') + '</text>',
+    '<text x="' + (x + 218) + '" y="' + (y + 329) + '" font-size="12" fill="#555">' + (availablePreview ? 'RESTORED PREVIEW' : entry.status === 'unchanged' ? 'ORIGINAL RETAINED (NO CHANGE)' : 'NO PREVIEW / MANUAL REVIEW') + '</text>',
     '</g>'
   ].join('');
 }
