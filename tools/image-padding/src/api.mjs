@@ -1,4 +1,5 @@
 import {createHash} from 'node:crypto';
+import {imageEditUsageReport,printUsageReport} from './usage.mjs';
 export const target={site:'6a4b7d4c587f58adf63bad93',products:'6ab0acfdb063e14a30f65e5c',
   images:'6ab2df3d42b6657bfaed2936',product:'6ac6311bb017dc1d03839b7f',
   item:'6ac69399d70193b11f7af706',file:'6ac69399d70193b11f7af702'};
@@ -37,8 +38,11 @@ export async function edit(photo,alphaMask,info,model) {
   const json=await response(await fetch('https://api.openai.com/v1/images/edits',{
     method:'POST',headers:{Authorization:'Bearer '+process.env.OPENAI_API_KEY},body:f,
     signal:AbortSignal.timeout(300000)}));
+  // Report API-provided usage immediately: processing may fail after this request is billed.
+  const usage=imageEditUsageReport(json.usage,model);
+  printUsageReport(usage);
   if(!json.data?.[0]?.b64_json)throw Error('OpenAI returned no image');
-  return Buffer.from(json.data[0].b64_json,'base64');
+  return {image:Buffer.from(json.data[0].b64_json,'base64'),usage};
 }
 export function hash(bytes){return createHash('sha256').update(bytes).digest('hex')}
 export async function upload(bytes) {
