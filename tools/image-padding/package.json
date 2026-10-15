@@ -1,7 +1,7 @@
 {
   "name": "total-image-padding-test",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "engines": {
     "node": ">=20"
@@ -18,7 +18,12 @@
     "batch:summary": "node src/batch.mjs summary",
     "batch:review": "node src/batch-review.mjs",
     "batch:resolve": "node src/batch-resolve.mjs resolve",
-    "batch:retry-oakleigh": "node src/batch-resolve.mjs retry-oakleigh"
+    "batch:retry-oakleigh": "node src/batch-resolve.mjs retry-oakleigh",
+    "batch:deploy:check": "node src/batch-deploy.mjs check",
+    "batch:deploy:stage": "node src/batch.mjs apply",
+    "batch:deploy:publish": "node src/batch-deploy.mjs publish",
+    "batch:deploy:verify": "node src/batch-deploy.mjs verify",
+    "batch:deploy": "node src/batch-deploy.mjs deploy"
   },
   "dependencies": {
     "dotenv": "17.2.3",
