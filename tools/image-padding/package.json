@@ -15,7 +15,8 @@
     "batch:preview": "node src/batch.mjs preview",
     "batch:apply": "node src/batch.mjs apply",
     "batch:rollback": "node src/batch.mjs rollback",
-    "batch:summary": "node src/batch.mjs summary"
+    "batch:summary": "node src/batch.mjs summary",
+    "batch:review": "node src/batch-review.mjs"
   },
   "dependencies": {
     "dotenv": "17.2.3",
