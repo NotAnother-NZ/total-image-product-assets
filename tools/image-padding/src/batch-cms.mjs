@@ -10,11 +10,22 @@ export const CMS = Object.freeze({
   images: siteTarget.images
 });
 
+// GET is safe to retry on transient rate limiting; never retry a CMS PATCH or asset POST blindly.
+async function wfRead(path) {
+  for (let attempt = 0; ; attempt++) {
+    try { return await wf(path); }
+    catch (error) {
+      if (attempt >= 5 || !/HTTP (429|500|502|503|504)\b/.test(String(error.message))) throw error;
+      await new Promise(resolve => setTimeout(resolve, Math.min(30000, 1500 * 2 ** attempt)));
+    }
+  }
+}
+
 export async function listEveryItem(collectionId) {
   const items = [];
   const limit = 100;
   for (let offset = 0; ;) {
-    const page = await wf('/collections/' + collectionId + '/items?limit=' + limit + '&offset=' + offset);
+    const page = await wfRead('/collections/' + collectionId + '/items?limit=' + limit + '&offset=' + offset);
     if (!Array.isArray(page.items) || !page.pagination || !Number.isInteger(page.pagination.total)) {
       throw Error('Malformed Webflow list response for ' + collectionId);
     }
@@ -108,8 +119,8 @@ export function assertOtherFieldsUnchanged(original, current) {
 
 export async function readVerifiedTarget(t) {
   const [image, product] = await Promise.all([
-    wf('/collections/' + CMS.images + '/items/' + t.imageItemId),
-    wf('/collections/' + CMS.products + '/items/' + t.productId)
+    wfRead('/collections/' + CMS.images + '/items/' + t.imageItemId),
+    wfRead('/collections/' + CMS.products + '/items/' + t.productId)
   ]);
   if (product.id !== t.productId || product.fieldData?.slug !== t.slug) {
     throw Error('Product identity changed: ' + t.slug);
