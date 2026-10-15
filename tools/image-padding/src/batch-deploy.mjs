@@ -20,6 +20,13 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 config({ path: join(root, '.env'), quiet: true });
 config({ path: resolve(root, '../../.env'), quiet: true });
 
+// SAFETY: The selected-CMS-item publish API is not domain-scoped.
+// This site has production custom domains. Fail closed for every publication mode.
+if (process.argv.slice(2).some(a => ['publish','deploy'].includes(a))) {
+  console.error('BLOCKED: Webflow CMS item publishing is not restricted to the staging subdomain. Production custom domains must remain untouched.');
+  console.error('Staging CMS changes is permitted; publication requires a separately verified staging-only method.');
+  process.exit(1);
+}
 const [mode, ...rawOptions] = process.argv.slice(2);
 if (!['check', 'publish', 'verify', 'deploy'].includes(mode)) {
   throw Error('Usage: node src/batch-deploy.mjs check|deploy|publish|verify [--out DIR] [--confirm TOKEN] [--ack-all-domains yes]');
