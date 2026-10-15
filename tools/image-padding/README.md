@@ -56,8 +56,48 @@ Examine the files in the output directory:
 - `original.webp`: untouched source for rollback.
 - `normalized.png`, `mask.png`, `restored.png`, optional `ai-output.png`: intermediate files.
 - `manifest.json`: original Webflow records, hashes, and apply state.
+- `usage.json`: per-request OpenAI tokens, pricing rates, and estimated USD cost.
 
 **Do not apply until you review the preview image.** The lossless intermediate preserves all original photo pixels; the compressed WebP is lossy and may introduce small encoding differences.
+
+## Token usage and cost reporting
+
+After each successful OpenAI Images API request (`npm run preview` or the Flare alternative), the terminal shows the actual API-reported token usage, split into:
+- Input text tokens
+- Input image tokens
+- Output image tokens
+- **Total tokens**
+- Estimated USD cost for each token category and the **estimated total cost**
+
+Example (illustrative token usage, not a recorded charge):
+
+```text
+--- OpenAI image-edit token usage and cost ---
+Model: gpt-image-2.5-sunburst
+Input tokens: 1,100
+  Text input: 100
+  Image input: 1,000
+Output image tokens: 2,300
+TOTAL TOKENS: 3,400
+Text input cost:  $0.00050000
+Image input cost: $0.00800000
+Image output cost:$0.06900000
+ESTIMATED TOTAL COST: $0.07750000 USD
+```
+
+Rates for both Sunburst and Flare, **Standard (non-Batch)** direct Images API calls, as verified 2026-10-15:
+- Text input: **$5.00 / 1M tokens**
+- Image input: **$8.00 / 1M tokens**
+- Image output: **$30.00 / 1M tokens**
+
+The token numbers come from the response's `usage` object. The result is an *estimated API cost*, not an OpenAI invoice; it excludes any taxes, account-specific adjustments or future pricing changes. If usage or the text/image breakdown is missing, the tool explicitly prints **unavailable** rather than reporting a made-up total. If the edit request succeeds but subsequent image processing fails, token usage and cost are still printed immediately.
+
+The preview directory also contains `usage.json`, and the same report is saved in `manifest.json` for a later audit. These are **per preview request**, not your OpenAI account-wide usage totals.
+
+`npm run preview:solid` does not call OpenAI, so it prints 0 tokens and $0 OpenAI API cost.
+
+Official documentation: [Image generation cost and token usage](https://developers.openai.com/api/docs/guides/image-generation) and [API pricing](https://developers.openai.com/api/docs/pricing).
+
 
 ## Apply — explicit staged change only
 
