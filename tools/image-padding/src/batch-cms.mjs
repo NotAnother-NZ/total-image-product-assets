@@ -134,8 +134,23 @@ export async function readVerifiedTarget(t) {
   return { image, product };
 }
 
+export function assetFilenameFor(t) {
+  // Webflow Upload Asset requires fileName to be strictly shorter than 100 characters.
+  // Keep the unique Images CMS ID in the name; truncate only the descriptive slug prefix.
+  const suffix = t.imageItemId + '-padding-restored.webp';
+  const maximumSlugLength = 99 - 1 - suffix.length;
+  if (maximumSlugLength < 1 || !/^[a-z0-9-]+$/.test(t.slug) ||
+      !/^[0-9a-f]{24}$/.test(t.imageItemId)) {
+    throw Error('Invalid asset name components');
+  }
+  const shortSlug = t.slug.slice(0, maximumSlugLength).replace(/-+$/, '');
+  const name = shortSlug + '-' + suffix;
+  if (name.length >= 100) throw Error('Webflow upload filename is too long');
+  return name;
+}
+
 export async function uploadAsset(bytes, t) {
-  const fileName = t.slug + '-' + t.imageItemId + '-padding-restored.webp';
+  const fileName = assetFilenameFor(t);
   const metadata = await wf('/sites/' + CMS.site + '/assets', 'POST', {
     fileName, fileHash: createHash('md5').update(bytes).digest('hex')
   });
