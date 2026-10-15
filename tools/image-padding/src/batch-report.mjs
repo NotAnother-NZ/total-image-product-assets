@@ -41,7 +41,8 @@ export function printTotalUsage(report) {
   console.log('Text input cost:               ', formatMoney(report.cost.text));
   console.log('Image input cost:              ', formatMoney(report.cost.imageInput));
   console.log('Image output cost:             ', formatMoney(report.cost.imageOutput));
-  const qualifier = report.completeCost ? '' : ' (PARTIAL: unknown usage on ' + report.unpricedCalls + ' call(s))';
+  const missing = (report.unpricedCalls ?? 0) + (report.unknownApiRequests ?? 0);
+  const qualifier = report.completeCost && !missing ? '' : ' (PARTIAL: possible unknown cost for ' + missing + ' call(s))';
   console.log('TOTAL ESTIMATED API COST:      ', formatMoney(report.cost.pricedTotal) + ' USD' + qualifier);
   console.log('Rates as of', report.pricingAsOf, '(not an invoice)');
   console.log('========================================\n');
