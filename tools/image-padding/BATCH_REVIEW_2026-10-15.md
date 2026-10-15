@@ -41,3 +41,26 @@ The Oakleigh HTTP 520 was returned from `api.openai.com`. An API request may hav
 The recorded usage aggregation originally set `usage.completeCost=true` despite `uncertainCalls=1`. Batch summary generation now reports **incomplete/partial cost** when any API request lacks a usage receipt. To update the existing local `summary.json` without regenerating images: `npm run batch:summary`.
 
 No CMS records were modified for this review.
+
+
+## Follow-up visual review: needs-attention-01.webp
+
+The user reviewed all 101 generated contact sheets and approved their visual quality. The seven remaining originals were reviewed using the supplied `needs-attention-01.webp`.
+
+- **Allegra White, Arc Eco Square Wireless Charger, Summit White and Sunrise Smoothie White:** grey photographic rectangle on white padding. The original strict detector's 97% interior-fill requirement wrongly rejects white products within a grey photo. Added `src/padding-fallback.mjs`, which verifies a rectangular grey inset using consistent border and edge samples; a narrow targeted local operation restores the grey margin with original inner pixels untouched.
+- **Casual Braided Belt (Navy Brown and Black Black):** already visually seamless white-on-white. Preserve original assets; mark `unchanged` only after original file and CMS identity checks.
+- **Oakleigh White cup:** only failure was HTTP 520 from OpenAI. The prior request has no usage receipt and may have cost money. A one-image retry is available solely with an explicit confirmation token; keep an audit trail of prior unknown-cost attempts.
+
+Commands on `feat/image-padding-restoration-test`:
+
+```bash
+npm run batch:resolve
+npm run batch:summary
+npm run batch:review
+# Optional only when ready to risk an additional OpenAI charge:
+npm run batch:retry-oakleigh -- --confirm RETRY_OAKLEIGH_MAY_INCUR_COST
+npm run batch:summary
+npm run batch:review
+```
+
+The targeted fallback was tested against synthetic 1200 × 1600 photos and enlarged crops from the supplied contact sheet: all four grey inset examples were detected; both belt examples were correctly rejected as not having a distinct grey inner rectangle. **The full-resolution images still require local confirmation.** Do not apply until reviewing the four new previews and Oakleigh's successful retry. No Webflow writes or API image generation were performed in this review session.
