@@ -4,3 +4,10 @@ mac-app/.build/
 mac-app/dist/
 assets/.total-image-classifier/
 assets/.total-image-audit/
+
+# Local image-padding test secrets and outputs
+.env
+**/.env
+!**/.env.example
+tools/image-padding/node_modules/
+tools/image-padding/output/
