@@ -296,3 +296,56 @@ Rollback only changes an image if the CMS still points to the exact asset this b
 
 Offline unit tests exercise target selection (47 products, 108 Images CMS records), safe refusal on missing/duplicate images, cost aggregation, and lossless preservation of the protected photograph before WebP compression. Live paid OpenAI requests and Webflow write permissions can only be validated with your local `.env` credentials.
 
+
+### Resolving the seven exceptions from the 15 October review
+
+The `needs-attention-01.webp` contact sheet has been reviewed. The seven records comprise **four grey rectangular photos containing white products**, **two braided belt images that already have seamless white backgrounds**, and **one Oakleigh HTTP 520 error**.
+
+This correction is isolated from the working batch:
+
+```bash
+git pull --ff-only origin feat/image-padding-restoration-test
+cd tools/image-padding
+npm install
+npm test
+npm run batch:resolve
+```
+
+**`batch:resolve` makes no OpenAI API calls and performs no Webflow writes.** It verifies the unchanged Webflow CMS item and the SHA-256 integrity of each locally saved original source before updating any local checkpoints.
+
+The command:
+1. Attempts precise grey-background extension for four specified images only: Allegra White, Arc Eco Square Wireless Charger, Summit White and Sunrise Smoothie White. The conservative detector requires matching uniform inner edges and contrasting outer padding. It preserves every pixel inside the existing photo rectangle; output remains 1200 × 1600 WebP.
+2. Marks the two already seamless Casual Braided Belt images as `unchanged`; their original assets stay linked.
+3. Leaves all 101 previously generated previews untouched.
+4. Leaves the failed Oakleigh image pending a separate, explicitly confirmed retry.
+
+Refresh the local summary and review sheets:
+
+```bash
+npm run batch:summary
+npm run batch:review
+```
+
+Provided the four full-resolution images pass the conservative detector, the expected counts become **105 ready, 2 unchanged, 1 failed**. Inspect the four new per-image `before-after.jpg` files and contact-sheet previews before updating Webflow.
+
+#### Optional: retry the single failed Oakleigh image
+
+The initial Oakleigh call returned HTTP 520 and no usage receipt. It **may** have incurred a charge. To approve the possibility of **one additional paid** image-edit request:
+
+```bash
+npm run batch:retry-oakleigh -- --confirm RETRY_OAKLEIGH_MAY_INCUR_COST
+```
+
+Optionally select Flare with `--model gpt-image-2.5-flare`. This command is hard-locked to Images CMS ID `6ac6948b14526571351528ef`; it refuses to re-request if an output/usage receipt exists, verifies the original CMS asset and checkpoint, retains an audit entry for the previous unknown-cost attempt, and prints the new token usage/cost. No Webflow CMS image is updated during the retry.
+
+Then run:
+
+```bash
+npm run batch:summary
+npm run batch:review
+```
+
+If successful, the expected total is **106 ready and 2 unchanged**, accounting for all 108 records. The new request's cost is added to the recorded total; the original unreceipted HTTP 520 remains an unknown possible charge.
+
+**Do not run `batch:apply` until the new previews pass visual QA.** Apply uploads only ready images, never the two unchanged belts, preserves existing CMS relationships, and does not publish.
+
