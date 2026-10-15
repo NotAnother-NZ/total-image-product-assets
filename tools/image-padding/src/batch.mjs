@@ -382,11 +382,21 @@ async function main() {
           progress.step('no approved preview');
           continue;
         }
+        if (state.status === 'applied') {
+          complete++;
+          progress.step('already applied');
+          continue;
+        }
       } else if (command === 'rollback') {
         const state = await getState(t);
         if (!state || !['applied', 'rolled-back'].includes(state.status)) {
           complete++;
           progress.step('nothing to roll back');
+          continue;
+        }
+        if (state.status === 'rolled-back') {
+          complete++;
+          progress.step('already rolled back');
           continue;
         }
       }
