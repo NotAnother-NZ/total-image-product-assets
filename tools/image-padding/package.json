@@ -1,0 +1,17 @@
+{
+  "name": "total-image-padding-test",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "preview": "node src/cli.mjs preview --engine ai",
+    "preview:solid": "node src/cli.mjs preview --engine solid",
+    "apply": "node src/cli.mjs apply",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "dotenv": "17.2.3",
+    "sharp": "0.34.4"
+  }
+}
