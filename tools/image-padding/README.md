@@ -273,7 +273,7 @@ Rollback only changes an image if the CMS still points to the exact asset this b
 - An AI response's token usage and output are saved immediately. If postprocessing fails, the result is reused on the next run rather than generated again.
 - If an interrupted API request may have been billed without a saved response, it is flagged for **manual review** and not automatically repurchased.
 - Failed records do not block safe records; `summary.json` keeps the full list and the last-run outcomes.
-- `--retry-failed yes` allows retrying review-required records **only after you have checked why they failed**, and may incur new OpenAI charges.
+- `--retry-failed yes` retries safe failed records after you investigate them. It **does not** automatically repeat an uncertain OpenAI call that may already have been billed; that record stays marked for manual review.
 - The batch is strictly scoped to the audited list; it never automatically adds new products.
 
 ### Verification scope
