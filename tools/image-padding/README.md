@@ -245,6 +245,22 @@ You can review progress and totals without contacting Webflow:
 npm run batch:summary
 ```
 
+### Visual QA contact sheets (local only)
+
+Generate review sheets for **all 101 completed previews** and a separate sheet containing the **seven unresolved source images**:
+
+```bash
+npm run batch:review
+```
+
+The tool creates `output/batch-padding/review-sheets/` with numbered `ready-01.webp`, `ready-02.webp`, etc. for side-by-side **original vs. generated** comparisons, plus `needs-attention-01.webp` showing the skipped/failed original images and their reasons. It also writes `review-sheets/index.json` mapping each CMS image ID to its sheet.
+
+**Please inspect all previews before applying.** A `ready` status means the output was generated and passed processing checks, not that the resulting padding, edges, products, and shadows have been visually approved.
+
+This contact-sheet generator is **entirely local**: no OpenAI API request, no Webflow changes, no new charges. Upload `needs-attention-01.webp` to a follow-up chat if you want visual diagnosis of the six skipped images and the one failed image.
+
+**Accounting clarification:** when any API request may have been billed without a usage receipt, `usage.completeCost` is now **false**, and the terminal calls the displayed amount a **partial estimate**, rather than implying that it represents every possible charge. Run `npm run batch:summary` to regenerate this corrected summary without reprocessing images.
+
 ### 5. Apply approved previews to Webflow CMS (optional)
 
 **Only after inspecting and approving the previews**, run:
