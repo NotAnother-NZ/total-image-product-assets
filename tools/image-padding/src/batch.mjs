@@ -311,6 +311,10 @@ async function summarize(plan, results = []) {
     });
   }
   const usage = aggregateUsage(reports);
+  usage.unknownApiRequests = uncertainCalls;
+  // An HTTP/network failure after an API call starts may still be billable.
+  // Do not mark the overall batch cost complete just because all received receipts were priced.
+  usage.completeCost = usage.completeCost && uncertainCalls === 0;
   const summary = { updatedAt: new Date().toISOString(), counts, uncertainCalls, usage, entries, recentResults: results };
   await saveJson(file('summary.json'), summary);
   console.log('\nBATCH STATUS:', JSON.stringify(counts));
