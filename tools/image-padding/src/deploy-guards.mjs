@@ -100,6 +100,10 @@ export function classifyLiveImage(original, live, uploaded, t) {
   const current = live.fieldData?.image?.fileId;
   if (current === uploaded?.fileId) {
     if (live.fieldData?.image?.url !== uploaded.url) throw Error('Live uploaded URL mismatch: ' + t.imageItemId);
+    const originalAlt = original.fieldData?.image?.alt ?? null;
+    if ((live.fieldData?.image?.alt ?? null) !== originalAlt) {
+      throw Error('Live image alt text changed unexpectedly: ' + t.imageItemId);
+    }
     return 'already-live';
   }
   if (current === original.fieldData?.image?.fileId) return 'not-yet-live';
