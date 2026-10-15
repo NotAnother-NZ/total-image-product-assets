@@ -5,6 +5,7 @@ import {config} from 'dotenv';
 import sharp from 'sharp';
 import {normalize,inspect,mask,restore,solid,encode,W,H} from './image.mjs';
 import {target,getItems,edit,hash,upload,stageImage,wf} from './api.mjs';
+import {solidUsageReport,printUsageReport} from './usage.mjs';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 config({path:resolve(root,'.env'),quiet:true});
 config({path:resolve(root,'../../.env'),quiet:true});
@@ -49,7 +50,10 @@ async function preview() {
   const png=await normalize(bytes), info=await inspect(png), alphaMask=await mask(info.rect);
   console.log('Detected photograph',info.rect,'background',info.hex);
   const model=opts.model||process.env.OPENAI_IMAGE_MODEL||'gpt-image-2.5-sunburst';
-  const ai=engine==='ai'?await edit(png,alphaMask,info,model):null;
+  const result=engine==='ai'?await edit(png,alphaMask,info,model):null;
+  const ai=result?.image??null;
+  const usage=result?.usage??solidUsageReport();
+  if(engine==='solid')printUsageReport(usage);
   const restored=ai?await restore(png,ai,info):await solid(png,info);
   const webp=await encode(restored);
   const beforeAfter=await sharp({create:{width:W*2,height:H,channels:3,background:'#fff'}})
@@ -60,8 +64,9 @@ async function preview() {
     'mask.png':alphaMask,'restored.png':restored,'preview.webp':webp,
     'before-after.jpg':beforeAfter,...(ai?{'ai-output.png':ai}:{})}))
     await writeFile(path(name),value);
+  await save('usage.json',usage);
   await save('manifest.json',{target,engine,model:engine==='ai'?model:null,info,
-    source:{image,product},previewHash:hash(webp),applied:false});
+    usage,source:{image,product},previewHash:hash(webp),applied:false});
   console.log('Preview ready:',path('preview.webp'),'\nComparison:',path('before-after.jpg'));
   console.log('No Webflow writes made. Review the image before using apply.');
 }
